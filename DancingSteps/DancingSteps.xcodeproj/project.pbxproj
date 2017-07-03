@@ -23,6 +23,9 @@
 		CBFAB3711F0AA31E005C8B80 /* Dancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3701F0AA31E005C8B80 /* Dancer.swift */; };
 		CBFAB3731F0AA329005C8B80 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3721F0AA329005C8B80 /* Song.swift */; };
 		CBFAB3751F0AA333005C8B80 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3741F0AA333005C8B80 /* Style.swift */; };
+		CBFAB3791F0AA750005C8B80 /* CongressNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3781F0AA750005C8B80 /* CongressNetwork.swift */; };
+		CBFAB37D1F0AA801005C8B80 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB37C1F0AA801005C8B80 /* Network.swift */; };
+		CBFAB37F1F0AA80C005C8B80 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB37E1F0AA80C005C8B80 /* NetworkProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,9 @@
 		CBFAB3701F0AA31E005C8B80 /* Dancer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dancer.swift; sourceTree = "<group>"; };
 		CBFAB3721F0AA329005C8B80 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		CBFAB3741F0AA333005C8B80 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		CBFAB3781F0AA750005C8B80 /* CongressNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongressNetwork.swift; sourceTree = "<group>"; };
+		CBFAB37C1F0AA801005C8B80 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		CBFAB37E1F0AA80C005C8B80 /* NetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingSteps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,6 +115,7 @@
 		CBFAB3411F0A88C0005C8B80 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CBFAB3761F0AA565005C8B80 /* login */,
 				CBFAB3521F0A91CD005C8B80 /* styleList */,
 				CBFAB3591F0A922B005C8B80 /* recordingScreen */,
 				CBFAB34D1F0A90F5005C8B80 /* topEvents */,
@@ -147,6 +154,7 @@
 		CBFAB34A1F0A907C005C8B80 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CBFAB3771F0AA718005C8B80 /* Network */,
 				CBFAB34C1F0A9099005C8B80 /* Realm_Repository */,
 				CBFAB34B1F0A9091005C8B80 /* App_Entities */,
 			);
@@ -328,6 +336,39 @@
 			name = Local;
 			sourceTree = "<group>";
 		};
+		CBFAB3761F0AA565005C8B80 /* login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		CBFAB3771F0AA718005C8B80 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CBFAB37B1F0AA7EA005C8B80 /* Configuration */,
+				CBFAB37A1F0AA7D1005C8B80 /* Entities */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		CBFAB37A1F0AA7D1005C8B80 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CBFAB3781F0AA750005C8B80 /* CongressNetwork.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		CBFAB37B1F0AA7EA005C8B80 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				CBFAB37C1F0AA801005C8B80 /* Network.swift */,
+				CBFAB37E1F0AA80C005C8B80 /* NetworkProvider.swift */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -452,6 +493,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBFAB3791F0AA750005C8B80 /* CongressNetwork.swift in Sources */,
 				CBFAB3711F0AA31E005C8B80 /* Dancer.swift in Sources */,
 				CBFAB3691F0A99BC005C8B80 /* RMSong.swift in Sources */,
 				CBFAB3671F0A99B1005C8B80 /* RMDancer.swift in Sources */,
@@ -463,7 +505,9 @@
 				CBFAB36D1F0AA309005C8B80 /* Video.swift in Sources */,
 				CBFAB36B1F0A9B8C005C8B80 /* RMStyle.swift in Sources */,
 				CB8A45521F0401C1006E1102 /* AppDelegate.swift in Sources */,
+				CBFAB37D1F0AA801005C8B80 /* Network.swift in Sources */,
 				CBFAB36F1F0AA315005C8B80 /* Congress.swift in Sources */,
+				CBFAB37F1F0AA80C005C8B80 /* NetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

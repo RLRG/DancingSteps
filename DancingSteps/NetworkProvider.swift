@@ -8,7 +8,6 @@
 
 final class NetworkProvider {
     private let apiEndpoint: String
-    
     public init() {
         apiEndpoint = "" // TODO: SET THIS !!!!
     }

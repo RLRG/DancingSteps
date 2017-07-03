@@ -24,9 +24,7 @@ public final class CongressNetwork {
 
 
 extension Congress: ImmutableMappable {
-    
     // TODO: SET THE MAPPING OF THE WEB SERVICE WITH THE OBJECT !
-    
     // JSON -> Object
     public init(map: Map) throws {
         name = try map.value("XXXXXXXXX")

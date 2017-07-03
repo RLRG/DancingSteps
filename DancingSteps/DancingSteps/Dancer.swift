@@ -7,12 +7,10 @@
 //
 
 import Foundation
-import RealmSwift
-import Realm
 
-final class Dancer: Object {
-    dynamic var name: String = ""
-    dynamic var birthday: Date = Date()
-    dynamic var nationality: String = "" // Get nationalities from a web service. Implement it as a enum ? Improve this?
+public struct Dancer {
+    let name: String
+    let birthday: Date
+    let nationality: String // Get nationalities from a web service. Implement it as a enum ? Improve this?
     // TODO: Add more properties?
 }

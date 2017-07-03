@@ -7,13 +7,11 @@
 //
 
 import Foundation
-import RealmSwift
-import Realm
 
-final class Congress: Object {
-    dynamic var name: String = ""
-    dynamic var organizer: String = ""
-    dynamic var startDate: Date = Date()
-    dynamic var endDate: Date = Date()
+public struct Congress {
+    let name: String
+    let organizer: String
+    let startDate: Date
+    let endDate: Date
     // TODO: Add location (to improve the app with a map).
 }

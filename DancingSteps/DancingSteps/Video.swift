@@ -7,16 +7,13 @@
 //
 
 import Foundation
-import RealmSwift
-import Realm
 
-final class Video: Object {
-    dynamic var title: String = ""
-    dynamic var datetime: Date = Date()
-    dynamic var videoDescription: String = ""
-    dynamic var style: Style = Style()
-    dynamic var song: Song = Song()
-    dynamic var congress: Congress = Congress()
-    dynamic var dancers: [Dancer] = []
-    // TODO: Add location (to improve the app with a map).
+public struct Video {
+    let title: String
+    let datetime: Date
+    let videoDescription: String
+    let style: Style
+    let song: Song
+    let congress: Congress
+    let dancers: [Dancer]
 }

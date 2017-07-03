@@ -7,11 +7,9 @@
 //
 
 import Foundation
-import RealmSwift
-import Realm
 
-final class Song: Object {
-    dynamic var title: String = ""
-    dynamic var singer: String = ""
+public struct Song {
+    let title: String
+    let singer: String
     // TODO: Add more properties?
 }

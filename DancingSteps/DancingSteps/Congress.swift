@@ -1,0 +1,19 @@
+//
+//  Congress.swift
+//  DancingSteps
+//
+//  Created by RLRG on 03/07/2017.
+//  Copyright © 2017 RLRG. All rights reserved.
+//
+
+import Foundation
+import RealmSwift
+import Realm
+
+final class Congress: Object {
+    dynamic var name: String = ""
+    dynamic var organizer: String = ""
+    dynamic var startDate: Date = Date()
+    dynamic var endDate: Date = Date()
+    // TODO: Add location (to improve the app with a map).
+}

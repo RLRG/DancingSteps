@@ -13,6 +13,11 @@
 		CB8A45571F0401C1006E1102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45551F0401C1006E1102 /* Main.storyboard */; };
 		CB8A45591F0401C1006E1102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45581F0401C1006E1102 /* Assets.xcassets */; };
 		CB8A455C1F0401C1006E1102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A455A1F0401C1006E1102 /* LaunchScreen.storyboard */; };
+		CBFAB3631F0A9981005C8B80 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3621F0A9981005C8B80 /* Video.swift */; };
+		CBFAB3651F0A9990005C8B80 /* Congress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3641F0A9990005C8B80 /* Congress.swift */; };
+		CBFAB3671F0A99B1005C8B80 /* Dancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3661F0A99B1005C8B80 /* Dancer.swift */; };
+		CBFAB3691F0A99BC005C8B80 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3681F0A99BC005C8B80 /* Song.swift */; };
+		CBFAB36B1F0A9B8C005C8B80 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB36A1F0A9B8C005C8B80 /* Style.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,11 @@
 		CB8A45581F0401C1006E1102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB8A455B1F0401C1006E1102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB8A455D1F0401C1006E1102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBFAB3621F0A9981005C8B80 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		CBFAB3641F0A9990005C8B80 /* Congress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Congress.swift; sourceTree = "<group>"; };
+		CBFAB3661F0A99B1005C8B80 /* Dancer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dancer.swift; sourceTree = "<group>"; };
+		CBFAB3681F0A99BC005C8B80 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		CBFAB36A1F0A9B8C005C8B80 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingSteps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -61,7 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				CB8A45501F0401C1006E1102 /* DancingStepsApp */,
-				CBFAB3411F0A88C0005C8B80 /* Modules */,
 				CB8A454F1F0401C1006E1102 /* Products */,
 				112D5606E748D11DA56D7F1F /* Pods */,
 				385EC1A6F9B10ACF19DDEB7E /* Frameworks */,
@@ -80,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				CBFAB3471F0A8AB1005C8B80 /* Application */,
+				CBFAB3411F0A88C0005C8B80 /* Modules */,
 				CBFAB34A1F0A907C005C8B80 /* Common */,
 			);
 			name = DancingStepsApp;
@@ -94,6 +104,7 @@
 				CBFAB34D1F0A90F5005C8B80 /* topEvents */,
 			);
 			name = Modules;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		CBFAB3451F0A8A5C005C8B80 /* View */ = {
@@ -135,6 +146,11 @@
 		CBFAB34B1F0A9091005C8B80 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				CBFAB3621F0A9981005C8B80 /* Video.swift */,
+				CBFAB3641F0A9990005C8B80 /* Congress.swift */,
+				CBFAB3661F0A99B1005C8B80 /* Dancer.swift */,
+				CBFAB3681F0A99BC005C8B80 /* Song.swift */,
+				CBFAB36A1F0A9B8C005C8B80 /* Style.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -421,7 +437,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBFAB3691F0A99BC005C8B80 /* Song.swift in Sources */,
+				CBFAB3671F0A99B1005C8B80 /* Dancer.swift in Sources */,
 				CB8A45541F0401C1006E1102 /* ViewController.swift in Sources */,
+				CBFAB3651F0A9990005C8B80 /* Congress.swift in Sources */,
+				CBFAB3631F0A9981005C8B80 /* Video.swift in Sources */,
+				CBFAB36B1F0A9B8C005C8B80 /* Style.swift in Sources */,
 				CB8A45521F0401C1006E1102 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

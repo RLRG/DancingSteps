@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C4CDF324FBF83BF05714683 /* Pods_DancingSteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */; };
 		CB8A45521F0401C1006E1102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45511F0401C1006E1102 /* AppDelegate.swift */; };
 		CB8A45541F0401C1006E1102 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45531F0401C1006E1102 /* ViewController.swift */; };
 		CB8A45571F0401C1006E1102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45551F0401C1006E1102 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E7CC749311DE4263BD303AC /* Pods-DancingSteps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingSteps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps.debug.xcconfig"; sourceTree = "<group>"; };
+		A371D2CB0E0F0E9EDFCBC5A0 /* Pods-DancingSteps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingSteps.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps.release.xcconfig"; sourceTree = "<group>"; };
 		CB8A454E1F0401C1006E1102 /* DancingSteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingSteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8A45511F0401C1006E1102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB8A45531F0401C1006E1102 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		CB8A45581F0401C1006E1102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB8A455B1F0401C1006E1102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB8A455D1F0401C1006E1102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingSteps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,18 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C4CDF324FBF83BF05714683 /* Pods_DancingSteps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		112D5606E748D11DA56D7F1F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E7CC749311DE4263BD303AC /* Pods-DancingSteps.debug.xcconfig */,
+				A371D2CB0E0F0E9EDFCBC5A0 /* Pods-DancingSteps.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		385EC1A6F9B10ACF19DDEB7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CB8A45451F0401C1006E1102 = {
 			isa = PBXGroup;
 			children = (
 				CB8A45501F0401C1006E1102 /* DancingStepsApp */,
 				CBFAB3411F0A88C0005C8B80 /* Modules */,
 				CB8A454F1F0401C1006E1102 /* Products */,
+				112D5606E748D11DA56D7F1F /* Pods */,
+				385EC1A6F9B10ACF19DDEB7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -280,9 +304,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB8A45601F0401C1006E1102 /* Build configuration list for PBXNativeTarget "DancingSteps" */;
 			buildPhases = (
+				9FC423342C22639607CE5565 /* [CP] Check Pods Manifest.lock */,
 				CB8A454A1F0401C1006E1102 /* Sources */,
 				CB8A454B1F0401C1006E1102 /* Frameworks */,
 				CB8A454C1F0401C1006E1102 /* Resources */,
+				18E2EA0247164EA3FCA180D8 /* [CP] Embed Pods Frameworks */,
+				03E92C36902BAF1A67F38AF7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -340,6 +367,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03E92C36902BAF1A67F38AF7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		18E2EA0247164EA3FCA180D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FC423342C22639607CE5565 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CB8A454A1F0401C1006E1102 /* Sources */ = {
@@ -470,6 +545,7 @@
 		};
 		CB8A45611F0401C1006E1102 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E7CC749311DE4263BD303AC /* Pods-DancingSteps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8WFER5UG23;
@@ -483,6 +559,7 @@
 		};
 		CB8A45621F0401C1006E1102 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A371D2CB0E0F0E9EDFCBC5A0 /* Pods-DancingSteps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8WFER5UG23;

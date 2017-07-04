@@ -6,20 +6,19 @@ target 'DancingSteps' do
   use_frameworks!
 
   # GENERAL
-  pod 'RxSwift'
-  pod 'SwiftLint'
+  pod 'RxSwift', '=3.5.0'
+  pod 'SwiftLint', '=0.20.1'
 
   # NETWORK
-  pod 'Alamofire'
-  pod 'RxAlamofire'
-  pod 'ObjectMapper'
-  pod 'AlamofireObjectMapper'
+  pod 'Alamofire', '=4.5.0'
+  pod 'RxAlamofire', '=3.0.3'
+  pod 'ObjectMapper', '=2.2.7'
+  pod 'AlamofireObjectMapper', '=4.1.0'
 
   # DATABASE
-  pod 'RxRealm'
-  pod 'QueryKit'
-  pod 'RealmSwift'
-  pod 'Realm'
-  pod 'QueryKit'
+  pod 'RxRealm', '=0.6.0'
+  pod 'QueryKit', '=0.13.0'
+  pod 'RealmSwift', '=2.8.3'
+  pod 'Realm', '=2.8.3'
 
 end

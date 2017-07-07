@@ -18,7 +18,8 @@ public final class CongressNetwork {
     }
     
     public func fetchCongresses() -> Observable<[Congress]> {
-        return network.getRequest("\(Constants.eventsURL)/?\(Constants.AnonymousAccessTokenParameter)=\(Constants.AnonymousAccessToken)&\(Constants.categoryParameter)=\(Constants.categoryValue)&\(Constants.subcategoryParameter)=\(Constants.subcategoryValue)&location.address=London&") // TODO: Improve this code with the corresponding Apple classes to create an URL.
+        return network.getRequest("\(Constants.eventsURL)/?\(Constants.AnonymousAccessTokenParameter)=\(Constants.AnonymousAccessToken)&\(Constants.categoryParameter)=\(Constants.categoryValue)&\(Constants.subcategoryParameter)=\(Constants.subcategoryValue)&location.address=London") // TODO: Improve this code with the corresponding Apple classes to create an URL.
+        // TODO: Remove the parameter "location.address=London" in order to have much less results. I have this configured like this for debugging purposes at the beginning of my developments.
     }
 }
 

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C4CDF324FBF83BF05714683 /* Pods_DancingSteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */; };
 		CB8A45521F0401C1006E1102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45511F0401C1006E1102 /* AppDelegate.swift */; };
-		CB8A45541F0401C1006E1102 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45531F0401C1006E1102 /* ViewController.swift */; };
+		CB8A45541F0401C1006E1102 /* CongressesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45531F0401C1006E1102 /* CongressesTableViewController.swift */; };
 		CB8A45571F0401C1006E1102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45551F0401C1006E1102 /* Main.storyboard */; };
 		CB8A45591F0401C1006E1102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45581F0401C1006E1102 /* Assets.xcassets */; };
 		CB8A455C1F0401C1006E1102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A455A1F0401C1006E1102 /* LaunchScreen.storyboard */; };
@@ -26,6 +26,15 @@
 		CBFAB3791F0AA750005C8B80 /* CongressNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3781F0AA750005C8B80 /* CongressNetwork.swift */; };
 		CBFAB37D1F0AA801005C8B80 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB37C1F0AA801005C8B80 /* Network.swift */; };
 		CBFAB37F1F0AA80C005C8B80 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB37E1F0AA80C005C8B80 /* NetworkProvider.swift */; };
+		CBFAB3831F0B8F1A005C8B80 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3821F0B8F1A005C8B80 /* Constants.swift */; };
+		CBFAB3861F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3851F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift */; };
+		CBFAB3881F0BAFA7005C8B80 /* GetCongressesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3871F0BAFA7005C8B80 /* GetCongressesUseCase.swift */; };
+		CBFAB38A1F0BB26E005C8B80 /* CongressesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3891F0BB26E005C8B80 /* CongressesPresenter.swift */; };
+		CBFAB38C1F0BB77A005C8B80 /* CongressCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB38B1F0BB77A005C8B80 /* CongressCellView.swift */; };
+		CBFAB38E1F0BB7BA005C8B80 /* CongressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB38D1F0BB7BA005C8B80 /* CongressTableViewCell.swift */; };
+		CBFAB3901F0BBC8B005C8B80 /* CongressesPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB38F1F0BBC8B005C8B80 /* CongressesPresentation.swift */; };
+		CBFAB3921F0F8D46005C8B80 /* UseCaseNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3911F0F8D46005C8B80 /* UseCaseNetworkProvider.swift */; };
+		CBFAB3941F0F8DAF005C8B80 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3931F0F8DAF005C8B80 /* UseCaseProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +42,7 @@
 		A371D2CB0E0F0E9EDFCBC5A0 /* Pods-DancingSteps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingSteps.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps.release.xcconfig"; sourceTree = "<group>"; };
 		CB8A454E1F0401C1006E1102 /* DancingSteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingSteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8A45511F0401C1006E1102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB8A45531F0401C1006E1102 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB8A45531F0401C1006E1102 /* CongressesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CongressesTableViewController.swift; path = DancingSteps/CongressesTableViewController.swift; sourceTree = "<group>"; };
 		CB8A45561F0401C1006E1102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB8A45581F0401C1006E1102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB8A455B1F0401C1006E1102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +60,15 @@
 		CBFAB3781F0AA750005C8B80 /* CongressNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongressNetwork.swift; sourceTree = "<group>"; };
 		CBFAB37C1F0AA801005C8B80 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		CBFAB37E1F0AA80C005C8B80 /* NetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		CBFAB3821F0B8F1A005C8B80 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CBFAB3851F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCongressesNetworkUseCase.swift; sourceTree = "<group>"; };
+		CBFAB3871F0BAFA7005C8B80 /* GetCongressesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetCongressesUseCase.swift; path = DancingSteps/GetCongressesUseCase.swift; sourceTree = "<group>"; };
+		CBFAB3891F0BB26E005C8B80 /* CongressesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressesPresenter.swift; path = DancingSteps/CongressesPresenter.swift; sourceTree = "<group>"; };
+		CBFAB38B1F0BB77A005C8B80 /* CongressCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressCellView.swift; path = DancingSteps/CongressCellView.swift; sourceTree = "<group>"; };
+		CBFAB38D1F0BB7BA005C8B80 /* CongressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressTableViewCell.swift; path = DancingSteps/CongressTableViewCell.swift; sourceTree = "<group>"; };
+		CBFAB38F1F0BBC8B005C8B80 /* CongressesPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressesPresentation.swift; path = DancingSteps/CongressesPresentation.swift; sourceTree = "<group>"; };
+		CBFAB3911F0F8D46005C8B80 /* UseCaseNetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseNetworkProvider.swift; sourceTree = "<group>"; };
+		CBFAB3931F0F8DAF005C8B80 /* UseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UseCaseProvider.swift; path = DancingSteps/UseCaseProvider.swift; sourceTree = "<group>"; };
 		F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingSteps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,6 +125,7 @@
 				CBFAB3471F0A8AB1005C8B80 /* Application */,
 				CBFAB3411F0A88C0005C8B80 /* Modules */,
 				CBFAB34A1F0A907C005C8B80 /* Common */,
+				CBFAB3811F0B8EFA005C8B80 /* Utils */,
 			);
 			name = DancingStepsApp;
 			path = DancingSteps;
@@ -127,6 +146,9 @@
 		CBFAB3451F0A8A5C005C8B80 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB8A45531F0401C1006E1102 /* CongressesTableViewController.swift */,
+				CBFAB38B1F0BB77A005C8B80 /* CongressCellView.swift */,
+				CBFAB38D1F0BB7BA005C8B80 /* CongressTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -134,6 +156,8 @@
 		CBFAB3461F0A8A63005C8B80 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				CBFAB3891F0BB26E005C8B80 /* CongressesPresenter.swift */,
+				CBFAB38F1F0BBC8B005C8B80 /* CongressesPresentation.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -142,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				CB8A45511F0401C1006E1102 /* AppDelegate.swift */,
-				CB8A45531F0401C1006E1102 /* ViewController.swift */,
 				CB8A45551F0401C1006E1102 /* Main.storyboard */,
 				CB8A455A1F0401C1006E1102 /* LaunchScreen.storyboard */,
 				CB8A45581F0401C1006E1102 /* Assets.xcassets */,
@@ -199,6 +222,8 @@
 		CBFAB34E1F0A9112005C8B80 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				CBFAB3871F0BAFA7005C8B80 /* GetCongressesUseCase.swift */,
+				CBFAB3931F0F8DAF005C8B80 /* UseCaseProvider.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -347,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				CBFAB37B1F0AA7EA005C8B80 /* Configuration */,
+				CBFAB3841F0BAEA7005C8B80 /* UseCases */,
 				CBFAB37A1F0AA7D1005C8B80 /* Entities */,
 			);
 			name = Network;
@@ -367,6 +393,23 @@
 				CBFAB37E1F0AA80C005C8B80 /* NetworkProvider.swift */,
 			);
 			name = Configuration;
+			sourceTree = "<group>";
+		};
+		CBFAB3811F0B8EFA005C8B80 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CBFAB3821F0B8F1A005C8B80 /* Constants.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		CBFAB3841F0BAEA7005C8B80 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				CBFAB3851F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift */,
+				CBFAB3911F0F8D46005C8B80 /* UseCaseNetworkProvider.swift */,
+			);
+			name = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -511,16 +554,25 @@
 				CBFAB3711F0AA31E005C8B80 /* Dancer.swift in Sources */,
 				CBFAB3691F0A99BC005C8B80 /* RMSong.swift in Sources */,
 				CBFAB3671F0A99B1005C8B80 /* RMDancer.swift in Sources */,
-				CB8A45541F0401C1006E1102 /* ViewController.swift in Sources */,
+				CBFAB3861F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift in Sources */,
+				CB8A45541F0401C1006E1102 /* CongressesTableViewController.swift in Sources */,
 				CBFAB3651F0A9990005C8B80 /* RMCongress.swift in Sources */,
 				CBFAB3731F0AA329005C8B80 /* Song.swift in Sources */,
+				CBFAB3921F0F8D46005C8B80 /* UseCaseNetworkProvider.swift in Sources */,
+				CBFAB3831F0B8F1A005C8B80 /* Constants.swift in Sources */,
+				CBFAB38E1F0BB7BA005C8B80 /* CongressTableViewCell.swift in Sources */,
 				CBFAB3631F0A9981005C8B80 /* RMVideo.swift in Sources */,
+				CBFAB38C1F0BB77A005C8B80 /* CongressCellView.swift in Sources */,
+				CBFAB3881F0BAFA7005C8B80 /* GetCongressesUseCase.swift in Sources */,
 				CBFAB3751F0AA333005C8B80 /* Style.swift in Sources */,
+				CBFAB3941F0F8DAF005C8B80 /* UseCaseProvider.swift in Sources */,
 				CBFAB36D1F0AA309005C8B80 /* Video.swift in Sources */,
 				CBFAB36B1F0A9B8C005C8B80 /* RMStyle.swift in Sources */,
 				CB8A45521F0401C1006E1102 /* AppDelegate.swift in Sources */,
+				CBFAB3901F0BBC8B005C8B80 /* CongressesPresentation.swift in Sources */,
 				CBFAB37D1F0AA801005C8B80 /* Network.swift in Sources */,
 				CBFAB36F1F0AA315005C8B80 /* Congress.swift in Sources */,
+				CBFAB38A1F0BB26E005C8B80 /* CongressesPresenter.swift in Sources */,
 				CBFAB37F1F0AA80C005C8B80 /* NetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

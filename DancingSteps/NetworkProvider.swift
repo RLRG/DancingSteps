@@ -9,7 +9,7 @@
 final class NetworkProvider {
     private let apiEndpoint: String
     public init() {
-        apiEndpoint = "" // TODO: SET THIS !!!!
+        apiEndpoint = Constants.EventBriteAPI
     }
     
     public func makeCongressNetwork() -> CongressNetwork {

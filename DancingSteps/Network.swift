@@ -29,7 +29,9 @@ final class Network<T: ImmutableMappable> {
             .debug()
             .observeOn(scheduler)
             .map({ json -> [T] in
-                return try Mapper<T>().mapArray(JSONObject: json)
+                let jsonData: [String : Any] = json as! [String : Any]
+                let jsonWithEvents = jsonData["events"] // TODO: BE CERAFUL WITH THIS. THIS METHOD IS ONLY USEFUL FOR THE EVENTS WEB SERVICE.
+                return try Mapper<T>().mapArray(JSONObject: jsonWithEvents!)
             })
     }
     

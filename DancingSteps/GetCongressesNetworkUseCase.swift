@@ -1,5 +1,5 @@
 //
-//  getDanceEvents.swift
+//  GetCongressesNetworkUseCase.swift
 //  DancingSteps
 //
 //  Created by RLRG on 04/07/2017.
@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-final class GetCongressesNetwork: GetCongressesUseCase {
+final class GetCongressesNetworkUseCase: GetCongressesUseCase {
     private let network: CongressNetwork
     var presenter: CongressesPresentation!
     
@@ -17,16 +17,14 @@ final class GetCongressesNetwork: GetCongressesUseCase {
         self.network = network
     }
     
-    func congresses() -> Observable<[Congress]> {
+    func congresses() {
         // 1. Fetching data.
         let congresses = network.fetchCongresses()
         
         // 2. Process the data if needed (mapping).
-        // TODO: MAPPING IF NEEDED.
+        // Example: let programmerResponse = programmers.map { ProgrammerResponse(programmer: $0) }
         
         // 3. Provide the data to the presenter.
         presenter.present(congresses: congresses)
-        
-        return congresses // TODO: Do we really need this ? I don't think so....
     }
 }

@@ -12,13 +12,33 @@ import ObjectMapper
 
 public final class CongressNetwork {
     private let network: Network<Congress>
+    private let disposeBag = DisposeBag()
     
     init(network: Network<Congress>) {
         self.network = network
     }
     
-    public func fetchCongresses() -> Observable<[Congress]> {
-        return network.getRequest("\(Constants.eventsURL)/?\(Constants.AnonymousAccessTokenParameter)=\(Constants.AnonymousAccessToken)&\(Constants.categoryParameter)=\(Constants.categoryValue)&\(Constants.subcategoryParameter)=\(Constants.subcategoryValue)") // TODO: Improve this code with the corresponding Apple classes to create an URL.
+    public func fetchCongresses() -> [Congress] {
+        let congressesObservable = network.getRequest("\(Constants.eventsURL)/?\(Constants.AnonymousAccessTokenParameter)=\(Constants.AnonymousAccessToken)&\(Constants.categoryParameter)=\(Constants.categoryValue)&\(Constants.subcategoryParameter)=\(Constants.subcategoryValue)") // TODO: Improve this code with the corresponding Apple classes to create an URL.
+        
+        var congresses: [Congress] = []
+        
+        congressesObservable.asObservable()
+            .subscribe(onNext: { (congressArray) in
+                for congress in congressArray {
+                    print("Congress: \(congress.name)")
+                }
+                congresses = congressArray
+            },
+                       onError: { error in
+                        print("ERROR IN RESPONSE (CONGRESS): \(error)")
+            },
+                       onCompleted: {
+                        print("onCompleted event !! (CONGRESS)")
+            })
+        .addDisposableTo(disposeBag)
+        
+        return congresses
     }
 }
 

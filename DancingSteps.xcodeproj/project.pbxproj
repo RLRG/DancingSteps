@@ -27,12 +27,14 @@
 		CBFAB37D1F0AA801005C8B80 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB37C1F0AA801005C8B80 /* Network.swift */; };
 		CBFAB37F1F0AA80C005C8B80 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB37E1F0AA80C005C8B80 /* NetworkProvider.swift */; };
 		CBFAB3831F0B8F1A005C8B80 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3821F0B8F1A005C8B80 /* Constants.swift */; };
-		CBFAB3861F0BAECD005C8B80 /* GetCongressesNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3851F0BAECD005C8B80 /* GetCongressesNetwork.swift */; };
+		CBFAB3861F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3851F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift */; };
 		CBFAB3881F0BAFA7005C8B80 /* GetCongressesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3871F0BAFA7005C8B80 /* GetCongressesUseCase.swift */; };
 		CBFAB38A1F0BB26E005C8B80 /* CongressesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3891F0BB26E005C8B80 /* CongressesPresenter.swift */; };
 		CBFAB38C1F0BB77A005C8B80 /* CongressCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB38B1F0BB77A005C8B80 /* CongressCellView.swift */; };
 		CBFAB38E1F0BB7BA005C8B80 /* CongressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB38D1F0BB7BA005C8B80 /* CongressTableViewCell.swift */; };
 		CBFAB3901F0BBC8B005C8B80 /* CongressesPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB38F1F0BBC8B005C8B80 /* CongressesPresentation.swift */; };
+		CBFAB3921F0F8D46005C8B80 /* UseCaseNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3911F0F8D46005C8B80 /* UseCaseNetworkProvider.swift */; };
+		CBFAB3941F0F8DAF005C8B80 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3931F0F8DAF005C8B80 /* UseCaseProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,12 +61,14 @@
 		CBFAB37C1F0AA801005C8B80 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		CBFAB37E1F0AA80C005C8B80 /* NetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		CBFAB3821F0B8F1A005C8B80 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		CBFAB3851F0BAECD005C8B80 /* GetCongressesNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCongressesNetwork.swift; sourceTree = "<group>"; };
+		CBFAB3851F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCongressesNetworkUseCase.swift; sourceTree = "<group>"; };
 		CBFAB3871F0BAFA7005C8B80 /* GetCongressesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetCongressesUseCase.swift; path = DancingSteps/GetCongressesUseCase.swift; sourceTree = "<group>"; };
 		CBFAB3891F0BB26E005C8B80 /* CongressesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressesPresenter.swift; path = DancingSteps/CongressesPresenter.swift; sourceTree = "<group>"; };
 		CBFAB38B1F0BB77A005C8B80 /* CongressCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressCellView.swift; path = DancingSteps/CongressCellView.swift; sourceTree = "<group>"; };
 		CBFAB38D1F0BB7BA005C8B80 /* CongressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressTableViewCell.swift; path = DancingSteps/CongressTableViewCell.swift; sourceTree = "<group>"; };
 		CBFAB38F1F0BBC8B005C8B80 /* CongressesPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressesPresentation.swift; path = DancingSteps/CongressesPresentation.swift; sourceTree = "<group>"; };
+		CBFAB3911F0F8D46005C8B80 /* UseCaseNetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseNetworkProvider.swift; sourceTree = "<group>"; };
+		CBFAB3931F0F8DAF005C8B80 /* UseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UseCaseProvider.swift; path = DancingSteps/UseCaseProvider.swift; sourceTree = "<group>"; };
 		F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingSteps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -219,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				CBFAB3871F0BAFA7005C8B80 /* GetCongressesUseCase.swift */,
+				CBFAB3931F0F8DAF005C8B80 /* UseCaseProvider.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -401,7 +406,8 @@
 		CBFAB3841F0BAEA7005C8B80 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				CBFAB3851F0BAECD005C8B80 /* GetCongressesNetwork.swift */,
+				CBFAB3851F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift */,
+				CBFAB3911F0F8D46005C8B80 /* UseCaseNetworkProvider.swift */,
 			);
 			name = UseCases;
 			sourceTree = "<group>";
@@ -548,16 +554,18 @@
 				CBFAB3711F0AA31E005C8B80 /* Dancer.swift in Sources */,
 				CBFAB3691F0A99BC005C8B80 /* RMSong.swift in Sources */,
 				CBFAB3671F0A99B1005C8B80 /* RMDancer.swift in Sources */,
-				CBFAB3861F0BAECD005C8B80 /* GetCongressesNetwork.swift in Sources */,
+				CBFAB3861F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift in Sources */,
 				CB8A45541F0401C1006E1102 /* CongressesTableViewController.swift in Sources */,
 				CBFAB3651F0A9990005C8B80 /* RMCongress.swift in Sources */,
 				CBFAB3731F0AA329005C8B80 /* Song.swift in Sources */,
+				CBFAB3921F0F8D46005C8B80 /* UseCaseNetworkProvider.swift in Sources */,
 				CBFAB3831F0B8F1A005C8B80 /* Constants.swift in Sources */,
 				CBFAB38E1F0BB7BA005C8B80 /* CongressTableViewCell.swift in Sources */,
 				CBFAB3631F0A9981005C8B80 /* RMVideo.swift in Sources */,
 				CBFAB38C1F0BB77A005C8B80 /* CongressCellView.swift in Sources */,
 				CBFAB3881F0BAFA7005C8B80 /* GetCongressesUseCase.swift in Sources */,
 				CBFAB3751F0AA333005C8B80 /* Style.swift in Sources */,
+				CBFAB3941F0F8DAF005C8B80 /* UseCaseProvider.swift in Sources */,
 				CBFAB36D1F0AA309005C8B80 /* Video.swift in Sources */,
 				CBFAB36B1F0A9B8C005C8B80 /* RMStyle.swift in Sources */,
 				CB8A45521F0401C1006E1102 /* AppDelegate.swift in Sources */,

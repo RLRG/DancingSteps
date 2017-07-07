@@ -25,6 +25,6 @@ final class GetCongressesNetworkUseCase: GetCongressesUseCase {
         // Example: let programmerResponse = programmers.map { ProgrammerResponse(programmer: $0) }
         
         // 3. Provide the data to the presenter.
-        presenter.present(congresses: congressesObservable)
+        presenter.present(congressesObservable: congressesObservable)
     }
 }

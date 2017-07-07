@@ -18,18 +18,19 @@ public final class CongressNetwork {
     }
     
     public func fetchCongresses() -> Observable<[Congress]> {
-        return network.getRequest("\(Constants.eventsURL)/?\(Constants.AnonymousAccessTokenParameter)=\(Constants.AnonymousAccessToken)&\(Constants.categoryParameter)=\(Constants.categoryValue)&\(Constants.subcategoryParameter)=\(Constants.subcategoryValue)") // TODO: Improve this code with the corresponding Apple classes to create an URL.
+        return network.getRequest("\(Constants.eventsURL)/?\(Constants.AnonymousAccessTokenParameter)=\(Constants.AnonymousAccessToken)&\(Constants.categoryParameter)=\(Constants.categoryValue)&\(Constants.subcategoryParameter)=\(Constants.subcategoryValue)&location.address=London&") // TODO: Improve this code with the corresponding Apple classes to create an URL.
     }
 }
 
 
 extension Congress: ImmutableMappable {
-    // TODO: SET THE MAPPING OF THE WEB SERVICE WITH THE OBJECT !
     // JSON -> Object
     public init(map: Map) throws {
-        name = try map.value("events -> name -> text")
-        organizer = try map.value("events -> organizer_id") // Call the corresponding Web Service to get the name?
-        startDate = try map.value("events -> start -> local")
-        endDate = try map.value("events -> end -> local")
+        name = try map.value("name.text")
+        organizer = try map.value("organizer_id") // Call the corresponding Web Service to get the name?
+        let dateFormatter = DateFormatter() // TODO: Improve this by creating an auxiliary function with Utils.
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        startDate = dateFormatter.date(from: try map.value("start.local"))!
+        endDate = dateFormatter.date(from: try map.value("end.local"))!
     }
 }

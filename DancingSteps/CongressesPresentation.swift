@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 protocol CongressesPresentation {
-    func present(congresses: Observable<[Congress]>)
+    func present(congressesObservable: Observable<[Congress]>)
 }

@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let useCaseNetworkProvider = UseCaseNetworkProvider()
         let getCongressesUseCase = useCaseNetworkProvider.makeGetCongressesUseCase()
         let presenter = CongressesPresenter(useCase: getCongressesUseCase)
+        getCongressesUseCase.presenter = presenter
         tableViewController.presenter = presenter
         
         window = UIWindow(frame: UIScreen.main.bounds)

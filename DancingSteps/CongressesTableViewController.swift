@@ -7,20 +7,31 @@
 //
 
 import UIKit
+import RxSwift
 
 class CongressesTableViewController: UITableViewController {
 
     public var presenter: CongressesPresenter!
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewIsReady()
+        setupDataObserver()
+    }
+    
+    func setupDataObserver() {
+        presenter.congresses.asObservable()
+            .subscribe(onNext: { congressArray in
+                self.tableView.reloadData()
+            })
+            .addDisposableTo(disposeBag)
     }
     
     // MARK: - Table View data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.congresses!.count
+        return presenter.congresses.value.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

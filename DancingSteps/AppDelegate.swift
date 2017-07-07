@@ -7,15 +7,32 @@
 //
 
 import UIKit
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let storyBoardName = "Main"
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Configuration
+        let storyboard = UIStoryboard(name: storyBoardName, bundle: nil)
+        let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+        let tableViewController = navigationController.topViewController as! CongressesTableViewController
+        let useCaseNetworkProvider = UseCaseNetworkProvider()
+        let getCongressesUseCase = useCaseNetworkProvider.makeGetCongressesUseCase()
+        let presenter = CongressesPresenter(useCase: getCongressesUseCase)
+        getCongressesUseCase.presenter = presenter
+        tableViewController.presenter = presenter
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
@@ -41,6 +58,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
 }
-

@@ -35,10 +35,13 @@ class CongressesPresenter {
 extension CongressesPresenter : CongressesPresentation {
     func present(congressesObservable: Observable<[Congress]>) {
         
-        congressesObservable.subscribe(onNext: { (congressArray) in
-                for congress in congressArray {
-                    print("Congress: \(congress.name)")
-                }
+        congressesObservable.subscribe(
+            onNext: { (congressArray) in
+                #if DEBUG
+                    for congress in congressArray {
+                        print("Congress: \(congress.name)")
+                    }
+                #endif
                 self.congresses.value = congressArray
             },
                        onError: { error in

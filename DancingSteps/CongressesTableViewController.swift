@@ -45,15 +45,21 @@ class CongressesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Tricky !!
-        
         // Get the empty cell.
         let cell = tableView.dequeueReusableCell(withIdentifier: "congressCell", for: indexPath)
-        
         // Configuration of the data inside of the cell
         presenter.configure(cell: cell as! CongressCellView, forRowAt: indexPath.row)
-        
         return cell
     }
 
+    // MARK: - Table View Delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // TODO: Implemente Clean architecture !! Give this responsability to the presenter ?
+        tableView.deselectRow(at: indexPath, animated: true)
+        let detailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CongressDetailsViewController") as! CongressDetailsViewController
+        detailsVC.congress = presenter.congresses.value[indexPath.row]
+        self.navigationController?.pushViewController(detailsVC, animated: true)
+    }
 }
 

@@ -42,6 +42,8 @@
 		CBD6CA3E1F1378C900AC4548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A455A1F0401C1006E1102 /* LaunchScreen.storyboard */; };
 		CBD6CA3F1F1378C900AC4548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45581F0401C1006E1102 /* Assets.xcassets */; };
 		CBD6CA401F1378C900AC4548 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45551F0401C1006E1102 /* Main.storyboard */; };
+		CBD6CA6B1F13E81D00AC4548 /* CongressDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA6A1F13E81D00AC4548 /* CongressDetailsViewController.swift */; };
+		CBD6CA6C1F13E81D00AC4548 /* CongressDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA6A1F13E81D00AC4548 /* CongressDetailsViewController.swift */; };
 		CBFAB3631F0A9981005C8B80 /* RMVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3621F0A9981005C8B80 /* RMVideo.swift */; };
 		CBFAB3651F0A9990005C8B80 /* RMCongress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3641F0A9990005C8B80 /* RMCongress.swift */; };
 		CBFAB3671F0A99B1005C8B80 /* RMDancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3661F0A99B1005C8B80 /* RMDancer.swift */; };
@@ -81,6 +83,7 @@
 		CB8A455D1F0401C1006E1102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBD6CA471F1378C900AC4548 /* DancingStepsLAB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingStepsLAB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD6CA481F1378C900AC4548 /* DancingStepsLAB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DancingStepsLAB-Info.plist"; path = "/Users/Gmv100/Documents/RLRG/iOS Developer Nanodegree/6. You decide! How to make an iOS app/project/DancingSteps/DancingSteps/DancingStepsLAB-Info.plist"; sourceTree = "<absolute>"; };
+		CBD6CA6A1F13E81D00AC4548 /* CongressDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressDetailsViewController.swift; path = DancingSteps/CongressDetailsViewController.swift; sourceTree = "<group>"; };
 		CBFAB3621F0A9981005C8B80 /* RMVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMVideo.swift; sourceTree = "<group>"; };
 		CBFAB3641F0A9990005C8B80 /* RMCongress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMCongress.swift; sourceTree = "<group>"; };
 		CBFAB3661F0A99B1005C8B80 /* RMDancer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMDancer.swift; sourceTree = "<group>"; };
@@ -203,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				CB8A45531F0401C1006E1102 /* CongressesTableViewController.swift */,
+				CBD6CA6A1F13E81D00AC4548 /* CongressDetailsViewController.swift */,
 				CBFAB38B1F0BB77A005C8B80 /* CongressCellView.swift */,
 				CBFAB38D1F0BB7BA005C8B80 /* CongressTableViewCell.swift */,
 			);
@@ -715,6 +719,7 @@
 				CBFAB38C1F0BB77A005C8B80 /* CongressCellView.swift in Sources */,
 				CBFAB3881F0BAFA7005C8B80 /* GetCongressesUseCase.swift in Sources */,
 				CBFAB3751F0AA333005C8B80 /* Style.swift in Sources */,
+				CBD6CA6C1F13E81D00AC4548 /* CongressDetailsViewController.swift in Sources */,
 				CBFAB3941F0F8DAF005C8B80 /* UseCaseProvider.swift in Sources */,
 				CBFAB36D1F0AA309005C8B80 /* Video.swift in Sources */,
 				CBFAB36B1F0A9B8C005C8B80 /* RMStyle.swift in Sources */,
@@ -746,6 +751,7 @@
 				CBD6CA2F1F1378C900AC4548 /* CongressCellView.swift in Sources */,
 				CBD6CA301F1378C900AC4548 /* GetCongressesUseCase.swift in Sources */,
 				CBD6CA311F1378C900AC4548 /* Style.swift in Sources */,
+				CBD6CA6B1F13E81D00AC4548 /* CongressDetailsViewController.swift in Sources */,
 				CBD6CA321F1378C900AC4548 /* UseCaseProvider.swift in Sources */,
 				CBD6CA331F1378C900AC4548 /* Video.swift in Sources */,
 				CBD6CA341F1378C900AC4548 /* RMStyle.swift in Sources */,

@@ -31,7 +31,7 @@ class CongressesTableViewController: UITableViewController {
     
     func setupDataObserver() {
         presenter.congresses.asObservable()
-            .subscribe(onNext: { congressArray in
+            .subscribe(onNext: { _ in
                 self.tableView.reloadData()
             })
             .addDisposableTo(disposeBag)
@@ -54,6 +54,5 @@ class CongressesTableViewController: UITableViewController {
         
         return cell
     }
-
 }
 

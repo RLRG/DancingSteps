@@ -36,7 +36,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ax-Jg-2Vi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-378" y="-186"/>
+            <point key="canvasLocation" x="-378" y="1265"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="MXz-TP-H6q">
@@ -48,9 +48,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="TeN-7y-JjB" kind="relationship" relationship="viewControllers" id="tS7-IM-Rla"/>
-                        <segue destination="ZCi-LD-aip" kind="relationship" relationship="viewControllers" id="g20-7t-7mc"/>
                         <segue destination="MZs-1d-NH8" kind="relationship" relationship="viewControllers" id="jGY-Jl-Og1"/>
+                        <segue destination="QK8-5N-Y1c" kind="relationship" relationship="viewControllers" id="jnQ-eJ-q8A"/>
+                        <segue destination="TeN-7y-JjB" kind="relationship" relationship="viewControllers" id="tS7-IM-Rla"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nHw-0L-bHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -72,7 +72,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cO8-hz-xP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1242" y="-186"/>
+            <point key="canvasLocation" x="-1242" y="1265"/>
         </scene>
         <!--STYLES-->
         <scene sceneID="v1T-f1-00E">
@@ -101,7 +101,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QaP-tW-a51" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-378" y="512"/>
+            <point key="canvasLocation" x="-378" y="-143"/>
         </scene>
         <!--Styles-->
         <scene sceneID="Mp2-OJ-ldI">
@@ -118,9 +118,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1h7-Il-EiP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1242" y="512"/>
+            <point key="canvasLocation" x="-1242" y="-143"/>
         </scene>
         <!--Record-->
+        <scene sceneID="BYa-rv-pcg">
+            <objects>
+                <navigationController id="QK8-5N-Y1c" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Record" id="6EX-vt-n6B"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UIu-9Y-tTv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZCi-LD-aip" kind="relationship" relationship="rootViewController" id="bEX-3O-uYs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j6Q-dO-Kot" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1242" y="535"/>
+        </scene>
+        <!--START RECORDING !-->
         <scene sceneID="sL4-BJ-N90">
             <objects>
                 <viewController storyboardIdentifier="SwiftyCamViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZCi-LD-aip" customClass="CameraViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
@@ -133,10 +150,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Record" id="rhe-OJ-O93"/>
+                    <navigationItem key="navigationItem" title="START RECORDING !" id="YDx-uJ-hNy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p3z-cr-qrK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1242" y="1260"/>
+            <point key="canvasLocation" x="-378" y="535"/>
         </scene>
     </scenes>
 </document>

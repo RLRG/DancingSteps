@@ -24,17 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard = UIStoryboard(name: storyBoardName, bundle: nil)
         let tabBarController = storyboard.instantiateInitialViewController() as! UITabBarController
         
-        // TOP CHART
-        let navigationController = tabBarController.viewControllers?.first as! UINavigationController
-        let tableViewController = navigationController.topViewController as! CongressesTableViewController
-        let useCaseNetworkProvider = UseCaseNetworkProvider()
-        let getCongressesUseCase = useCaseNetworkProvider.makeGetCongressesUseCase()
-        let presenter = CongressesPresenter(useCase: getCongressesUseCase)
-        getCongressesUseCase.presenter = presenter
-        tableViewController.presenter = presenter
-        
         // STYLES
-        let s_navigationController = tabBarController.viewControllers?[2] as! UINavigationController
+        let s_navigationController = tabBarController.viewControllers?.first as! UINavigationController
         let s_tableViewController = s_navigationController.topViewController as! StylesTableViewController
         let memoryRepo = InMemoryRepo()
         let stylesUseCase = StylesUseCase(entityGateway: memoryRepo)
@@ -42,6 +33,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         stylesUseCase.presenter = s_presenter
         s_tableViewController.presenter = s_presenter
         
+        // RECORDING
+        let r_navigationController = tabBarController.viewControllers?[1] as! UINavigationController
+        let recordingViewController = r_navigationController.topViewController as! CameraViewController
+        // TODO: Connect the architecture for the recording workflow.
+//        let memoryRepo = InMemoryRepo()
+//        let stylesUseCase = StylesUseCase(entityGateway: memoryRepo)
+//        let s_presenter = StylesPresenter(useCase: stylesUseCase)
+//        stylesUseCase.presenter = s_presenter
+//        s_tableViewController.presenter = s_presenter
+        
+        // TOP CHART
+        let navigationController = tabBarController.viewControllers?[2] as! UINavigationController
+        let tableViewController = navigationController.topViewController as! CongressesTableViewController
+        let useCaseNetworkProvider = UseCaseNetworkProvider()
+        let getCongressesUseCase = useCaseNetworkProvider.makeGetCongressesUseCase()
+        let presenter = CongressesPresenter(useCase: getCongressesUseCase)
+        getCongressesUseCase.presenter = presenter
+        tableViewController.presenter = presenter
+        
+        // START THE APP !
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()

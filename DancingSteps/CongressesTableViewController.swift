@@ -8,6 +8,9 @@
 
 import UIKit
 import RxSwift
+#if DancingStepsLAB
+    import FLEX
+#endif
 
 class CongressesTableViewController: UITableViewController {
 
@@ -18,6 +21,12 @@ class CongressesTableViewController: UITableViewController {
         super.viewDidLoad()
         presenter.viewIsReady()
         setupDataObserver()
+        
+        // Displaying FLEX debugger.
+        // TODO: Set up a button only in the LAB target so that the debugger can be opened by the user in real time.
+        #if DancingStepsLAB
+            FLEXManager.shared().showExplorer()
+        #endif
     }
     
     func setupDataObserver() {

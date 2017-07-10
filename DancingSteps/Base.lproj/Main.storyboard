@@ -77,13 +77,13 @@
         <!--STYLES-->
         <scene sceneID="v1T-f1-00E">
             <objects>
-                <tableViewController id="FnE-jR-Esv" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="StylesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FnE-jR-Esv" customClass="StylesTableViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="stE-kY-GEZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="styleCell" id="MDX-5N-sZt" customClass="CongressTableViewCell" customModule="DancingSteps" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="styleCell" id="MDX-5N-sZt" customClass="StyleTableViewCell" customModule="DancingSteps" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MDX-5N-sZt" id="B6j-1C-w0B">

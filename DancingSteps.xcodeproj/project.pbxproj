@@ -42,6 +42,22 @@
 		CBD6CA3E1F1378C900AC4548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A455A1F0401C1006E1102 /* LaunchScreen.storyboard */; };
 		CBD6CA3F1F1378C900AC4548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45581F0401C1006E1102 /* Assets.xcassets */; };
 		CBD6CA401F1378C900AC4548 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45551F0401C1006E1102 /* Main.storyboard */; };
+		CBD6CA501F13C02800AC4548 /* StylesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA4F1F13C02800AC4548 /* StylesTableViewController.swift */; };
+		CBD6CA511F13C02800AC4548 /* StylesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA4F1F13C02800AC4548 /* StylesTableViewController.swift */; };
+		CBD6CA531F13C0F000AC4548 /* StylesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA521F13C0F000AC4548 /* StylesPresenter.swift */; };
+		CBD6CA541F13C0F000AC4548 /* StylesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA521F13C0F000AC4548 /* StylesPresenter.swift */; };
+		CBD6CA561F13C4C700AC4548 /* StylesPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA551F13C4C700AC4548 /* StylesPresentation.swift */; };
+		CBD6CA571F13C4C700AC4548 /* StylesPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA551F13C4C700AC4548 /* StylesPresentation.swift */; };
+		CBD6CA591F13C52500AC4548 /* StyleCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA581F13C52500AC4548 /* StyleCellView.swift */; };
+		CBD6CA5A1F13C52500AC4548 /* StyleCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA581F13C52500AC4548 /* StyleCellView.swift */; };
+		CBD6CA5C1F13C66F00AC4548 /* StylesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA5B1F13C66F00AC4548 /* StylesUseCase.swift */; };
+		CBD6CA5D1F13C66F00AC4548 /* StylesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA5B1F13C66F00AC4548 /* StylesUseCase.swift */; };
+		CBD6CA5F1F13C74600AC4548 /* EntityGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA5E1F13C74600AC4548 /* EntityGateway.swift */; };
+		CBD6CA601F13C74600AC4548 /* EntityGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA5E1F13C74600AC4548 /* EntityGateway.swift */; };
+		CBD6CA621F13C78A00AC4548 /* InMemoryRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA611F13C78A00AC4548 /* InMemoryRepo.swift */; };
+		CBD6CA631F13C78A00AC4548 /* InMemoryRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA611F13C78A00AC4548 /* InMemoryRepo.swift */; };
+		CBD6CA651F13CBAD00AC4548 /* StyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA641F13CBAD00AC4548 /* StyleTableViewCell.swift */; };
+		CBD6CA661F13CBAD00AC4548 /* StyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA641F13CBAD00AC4548 /* StyleTableViewCell.swift */; };
 		CBFAB3631F0A9981005C8B80 /* RMVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3621F0A9981005C8B80 /* RMVideo.swift */; };
 		CBFAB3651F0A9990005C8B80 /* RMCongress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3641F0A9990005C8B80 /* RMCongress.swift */; };
 		CBFAB3671F0A99B1005C8B80 /* RMDancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3661F0A99B1005C8B80 /* RMDancer.swift */; };
@@ -81,6 +97,14 @@
 		CB8A455D1F0401C1006E1102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBD6CA471F1378C900AC4548 /* DancingStepsLAB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingStepsLAB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD6CA481F1378C900AC4548 /* DancingStepsLAB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DancingStepsLAB-Info.plist"; path = "/Users/Gmv100/Documents/RLRG/iOS Developer Nanodegree/6. You decide! How to make an iOS app/project/DancingSteps/DancingSteps/DancingStepsLAB-Info.plist"; sourceTree = "<absolute>"; };
+		CBD6CA4F1F13C02800AC4548 /* StylesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StylesTableViewController.swift; path = DancingSteps/StylesTableViewController.swift; sourceTree = "<group>"; };
+		CBD6CA521F13C0F000AC4548 /* StylesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StylesPresenter.swift; path = DancingSteps/StylesPresenter.swift; sourceTree = "<group>"; };
+		CBD6CA551F13C4C700AC4548 /* StylesPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StylesPresentation.swift; path = DancingSteps/StylesPresentation.swift; sourceTree = "<group>"; };
+		CBD6CA581F13C52500AC4548 /* StyleCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleCellView.swift; path = DancingSteps/StyleCellView.swift; sourceTree = "<group>"; };
+		CBD6CA5B1F13C66F00AC4548 /* StylesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StylesUseCase.swift; path = DancingSteps/StylesUseCase.swift; sourceTree = "<group>"; };
+		CBD6CA5E1F13C74600AC4548 /* EntityGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntityGateway.swift; path = DancingSteps/EntityGateway.swift; sourceTree = "<group>"; };
+		CBD6CA611F13C78A00AC4548 /* InMemoryRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InMemoryRepo.swift; path = DancingSteps/InMemoryRepo.swift; sourceTree = "<group>"; };
+		CBD6CA641F13CBAD00AC4548 /* StyleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleTableViewCell.swift; path = DancingSteps/StyleTableViewCell.swift; sourceTree = "<group>"; };
 		CBFAB3621F0A9981005C8B80 /* RMVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMVideo.swift; sourceTree = "<group>"; };
 		CBFAB3641F0A9990005C8B80 /* RMCongress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMCongress.swift; sourceTree = "<group>"; };
 		CBFAB3661F0A99B1005C8B80 /* RMDancer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMDancer.swift; sourceTree = "<group>"; };
@@ -267,7 +291,6 @@
 		CBFAB34D1F0A90F5005C8B80 /* topEvents */ = {
 			isa = PBXGroup;
 			children = (
-				CBFAB34F1F0A916E005C8B80 /* DataManager */,
 				CBFAB3451F0A8A5C005C8B80 /* View */,
 				CBFAB3461F0A8A63005C8B80 /* Presenter */,
 				CBFAB34E1F0A9112005C8B80 /* Interactor */,
@@ -284,29 +307,6 @@
 			name = Interactor;
 			sourceTree = "<group>";
 		};
-		CBFAB34F1F0A916E005C8B80 /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				CBFAB3511F0A9185005C8B80 /* Local */,
-				CBFAB3501F0A9178005C8B80 /* API */,
-			);
-			name = DataManager;
-			sourceTree = "<group>";
-		};
-		CBFAB3501F0A9178005C8B80 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = API;
-			sourceTree = "<group>";
-		};
-		CBFAB3511F0A9185005C8B80 /* Local */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Local;
-			sourceTree = "<group>";
-		};
 		CBFAB3521F0A91CD005C8B80 /* styleList */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +321,7 @@
 		CBFAB3531F0A91ED005C8B80 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				CBD6CA5B1F13C66F00AC4548 /* StylesUseCase.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -328,6 +329,8 @@
 		CBFAB3541F0A91F6005C8B80 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				CBD6CA521F13C0F000AC4548 /* StylesPresenter.swift */,
+				CBD6CA551F13C4C700AC4548 /* StylesPresentation.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -335,6 +338,9 @@
 		CBFAB3551F0A91FD005C8B80 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CBD6CA4F1F13C02800AC4548 /* StylesTableViewController.swift */,
+				CBD6CA581F13C52500AC4548 /* StyleCellView.swift */,
+				CBD6CA641F13CBAD00AC4548 /* StyleTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -343,21 +349,15 @@
 			isa = PBXGroup;
 			children = (
 				CBFAB3581F0A921D005C8B80 /* Local */,
-				CBFAB3571F0A9211005C8B80 /* API */,
 			);
 			name = DataManager;
-			sourceTree = "<group>";
-		};
-		CBFAB3571F0A9211005C8B80 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = API;
 			sourceTree = "<group>";
 		};
 		CBFAB3581F0A921D005C8B80 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				CBD6CA5E1F13C74600AC4548 /* EntityGateway.swift */,
+				CBD6CA611F13C78A00AC4548 /* InMemoryRepo.swift */,
 			);
 			name = Local;
 			sourceTree = "<group>";
@@ -706,8 +706,12 @@
 				CBFAB3671F0A99B1005C8B80 /* RMDancer.swift in Sources */,
 				CBFAB3861F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift in Sources */,
 				CB8A45541F0401C1006E1102 /* CongressesTableViewController.swift in Sources */,
+				CBD6CA5A1F13C52500AC4548 /* StyleCellView.swift in Sources */,
+				CBD6CA661F13CBAD00AC4548 /* StyleTableViewCell.swift in Sources */,
 				CBFAB3651F0A9990005C8B80 /* RMCongress.swift in Sources */,
+				CBD6CA631F13C78A00AC4548 /* InMemoryRepo.swift in Sources */,
 				CBFAB3731F0AA329005C8B80 /* Song.swift in Sources */,
+				CBD6CA5D1F13C66F00AC4548 /* StylesUseCase.swift in Sources */,
 				CBFAB3921F0F8D46005C8B80 /* UseCaseNetworkProvider.swift in Sources */,
 				CBFAB3831F0B8F1A005C8B80 /* Constants.swift in Sources */,
 				CBFAB38E1F0BB7BA005C8B80 /* CongressTableViewCell.swift in Sources */,
@@ -721,8 +725,12 @@
 				CB8A45521F0401C1006E1102 /* AppDelegate.swift in Sources */,
 				CBFAB3901F0BBC8B005C8B80 /* CongressesPresentation.swift in Sources */,
 				CBFAB37D1F0AA801005C8B80 /* Network.swift in Sources */,
+				CBD6CA601F13C74600AC4548 /* EntityGateway.swift in Sources */,
 				CBFAB36F1F0AA315005C8B80 /* Congress.swift in Sources */,
+				CBD6CA511F13C02800AC4548 /* StylesTableViewController.swift in Sources */,
 				CBFAB38A1F0BB26E005C8B80 /* CongressesPresenter.swift in Sources */,
+				CBD6CA541F13C0F000AC4548 /* StylesPresenter.swift in Sources */,
+				CBD6CA571F13C4C700AC4548 /* StylesPresentation.swift in Sources */,
 				CBFAB37F1F0AA80C005C8B80 /* NetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -737,8 +745,12 @@
 				CBD6CA261F1378C900AC4548 /* RMDancer.swift in Sources */,
 				CBD6CA271F1378C900AC4548 /* GetCongressesNetworkUseCase.swift in Sources */,
 				CBD6CA281F1378C900AC4548 /* CongressesTableViewController.swift in Sources */,
+				CBD6CA591F13C52500AC4548 /* StyleCellView.swift in Sources */,
+				CBD6CA651F13CBAD00AC4548 /* StyleTableViewCell.swift in Sources */,
 				CBD6CA291F1378C900AC4548 /* RMCongress.swift in Sources */,
+				CBD6CA621F13C78A00AC4548 /* InMemoryRepo.swift in Sources */,
 				CBD6CA2A1F1378C900AC4548 /* Song.swift in Sources */,
+				CBD6CA5C1F13C66F00AC4548 /* StylesUseCase.swift in Sources */,
 				CBD6CA2B1F1378C900AC4548 /* UseCaseNetworkProvider.swift in Sources */,
 				CBD6CA2C1F1378C900AC4548 /* Constants.swift in Sources */,
 				CBD6CA2D1F1378C900AC4548 /* CongressTableViewCell.swift in Sources */,
@@ -752,8 +764,12 @@
 				CBD6CA351F1378C900AC4548 /* AppDelegate.swift in Sources */,
 				CBD6CA361F1378C900AC4548 /* CongressesPresentation.swift in Sources */,
 				CBD6CA371F1378C900AC4548 /* Network.swift in Sources */,
+				CBD6CA5F1F13C74600AC4548 /* EntityGateway.swift in Sources */,
 				CBD6CA381F1378C900AC4548 /* Congress.swift in Sources */,
+				CBD6CA501F13C02800AC4548 /* StylesTableViewController.swift in Sources */,
 				CBD6CA391F1378C900AC4548 /* CongressesPresenter.swift in Sources */,
+				CBD6CA531F13C0F000AC4548 /* StylesPresenter.swift in Sources */,
+				CBD6CA561F13C4C700AC4548 /* StylesPresentation.swift in Sources */,
 				CBD6CA3A1F1378C900AC4548 /* NetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,9 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // TODO: Place this configuration in another separate class/file.
         // Configuration
         let storyboard = UIStoryboard(name: storyBoardName, bundle: nil)
         let tabBarController = storyboard.instantiateInitialViewController() as! UITabBarController
+        
+        // TOP CHART
         let navigationController = tabBarController.viewControllers?.first as! UINavigationController
         let tableViewController = navigationController.topViewController as! CongressesTableViewController
         let useCaseNetworkProvider = UseCaseNetworkProvider()
@@ -29,6 +32,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let presenter = CongressesPresenter(useCase: getCongressesUseCase)
         getCongressesUseCase.presenter = presenter
         tableViewController.presenter = presenter
+        
+        // STYLES
+        let s_navigationController = tabBarController.viewControllers?[2] as! UINavigationController
+        let s_tableViewController = s_navigationController.topViewController as! StylesTableViewController
+        let memoryRepo = InMemoryRepo()
+        let stylesUseCase = StylesUseCase(entityGateway: memoryRepo)
+        let s_presenter = StylesPresenter(useCase: stylesUseCase)
+        stylesUseCase.presenter = s_presenter
+        s_tableViewController.presenter = s_presenter
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBarController

@@ -8,6 +8,9 @@ target 'DancingSteps' do
   # GENERAL
   pod 'RxSwift', '=3.5.0'
   pod 'SwiftLint', '=0.20.1'
+  
+  # UI
+  pod 'SwiftyCam'
 
   # NETWORK
   pod 'Alamofire', '=4.5.0'
@@ -31,6 +34,9 @@ target 'DancingStepsLAB' do
     pod 'FLEX', '~> 2.0'
     pod 'RxSwift', '=3.5.0'
     pod 'SwiftLint', '=0.20.1'
+    
+    # UI
+    pod 'SwiftyCam'
     
     # NETWORK
     pod 'Alamofire', '=4.5.0'

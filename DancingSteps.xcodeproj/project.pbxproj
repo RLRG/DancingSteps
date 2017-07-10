@@ -58,6 +58,8 @@
 		CBD6CA631F13C78A00AC4548 /* InMemoryRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA611F13C78A00AC4548 /* InMemoryRepo.swift */; };
 		CBD6CA651F13CBAD00AC4548 /* StyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA641F13CBAD00AC4548 /* StyleTableViewCell.swift */; };
 		CBD6CA661F13CBAD00AC4548 /* StyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA641F13CBAD00AC4548 /* StyleTableViewCell.swift */; };
+		CBD6CA681F13D3F200AC4548 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA671F13D3F200AC4548 /* CameraViewController.swift */; };
+		CBD6CA691F13D3F200AC4548 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA671F13D3F200AC4548 /* CameraViewController.swift */; };
 		CBFAB3631F0A9981005C8B80 /* RMVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3621F0A9981005C8B80 /* RMVideo.swift */; };
 		CBFAB3651F0A9990005C8B80 /* RMCongress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3641F0A9990005C8B80 /* RMCongress.swift */; };
 		CBFAB3671F0A99B1005C8B80 /* RMDancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3661F0A99B1005C8B80 /* RMDancer.swift */; };
@@ -105,6 +107,7 @@
 		CBD6CA5E1F13C74600AC4548 /* EntityGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntityGateway.swift; path = DancingSteps/EntityGateway.swift; sourceTree = "<group>"; };
 		CBD6CA611F13C78A00AC4548 /* InMemoryRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InMemoryRepo.swift; path = DancingSteps/InMemoryRepo.swift; sourceTree = "<group>"; };
 		CBD6CA641F13CBAD00AC4548 /* StyleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleTableViewCell.swift; path = DancingSteps/StyleTableViewCell.swift; sourceTree = "<group>"; };
+		CBD6CA671F13D3F200AC4548 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = DancingSteps/CameraViewController.swift; sourceTree = "<group>"; };
 		CBFAB3621F0A9981005C8B80 /* RMVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMVideo.swift; sourceTree = "<group>"; };
 		CBFAB3641F0A9990005C8B80 /* RMCongress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMCongress.swift; sourceTree = "<group>"; };
 		CBFAB3661F0A99B1005C8B80 /* RMDancer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMDancer.swift; sourceTree = "<group>"; };
@@ -390,6 +393,7 @@
 		CBFAB35C1F0A9272005C8B80 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CBD6CA671F13D3F200AC4548 /* CameraViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -711,6 +715,7 @@
 				CBFAB3651F0A9990005C8B80 /* RMCongress.swift in Sources */,
 				CBD6CA631F13C78A00AC4548 /* InMemoryRepo.swift in Sources */,
 				CBFAB3731F0AA329005C8B80 /* Song.swift in Sources */,
+				CBD6CA691F13D3F200AC4548 /* CameraViewController.swift in Sources */,
 				CBD6CA5D1F13C66F00AC4548 /* StylesUseCase.swift in Sources */,
 				CBFAB3921F0F8D46005C8B80 /* UseCaseNetworkProvider.swift in Sources */,
 				CBFAB3831F0B8F1A005C8B80 /* Constants.swift in Sources */,
@@ -750,6 +755,7 @@
 				CBD6CA291F1378C900AC4548 /* RMCongress.swift in Sources */,
 				CBD6CA621F13C78A00AC4548 /* InMemoryRepo.swift in Sources */,
 				CBD6CA2A1F1378C900AC4548 /* Song.swift in Sources */,
+				CBD6CA681F13D3F200AC4548 /* CameraViewController.swift in Sources */,
 				CBD6CA5C1F13C66F00AC4548 /* StylesUseCase.swift in Sources */,
 				CBD6CA2B1F1378C900AC4548 /* UseCaseNetworkProvider.swift in Sources */,
 				CBD6CA2C1F1378C900AC4548 /* Constants.swift in Sources */,

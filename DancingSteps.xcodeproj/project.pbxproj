@@ -910,7 +910,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8WFER5UG23;
-				INFOPLIST_FILE = "DancingStepsLAB-Info.plist";
+				INFOPLIST_FILE = "DancingSteps/DancingStepsLAB-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDancingStepsLAB";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rlrg.DancingSteps;
@@ -928,7 +928,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8WFER5UG23;
-				INFOPLIST_FILE = "DancingStepsLAB-Info.plist";
+				INFOPLIST_FILE = "DancingSteps/DancingStepsLAB-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDancingStepsLAB";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rlrg.DancingSteps;

@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Configuration
         let storyboard = UIStoryboard(name: storyBoardName, bundle: nil)
-        let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+        let tabBarController = storyboard.instantiateInitialViewController() as! UITabBarController
+        let navigationController = tabBarController.viewControllers?.first as! UINavigationController
         let tableViewController = navigationController.topViewController as! CongressesTableViewController
         let useCaseNetworkProvider = UseCaseNetworkProvider()
         let getCongressesUseCase = useCaseNetworkProvider.makeGetCongressesUseCase()
@@ -30,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tableViewController.presenter = presenter
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navigationController
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         
         return true

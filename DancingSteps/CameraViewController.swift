@@ -52,24 +52,40 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
     @objc private func recordingAction(_ sender: Any) {
         DispatchQueue.main.async {
             self.captureButton.setImage(#imageLiteral(resourceName: "stopRecording"), for: UIControlState())
+            UIView.animate(withDuration: 0.25, animations: {
+                self.flashButton.alpha = 0.0
+                self.switchToSelfieButton.alpha = 0.0
+            })
         }
         captureButton.removeTarget(self, action: #selector(recordingAction(_:)), for: .touchUpInside)
         captureButton.addTarget(self, action: #selector(stopRecordingAction(_:)), for: .touchUpInside)
+        
+        #if DEBUG
+            print("Starting video recording.")
+        #endif
         startVideoRecording()
     }
     
     @objc private func stopRecordingAction(_ sender: Any) {
+        
+        #if DEBUG
+            print("Finishing video recording.")
+        #endif
         stopVideoRecording()
+        
+        DispatchQueue.main.async {
+            self.captureButton.setImage(#imageLiteral(resourceName: "startRecording"), for: UIControlState())
+            UIView.animate(withDuration: 0.25, animations: {
+                self.flashButton.alpha = 1.0
+                self.switchToSelfieButton.alpha = 1.0
+            })
+        }
+        captureButton.removeTarget(self, action: #selector(stopRecordingAction(_:)), for: .touchUpInside)
+        captureButton.addTarget(self, action: #selector(recordingAction(_:)), for: .touchUpInside)
         
         // TODO: Implemente Clean architecture !! Give this responsability to the presenter ?
         let completeVideoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CompleteVideoViewController") as! CompleteVideoViewController
         self.navigationController?.pushViewController(completeVideoVC, animated: true)
-        
-        DispatchQueue.main.async {
-            self.captureButton.setImage(#imageLiteral(resourceName: "startRecording"), for: UIControlState())
-        }
-        captureButton.removeTarget(self, action: #selector(stopRecordingAction(_:)), for: .touchUpInside)
-        captureButton.addTarget(self, action: #selector(recordingAction(_:)), for: .touchUpInside)
     }
     
     @objc private func cameraSwitchAction(_ sender: Any) {

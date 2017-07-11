@@ -1,58 +1,52 @@
 //
-//  CongressesTableViewController.swift
+//  StylesTableViewController.swift
 //  DancingSteps
 //
-//  Created by RLRG on 28/06/2017.
+//  Created by RLRG on 10/07/2017.
 //  Copyright © 2017 RLRG. All rights reserved.
 //
 
 import UIKit
 import RxSwift
-#if DancingStepsLAB
-    import FLEX
-#endif
 
-class CongressesTableViewController: UITableViewController {
-
-    public var presenter: CongressesPresenter!
+class StylesTableViewController: UITableViewController {
+    
+    // MARK: - Properties & Initialization
+    
+    public var presenter: StylesPresenter!
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewIsReady()
         setupDataObserver()
-        
-        // Displaying FLEX debugger.
-        // TODO: Set up a button only in the LAB target so that the debugger can be opened by the user in real time.
-        #if DancingStepsLAB
-            FLEXManager.shared().showExplorer()
-        #endif
+
     }
     
     func setupDataObserver() {
-        presenter.congresses.asObservable()
-            .subscribe(onNext: { _ in
+        presenter.styles.asObservable()
+            .subscribe({_ in 
                 self.tableView.reloadData()
             })
             .addDisposableTo(disposeBag)
     }
     
+    
     // MARK: - Table View data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.congresses.value.count
+        return presenter.styles.value.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Tricky !!
         
         // Get the empty cell.
-        let cell = tableView.dequeueReusableCell(withIdentifier: "congressCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "styleCell", for: indexPath)
         
         // Configuration of the data inside of the cell
-        presenter.configure(cell: cell as! CongressCellView, forRowAt: indexPath.row)
+        presenter.configure(cell: cell as! StyleCellView, forRowAt: indexPath.row)
         
         return cell
     }
 }
-

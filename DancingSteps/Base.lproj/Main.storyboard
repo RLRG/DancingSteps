@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TeN-7y-JjB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="w3K-8p-a9y">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--TOP CHART-->
         <scene sceneID="geR-Vf-48Y">
             <objects>
-                <tableViewController id="5or-S8-0b9" customClass="CongressesTableViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CongressesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5or-S8-0b9" customClass="CongressesTableViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="QKG-Bl-CeY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,16 +32,36 @@
                             <outlet property="delegate" destination="5or-S8-0b9" id="4t3-oP-Sjl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="s7J-Gd-r63"/>
+                    <navigationItem key="navigationItem" title="TOP CHART" id="s7J-Gd-r63"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ax-Jg-2Vi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-361" y="63"/>
+            <point key="canvasLocation" x="-378" y="1265"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="MXz-TP-H6q">
+            <objects>
+                <tabBarController id="w3K-8p-a9y" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="kOP-Hm-QiE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="MZs-1d-NH8" kind="relationship" relationship="viewControllers" id="jGY-Jl-Og1"/>
+                        <segue destination="QK8-5N-Y1c" kind="relationship" relationship="viewControllers" id="jnQ-eJ-q8A"/>
+                        <segue destination="TeN-7y-JjB" kind="relationship" relationship="viewControllers" id="tS7-IM-Rla"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nHw-0L-bHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2369" y="513"/>
+        </scene>
+        <!--Top Chart-->
         <scene sceneID="Dsa-P9-zby">
             <objects>
                 <navigationController id="TeN-7y-JjB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Top Chart" id="oQy-2c-RFM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XGw-U0-C5T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -52,7 +72,129 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cO8-hz-xP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1225" y="63"/>
+            <point key="canvasLocation" x="-1242" y="1265"/>
+        </scene>
+        <!--STYLES-->
+        <scene sceneID="v1T-f1-00E">
+            <objects>
+                <tableViewController storyboardIdentifier="StylesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FnE-jR-Esv" customClass="StylesTableViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="stE-kY-GEZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="styleCell" id="MDX-5N-sZt" customClass="StyleTableViewCell" customModule="DancingSteps" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MDX-5N-sZt" id="B6j-1C-w0B">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FnE-jR-Esv" id="dX8-QI-f2i"/>
+                            <outlet property="delegate" destination="FnE-jR-Esv" id="1UC-Yy-I8X"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="STYLES" id="QSv-Aq-arg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QaP-tW-a51" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-378" y="-143"/>
+        </scene>
+        <!--Styles-->
+        <scene sceneID="Mp2-OJ-ldI">
+            <objects>
+                <navigationController id="MZs-1d-NH8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Styles" id="9VZ-16-48h"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QQe-8I-Dfn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FnE-jR-Esv" kind="relationship" relationship="rootViewController" id="zvD-Ku-1e5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1h7-Il-EiP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1242" y="-143"/>
+        </scene>
+        <!--Record-->
+        <scene sceneID="BYa-rv-pcg">
+            <objects>
+                <navigationController id="QK8-5N-Y1c" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Record" id="6EX-vt-n6B"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UIu-9Y-tTv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZCi-LD-aip" kind="relationship" relationship="rootViewController" id="bEX-3O-uYs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j6Q-dO-Kot" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1242" y="535"/>
+        </scene>
+        <!--START RECORDING !-->
+        <scene sceneID="sL4-BJ-N90">
+            <objects>
+                <viewController storyboardIdentifier="SwiftyCamViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZCi-LD-aip" customClass="CameraViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ex6-e2-U20"/>
+                        <viewControllerLayoutGuide type="bottom" id="5hO-We-wtG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PyM-DD-6yK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Record" id="rhe-OJ-O93"/>
+                    <navigationItem key="navigationItem" title="START RECORDING !" id="YDx-uJ-hNy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p3z-cr-qrK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-378.39999999999998" y="534.78260869565224"/>
+        </scene>
+        <!--Complete Video View Controller-->
+        <scene sceneID="cL9-Ro-qeg">
+            <objects>
+                <viewController storyboardIdentifier="CompleteVideoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1Ry-fb-WJd" customClass="CompleteVideoViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yen-4P-m48"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vrx-i8-W3b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZU6-uX-xwS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="THE VIDEO HAS ENDED. THIS SCREEN IS STILL IN DEVELOPMENT." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="m9a-HY-xmX">
+                                <rect key="frame" x="84" y="84" width="206" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <color key="textColor" red="0.98537339639999999" green="0.98945639959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="THE VIDEO HAS ENDED. THIS SCREEN IS STILL IN DEVELOPMENT." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lCY-y1-6rF">
+                                <rect key="frame" x="84" y="457" width="206" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <color key="textColor" red="0.98537339639999999" green="0.98945639959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98766356706619263" green="0.53838598728179932" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MmV-9k-9AK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="535.68215892053979"/>
         </scene>
     </scenes>
 </document>

@@ -8,11 +8,60 @@
 
 /* Begin PBXBuildFile section */
 		1C4CDF324FBF83BF05714683 /* Pods_DancingSteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */; };
+		63148DBCF0E3A0AAA7D362A5 /* Pods_DancingStepsLAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */; };
 		CB8A45521F0401C1006E1102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45511F0401C1006E1102 /* AppDelegate.swift */; };
 		CB8A45541F0401C1006E1102 /* CongressesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45531F0401C1006E1102 /* CongressesTableViewController.swift */; };
 		CB8A45571F0401C1006E1102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45551F0401C1006E1102 /* Main.storyboard */; };
 		CB8A45591F0401C1006E1102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45581F0401C1006E1102 /* Assets.xcassets */; };
 		CB8A455C1F0401C1006E1102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A455A1F0401C1006E1102 /* LaunchScreen.storyboard */; };
+		CBB9B9E91F15324000F0E441 /* CompleteVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */; };
+		CBB9B9EA1F15324000F0E441 /* CompleteVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */; };
+		CBD6CA231F1378C900AC4548 /* CongressNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3781F0AA750005C8B80 /* CongressNetwork.swift */; };
+		CBD6CA241F1378C900AC4548 /* Dancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3701F0AA31E005C8B80 /* Dancer.swift */; };
+		CBD6CA251F1378C900AC4548 /* RMSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3681F0A99BC005C8B80 /* RMSong.swift */; };
+		CBD6CA261F1378C900AC4548 /* RMDancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3661F0A99B1005C8B80 /* RMDancer.swift */; };
+		CBD6CA271F1378C900AC4548 /* GetCongressesNetworkUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3851F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift */; };
+		CBD6CA281F1378C900AC4548 /* CongressesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45531F0401C1006E1102 /* CongressesTableViewController.swift */; };
+		CBD6CA291F1378C900AC4548 /* RMCongress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3641F0A9990005C8B80 /* RMCongress.swift */; };
+		CBD6CA2A1F1378C900AC4548 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3721F0AA329005C8B80 /* Song.swift */; };
+		CBD6CA2B1F1378C900AC4548 /* UseCaseNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3911F0F8D46005C8B80 /* UseCaseNetworkProvider.swift */; };
+		CBD6CA2C1F1378C900AC4548 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3821F0B8F1A005C8B80 /* Constants.swift */; };
+		CBD6CA2D1F1378C900AC4548 /* CongressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB38D1F0BB7BA005C8B80 /* CongressTableViewCell.swift */; };
+		CBD6CA2E1F1378C900AC4548 /* RMVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3621F0A9981005C8B80 /* RMVideo.swift */; };
+		CBD6CA2F1F1378C900AC4548 /* CongressCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB38B1F0BB77A005C8B80 /* CongressCellView.swift */; };
+		CBD6CA301F1378C900AC4548 /* GetCongressesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3871F0BAFA7005C8B80 /* GetCongressesUseCase.swift */; };
+		CBD6CA311F1378C900AC4548 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3741F0AA333005C8B80 /* Style.swift */; };
+		CBD6CA321F1378C900AC4548 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3931F0F8DAF005C8B80 /* UseCaseProvider.swift */; };
+		CBD6CA331F1378C900AC4548 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB36C1F0AA309005C8B80 /* Video.swift */; };
+		CBD6CA341F1378C900AC4548 /* RMStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB36A1F0A9B8C005C8B80 /* RMStyle.swift */; };
+		CBD6CA351F1378C900AC4548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45511F0401C1006E1102 /* AppDelegate.swift */; };
+		CBD6CA361F1378C900AC4548 /* CongressesPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB38F1F0BBC8B005C8B80 /* CongressesPresentation.swift */; };
+		CBD6CA371F1378C900AC4548 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB37C1F0AA801005C8B80 /* Network.swift */; };
+		CBD6CA381F1378C900AC4548 /* Congress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB36E1F0AA315005C8B80 /* Congress.swift */; };
+		CBD6CA391F1378C900AC4548 /* CongressesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3891F0BB26E005C8B80 /* CongressesPresenter.swift */; };
+		CBD6CA3A1F1378C900AC4548 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB37E1F0AA80C005C8B80 /* NetworkProvider.swift */; };
+		CBD6CA3C1F1378C900AC4548 /* Pods_DancingSteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */; };
+		CBD6CA3E1F1378C900AC4548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A455A1F0401C1006E1102 /* LaunchScreen.storyboard */; };
+		CBD6CA3F1F1378C900AC4548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45581F0401C1006E1102 /* Assets.xcassets */; };
+		CBD6CA401F1378C900AC4548 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45551F0401C1006E1102 /* Main.storyboard */; };
+		CBD6CA501F13C02800AC4548 /* StylesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA4F1F13C02800AC4548 /* StylesTableViewController.swift */; };
+		CBD6CA511F13C02800AC4548 /* StylesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA4F1F13C02800AC4548 /* StylesTableViewController.swift */; };
+		CBD6CA531F13C0F000AC4548 /* StylesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA521F13C0F000AC4548 /* StylesPresenter.swift */; };
+		CBD6CA541F13C0F000AC4548 /* StylesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA521F13C0F000AC4548 /* StylesPresenter.swift */; };
+		CBD6CA561F13C4C700AC4548 /* StylesPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA551F13C4C700AC4548 /* StylesPresentation.swift */; };
+		CBD6CA571F13C4C700AC4548 /* StylesPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA551F13C4C700AC4548 /* StylesPresentation.swift */; };
+		CBD6CA591F13C52500AC4548 /* StyleCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA581F13C52500AC4548 /* StyleCellView.swift */; };
+		CBD6CA5A1F13C52500AC4548 /* StyleCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA581F13C52500AC4548 /* StyleCellView.swift */; };
+		CBD6CA5C1F13C66F00AC4548 /* StylesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA5B1F13C66F00AC4548 /* StylesUseCase.swift */; };
+		CBD6CA5D1F13C66F00AC4548 /* StylesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA5B1F13C66F00AC4548 /* StylesUseCase.swift */; };
+		CBD6CA5F1F13C74600AC4548 /* EntityGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA5E1F13C74600AC4548 /* EntityGateway.swift */; };
+		CBD6CA601F13C74600AC4548 /* EntityGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA5E1F13C74600AC4548 /* EntityGateway.swift */; };
+		CBD6CA621F13C78A00AC4548 /* InMemoryRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA611F13C78A00AC4548 /* InMemoryRepo.swift */; };
+		CBD6CA631F13C78A00AC4548 /* InMemoryRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA611F13C78A00AC4548 /* InMemoryRepo.swift */; };
+		CBD6CA651F13CBAD00AC4548 /* StyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA641F13CBAD00AC4548 /* StyleTableViewCell.swift */; };
+		CBD6CA661F13CBAD00AC4548 /* StyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA641F13CBAD00AC4548 /* StyleTableViewCell.swift */; };
+		CBD6CA681F13D3F200AC4548 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA671F13D3F200AC4548 /* CameraViewController.swift */; };
+		CBD6CA691F13D3F200AC4548 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA671F13D3F200AC4548 /* CameraViewController.swift */; };
 		CBFAB3631F0A9981005C8B80 /* RMVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3621F0A9981005C8B80 /* RMVideo.swift */; };
 		CBFAB3651F0A9990005C8B80 /* RMCongress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3641F0A9990005C8B80 /* RMCongress.swift */; };
 		CBFAB3671F0A99B1005C8B80 /* RMDancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3661F0A99B1005C8B80 /* RMDancer.swift */; };
@@ -38,7 +87,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31A2992605E8EC18CEFF3E68 /* Pods-DancingStepsLAB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsLAB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB.debug.xcconfig"; sourceTree = "<group>"; };
 		4E7CC749311DE4263BD303AC /* Pods-DancingSteps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingSteps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps.debug.xcconfig"; sourceTree = "<group>"; };
+		58A4B1197EA040862E16888F /* Pods-DancingStepsLAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsLAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB.release.xcconfig"; sourceTree = "<group>"; };
+		8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingStepsLAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A371D2CB0E0F0E9EDFCBC5A0 /* Pods-DancingSteps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingSteps.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps.release.xcconfig"; sourceTree = "<group>"; };
 		CB8A454E1F0401C1006E1102 /* DancingSteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingSteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8A45511F0401C1006E1102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +99,18 @@
 		CB8A45581F0401C1006E1102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB8A455B1F0401C1006E1102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB8A455D1F0401C1006E1102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteVideoViewController.swift; path = DancingSteps/CompleteVideoViewController.swift; sourceTree = "<group>"; };
+		CBD6CA471F1378C900AC4548 /* DancingStepsLAB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingStepsLAB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBD6CA481F1378C900AC4548 /* DancingStepsLAB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DancingStepsLAB-Info.plist"; path = "/Users/Gmv100/Documents/RLRG/iOS Developer Nanodegree/6. You decide! How to make an iOS app/project/DancingSteps/DancingSteps/DancingStepsLAB-Info.plist"; sourceTree = "<absolute>"; };
+		CBD6CA4F1F13C02800AC4548 /* StylesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StylesTableViewController.swift; path = DancingSteps/StylesTableViewController.swift; sourceTree = "<group>"; };
+		CBD6CA521F13C0F000AC4548 /* StylesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StylesPresenter.swift; path = DancingSteps/StylesPresenter.swift; sourceTree = "<group>"; };
+		CBD6CA551F13C4C700AC4548 /* StylesPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StylesPresentation.swift; path = DancingSteps/StylesPresentation.swift; sourceTree = "<group>"; };
+		CBD6CA581F13C52500AC4548 /* StyleCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleCellView.swift; path = DancingSteps/StyleCellView.swift; sourceTree = "<group>"; };
+		CBD6CA5B1F13C66F00AC4548 /* StylesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StylesUseCase.swift; path = DancingSteps/StylesUseCase.swift; sourceTree = "<group>"; };
+		CBD6CA5E1F13C74600AC4548 /* EntityGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntityGateway.swift; path = DancingSteps/EntityGateway.swift; sourceTree = "<group>"; };
+		CBD6CA611F13C78A00AC4548 /* InMemoryRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InMemoryRepo.swift; path = DancingSteps/InMemoryRepo.swift; sourceTree = "<group>"; };
+		CBD6CA641F13CBAD00AC4548 /* StyleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleTableViewCell.swift; path = DancingSteps/StyleTableViewCell.swift; sourceTree = "<group>"; };
+		CBD6CA671F13D3F200AC4548 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = DancingSteps/CameraViewController.swift; sourceTree = "<group>"; };
 		CBFAB3621F0A9981005C8B80 /* RMVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMVideo.swift; sourceTree = "<group>"; };
 		CBFAB3641F0A9990005C8B80 /* RMCongress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMCongress.swift; sourceTree = "<group>"; };
 		CBFAB3661F0A99B1005C8B80 /* RMDancer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMDancer.swift; sourceTree = "<group>"; };
@@ -81,6 +145,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CBD6CA3B1F1378C900AC4548 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBD6CA3C1F1378C900AC4548 /* Pods_DancingSteps.framework in Frameworks */,
+				63148DBCF0E3A0AAA7D362A5 /* Pods_DancingStepsLAB.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -89,6 +162,8 @@
 			children = (
 				4E7CC749311DE4263BD303AC /* Pods-DancingSteps.debug.xcconfig */,
 				A371D2CB0E0F0E9EDFCBC5A0 /* Pods-DancingSteps.release.xcconfig */,
+				31A2992605E8EC18CEFF3E68 /* Pods-DancingStepsLAB.debug.xcconfig */,
+				58A4B1197EA040862E16888F /* Pods-DancingStepsLAB.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -97,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */,
+				8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				CB8A454E1F0401C1006E1102 /* DancingSteps.app */,
+				CBD6CA471F1378C900AC4548 /* DancingStepsLAB.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,6 +206,15 @@
 			);
 			name = DancingStepsApp;
 			path = DancingSteps;
+			sourceTree = "<group>";
+		};
+		CBD6CA491F13795C00AC4548 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				CBD6CA481F1378C900AC4548 /* DancingStepsLAB-Info.plist */,
+				CB8A455D1F0401C1006E1102 /* Info.plist */,
+			);
+			name = Configuration;
 			sourceTree = "<group>";
 		};
 		CBFAB3411F0A88C0005C8B80 /* Modules */ = {
@@ -165,11 +251,11 @@
 		CBFAB3471F0A8AB1005C8B80 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				CBD6CA491F13795C00AC4548 /* Configuration */,
 				CB8A45511F0401C1006E1102 /* AppDelegate.swift */,
 				CB8A45551F0401C1006E1102 /* Main.storyboard */,
 				CB8A455A1F0401C1006E1102 /* LaunchScreen.storyboard */,
 				CB8A45581F0401C1006E1102 /* Assets.xcassets */,
-				CB8A455D1F0401C1006E1102 /* Info.plist */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -211,7 +297,6 @@
 		CBFAB34D1F0A90F5005C8B80 /* topEvents */ = {
 			isa = PBXGroup;
 			children = (
-				CBFAB34F1F0A916E005C8B80 /* DataManager */,
 				CBFAB3451F0A8A5C005C8B80 /* View */,
 				CBFAB3461F0A8A63005C8B80 /* Presenter */,
 				CBFAB34E1F0A9112005C8B80 /* Interactor */,
@@ -228,29 +313,6 @@
 			name = Interactor;
 			sourceTree = "<group>";
 		};
-		CBFAB34F1F0A916E005C8B80 /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				CBFAB3511F0A9185005C8B80 /* Local */,
-				CBFAB3501F0A9178005C8B80 /* API */,
-			);
-			name = DataManager;
-			sourceTree = "<group>";
-		};
-		CBFAB3501F0A9178005C8B80 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = API;
-			sourceTree = "<group>";
-		};
-		CBFAB3511F0A9185005C8B80 /* Local */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Local;
-			sourceTree = "<group>";
-		};
 		CBFAB3521F0A91CD005C8B80 /* styleList */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +327,7 @@
 		CBFAB3531F0A91ED005C8B80 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				CBD6CA5B1F13C66F00AC4548 /* StylesUseCase.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -272,6 +335,8 @@
 		CBFAB3541F0A91F6005C8B80 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				CBD6CA521F13C0F000AC4548 /* StylesPresenter.swift */,
+				CBD6CA551F13C4C700AC4548 /* StylesPresentation.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -279,6 +344,9 @@
 		CBFAB3551F0A91FD005C8B80 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CBD6CA4F1F13C02800AC4548 /* StylesTableViewController.swift */,
+				CBD6CA581F13C52500AC4548 /* StyleCellView.swift */,
+				CBD6CA641F13CBAD00AC4548 /* StyleTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -287,21 +355,15 @@
 			isa = PBXGroup;
 			children = (
 				CBFAB3581F0A921D005C8B80 /* Local */,
-				CBFAB3571F0A9211005C8B80 /* API */,
 			);
 			name = DataManager;
-			sourceTree = "<group>";
-		};
-		CBFAB3571F0A9211005C8B80 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = API;
 			sourceTree = "<group>";
 		};
 		CBFAB3581F0A921D005C8B80 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				CBD6CA5E1F13C74600AC4548 /* EntityGateway.swift */,
+				CBD6CA611F13C78A00AC4548 /* InMemoryRepo.swift */,
 			);
 			name = Local;
 			sourceTree = "<group>";
@@ -334,6 +396,8 @@
 		CBFAB35C1F0A9272005C8B80 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CBD6CA671F13D3F200AC4548 /* CameraViewController.swift */,
+				CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -436,6 +500,27 @@
 			productReference = CB8A454E1F0401C1006E1102 /* DancingSteps.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CBD6CA201F1378C900AC4548 /* DancingStepsLAB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBD6CA441F1378C900AC4548 /* Build configuration list for PBXNativeTarget "DancingStepsLAB" */;
+			buildPhases = (
+				CBD6CA211F1378C900AC4548 /* [CP] Check Pods Manifest.lock */,
+				CBD6CA221F1378C900AC4548 /* Sources */,
+				CBD6CA3B1F1378C900AC4548 /* Frameworks */,
+				CBD6CA3D1F1378C900AC4548 /* Resources */,
+				CBD6CA411F1378C900AC4548 /* [CP] Embed Pods Frameworks */,
+				CBD6CA421F1378C900AC4548 /* [CP] Copy Pods Resources */,
+				CBD6CA431F1378C900AC4548 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DancingStepsLAB;
+			productName = DancingSteps;
+			productReference = CBD6CA471F1378C900AC4548 /* DancingStepsLAB.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -450,6 +535,10 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 8WFER5UG23;
 						ProvisioningStyle = Automatic;
+					};
+					CBD6CA201F1378C900AC4548 = {
+						DevelopmentTeam = 8WFER5UG23;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -466,6 +555,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				CBD6CA201F1378C900AC4548 /* DancingStepsLAB */,
 				CB8A454D1F0401C1006E1102 /* DancingSteps */,
 			);
 		};
@@ -479,6 +569,16 @@
 				CB8A455C1F0401C1006E1102 /* LaunchScreen.storyboard in Resources */,
 				CB8A45591F0401C1006E1102 /* Assets.xcassets in Resources */,
 				CB8A45571F0401C1006E1102 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBD6CA3D1F1378C900AC4548 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBD6CA3E1F1378C900AC4548 /* LaunchScreen.storyboard in Resources */,
+				CBD6CA3F1F1378C900AC4548 /* Assets.xcassets in Resources */,
+				CBD6CA401F1378C900AC4548 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +630,64 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		CBD6CA211F1378C900AC4548 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CBD6CA411F1378C900AC4548 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBD6CA421F1378C900AC4548 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBD6CA431F1378C900AC4548 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
 		CBFAB3801F0ABE9C005C8B80 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -556,8 +714,13 @@
 				CBFAB3671F0A99B1005C8B80 /* RMDancer.swift in Sources */,
 				CBFAB3861F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift in Sources */,
 				CB8A45541F0401C1006E1102 /* CongressesTableViewController.swift in Sources */,
+				CBD6CA5A1F13C52500AC4548 /* StyleCellView.swift in Sources */,
+				CBD6CA661F13CBAD00AC4548 /* StyleTableViewCell.swift in Sources */,
 				CBFAB3651F0A9990005C8B80 /* RMCongress.swift in Sources */,
+				CBD6CA631F13C78A00AC4548 /* InMemoryRepo.swift in Sources */,
 				CBFAB3731F0AA329005C8B80 /* Song.swift in Sources */,
+				CBD6CA691F13D3F200AC4548 /* CameraViewController.swift in Sources */,
+				CBD6CA5D1F13C66F00AC4548 /* StylesUseCase.swift in Sources */,
 				CBFAB3921F0F8D46005C8B80 /* UseCaseNetworkProvider.swift in Sources */,
 				CBFAB3831F0B8F1A005C8B80 /* Constants.swift in Sources */,
 				CBFAB38E1F0BB7BA005C8B80 /* CongressTableViewCell.swift in Sources */,
@@ -571,9 +734,55 @@
 				CB8A45521F0401C1006E1102 /* AppDelegate.swift in Sources */,
 				CBFAB3901F0BBC8B005C8B80 /* CongressesPresentation.swift in Sources */,
 				CBFAB37D1F0AA801005C8B80 /* Network.swift in Sources */,
+				CBD6CA601F13C74600AC4548 /* EntityGateway.swift in Sources */,
 				CBFAB36F1F0AA315005C8B80 /* Congress.swift in Sources */,
+				CBD6CA511F13C02800AC4548 /* StylesTableViewController.swift in Sources */,
 				CBFAB38A1F0BB26E005C8B80 /* CongressesPresenter.swift in Sources */,
+				CBD6CA541F13C0F000AC4548 /* StylesPresenter.swift in Sources */,
+				CBD6CA571F13C4C700AC4548 /* StylesPresentation.swift in Sources */,
 				CBFAB37F1F0AA80C005C8B80 /* NetworkProvider.swift in Sources */,
+				CBB9B9EA1F15324000F0E441 /* CompleteVideoViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBD6CA221F1378C900AC4548 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBD6CA231F1378C900AC4548 /* CongressNetwork.swift in Sources */,
+				CBD6CA241F1378C900AC4548 /* Dancer.swift in Sources */,
+				CBD6CA251F1378C900AC4548 /* RMSong.swift in Sources */,
+				CBD6CA261F1378C900AC4548 /* RMDancer.swift in Sources */,
+				CBD6CA271F1378C900AC4548 /* GetCongressesNetworkUseCase.swift in Sources */,
+				CBD6CA281F1378C900AC4548 /* CongressesTableViewController.swift in Sources */,
+				CBD6CA591F13C52500AC4548 /* StyleCellView.swift in Sources */,
+				CBD6CA651F13CBAD00AC4548 /* StyleTableViewCell.swift in Sources */,
+				CBD6CA291F1378C900AC4548 /* RMCongress.swift in Sources */,
+				CBD6CA621F13C78A00AC4548 /* InMemoryRepo.swift in Sources */,
+				CBD6CA2A1F1378C900AC4548 /* Song.swift in Sources */,
+				CBD6CA681F13D3F200AC4548 /* CameraViewController.swift in Sources */,
+				CBD6CA5C1F13C66F00AC4548 /* StylesUseCase.swift in Sources */,
+				CBD6CA2B1F1378C900AC4548 /* UseCaseNetworkProvider.swift in Sources */,
+				CBD6CA2C1F1378C900AC4548 /* Constants.swift in Sources */,
+				CBD6CA2D1F1378C900AC4548 /* CongressTableViewCell.swift in Sources */,
+				CBD6CA2E1F1378C900AC4548 /* RMVideo.swift in Sources */,
+				CBD6CA2F1F1378C900AC4548 /* CongressCellView.swift in Sources */,
+				CBD6CA301F1378C900AC4548 /* GetCongressesUseCase.swift in Sources */,
+				CBD6CA311F1378C900AC4548 /* Style.swift in Sources */,
+				CBD6CA321F1378C900AC4548 /* UseCaseProvider.swift in Sources */,
+				CBD6CA331F1378C900AC4548 /* Video.swift in Sources */,
+				CBD6CA341F1378C900AC4548 /* RMStyle.swift in Sources */,
+				CBD6CA351F1378C900AC4548 /* AppDelegate.swift in Sources */,
+				CBD6CA361F1378C900AC4548 /* CongressesPresentation.swift in Sources */,
+				CBD6CA371F1378C900AC4548 /* Network.swift in Sources */,
+				CBD6CA5F1F13C74600AC4548 /* EntityGateway.swift in Sources */,
+				CBD6CA381F1378C900AC4548 /* Congress.swift in Sources */,
+				CBD6CA501F13C02800AC4548 /* StylesTableViewController.swift in Sources */,
+				CBD6CA391F1378C900AC4548 /* CongressesPresenter.swift in Sources */,
+				CBD6CA531F13C0F000AC4548 /* StylesPresenter.swift in Sources */,
+				CBD6CA561F13C4C700AC4548 /* StylesPresentation.swift in Sources */,
+				CBD6CA3A1F1378C900AC4548 /* NetworkProvider.swift in Sources */,
+				CBB9B9E91F15324000F0E441 /* CompleteVideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,6 +931,41 @@
 			};
 			name = Release;
 		};
+		CBD6CA451F1378C900AC4548 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31A2992605E8EC18CEFF3E68 /* Pods-DancingStepsLAB.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 8WFER5UG23;
+				INFOPLIST_FILE = "DancingSteps/DancingStepsLAB-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDancingStepsLAB";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rlrg.DancingSteps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CBD6CA461F1378C900AC4548 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58A4B1197EA040862E16888F /* Pods-DancingStepsLAB.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 8WFER5UG23;
+				INFOPLIST_FILE = "DancingSteps/DancingStepsLAB-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDancingStepsLAB";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rlrg.DancingSteps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -739,6 +983,15 @@
 			buildConfigurations = (
 				CB8A45611F0401C1006E1102 /* Debug */,
 				CB8A45621F0401C1006E1102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBD6CA441F1378C900AC4548 /* Build configuration list for PBXNativeTarget "DancingStepsLAB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBD6CA451F1378C900AC4548 /* Debug */,
+				CBD6CA461F1378C900AC4548 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

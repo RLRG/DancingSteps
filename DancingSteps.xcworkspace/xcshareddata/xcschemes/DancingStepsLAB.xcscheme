@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CB8A454D1F0401C1006E1102"
-               BuildableName = "DancingSteps.app"
-               BlueprintName = "DancingSteps"
+               BlueprintIdentifier = "CBD6CA201F1378C900AC4548"
+               BuildableName = "DancingStepsLAB.app"
+               BlueprintName = "DancingStepsLAB"
                ReferencedContainer = "container:DancingSteps.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CB8A454D1F0401C1006E1102"
-            BuildableName = "DancingSteps.app"
-            BlueprintName = "DancingSteps"
+            BlueprintIdentifier = "CBD6CA201F1378C900AC4548"
+            BuildableName = "DancingStepsLAB.app"
+            BlueprintName = "DancingStepsLAB"
             ReferencedContainer = "container:DancingSteps.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -42,7 +42,7 @@
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CB8A454D1F0401C1006E1102"
-            BuildableName = "DancingSteps.app"
-            BlueprintName = "DancingSteps"
+            BlueprintIdentifier = "CBD6CA201F1378C900AC4548"
+            BuildableName = "DancingStepsLAB.app"
+            BlueprintName = "DancingStepsLAB"
             ReferencedContainer = "container:DancingSteps.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CB8A454D1F0401C1006E1102"
-            BuildableName = "DancingSteps.app"
-            BlueprintName = "DancingSteps"
+            BlueprintIdentifier = "CBD6CA201F1378C900AC4548"
+            BuildableName = "DancingStepsLAB.app"
+            BlueprintName = "DancingStepsLAB"
             ReferencedContainer = "container:DancingSteps.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

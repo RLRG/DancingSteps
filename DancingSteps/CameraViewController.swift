@@ -28,6 +28,10 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
         flashEnabled = true
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     private func addButtons() {
         captureButton = UIButton(frame: CGRect(x: view.frame.midX - 50, y: view.frame.height - 160.0, width: 100.0, height: 100.0))
         captureButton.setImage(#imageLiteral(resourceName: "startRecording"), for: UIControlState())
@@ -47,7 +51,7 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
     }
     
     
-    // MARK: - Logic
+    // MARK: - Actions
     
     @objc private func recordingAction(_ sender: Any) {
         DispatchQueue.main.async {
@@ -82,10 +86,6 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
         }
         captureButton.removeTarget(self, action: #selector(stopRecordingAction(_:)), for: .touchUpInside)
         captureButton.addTarget(self, action: #selector(recordingAction(_:)), for: .touchUpInside)
-        
-        // TODO: Implemente Clean architecture !! Give this responsability to the presenter ?
-        let completeVideoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CompleteVideoViewController") as! CompleteVideoViewController
-        self.navigationController?.pushViewController(completeVideoVC, animated: true)
     }
     
     @objc private func cameraSwitchAction(_ sender: Any) {
@@ -104,5 +104,14 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
                 self.flashButton.setImage(#imageLiteral(resourceName: "withoutFlash"), for: UIControlState())
             }
         }
+    }
+    
+    // MARK: - SwiftyCam Delegate methods
+    
+    func swiftyCam(_ swiftyCam: SwiftyCamViewController, didFinishProcessVideoAt url: URL) {
+        // TODO: Implemente Clean architecture !! Give this responsability to the presenter ?
+        let completeVideoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CompleteVideoViewController") as! CompleteVideoViewController
+        completeVideoVC.videoURL = url
+        self.navigationController?.pushViewController(completeVideoVC, animated: true)
     }
 }

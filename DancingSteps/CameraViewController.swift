@@ -62,9 +62,8 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
         stopVideoRecording()
         
         // TODO: Implemente Clean architecture !! Give this responsability to the presenter ?
-//        let detailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CongressDetailsViewController") as! CongressDetailsViewController
-//        detailsVC.congress = presenter.congresses.value[indexPath.row]
-//        self.navigationController?.pushViewController(detailsVC, animated: true)
+        let completeVideoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CompleteVideoViewController") as! CompleteVideoViewController
+        self.navigationController?.pushViewController(completeVideoVC, animated: true)
         
         DispatchQueue.main.async {
             self.captureButton.setImage(#imageLiteral(resourceName: "startRecording"), for: UIControlState())

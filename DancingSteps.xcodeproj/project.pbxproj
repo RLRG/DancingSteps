@@ -14,6 +14,8 @@
 		CB8A45571F0401C1006E1102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45551F0401C1006E1102 /* Main.storyboard */; };
 		CB8A45591F0401C1006E1102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45581F0401C1006E1102 /* Assets.xcassets */; };
 		CB8A455C1F0401C1006E1102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A455A1F0401C1006E1102 /* LaunchScreen.storyboard */; };
+		CBB9B9E91F15324000F0E441 /* CompleteVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */; };
+		CBB9B9EA1F15324000F0E441 /* CompleteVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */; };
 		CBD6CA231F1378C900AC4548 /* CongressNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3781F0AA750005C8B80 /* CongressNetwork.swift */; };
 		CBD6CA241F1378C900AC4548 /* Dancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3701F0AA31E005C8B80 /* Dancer.swift */; };
 		CBD6CA251F1378C900AC4548 /* RMSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3681F0A99BC005C8B80 /* RMSong.swift */; };
@@ -97,6 +99,7 @@
 		CB8A45581F0401C1006E1102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB8A455B1F0401C1006E1102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB8A455D1F0401C1006E1102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteVideoViewController.swift; path = DancingSteps/CompleteVideoViewController.swift; sourceTree = "<group>"; };
 		CBD6CA471F1378C900AC4548 /* DancingStepsLAB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingStepsLAB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD6CA481F1378C900AC4548 /* DancingStepsLAB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DancingStepsLAB-Info.plist"; path = "/Users/Gmv100/Documents/RLRG/iOS Developer Nanodegree/6. You decide! How to make an iOS app/project/DancingSteps/DancingSteps/DancingStepsLAB-Info.plist"; sourceTree = "<absolute>"; };
 		CBD6CA4F1F13C02800AC4548 /* StylesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StylesTableViewController.swift; path = DancingSteps/StylesTableViewController.swift; sourceTree = "<group>"; };
@@ -394,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				CBD6CA671F13D3F200AC4548 /* CameraViewController.swift */,
+				CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -737,6 +741,7 @@
 				CBD6CA541F13C0F000AC4548 /* StylesPresenter.swift in Sources */,
 				CBD6CA571F13C4C700AC4548 /* StylesPresentation.swift in Sources */,
 				CBFAB37F1F0AA80C005C8B80 /* NetworkProvider.swift in Sources */,
+				CBB9B9EA1F15324000F0E441 /* CompleteVideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -777,6 +782,7 @@
 				CBD6CA531F13C0F000AC4548 /* StylesPresenter.swift in Sources */,
 				CBD6CA561F13C4C700AC4548 /* StylesPresentation.swift in Sources */,
 				CBD6CA3A1F1378C900AC4548 /* NetworkProvider.swift in Sources */,
+				CBB9B9E91F15324000F0E441 /* CompleteVideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,10 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let r_navigationController = tabBarController.viewControllers?[1] as! UINavigationController
         let recordingViewController = r_navigationController.topViewController as! CameraViewController
         // TODO: Connect the architecture for the recording workflow.
-//        let memoryRepo = InMemoryRepo()
-//        let stylesUseCase = StylesUseCase(entityGateway: memoryRepo)
-//        let s_presenter = StylesPresenter(useCase: stylesUseCase)
-//        stylesUseCase.presenter = s_presenter
+//        let realmRepo = RealmRepo<Video>()
+//        let saveNewVideoUseCase = SaveNewVideoUseCase(repository: realmRepo)
+//        let r_presenter = CompleteVideoPresenter(useCase: saveNewVideoUseCase)
+//        // SaveNewVideoUseCase.presenter = r_presenter
 //        s_tableViewController.presenter = s_presenter
         
         // TOP CHART

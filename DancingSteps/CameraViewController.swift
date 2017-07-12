@@ -112,6 +112,13 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
         // TODO: Implemente Clean architecture !! Give this responsability to the presenter ?
         let completeVideoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CompleteVideoViewController") as! CompleteVideoViewController
         completeVideoVC.videoURL = url
+        
+        let realmRepo = RealmRepo<Video>()
+        let saveNewVideoUseCase = SaveNewVideoUseCase(repository: realmRepo)
+        let r_presenter = CompleteVideoPresenter(useCase: saveNewVideoUseCase)
+        // SaveNewVideoUseCase.presenter = r_presenter
+        completeVideoVC.presenter = r_presenter
+        
         self.navigationController?.pushViewController(completeVideoVC, animated: true)
     }
 }

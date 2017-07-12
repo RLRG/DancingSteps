@@ -14,6 +14,24 @@
 		CB8A45571F0401C1006E1102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45551F0401C1006E1102 /* Main.storyboard */; };
 		CB8A45591F0401C1006E1102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45581F0401C1006E1102 /* Assets.xcassets */; };
 		CB8A455C1F0401C1006E1102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A455A1F0401C1006E1102 /* LaunchScreen.storyboard */; };
+		CBAA33451F1616CC009ED7CE /* CompleteVideoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33441F1616CC009ED7CE /* CompleteVideoPresenter.swift */; };
+		CBAA33461F1616CC009ED7CE /* CompleteVideoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33441F1616CC009ED7CE /* CompleteVideoPresenter.swift */; };
+		CBAA33481F16170B009ED7CE /* SaveNewVideoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33471F16170B009ED7CE /* SaveNewVideoUseCase.swift */; };
+		CBAA33491F16170B009ED7CE /* SaveNewVideoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33471F16170B009ED7CE /* SaveNewVideoUseCase.swift */; };
+		CBAA33511F161940009ED7CE /* RealmRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33501F161940009ED7CE /* RealmRepo.swift */; };
+		CBAA33521F161940009ED7CE /* RealmRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33501F161940009ED7CE /* RealmRepo.swift */; };
+		CBAA33551F16230C009ED7CE /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33541F16230C009ED7CE /* RealmRepresentable.swift */; };
+		CBAA33561F16230C009ED7CE /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33541F16230C009ED7CE /* RealmRepresentable.swift */; };
+		CBAA33581F162369009ED7CE /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33571F162369009ED7CE /* DomainConvertibleType.swift */; };
+		CBAA33591F162369009ED7CE /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33571F162369009ED7CE /* DomainConvertibleType.swift */; };
+		CBAA335B1F1624AC009ED7CE /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA335A1F1624AC009ED7CE /* RunLoopThreadScheduler.swift */; };
+		CBAA335C1F1624AC009ED7CE /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA335A1F1624AC009ED7CE /* RunLoopThreadScheduler.swift */; };
+		CBAA335E1F16256B009ED7CE /* ObservableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA335D1F16256B009ED7CE /* ObservableExt.swift */; };
+		CBAA335F1F16256B009ED7CE /* ObservableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA335D1F16256B009ED7CE /* ObservableExt.swift */; };
+		CBAA33611F1625C4009ED7CE /* RealmExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33601F1625C4009ED7CE /* RealmExt.swift */; };
+		CBAA33621F1625C4009ED7CE /* RealmExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33601F1625C4009ED7CE /* RealmExt.swift */; };
+		CBAA33671F168AFB009ED7CE /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33661F168AFB009ED7CE /* TestingViewController.swift */; };
+		CBAA33681F168AFC009ED7CE /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33661F168AFB009ED7CE /* TestingViewController.swift */; };
 		CBB9B9E91F15324000F0E441 /* CompleteVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */; };
 		CBB9B9EA1F15324000F0E441 /* CompleteVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */; };
 		CBD6CA231F1378C900AC4548 /* CongressNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3781F0AA750005C8B80 /* CongressNetwork.swift */; };
@@ -101,6 +119,15 @@
 		CB8A45581F0401C1006E1102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB8A455B1F0401C1006E1102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB8A455D1F0401C1006E1102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBAA33441F1616CC009ED7CE /* CompleteVideoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteVideoPresenter.swift; path = DancingSteps/CompleteVideoPresenter.swift; sourceTree = "<group>"; };
+		CBAA33471F16170B009ED7CE /* SaveNewVideoUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaveNewVideoUseCase.swift; path = DancingSteps/SaveNewVideoUseCase.swift; sourceTree = "<group>"; };
+		CBAA33501F161940009ED7CE /* RealmRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepo.swift; sourceTree = "<group>"; };
+		CBAA33541F16230C009ED7CE /* RealmRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
+		CBAA33571F162369009ED7CE /* DomainConvertibleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
+		CBAA335A1F1624AC009ED7CE /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
+		CBAA335D1F16256B009ED7CE /* ObservableExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableExt.swift; sourceTree = "<group>"; };
+		CBAA33601F1625C4009ED7CE /* RealmExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmExt.swift; sourceTree = "<group>"; };
+		CBAA33661F168AFB009ED7CE /* TestingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestingViewController.swift; path = DancingSteps/TestingViewController.swift; sourceTree = "<group>"; };
 		CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteVideoViewController.swift; path = DancingSteps/CompleteVideoViewController.swift; sourceTree = "<group>"; };
 		CBD6CA471F1378C900AC4548 /* DancingStepsLAB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingStepsLAB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD6CA481F1378C900AC4548 /* DancingStepsLAB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DancingStepsLAB-Info.plist"; path = "/Users/Gmv100/Documents/RLRG/iOS Developer Nanodegree/6. You decide! How to make an iOS app/project/DancingSteps/DancingSteps/DancingStepsLAB-Info.plist"; sourceTree = "<absolute>"; };
@@ -211,6 +238,18 @@
 			path = DancingSteps;
 			sourceTree = "<group>";
 		};
+		CBAA33531F1622F5009ED7CE /* Conversion & Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CBAA33541F16230C009ED7CE /* RealmRepresentable.swift */,
+				CBAA33571F162369009ED7CE /* DomainConvertibleType.swift */,
+				CBAA335A1F1624AC009ED7CE /* RunLoopThreadScheduler.swift */,
+				CBAA335D1F16256B009ED7CE /* ObservableExt.swift */,
+				CBAA33601F1625C4009ED7CE /* RealmExt.swift */,
+			);
+			name = "Conversion & Utils";
+			sourceTree = "<group>";
+		};
 		CBD6CA491F13795C00AC4548 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +328,8 @@
 		CBFAB34C1F0A9099005C8B80 /* Realm_Repository */ = {
 			isa = PBXGroup;
 			children = (
+				CBAA33501F161940009ED7CE /* RealmRepo.swift */,
+				CBAA33531F1622F5009ED7CE /* Conversion & Utils */,
 				CBFAB3621F0A9981005C8B80 /* RMVideo.swift */,
 				CBFAB3641F0A9990005C8B80 /* RMCongress.swift */,
 				CBFAB3661F0A99B1005C8B80 /* RMDancer.swift */,
@@ -375,7 +416,6 @@
 		CBFAB3591F0A922B005C8B80 /* recordingScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CBFAB35D1F0A9277005C8B80 /* DataManager */,
 				CBFAB35C1F0A9272005C8B80 /* View */,
 				CBFAB35B1F0A9266005C8B80 /* Presenter */,
 				CBFAB35A1F0A9258005C8B80 /* Interactor */,
@@ -386,6 +426,7 @@
 		CBFAB35A1F0A9258005C8B80 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				CBAA33471F16170B009ED7CE /* SaveNewVideoUseCase.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -393,6 +434,7 @@
 		CBFAB35B1F0A9266005C8B80 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				CBAA33441F1616CC009ED7CE /* CompleteVideoPresenter.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -402,31 +444,9 @@
 			children = (
 				CBD6CA671F13D3F200AC4548 /* CameraViewController.swift */,
 				CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */,
+				CBAA33661F168AFB009ED7CE /* TestingViewController.swift */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		CBFAB35D1F0A9277005C8B80 /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				CBFAB35F1F0A928C005C8B80 /* Local */,
-				CBFAB35E1F0A9283005C8B80 /* API */,
-			);
-			name = DataManager;
-			sourceTree = "<group>";
-		};
-		CBFAB35E1F0A9283005C8B80 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = API;
-			sourceTree = "<group>";
-		};
-		CBFAB35F1F0A928C005C8B80 /* Local */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Local;
 			sourceTree = "<group>";
 		};
 		CBFAB3761F0AA565005C8B80 /* login */ = {
@@ -712,14 +732,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBAA33561F16230C009ED7CE /* RealmRepresentable.swift in Sources */,
 				CBFAB3791F0AA750005C8B80 /* CongressNetwork.swift in Sources */,
+				CBAA33521F161940009ED7CE /* RealmRepo.swift in Sources */,
 				CBFAB3711F0AA31E005C8B80 /* Dancer.swift in Sources */,
 				CBFAB3691F0A99BC005C8B80 /* RMSong.swift in Sources */,
+				CBAA33461F1616CC009ED7CE /* CompleteVideoPresenter.swift in Sources */,
 				CBFAB3671F0A99B1005C8B80 /* RMDancer.swift in Sources */,
+				CBAA33681F168AFC009ED7CE /* TestingViewController.swift in Sources */,
 				CBFAB3861F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift in Sources */,
 				CB8A45541F0401C1006E1102 /* CongressesTableViewController.swift in Sources */,
 				CBD6CA5A1F13C52500AC4548 /* StyleCellView.swift in Sources */,
 				CBD6CA661F13CBAD00AC4548 /* StyleTableViewCell.swift in Sources */,
+				CBAA33621F1625C4009ED7CE /* RealmExt.swift in Sources */,
 				CBFAB3651F0A9990005C8B80 /* RMCongress.swift in Sources */,
 				CBD6CA631F13C78A00AC4548 /* InMemoryRepo.swift in Sources */,
 				CBFAB3731F0AA329005C8B80 /* Song.swift in Sources */,
@@ -729,6 +754,9 @@
 				CBFAB3831F0B8F1A005C8B80 /* Constants.swift in Sources */,
 				CBFAB38E1F0BB7BA005C8B80 /* CongressTableViewCell.swift in Sources */,
 				CBFAB3631F0A9981005C8B80 /* RMVideo.swift in Sources */,
+				CBAA33491F16170B009ED7CE /* SaveNewVideoUseCase.swift in Sources */,
+				CBAA335F1F16256B009ED7CE /* ObservableExt.swift in Sources */,
+				CBAA33591F162369009ED7CE /* DomainConvertibleType.swift in Sources */,
 				CBFAB38C1F0BB77A005C8B80 /* CongressCellView.swift in Sources */,
 				CBFAB3881F0BAFA7005C8B80 /* GetCongressesUseCase.swift in Sources */,
 				CBFAB3751F0AA333005C8B80 /* Style.swift in Sources */,
@@ -738,6 +766,7 @@
 				CBFAB36B1F0A9B8C005C8B80 /* RMStyle.swift in Sources */,
 				CB8A45521F0401C1006E1102 /* AppDelegate.swift in Sources */,
 				CBFAB3901F0BBC8B005C8B80 /* CongressesPresentation.swift in Sources */,
+				CBAA335C1F1624AC009ED7CE /* RunLoopThreadScheduler.swift in Sources */,
 				CBFAB37D1F0AA801005C8B80 /* Network.swift in Sources */,
 				CBD6CA601F13C74600AC4548 /* EntityGateway.swift in Sources */,
 				CBFAB36F1F0AA315005C8B80 /* Congress.swift in Sources */,
@@ -754,14 +783,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBAA33551F16230C009ED7CE /* RealmRepresentable.swift in Sources */,
 				CBD6CA231F1378C900AC4548 /* CongressNetwork.swift in Sources */,
+				CBAA33511F161940009ED7CE /* RealmRepo.swift in Sources */,
 				CBD6CA241F1378C900AC4548 /* Dancer.swift in Sources */,
 				CBD6CA251F1378C900AC4548 /* RMSong.swift in Sources */,
+				CBAA33451F1616CC009ED7CE /* CompleteVideoPresenter.swift in Sources */,
 				CBD6CA261F1378C900AC4548 /* RMDancer.swift in Sources */,
+				CBAA33671F168AFB009ED7CE /* TestingViewController.swift in Sources */,
 				CBD6CA271F1378C900AC4548 /* GetCongressesNetworkUseCase.swift in Sources */,
 				CBD6CA281F1378C900AC4548 /* CongressesTableViewController.swift in Sources */,
 				CBD6CA591F13C52500AC4548 /* StyleCellView.swift in Sources */,
 				CBD6CA651F13CBAD00AC4548 /* StyleTableViewCell.swift in Sources */,
+				CBAA33611F1625C4009ED7CE /* RealmExt.swift in Sources */,
 				CBD6CA291F1378C900AC4548 /* RMCongress.swift in Sources */,
 				CBD6CA621F13C78A00AC4548 /* InMemoryRepo.swift in Sources */,
 				CBD6CA2A1F1378C900AC4548 /* Song.swift in Sources */,
@@ -771,6 +805,9 @@
 				CBD6CA2C1F1378C900AC4548 /* Constants.swift in Sources */,
 				CBD6CA2D1F1378C900AC4548 /* CongressTableViewCell.swift in Sources */,
 				CBD6CA2E1F1378C900AC4548 /* RMVideo.swift in Sources */,
+				CBAA33481F16170B009ED7CE /* SaveNewVideoUseCase.swift in Sources */,
+				CBAA335E1F16256B009ED7CE /* ObservableExt.swift in Sources */,
+				CBAA33581F162369009ED7CE /* DomainConvertibleType.swift in Sources */,
 				CBD6CA2F1F1378C900AC4548 /* CongressCellView.swift in Sources */,
 				CBD6CA301F1378C900AC4548 /* GetCongressesUseCase.swift in Sources */,
 				CBD6CA311F1378C900AC4548 /* Style.swift in Sources */,
@@ -780,6 +817,7 @@
 				CBD6CA341F1378C900AC4548 /* RMStyle.swift in Sources */,
 				CBD6CA351F1378C900AC4548 /* AppDelegate.swift in Sources */,
 				CBD6CA361F1378C900AC4548 /* CongressesPresentation.swift in Sources */,
+				CBAA335B1F1624AC009ED7CE /* RunLoopThreadScheduler.swift in Sources */,
 				CBD6CA371F1378C900AC4548 /* Network.swift in Sources */,
 				CBD6CA5F1F13C74600AC4548 /* EntityGateway.swift in Sources */,
 				CBD6CA381F1378C900AC4548 /* Congress.swift in Sources */,

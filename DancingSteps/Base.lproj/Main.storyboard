@@ -139,11 +139,31 @@
                         <segue destination="MZs-1d-NH8" kind="relationship" relationship="viewControllers" id="jGY-Jl-Og1"/>
                         <segue destination="QK8-5N-Y1c" kind="relationship" relationship="viewControllers" id="jnQ-eJ-q8A"/>
                         <segue destination="TeN-7y-JjB" kind="relationship" relationship="viewControllers" id="tS7-IM-Rla"/>
+                        <segue destination="3im-l8-2Vl" kind="relationship" relationship="viewControllers" id="HAP-Io-WiI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nHw-0L-bHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2369" y="513"/>
+        </scene>
+        <!--Testing-->
+        <scene sceneID="HLw-BL-won">
+            <objects>
+                <viewController id="3im-l8-2Vl" customClass="TestingViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fO9-Zr-xlI"/>
+                        <viewControllerLayoutGuide type="bottom" id="sdE-Cj-tyt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9iQ-Ux-LcC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Testing" id="1KP-LG-PpG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8nQ-c4-lRt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2145" y="1352"/>
         </scene>
         <!--Top Chart-->
         <scene sceneID="Dsa-P9-zby">

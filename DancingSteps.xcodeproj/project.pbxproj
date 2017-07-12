@@ -30,8 +30,6 @@
 		CBAA335F1F16256B009ED7CE /* ObservableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA335D1F16256B009ED7CE /* ObservableExt.swift */; };
 		CBAA33611F1625C4009ED7CE /* RealmExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33601F1625C4009ED7CE /* RealmExt.swift */; };
 		CBAA33621F1625C4009ED7CE /* RealmExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33601F1625C4009ED7CE /* RealmExt.swift */; };
-		CBAA33641F1662B8009ED7CE /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33631F1662B8009ED7CE /* EmailViewController.swift */; };
-		CBAA33651F1662B8009ED7CE /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33631F1662B8009ED7CE /* EmailViewController.swift */; };
 		CBB9B9E91F15324000F0E441 /* CompleteVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */; };
 		CBB9B9EA1F15324000F0E441 /* CompleteVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */; };
 		CBD6CA231F1378C900AC4548 /* CongressNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3781F0AA750005C8B80 /* CongressNetwork.swift */; };
@@ -127,7 +125,6 @@
 		CBAA335A1F1624AC009ED7CE /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
 		CBAA335D1F16256B009ED7CE /* ObservableExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableExt.swift; sourceTree = "<group>"; };
 		CBAA33601F1625C4009ED7CE /* RealmExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmExt.swift; sourceTree = "<group>"; };
-		CBAA33631F1662B8009ED7CE /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailViewController.swift; path = DancingSteps/EmailViewController.swift; sourceTree = "<group>"; };
 		CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteVideoViewController.swift; path = DancingSteps/CompleteVideoViewController.swift; sourceTree = "<group>"; };
 		CBD6CA471F1378C900AC4548 /* DancingStepsLAB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingStepsLAB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD6CA481F1378C900AC4548 /* DancingStepsLAB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DancingStepsLAB-Info.plist"; path = "/Users/Gmv100/Documents/RLRG/iOS Developer Nanodegree/6. You decide! How to make an iOS app/project/DancingSteps/DancingSteps/DancingStepsLAB-Info.plist"; sourceTree = "<absolute>"; };
@@ -392,7 +389,6 @@
 				CBD6CA4F1F13C02800AC4548 /* StylesTableViewController.swift */,
 				CBD6CA581F13C52500AC4548 /* StyleCellView.swift */,
 				CBD6CA641F13CBAD00AC4548 /* StyleTableViewCell.swift */,
-				CBAA33631F1662B8009ED7CE /* EmailViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -763,7 +759,6 @@
 				CBFAB3941F0F8DAF005C8B80 /* UseCaseProvider.swift in Sources */,
 				CBFAB36D1F0AA309005C8B80 /* Video.swift in Sources */,
 				CBFAB36B1F0A9B8C005C8B80 /* RMStyle.swift in Sources */,
-				CBAA33651F1662B8009ED7CE /* EmailViewController.swift in Sources */,
 				CB8A45521F0401C1006E1102 /* AppDelegate.swift in Sources */,
 				CBFAB3901F0BBC8B005C8B80 /* CongressesPresentation.swift in Sources */,
 				CBAA335C1F1624AC009ED7CE /* RunLoopThreadScheduler.swift in Sources */,
@@ -814,7 +809,6 @@
 				CBD6CA321F1378C900AC4548 /* UseCaseProvider.swift in Sources */,
 				CBD6CA331F1378C900AC4548 /* Video.swift in Sources */,
 				CBD6CA341F1378C900AC4548 /* RMStyle.swift in Sources */,
-				CBAA33641F1662B8009ED7CE /* EmailViewController.swift in Sources */,
 				CBD6CA351F1378C900AC4548 /* AppDelegate.swift in Sources */,
 				CBD6CA361F1378C900AC4548 /* CongressesPresentation.swift in Sources */,
 				CBAA335B1F1624AC009ED7CE /* RunLoopThreadScheduler.swift in Sources */,

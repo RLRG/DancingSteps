@@ -13,6 +13,7 @@ public struct Video {
     let title: String
     let datetime: Date
     let videoDescription: String
+    let url: String
 //    let style: Style
 //    let song: Song
 //    let congress: Congress

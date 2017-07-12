@@ -15,6 +15,7 @@ final class RMVideo: Object {
     dynamic var title: String = ""
     dynamic var datetime: Date = Date()
     dynamic var videoDescription: String = ""
+    dynamic var url: String = ""
 //    dynamic var style: RMStyle = RMStyle()
 //    dynamic var song: RMSong = RMSong()
 //    dynamic var congress: RMCongress = RMCongress()
@@ -32,7 +33,8 @@ extension RMVideo: DomainConvertibleType {
         return Video(id: id,
                     title: title,
                     datetime: datetime,
-                    videoDescription: videoDescription)
+                    videoDescription: videoDescription,
+                    url: url)
     }
 }
 
@@ -43,6 +45,7 @@ extension Video: RealmRepresentable {
             object.title = title
             object.datetime = datetime
             object.videoDescription = videoDescription
+            object.url = url
         }
     }
 }

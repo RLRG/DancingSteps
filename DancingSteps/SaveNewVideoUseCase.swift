@@ -49,5 +49,4 @@ class SaveNewVideoUseCase {
         // 3. Provide the data to the presenter.
         //presenter.present(styles: styles)
     }
-    
 }

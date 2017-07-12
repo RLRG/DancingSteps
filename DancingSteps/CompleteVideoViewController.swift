@@ -67,5 +67,6 @@ class CompleteVideoViewController: UIViewController {
 
     @objc fileprivate func nextButtonAction(_ sender: Any) {
         presenter.saveVideo(videoURL: videoURL!)
+        self.navigationController?.popViewController(animated: true)
     }
 }

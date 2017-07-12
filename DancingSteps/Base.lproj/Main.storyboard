@@ -185,7 +185,13 @@
                             <outlet property="delegate" destination="FnE-jR-Esv" id="1UC-Yy-I8X"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="STYLES" id="QSv-Aq-arg"/>
+                    <navigationItem key="navigationItem" title="STYLES" id="QSv-Aq-arg">
+                        <barButtonItem key="rightBarButtonItem" title="Send Realm" id="7f5-Bv-evO">
+                            <connections>
+                                <action selector="sendRealmDBByEmail:" destination="FnE-jR-Esv" id="n8z-Dm-FHo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QaP-tW-a51" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

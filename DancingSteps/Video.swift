@@ -9,11 +9,12 @@
 import Foundation
 
 public struct Video {
+    let id: String
     let title: String
     let datetime: Date
     let videoDescription: String
-    let style: Style
-    let song: Song
-    let congress: Congress
-    let dancers: [Dancer]
+//    let style: Style
+//    let song: Song
+//    let congress: Congress
+//    let dancers: [Dancer]
 }

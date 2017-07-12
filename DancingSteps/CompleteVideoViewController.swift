@@ -11,11 +11,12 @@ import AVFoundation
 import AVKit
 
 
-class CompleteVideoViewController: UIViewController {
+class CompleteVideoViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Properties & Initialization
     
     var nextButton: UIButton!
+    var titleTextField: UITextField!
     
     var videoURL: URL?
     var player: AVPlayer?
@@ -48,6 +49,15 @@ class CompleteVideoViewController: UIViewController {
         nextButton.setImage(#imageLiteral(resourceName: "nextButton"), for: UIControlState())
         nextButton.addTarget(self, action: #selector(nextButtonAction(_:)), for: .touchUpInside)
         self.view.addSubview(nextButton)
+        
+        titleTextField = UITextField(frame: CGRect(x: view.frame.midX - 50, y: view.frame.height - 400.0, width: 200.0, height: 75.0))
+        titleTextField.center = self.view.center
+        titleTextField.placeholder = "Set the title of the video"
+        titleTextField.borderStyle = UITextBorderStyle.line
+        titleTextField.backgroundColor = UIColor.white
+        titleTextField.textColor = UIColor.blue
+        titleTextField.delegate = self
+        self.view.addSubview(titleTextField)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -66,7 +76,14 @@ class CompleteVideoViewController: UIViewController {
     }
 
     @objc fileprivate func nextButtonAction(_ sender: Any) {
-        presenter.saveVideo(videoURL: videoURL!)
+        presenter.saveVideo(title: titleTextField.text!, videoURL: videoURL!)
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    // MARK: - UITextFieldDelegate methods
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

@@ -16,8 +16,8 @@ class CompleteVideoPresenter {
         self.useCase = useCase
     }
     
-    func saveVideo(videoURL: URL) {
-        useCase.saveVideoToDB(videoURL: videoURL)
+    func saveVideo(title: String = "NO_TITLE", videoURL: URL) {
+        useCase.saveVideoToDB(title: title, videoURL: videoURL)
             .subscribe({_ in
                 print("The saving of the video has FINISHED.")
                 // TODO: Tell the view/user we have finished !

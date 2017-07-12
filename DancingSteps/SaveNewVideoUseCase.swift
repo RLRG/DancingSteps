@@ -24,16 +24,16 @@ class SaveNewVideoUseCase {
     
     // MARK: Logic of the interactor.
     
-    func saveVideoToDB(videoURL: URL) -> Observable<Void> {
+    func saveVideoToDB(title: String, videoURL: URL) -> Observable<Void> {
         
         // 1. Fetching the data. (dependency version principle)
         var video: Video? = nil
         do {
             let documentsPath =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-            let writePath = documentsPath.appendingPathComponent("videNameTEST").appendingPathExtension("mov")
+            let writePath = documentsPath.appendingPathComponent(title).appendingPathExtension("mov")
             try  FileManager.default.moveItem(at: videoURL, to: writePath)
             
-            video = Video(id: "1234", title: "TITLE TEST", datetime: Date(), videoDescription: "DESCRIPTION TEST", url: writePath.absoluteString)
+            video = Video(id: title, title: title, datetime: Date(), videoDescription: "DESCRIPTION TEST", url: writePath.absoluteString)
             //return repository.save(entity: video)
             
             print("movie saved")

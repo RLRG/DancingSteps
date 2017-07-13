@@ -168,7 +168,7 @@
         <scene sceneID="Dsa-P9-zby">
             <objects>
                 <navigationController id="TeN-7y-JjB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Top Chart" id="oQy-2c-RFM"/>
+                    <tabBarItem key="tabBarItem" title="Top Chart" image="topChartIcon" id="oQy-2c-RFM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XGw-U0-C5T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -220,7 +220,7 @@
         <scene sceneID="Mp2-OJ-ldI">
             <objects>
                 <navigationController id="MZs-1d-NH8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Videos" id="9VZ-16-48h"/>
+                    <tabBarItem key="tabBarItem" title="Videos" image="videosIcon" id="9VZ-16-48h"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QQe-8I-Dfn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -237,7 +237,7 @@
         <scene sceneID="BYa-rv-pcg">
             <objects>
                 <navigationController id="QK8-5N-Y1c" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Record" id="6EX-vt-n6B"/>
+                    <tabBarItem key="tabBarItem" title="Record" image="cameraIcon" id="6EX-vt-n6B"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UIu-9Y-tTv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -310,4 +310,9 @@
             <point key="canvasLocation" x="340" y="535.68215892053979"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cameraIcon" width="25" height="25"/>
+        <image name="topChartIcon" width="25" height="25"/>
+        <image name="videosIcon" width="25" height="25"/>
+    </resources>
 </document>

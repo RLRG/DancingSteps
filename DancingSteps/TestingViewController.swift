@@ -11,11 +11,8 @@ import AVFoundation
 import AVKit
 
 class TestingViewController: UIViewController, UITextFieldDelegate {
-    
-    // MARK: - Properties & Initialization
-    
-    var nextButton: UIButton!
-    var titleTextField: UITextField!
+
+    // TODO: Use the same ViewController for this and for the completeVideoViewController, right? The code is almost identical !
     
     var videoURL: URL?
     var player: AVPlayer?
@@ -24,36 +21,8 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.gray
-    
-        nextButton = UIButton(frame: CGRect(x: view.frame.midX - 50, y: view.frame.height - 160.0, width: 100.0, height: 30.0))
-        nextButton.setImage(#imageLiteral(resourceName: "nextButton"), for: UIControlState())
-        nextButton.addTarget(self, action: #selector(nextButtonAction(_:)), for: .touchUpInside)
-        self.view.addSubview(nextButton)
         
-        titleTextField = UITextField(frame: CGRect(x: view.frame.midX - 50, y: view.frame.height - 400.0, width: 200.0, height: 75.0))
-        titleTextField.center = self.view.center
-        titleTextField.placeholder = "Set the title of the video"
-        titleTextField.borderStyle = UITextBorderStyle.line
-        titleTextField.backgroundColor = UIColor.blue
-        titleTextField.textColor = UIColor.white
-        titleTextField.delegate = self
-        self.view.addSubview(titleTextField)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        player?.play()
-    }
-    
-    
-    // MARK: - Logic & Actions
-    
-    @objc fileprivate func nextButtonAction(_ sender: Any) {
-        
-        let documentsPath =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let videoURL = documentsPath.appendingPathComponent(titleTextField.text!).appendingPathExtension("mov")
-        
-        player = AVPlayer(url: videoURL)
+        player = AVPlayer(url: videoURL!)
         playerController = AVPlayerViewController()
         
         guard player != nil && playerController != nil else {
@@ -70,18 +39,16 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.player!.currentItem)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        player?.play()
+    }
+    
     @objc fileprivate func playerItemDidReachEnd(_ notification: Notification) {
         if self.player != nil {
             self.player!.seek(to: kCMTimeZero)
             self.player!.play()
         }
-    }
-    
-    // MARK: - UITextFieldDelegate methods
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
     }
 }
 

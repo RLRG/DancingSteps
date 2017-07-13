@@ -15,36 +15,42 @@ class StylesPresenter {
     var styles: Variable<[Style]> = Variable([])
     var videos: Variable<[Video]> = Variable([])
     
-    let useCase: StylesUseCase
+    let useCase: GetVideosUseCase
     let disposeBag = DisposeBag()
     
     // MARK: Initialization
     
-    init(useCase: StylesUseCase) {
+    init(useCase: GetVideosUseCase) {
         self.useCase = useCase
     }
     
     // MARK: Logic
     
     func viewIsReady() {
-        useCase.showStyles()
+        let videosObservable = useCase.getAllVideosFromDB()
+        videosObservable.asObservable()
+            .subscribe(
+                onNext: { (videos) in
+                    #if DEBUG
+                        for video in videos {
+                            print("Video: \(video.title)")
+                        }
+                    #endif
+                    self.videos.value = videos
+            },
+                onError: { (error) in
+                    print("ERROR GETTING VIDEOS FROM DB: \(error)")
+            },
+                onCompleted: {
+                    print("onCompleted: Getting videos from DB !")
+            })
+        .addDisposableTo(disposeBag)
     }
     
     // Not a good idea to have a dependency from UIKit, what if we want to have different UI Interfaces?
+    // TODO: BE CAREFUL WITH THE StyleCellView !!
     func configure(cell: StyleCellView, forRowAt row: Int) {
-        let style = styles.value[row]
-        cell.display(name: style.name)
-        // The same for the rest of the data.....
-    }
-}
-
-extension StylesPresenter: StylesPresentation {
-    func present(styles: [Style]) {
-        #if DEBUG
-            for style in styles {
-                print("Style: \(style.name)")
-            }
-        #endif
-        self.styles.value = styles
+        let video = videos.value[row]
+        cell.display(name: video.title)
     }
 }

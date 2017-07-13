@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1C4CDF324FBF83BF05714683 /* Pods_DancingSteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */; };
 		63148DBCF0E3A0AAA7D362A5 /* Pods_DancingStepsLAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */; };
+		CB38EBEB1F17691800008585 /* GetVideosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */; };
+		CB38EBEC1F17691B00008585 /* GetVideosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */; };
 		CB8A45521F0401C1006E1102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45511F0401C1006E1102 /* AppDelegate.swift */; };
 		CB8A45541F0401C1006E1102 /* CongressesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45531F0401C1006E1102 /* CongressesTableViewController.swift */; };
 		CB8A45571F0401C1006E1102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45551F0401C1006E1102 /* Main.storyboard */; };
@@ -112,6 +114,7 @@
 		58A4B1197EA040862E16888F /* Pods-DancingStepsLAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsLAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB.release.xcconfig"; sourceTree = "<group>"; };
 		8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingStepsLAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A371D2CB0E0F0E9EDFCBC5A0 /* Pods-DancingSteps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingSteps.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps.release.xcconfig"; sourceTree = "<group>"; };
+		CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetVideosUseCase.swift; path = DancingSteps/GetVideosUseCase.swift; sourceTree = "<group>"; };
 		CB8A454E1F0401C1006E1102 /* DancingSteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingSteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8A45511F0401C1006E1102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB8A45531F0401C1006E1102 /* CongressesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CongressesTableViewController.swift; path = DancingSteps/CongressesTableViewController.swift; sourceTree = "<group>"; };
@@ -373,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				CBD6CA5B1F13C66F00AC4548 /* StylesUseCase.swift */,
+				CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -390,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				CBD6CA4F1F13C02800AC4548 /* StylesTableViewController.swift */,
+				CBAA33661F168AFB009ED7CE /* TestingViewController.swift */,
 				CBD6CA581F13C52500AC4548 /* StyleCellView.swift */,
 				CBD6CA641F13CBAD00AC4548 /* StyleTableViewCell.swift */,
 			);
@@ -444,7 +449,6 @@
 			children = (
 				CBD6CA671F13D3F200AC4548 /* CameraViewController.swift */,
 				CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */,
-				CBAA33661F168AFB009ED7CE /* TestingViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -757,6 +761,7 @@
 				CBAA33491F16170B009ED7CE /* SaveNewVideoUseCase.swift in Sources */,
 				CBAA335F1F16256B009ED7CE /* ObservableExt.swift in Sources */,
 				CBAA33591F162369009ED7CE /* DomainConvertibleType.swift in Sources */,
+				CB38EBEC1F17691B00008585 /* GetVideosUseCase.swift in Sources */,
 				CBFAB38C1F0BB77A005C8B80 /* CongressCellView.swift in Sources */,
 				CBFAB3881F0BAFA7005C8B80 /* GetCongressesUseCase.swift in Sources */,
 				CBFAB3751F0AA333005C8B80 /* Style.swift in Sources */,
@@ -808,6 +813,7 @@
 				CBAA33481F16170B009ED7CE /* SaveNewVideoUseCase.swift in Sources */,
 				CBAA335E1F16256B009ED7CE /* ObservableExt.swift in Sources */,
 				CBAA33581F162369009ED7CE /* DomainConvertibleType.swift in Sources */,
+				CB38EBEB1F17691800008585 /* GetVideosUseCase.swift in Sources */,
 				CBD6CA2F1F1378C900AC4548 /* CongressCellView.swift in Sources */,
 				CBD6CA301F1378C900AC4548 /* GetCongressesUseCase.swift in Sources */,
 				CBD6CA311F1378C900AC4548 /* Style.swift in Sources */,

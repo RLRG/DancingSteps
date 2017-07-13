@@ -28,7 +28,7 @@ class StylesTableViewController: UITableViewController, MFMailComposeViewControl
     }
     
     func setupDataObserver() {
-        presenter.styles.asObservable()
+        presenter.videos.asObservable()
             .subscribe({_ in 
                 self.tableView.reloadData()
             })
@@ -39,19 +39,26 @@ class StylesTableViewController: UITableViewController, MFMailComposeViewControl
     // MARK: - Table View data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.styles.value.count
+        return presenter.videos.value.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Tricky !!
-        
         // Get the empty cell.
         let cell = tableView.dequeueReusableCell(withIdentifier: "styleCell", for: indexPath)
-        
         // Configuration of the data inside of the cell
         presenter.configure(cell: cell as! StyleCellView, forRowAt: indexPath.row)
-        
         return cell
+    }
+    
+    // MARK: - Table View Delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // TODO: Implemente Clean architecture !! Give this responsability to the presenter ?
+        tableView.deselectRow(at: indexPath, animated: true)
+        let testingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TestingViewController") as! TestingViewController
+        testingVC.videoURL = URL(string: presenter.videos.value[indexPath.row].url)
+        self.navigationController?.pushViewController(testingVC, animated: true)
     }
     
     // MARK: - Actions

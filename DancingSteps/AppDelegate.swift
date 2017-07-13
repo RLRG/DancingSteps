@@ -27,10 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // STYLES
         let s_navigationController = tabBarController.viewControllers?.first as! UINavigationController
         let s_tableViewController = s_navigationController.topViewController as! StylesTableViewController
-        let memoryRepo = InMemoryRepo()
-        let stylesUseCase = StylesUseCase(entityGateway: memoryRepo)
-        let s_presenter = StylesPresenter(useCase: stylesUseCase)
-        stylesUseCase.presenter = s_presenter
+        let realmRepo = RealmRepo<Video>()
+        let getVideosUseCase = GetVideosUseCase(repository: realmRepo)
+        let s_presenter = StylesPresenter(useCase: getVideosUseCase)
+        // getVideosUseCase.presenter = s_presenter
         s_tableViewController.presenter = s_presenter
         
         // RECORDING

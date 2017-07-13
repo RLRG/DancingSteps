@@ -394,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				CBD6CA4F1F13C02800AC4548 /* StylesTableViewController.swift */,
+				CBAA33661F168AFB009ED7CE /* TestingViewController.swift */,
 				CBD6CA581F13C52500AC4548 /* StyleCellView.swift */,
 				CBD6CA641F13CBAD00AC4548 /* StyleTableViewCell.swift */,
 			);
@@ -448,7 +449,6 @@
 			children = (
 				CBD6CA671F13D3F200AC4548 /* CameraViewController.swift */,
 				CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */,
-				CBAA33661F168AFB009ED7CE /* TestingViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";

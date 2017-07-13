@@ -51,6 +51,16 @@ class StylesTableViewController: UITableViewController, MFMailComposeViewControl
         return cell
     }
     
+    // MARK: - Table View Delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // TODO: Implemente Clean architecture !! Give this responsability to the presenter ?
+        tableView.deselectRow(at: indexPath, animated: true)
+        let testingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TestingViewController") as! TestingViewController
+        testingVC.videoURL = URL(string: presenter.videos.value[indexPath.row].url)
+        self.navigationController?.pushViewController(testingVC, animated: true)
+    }
+    
     // MARK: - Actions
     
     @IBAction func sendRealmDBByEmail(_ sender: Any) {

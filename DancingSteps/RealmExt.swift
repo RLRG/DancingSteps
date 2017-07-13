@@ -12,7 +12,7 @@ import RealmSwift
 import RxSwift
 
 extension Object {
-    static func build<O: Object>(_ builder: (O) -> () ) -> O {
+    static func build<O: Object>(_ builder: (O) -> Void ) -> O {
         let object = O()
         builder(object)
         return object
@@ -27,7 +27,7 @@ extension SortDescriptor {
 }
 
 extension Reactive where Base: Realm {
-    func save<R: RealmRepresentable>(entity: R, update: Bool = true) -> Observable<Void> where R.RealmType: Object  {
+    func save<R: RealmRepresentable>(entity: R, update: Bool = true) -> Observable<Void> where R.RealmType: Object {
         return Observable.create { observer in
             do {
                 try self.base.write {

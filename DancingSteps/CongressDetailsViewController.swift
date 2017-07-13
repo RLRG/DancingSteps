@@ -13,8 +13,7 @@ class CongressDetailsViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var organizerLabel: UILabel!
-    
-    var congress:Congress? = nil
+    var congress:Congress?
     
     override func viewWillAppear(_ animated: Bool) {
         self.nameLabel.text = congress?.name

@@ -46,7 +46,7 @@ class VideosTableViewController: UITableViewController, MFMailComposeViewControl
         // Get the empty cell.
         let cell = tableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath)
         // Configuration of the data inside of the cell
-        presenter.configure(cell: cell as! VideoCellView, forRowAt: indexPath.row)
+        presenter.configure(cell: cell as! VideoCellView, forRowAt: indexPath.row) // swiftlint:disable:this force_cast
         return cell
     }
     
@@ -55,7 +55,7 @@ class VideosTableViewController: UITableViewController, MFMailComposeViewControl
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // TODO: Implemente Clean architecture !! Give this responsability to the presenter ?
         tableView.deselectRow(at: indexPath, animated: true)
-        let testingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TestingViewController") as! TestingViewController
+        let testingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TestingViewController") as! TestingViewController // swiftlint:disable:this force_cast
         testingVC.videoURL = URL(string: presenter.videos.value[indexPath.row].url)
         self.navigationController?.pushViewController(testingVC, animated: true)
     }

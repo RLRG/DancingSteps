@@ -13,6 +13,8 @@
 		CB38EBEC1F17691B00008585 /* GetVideosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */; };
 		CB38EBEE1F1783E300008585 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBED1F1783E300008585 /* Application.swift */; };
 		CB38EBEF1F1783E300008585 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBED1F1783E300008585 /* Application.swift */; };
+		CB38EBF11F17875000008585 /* CompleteVideoPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBF01F17875000008585 /* CompleteVideoPresentation.swift */; };
+		CB38EBF21F17875000008585 /* CompleteVideoPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBF01F17875000008585 /* CompleteVideoPresentation.swift */; };
 		CB8A45521F0401C1006E1102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45511F0401C1006E1102 /* AppDelegate.swift */; };
 		CB8A45541F0401C1006E1102 /* CongressesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45531F0401C1006E1102 /* CongressesTableViewController.swift */; };
 		CB8A45571F0401C1006E1102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45551F0401C1006E1102 /* Main.storyboard */; };
@@ -112,6 +114,7 @@
 		A371D2CB0E0F0E9EDFCBC5A0 /* Pods-DancingSteps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingSteps.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps.release.xcconfig"; sourceTree = "<group>"; };
 		CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetVideosUseCase.swift; path = DancingSteps/GetVideosUseCase.swift; sourceTree = "<group>"; };
 		CB38EBED1F1783E300008585 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		CB38EBF01F17875000008585 /* CompleteVideoPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteVideoPresentation.swift; path = DancingSteps/CompleteVideoPresentation.swift; sourceTree = "<group>"; };
 		CB8A454E1F0401C1006E1102 /* DancingSteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingSteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8A45511F0401C1006E1102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB8A45531F0401C1006E1102 /* CongressesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CongressesTableViewController.swift; path = DancingSteps/CongressesTableViewController.swift; sourceTree = "<group>"; };
@@ -416,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				CBAA33441F1616CC009ED7CE /* CompleteVideoPresenter.swift */,
+				CB38EBF01F17875000008585 /* CompleteVideoPresentation.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -726,6 +730,7 @@
 				CBD6CA661F13CBAD00AC4548 /* VideoTableViewCell.swift in Sources */,
 				CBAA33621F1625C4009ED7CE /* RealmExt.swift in Sources */,
 				CBFAB3651F0A9990005C8B80 /* RMCongress.swift in Sources */,
+				CB38EBF21F17875000008585 /* CompleteVideoPresentation.swift in Sources */,
 				CBFAB3731F0AA329005C8B80 /* Song.swift in Sources */,
 				CBD6CA691F13D3F200AC4548 /* CameraViewController.swift in Sources */,
 				CBFAB3921F0F8D46005C8B80 /* UseCaseNetworkProvider.swift in Sources */,
@@ -776,6 +781,7 @@
 				CBD6CA651F13CBAD00AC4548 /* VideoTableViewCell.swift in Sources */,
 				CBAA33611F1625C4009ED7CE /* RealmExt.swift in Sources */,
 				CBD6CA291F1378C900AC4548 /* RMCongress.swift in Sources */,
+				CB38EBF11F17875000008585 /* CompleteVideoPresentation.swift in Sources */,
 				CBD6CA2A1F1378C900AC4548 /* Song.swift in Sources */,
 				CBD6CA681F13D3F200AC4548 /* CameraViewController.swift in Sources */,
 				CBD6CA2B1F1378C900AC4548 /* UseCaseNetworkProvider.swift in Sources */,

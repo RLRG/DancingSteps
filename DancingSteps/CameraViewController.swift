@@ -116,7 +116,7 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
         let realmRepo = RealmRepo<Video>()
         let saveNewVideoUseCase = SaveNewVideoUseCase(repository: realmRepo)
         let r_presenter = CompleteVideoPresenter(useCase: saveNewVideoUseCase)
-        // SaveNewVideoUseCase.presenter = r_presenter
+        saveNewVideoUseCase.presenter = r_presenter
         completeVideoVC.presenter = r_presenter
         
         self.navigationController?.pushViewController(completeVideoVC, animated: true)

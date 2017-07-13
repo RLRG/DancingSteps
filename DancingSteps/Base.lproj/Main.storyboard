@@ -216,11 +216,11 @@
             </objects>
             <point key="canvasLocation" x="-378" y="-143"/>
         </scene>
-        <!--Styles-->
+        <!--Videos-->
         <scene sceneID="Mp2-OJ-ldI">
             <objects>
                 <navigationController id="MZs-1d-NH8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Styles" id="9VZ-16-48h"/>
+                    <tabBarItem key="tabBarItem" title="Videos" id="9VZ-16-48h"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QQe-8I-Dfn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

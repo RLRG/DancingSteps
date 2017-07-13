@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 class CompleteVideoPresenter {
     
@@ -18,9 +19,15 @@ class CompleteVideoPresenter {
     
     func saveVideo(title: String = "NO_TITLE", videoURL: URL) {
         useCase.saveVideoToDB(title: title, videoURL: videoURL)
+    }
+}
+
+extension CompleteVideoPresenter : CompleteVideoPresentation {
+    func present (finishVideoObservable: Observable<Void>) {
+        finishVideoObservable
             .subscribe({_ in
-                print("The saving of the video has FINISHED.")
-                // TODO: Tell the view/user we have finished !
-            })
+            print("The saving of the video has FINISHED.")
+            // TODO: Tell the view/user we have finished !
+        })
     }
 }

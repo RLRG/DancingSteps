@@ -12,6 +12,8 @@ import RxSwift
 class CompleteVideoPresenter {
     
     let useCase: SaveNewVideoUseCase
+    var completeVideoVC : CompleteVideoProtocol!
+    let disposeBag = DisposeBag()
     
     init (useCase: SaveNewVideoUseCase) {
         self.useCase = useCase
@@ -25,9 +27,12 @@ class CompleteVideoPresenter {
 extension CompleteVideoPresenter : CompleteVideoPresentation {
     func present (finishVideoObservable: Observable<Void>) {
         finishVideoObservable
-            .subscribe({_ in
-            print("The saving of the video has FINISHED.")
-            // TODO: Tell the view/user we have finished !
-        })
+            .subscribe(
+                onError: { (error) in
+                    self.completeVideoVC.errorSavingVideo(error: error)
+            },
+                onCompleted: {
+                    self.completeVideoVC.videoSavedSuccessfully()
+        }).addDisposableTo(disposeBag)
     }
 }

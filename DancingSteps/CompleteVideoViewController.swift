@@ -77,7 +77,6 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate {
 
     @objc fileprivate func nextButtonAction(_ sender: Any) {
         presenter.saveVideo(title: titleTextField.text!, videoURL: videoURL!)
-        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: - UITextFieldDelegate methods
@@ -85,5 +84,20 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+}
+
+extension CompleteVideoViewController : CompleteVideoProtocol {
+    
+    func videoSavedSuccessfully() {
+        // TODO: Message to the user: "Saved successfully!"
+        print("Saved successfully!")
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func errorSavingVideo(error: Error) {
+        // TODO: Message to the user: "Error!"
+        print(error.localizedDescription)
+        self.navigationController?.popViewController(animated: true)
     }
 }

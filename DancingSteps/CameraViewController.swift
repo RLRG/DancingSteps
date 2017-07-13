@@ -118,6 +118,7 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
         let r_presenter = CompleteVideoPresenter(useCase: saveNewVideoUseCase)
         saveNewVideoUseCase.presenter = r_presenter
         completeVideoVC.presenter = r_presenter
+        r_presenter.completeVideoVC = completeVideoVC // TODO: Clean Architecture: Is this correct ? uhmm... I'm not sure if I meet the specifications of Clean Architecture...
         
         self.navigationController?.pushViewController(completeVideoVC, animated: true)
     }

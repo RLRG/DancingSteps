@@ -17,6 +17,8 @@
 		CB38EBF21F17875000008585 /* CompleteVideoPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBF01F17875000008585 /* CompleteVideoPresentation.swift */; };
 		CB38EBF41F178B8100008585 /* CompleteVideoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBF31F178B8100008585 /* CompleteVideoProtocol.swift */; };
 		CB38EBF51F178B8100008585 /* CompleteVideoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBF31F178B8100008585 /* CompleteVideoProtocol.swift */; };
+		CB38EBF71F1792CC00008585 /* AlertsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBF61F1792CC00008585 /* AlertsManager.swift */; };
+		CB38EBF81F1792CC00008585 /* AlertsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBF61F1792CC00008585 /* AlertsManager.swift */; };
 		CB8A45521F0401C1006E1102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45511F0401C1006E1102 /* AppDelegate.swift */; };
 		CB8A45541F0401C1006E1102 /* CongressesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45531F0401C1006E1102 /* CongressesTableViewController.swift */; };
 		CB8A45571F0401C1006E1102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45551F0401C1006E1102 /* Main.storyboard */; };
@@ -118,6 +120,7 @@
 		CB38EBED1F1783E300008585 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		CB38EBF01F17875000008585 /* CompleteVideoPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteVideoPresentation.swift; path = DancingSteps/CompleteVideoPresentation.swift; sourceTree = "<group>"; };
 		CB38EBF31F178B8100008585 /* CompleteVideoProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteVideoProtocol.swift; path = DancingSteps/CompleteVideoProtocol.swift; sourceTree = "<group>"; };
+		CB38EBF61F1792CC00008585 /* AlertsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertsManager.swift; sourceTree = "<group>"; };
 		CB8A454E1F0401C1006E1102 /* DancingSteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingSteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8A45511F0401C1006E1102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB8A45531F0401C1006E1102 /* CongressesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CongressesTableViewController.swift; path = DancingSteps/CongressesTableViewController.swift; sourceTree = "<group>"; };
@@ -475,6 +478,7 @@
 			isa = PBXGroup;
 			children = (
 				CBFAB3821F0B8F1A005C8B80 /* Constants.swift */,
+				CB38EBF61F1792CC00008585 /* AlertsManager.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -734,6 +738,7 @@
 				CBD6CA661F13CBAD00AC4548 /* VideoTableViewCell.swift in Sources */,
 				CBAA33621F1625C4009ED7CE /* RealmExt.swift in Sources */,
 				CBFAB3651F0A9990005C8B80 /* RMCongress.swift in Sources */,
+				CB38EBF81F1792CC00008585 /* AlertsManager.swift in Sources */,
 				CB38EBF21F17875000008585 /* CompleteVideoPresentation.swift in Sources */,
 				CBFAB3731F0AA329005C8B80 /* Song.swift in Sources */,
 				CBD6CA691F13D3F200AC4548 /* CameraViewController.swift in Sources */,
@@ -786,6 +791,7 @@
 				CBD6CA651F13CBAD00AC4548 /* VideoTableViewCell.swift in Sources */,
 				CBAA33611F1625C4009ED7CE /* RealmExt.swift in Sources */,
 				CBD6CA291F1378C900AC4548 /* RMCongress.swift in Sources */,
+				CB38EBF71F1792CC00008585 /* AlertsManager.swift in Sources */,
 				CB38EBF11F17875000008585 /* CompleteVideoPresentation.swift in Sources */,
 				CBD6CA2A1F1378C900AC4548 /* Song.swift in Sources */,
 				CBD6CA681F13D3F200AC4548 /* CameraViewController.swift in Sources */,

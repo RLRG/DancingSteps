@@ -90,14 +90,22 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate {
 extension CompleteVideoViewController : CompleteVideoProtocol {
     
     func videoSavedSuccessfully() {
-        // TODO: Message to the user: "Saved successfully!"
-        print("Saved successfully!")
-        self.navigationController?.popViewController(animated: true)
+        #if DEBUG
+            print("Saved successfully!")
+        #endif
+        
+        AlertsManager.alert(caller: self, message: "Saved successfully") { 
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     func errorSavingVideo(error: Error) {
-        // TODO: Message to the user: "Error!"
-        print(error.localizedDescription)
-        self.navigationController?.popViewController(animated: true)
+        #if DEBUG
+            print(error.localizedDescription)
+        #endif
+        
+        AlertsManager.alert(caller: self, message: "Error: \(error.localizedDescription)") {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }

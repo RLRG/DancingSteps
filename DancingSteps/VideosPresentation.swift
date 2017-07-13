@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 protocol VideosPresentation {
-    func present(videos: [Video])
+    func present(videosObservable: Observable<[Video]>)
 }

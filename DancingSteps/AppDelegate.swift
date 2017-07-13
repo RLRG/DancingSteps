@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let realmRepo = RealmRepo<Video>()
         let getVideosUseCase = GetVideosUseCase(repository: realmRepo)
         let s_presenter = VideosPresenter(useCase: getVideosUseCase)
-        // getVideosUseCase.presenter = s_presenter
+        getVideosUseCase.presenter = s_presenter
         s_tableViewController.presenter = s_presenter
         
         // RECORDING

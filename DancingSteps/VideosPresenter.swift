@@ -11,10 +11,7 @@ import RxSwift
 
 class VideosPresenter {
     
-    // MARK: - Properties & Initialization
-    var styles: Variable<[Style]> = Variable([])
     var videos: Variable<[Video]> = Variable([])
-    
     let useCase: GetVideosUseCase
     let disposeBag = DisposeBag()
     
@@ -22,10 +19,19 @@ class VideosPresenter {
         self.useCase = useCase
     }
     
-    // MARK: - Logic
-    
     func viewIsReady() {
-        let videosObservable = useCase.getAllVideosFromDB()
+        useCase.getAllVideosFromDB()
+    }
+    
+    // Not a good idea to have a dependency from UIKit, what if we want to have different UI Interfaces?
+    func configure(cell: VideoCellView, forRowAt row: Int) {
+        let video = videos.value[row]
+        cell.display(name: video.title)
+    }
+}
+
+extension VideosPresenter : VideosPresentation {
+    func present(videosObservable: Observable<[Video]>) {
         videosObservable.asObservable()
             .subscribe(
                 onNext: { (videos) in
@@ -42,13 +48,6 @@ class VideosPresenter {
                 onCompleted: {
                     print("onCompleted: Getting videos from DB !")
             })
-        .addDisposableTo(disposeBag)
-    }
-    
-    // Not a good idea to have a dependency from UIKit, what if we want to have different UI Interfaces?
-    // TODO: BE CAREFUL WITH THE StyleCellView !!
-    func configure(cell: VideoCellView, forRowAt row: Int) {
-        let video = videos.value[row]
-        cell.display(name: video.title)
+            .addDisposableTo(disposeBag)
     }
 }

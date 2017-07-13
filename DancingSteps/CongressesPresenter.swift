@@ -27,7 +27,7 @@ class CongressesPresenter {
     // Not a good idea to have a dependency from UIKit, what if we want to have different UI Interfaces?
     func configure(cell: CongressCellView, forRowAt row: Int) {
         let congress = congresses.value[row]
-        cell.display(name: congress.name)
+        cell.display(name: congress.name, imageUrl: congress.imageUrl) // TODO: Is there a better way to do this? Several methods?
         // The same for the rest of the data.....
     }
 }

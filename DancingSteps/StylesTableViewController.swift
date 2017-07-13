@@ -28,7 +28,7 @@ class StylesTableViewController: UITableViewController, MFMailComposeViewControl
     }
     
     func setupDataObserver() {
-        presenter.styles.asObservable()
+        presenter.videos.asObservable()
             .subscribe({_ in 
                 self.tableView.reloadData()
             })
@@ -39,18 +39,15 @@ class StylesTableViewController: UITableViewController, MFMailComposeViewControl
     // MARK: - Table View data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.styles.value.count
+        return presenter.videos.value.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Tricky !!
-        
         // Get the empty cell.
         let cell = tableView.dequeueReusableCell(withIdentifier: "styleCell", for: indexPath)
-        
         // Configuration of the data inside of the cell
         presenter.configure(cell: cell as! StyleCellView, forRowAt: indexPath.row)
-        
         return cell
     }
     

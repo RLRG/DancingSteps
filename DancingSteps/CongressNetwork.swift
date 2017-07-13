@@ -33,5 +33,6 @@ extension Congress: ImmutableMappable {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         startDate = dateFormatter.date(from: try map.value("start.local"))!
         endDate = dateFormatter.date(from: try map.value("end.local"))!
+        imageUrl = (try? map.value("logo.url")) ?? "" // optional + default value
     }
 }

@@ -14,17 +14,15 @@ class SaveNewVideoUseCase {
     // MARK: Properties & Initialization
     
     private let repository: AbstractRepository<Video>
+    var presenter: CompleteVideoPresentation!
     
     init(repository: AbstractRepository<Video>) {
         self.repository = repository
     }
     
-    //var presenter: CompleteVideoPresentation!
-    
-    
     // MARK: Logic of the interactor.
     
-    func saveVideoToDB(title: String, videoURL: URL) -> Observable<Void> {
+    func saveVideoToDB(title: String, videoURL: URL) {
         
         // 1. Fetching the data. (dependency version principle)
         var video: Video? = nil
@@ -41,12 +39,12 @@ class SaveNewVideoUseCase {
             print(error)
         }
         
-        return repository.save(entity: video!)
+        let completeVideoObservable = repository.save(entity: video!)
         
         // 2. Process the data: transformation in order to reduce the data we are going to show in the view.
         //let programmerResponse = programmers.map { ProgrammerResponse(programmer: $0) }
         
         // 3. Provide the data to the presenter.
-        //presenter.present(styles: styles)
+        presenter.present(finishVideoObservable: completeVideoObservable)
     }
 }

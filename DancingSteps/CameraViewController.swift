@@ -109,15 +109,23 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
     // MARK: - SwiftyCam Delegate methods
     
     func swiftyCam(_ swiftyCam: SwiftyCamViewController, didFinishProcessVideoAt url: URL) {
-        // TODO: Implemente Clean architecture !! Give this responsability to the presenter ?
-        let completeVideoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CompleteVideoViewController") as! CompleteVideoViewController
+        // TODO: Implement Clean architecture !! Give this responsability to the presenter ?
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let completeVideoVC = storyboard.instantiateViewController(withIdentifier: "CompleteVideoViewController") as? CompleteVideoViewController else {
+            AlertsManager.alert(caller: self, message: "Unexpected error. Contact the developer of the app.") {
+                print("CompleteVideoViewController NOT FOUND")
+            }
+            return
+        }
+    
         completeVideoVC.videoURL = url
         
         let realmRepo = RealmRepo<Video>()
         let saveNewVideoUseCase = SaveNewVideoUseCase(repository: realmRepo)
         let r_presenter = CompleteVideoPresenter(useCase: saveNewVideoUseCase)
-        // SaveNewVideoUseCase.presenter = r_presenter
+        saveNewVideoUseCase.presenter = r_presenter
         completeVideoVC.presenter = r_presenter
+        r_presenter.completeVideoVC = completeVideoVC // TODO: Clean Architecture: Is this correct ? uhmm... I'm not sure if I meet the specifications of Clean Architecture...
         
         self.navigationController?.pushViewController(completeVideoVC, animated: true)
     }

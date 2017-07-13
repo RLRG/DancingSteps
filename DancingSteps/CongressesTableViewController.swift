@@ -48,7 +48,7 @@ class CongressesTableViewController: UITableViewController {
         // Get the empty cell.
         let cell = tableView.dequeueReusableCell(withIdentifier: "congressCell", for: indexPath)
         // Configuration of the data inside of the cell
-        presenter.configure(cell: cell as! CongressCellView, forRowAt: indexPath.row)
+        presenter.configure(cell: cell as! CongressCellView, forRowAt: indexPath.row) // swiftlint:disable:this force_cast
         return cell
     }
 
@@ -57,6 +57,7 @@ class CongressesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // TODO: Implemente Clean architecture !! Give this responsability to the presenter ?
         tableView.deselectRow(at: indexPath, animated: true)
+        // swiftlint:disable:next force_cast
         let detailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CongressDetailsViewController") as! CongressDetailsViewController
         detailsVC.congress = presenter.congresses.value[indexPath.row]
         self.navigationController?.pushViewController(detailsVC, animated: true)

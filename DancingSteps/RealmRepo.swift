@@ -41,7 +41,7 @@ final class RealmRepo<T:RealmRepresentable>: AbstractRepository<T> where T == T.
     private let scheduler: RunLoopThreadScheduler
     
     private var realm: Realm {
-        return try! Realm(configuration: self.configuration)
+        return try! Realm(configuration: self.configuration) // swiftlint:disable:this force_try
     }
     
     init(configuration: Realm.Configuration = Realm.Configuration()) {

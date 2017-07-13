@@ -181,16 +181,16 @@
             </objects>
             <point key="canvasLocation" x="-1242" y="1265"/>
         </scene>
-        <!--STYLES-->
+        <!--VIDEOS-->
         <scene sceneID="v1T-f1-00E">
             <objects>
-                <tableViewController storyboardIdentifier="StylesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FnE-jR-Esv" customClass="StylesTableViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="StylesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FnE-jR-Esv" customClass="VideosTableViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="stE-kY-GEZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="styleCell" id="MDX-5N-sZt" customClass="StyleTableViewCell" customModule="DancingSteps" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="videoCell" id="MDX-5N-sZt" customClass="VideoTableViewCell" customModule="DancingSteps" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MDX-5N-sZt" id="B6j-1C-w0B">
@@ -204,7 +204,7 @@
                             <outlet property="delegate" destination="FnE-jR-Esv" id="1UC-Yy-I8X"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="STYLES" id="QSv-Aq-arg">
+                    <navigationItem key="navigationItem" title="VIDEOS" id="QSv-Aq-arg">
                         <barButtonItem key="rightBarButtonItem" title="Send Realm" id="7f5-Bv-evO">
                             <connections>
                                 <action selector="sendRealmDBByEmail:" destination="FnE-jR-Esv" id="n8z-Dm-FHo"/>
@@ -250,7 +250,7 @@
             </objects>
             <point key="canvasLocation" x="-1242" y="535"/>
         </scene>
-        <!--START RECORDING !-->
+        <!--RECORDING SCREEN-->
         <scene sceneID="sL4-BJ-N90">
             <objects>
                 <viewController storyboardIdentifier="SwiftyCamViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZCi-LD-aip" customClass="CameraViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
@@ -263,7 +263,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Record" id="rhe-OJ-O93"/>
-                    <navigationItem key="navigationItem" title="START RECORDING !" id="YDx-uJ-hNy"/>
+                    <navigationItem key="navigationItem" title="RECORDING SCREEN" id="YDx-uJ-hNy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p3z-cr-qrK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

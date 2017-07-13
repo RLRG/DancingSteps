@@ -24,12 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard = UIStoryboard(name: storyBoardName, bundle: nil)
         let tabBarController = storyboard.instantiateInitialViewController() as! UITabBarController
         
-        // STYLES
+        // VIDEOS
         let s_navigationController = tabBarController.viewControllers?.first as! UINavigationController
-        let s_tableViewController = s_navigationController.topViewController as! StylesTableViewController
+        let s_tableViewController = s_navigationController.topViewController as! VideosTableViewController
         let realmRepo = RealmRepo<Video>()
         let getVideosUseCase = GetVideosUseCase(repository: realmRepo)
-        let s_presenter = StylesPresenter(useCase: getVideosUseCase)
+        let s_presenter = VideosPresenter(useCase: getVideosUseCase)
         // getVideosUseCase.presenter = s_presenter
         s_tableViewController.presenter = s_presenter
         

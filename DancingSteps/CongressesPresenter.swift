@@ -34,7 +34,6 @@ class CongressesPresenter {
 
 extension CongressesPresenter : CongressesPresentation {
     func present(congressesObservable: Observable<[Congress]>) {
-        
         congressesObservable.subscribe(
             onNext: { (congressArray) in
                 #if DEBUG

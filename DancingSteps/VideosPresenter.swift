@@ -1,5 +1,5 @@
 //
-//  StylesPresenter.swift
+//  VideosPresenter.swift
 //  DancingSteps
 //
 //  Created by RLRG on 10/07/2017.
@@ -9,22 +9,20 @@
 import Foundation
 import RxSwift
 
-class StylesPresenter {
+class VideosPresenter {
     
-    // MARK: Properties
+    // MARK: - Properties & Initialization
     var styles: Variable<[Style]> = Variable([])
     var videos: Variable<[Video]> = Variable([])
     
     let useCase: GetVideosUseCase
     let disposeBag = DisposeBag()
     
-    // MARK: Initialization
-    
     init(useCase: GetVideosUseCase) {
         self.useCase = useCase
     }
     
-    // MARK: Logic
+    // MARK: - Logic
     
     func viewIsReady() {
         let videosObservable = useCase.getAllVideosFromDB()
@@ -49,7 +47,7 @@ class StylesPresenter {
     
     // Not a good idea to have a dependency from UIKit, what if we want to have different UI Interfaces?
     // TODO: BE CAREFUL WITH THE StyleCellView !!
-    func configure(cell: StyleCellView, forRowAt row: Int) {
+    func configure(cell: VideoCellView, forRowAt row: Int) {
         let video = videos.value[row]
         cell.display(name: video.title)
     }

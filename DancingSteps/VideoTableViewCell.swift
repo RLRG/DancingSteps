@@ -1,5 +1,5 @@
 //
-//  StyleTableViewCell.swift
+//  VideoTableViewCell.swift
 //  DancingSteps
 //
 //  Created by RLRG on 10/07/2017.
@@ -8,12 +8,10 @@
 
 import UIKit
 
-class StyleTableViewCell: UITableViewCell {
-    
+class VideoTableViewCell: UITableViewCell {
 }
 
-extension StyleTableViewCell : StyleCellView {
-    
+extension VideoTableViewCell : VideoCellView {
     func display(name: String) {
         textLabel?.text = name
     }

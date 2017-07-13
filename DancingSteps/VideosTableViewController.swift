@@ -1,5 +1,5 @@
 //
-//  StylesTableViewController.swift
+//  VideosTableViewController.swift
 //  DancingSteps
 //
 //  Created by RLRG on 10/07/2017.
@@ -12,12 +12,11 @@ import RxSwift
 import MessageUI
 import Realm // TODO: BE CAREFUL ! REMOVE THIS !
 
-
-class StylesTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
+class VideosTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
     
     // MARK: - Properties & Initialization
     
-    public var presenter: StylesPresenter!
+    public var presenter: VideosPresenter!
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -45,9 +44,9 @@ class StylesTableViewController: UITableViewController, MFMailComposeViewControl
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Tricky !!
         // Get the empty cell.
-        let cell = tableView.dequeueReusableCell(withIdentifier: "styleCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath)
         // Configuration of the data inside of the cell
-        presenter.configure(cell: cell as! StyleCellView, forRowAt: indexPath.row)
+        presenter.configure(cell: cell as! VideoCellView, forRowAt: indexPath.row)
         return cell
     }
     

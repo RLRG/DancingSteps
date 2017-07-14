@@ -16,6 +16,7 @@ class CongressDetailsViewController: UIViewController {
     var congress:Congress?
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Details of the event"
         self.nameLabel.text = congress?.name
         self.organizerLabel.text = congress?.organizer
     }

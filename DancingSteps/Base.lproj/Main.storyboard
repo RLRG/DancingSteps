@@ -10,14 +10,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TOP CHART-->
+        <!--Congresses Table View Controller-->
         <scene sceneID="geR-Vf-48Y">
             <objects>
                 <tableViewController storyboardIdentifier="CongressesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5or-S8-0b9" customClass="CongressesTableViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="QKG-Bl-CeY">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="QKG-Bl-CeY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.9578896164894104" green="0.75255662202835083" blue="0.040408425033092499" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="congressCell" rowHeight="180" id="EZ1-RR-OIP" customClass="CongressTableViewCell" customModule="DancingSteps" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="180"/>
@@ -29,25 +30,30 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F6k-77-CsH">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="136"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBK-yN-O2A">
-                                            <rect key="frame" x="166" y="150" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Name of the event" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pq8-ti-H1d">
+                                            <rect key="frame" x="0.0" y="137" width="375" height="43"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="43" id="rQc-mU-XUP"/>
+                                            </constraints>
+                                            <color key="textColor" red="0.12219756096601486" green="0.065999522805213928" blue="0.31970518827438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="11"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.9578896164894104" green="0.75255662202835083" blue="0.040408425033092499" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstItem="PBK-yN-O2A" firstAttribute="top" secondItem="F6k-77-CsH" secondAttribute="bottom" constant="14" id="4EN-Hw-SKQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="pq8-ti-H1d" secondAttribute="bottom" id="HCN-wL-rgh"/>
                                         <constraint firstItem="F6k-77-CsH" firstAttribute="leading" secondItem="LIq-fM-LgE" secondAttribute="leading" id="JMo-7f-UPa"/>
                                         <constraint firstItem="F6k-77-CsH" firstAttribute="top" secondItem="LIq-fM-LgE" secondAttribute="top" id="JkB-hg-Iix"/>
                                         <constraint firstAttribute="trailing" secondItem="F6k-77-CsH" secondAttribute="trailing" id="KOJ-CK-5lx"/>
-                                        <constraint firstItem="PBK-yN-O2A" firstAttribute="centerX" secondItem="LIq-fM-LgE" secondAttribute="centerX" id="hAG-ME-ZiE"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="PBK-yN-O2A" secondAttribute="bottom" constant="0.5" id="z7E-t2-yz0"/>
+                                        <constraint firstAttribute="trailing" secondItem="pq8-ti-H1d" secondAttribute="trailing" id="NqY-Md-fTo"/>
+                                        <constraint firstItem="pq8-ti-H1d" firstAttribute="leading" secondItem="LIq-fM-LgE" secondAttribute="leading" id="UaO-FK-ZFZ"/>
+                                        <constraint firstItem="pq8-ti-H1d" firstAttribute="top" secondItem="F6k-77-CsH" secondAttribute="bottom" constant="1" id="V8c-7Z-gsb"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="eventImageView" destination="F6k-77-CsH" id="ckg-q8-66w"/>
-                                    <outlet property="titleLabel" destination="PBK-yN-O2A" id="yJc-mY-Eiu"/>
+                                    <outlet property="titleTextView" destination="pq8-ti-H1d" id="baK-Vo-hCJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -56,7 +62,7 @@
                             <outlet property="delegate" destination="5or-S8-0b9" id="4t3-oP-Sjl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="TOP CHART" id="s7J-Gd-r63"/>
+                    <navigationItem key="navigationItem" id="s7J-Gd-r63"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ax-Jg-2Vi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,7 +129,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.71476724229999999" blue="0.25476330019999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.9578896164894104" green="0.75255662202835083" blue="0.040408425033092499" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="r9B-ju-mZ4" firstAttribute="top" secondItem="J8M-wN-RTr" secondAttribute="bottom" constant="23" id="5Q9-pZ-aop"/>
                             <constraint firstItem="J8M-wN-RTr" firstAttribute="leading" secondItem="Ws8-hS-Tis" secondAttribute="leading" id="BfH-5b-lPs"/>

@@ -37,6 +37,16 @@ class CongressesTableViewController: UITableViewController {
             .addDisposableTo(disposeBag)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
     // MARK: - Table View data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -265,7 +265,7 @@
         <!--Record-->
         <scene sceneID="BYa-rv-pcg">
             <objects>
-                <navigationController id="QK8-5N-Y1c" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="QK8-5N-Y1c" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Record" image="cameraIcon" id="6EX-vt-n6B"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UIu-9Y-tTv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

@@ -1,6 +1,7 @@
 # DancingSteps
 :dancer: :dancer: :dancer: :dancer: :dancer: :dancer: :dancer: :dancer: :dancer: :dancer: :dancer: :dancer: :dancer: :dancer:
-This app was created as a final project of the “Become an iOS Developer” nanodegree program from Udacity (more info: https://www.udacity.com/course/ios-developer-nanodegree--nd003).
+
+This app was created as a final project of the [“Become an iOS Developer” Nanodegree program from Udacity](https://www.udacity.com/course/ios-developer-nanodegree--nd003).
 
 ## Screenshots
 TODO: Include some screenshots of the app when it is finished.

@@ -1,4 +1,5 @@
 # DancingSteps
+:dancer: :dancer: :dancer: :dancer: :dancer: :dancer: :dancer: :dancer: :dancer: :dancer: :dancer: :dancer: :dancer: :dancer:
 This app was created as a final project of the “Become an iOS Developer” nanodegree program from Udacity (more info: https://www.udacity.com/course/ios-developer-nanodegree--nd003).
 
 ## Screenshots
@@ -24,6 +25,11 @@ I wanted to focus on learning new materials which were not covered in the iOS Na
 *TODO: Explain this a little bit more with links.*
 
 ## Build and install
+### Requirements
+* Xcode 8.3.3
+* iOS 10.3 SDK
+* Swift 3.1.
+### Getting the code
 In order to build, run and access the app, the first thing you have to do is to clone my repository:
 ```
 git clone url_of_my_repository
@@ -32,7 +38,10 @@ It is important to remark that I have used CocoaPods as the dependency manager o
 ```
 pod install
 ```
-Note that there are two targets:
+### Running the app
+Open `DancingSteps.xcworkspace` with XCode 8.3.3. Then, it is recommended to install the app in a real device so that you can test the video recording functionality.
+
+Before running it, note that there are two targets:
 * LAB: This one includes tools to monitor and get information about the operation of the app in real time (real-time debuggers, logs and so on).
 * PRO: This target would be a simulation of the app if it was going to be submitted to the App Store.
 
@@ -75,6 +84,9 @@ Difficulties found along the way:
 ## Future work & Improvements
 Include all the pending points.
 If I find enough time to carry out it, I will work on this project to improve it in a way that it is feasible to publish this app in the App Store.
+
+## Feedback
+As I am continuously learning, I would appreciate if you take a look at my code and you have recommendations to improve it in different ways. You can contact me at rlromero@gmv.com to do so :smiley:
 
 ## License
 The contents of this repository are covered under the [MIT License](LICENSE).

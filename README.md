@@ -4,7 +4,7 @@
 This app was created as a final project of the [“Become an iOS Developer” Nanodegree program from Udacity](https://www.udacity.com/course/ios-developer-nanodegree--nd003).
 
 ## Screenshots
-TODO: Include some screenshots of the app when it is finished.
+*TODO: Include some screenshots of the app when it is finished.*
 
 ## Objective and audience of the app
  The main functionalities of the app are to record all the dancing steps to be learnt by a dancer, organise them by different styles and check the most important dancing events around the user.
@@ -19,11 +19,31 @@ One of my passions is to dance so that I spend so much time learning new steps o
 Therefore,  I thought of a useful way to have all the videos in the same place arranged by styles. To give added value to the application and to meet all the requirements to pass the iOS Udacity Nanodegree, a list of dancing events around the user can also be seen in the app.
 
 ### Learning purposes
-I wanted to focus on learning new materials which were not covered in the iOS Nanodegree Program, paying special attention to:
-- Clean Architecture.
-- RxSwift - Reactive programming.
+I wanted to focus on learning new materials which were not covered in the iOS Nanodegree Program, paying special attention to Clean Architecture & RxSwift (Reactive Programming). This paragraph is also intended to collect interesting and useful resources and links related to the aforementioned topics:
+- Clean Architecture:
+    - [Clean Swift documentation](http://clean-swift.com/clean-swift-ios-architecture/)
+    - [Uncle Bob documentation](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)
+    - [Robert C Martin - Clean Architecture and Design. Conference video](https://www.youtube.com/watch?v=Nsjsiz2A9mg)
+- RxSwift - Reactive programming:
+    - [Official documentation](https://github.com/ReactiveX/RxSwift)
+    - [Interactive diagrams of Rx Observables](http://rxmarbles.com/)
+    - [Marin Todorov Rx blog](http://rx-marin.com/)
+    - [RxSwift ecosystem projects](https://github.com/RxSwiftCommunity)
+    - Other resources (tutorials/talks/...):
+      - https://www.raywenderlich.com/138547/getting-started-with-rxswift-and-rxcocoa
+      - https://github.com/Artsy/eidolon - Real app programmed in RxSwift.
+      - https://news.realm.io/news/altconf-scott-gardner-reactive-programming-with-rxswift/
+      - https://news.realm.io/news/slug-max-alexander-functional-reactive-rxswift/
+      - https://www.raywenderlich.com/138547/getting-started-with-rxswift-and-rxcocoa
+      - http://www.develapps.com/es/noticias/rxswift-programacion-reactiva-en-swift
+      - https://medium.com/ios-os-x-development/learn-and-master-%EF%B8%8F-the-basics-of-rxswift-in-10-minutes-818ea6e0a05b
+      - http://as.ync.io/
+      - https://www.thedroidsonroids.com/blog/ios/rxswift-by-examples-1-the-basics/
+      - .....
+      - Other million of resources !
 
-*TODO: Explain this a little bit more with links.*
+In order to create the architecture and the communications of my app I have studied mainly the following projects in addition to the links provided above:
+* [An example of and app built with clean architecture and RxSwift](https://github.com/sergdort/CleanArchitectureRxSwift)
 
 ## Build and install
 ### Requirements
@@ -55,7 +75,11 @@ This paragraph includes all the resources used to create this app project, inclu
 | [FLEX Debugger](https://github.com/Flipboard/FLEX) | An in-app debugger. |
 | [SwiftLint](https://github.com/realm/SwiftLint) | A tool to enforce Swift style and conventions. |
 | [Alamofire](https://github.com/Alamofire/Alamofire) | Elegant HTTP Networking in Swift. |
-| ..... | ..... |
+| [SwiftyCam](https://github.com/Awalz/SwiftyCam) | A Snapchat Inspired iOS Camera Framework written in Swift |
+| [Kiuwan](https://www.kiuwan.com/codereview/) | Automated code review tool to detect vulnerabilities and improve quality. After setting it up, I discovered that moment, Swift was not supported yet. There must be working on it. |
+| [Travis CI](https://travis-ci.org/) | Continuous Integration used to build the project automatically. |
+| [Realm](https://github.com/realm/realm-cocoa) | Mobile database used to persist data of the app. |
+| Other | Other frameworks related to the ones already mentioned such as: RxAlamofire, ObjectMapper, AlamofireObjectMapper, RxRealm, QueryKit (see PodFile of the project) |
 ### APIs
 | Framework | Description |
 | --- | --- |
@@ -65,11 +89,6 @@ This paragraph includes all the resources used to create this app project, inclu
 | --- | --- |
 | [Writing READMEs Udacity course](https://www.udacity.com/course/writing-readmes--ud777) | In order to document this project. |
 | [GitHub documentation to write READMEs](https://help.github.com/categories/writing-on-github/) | In order to document this project. |
-| ..... | ..... |
-
-## Difficulties
-Difficulties found along the way:
-* Kiuwan: It does not support Swift yet.
 
 ## Future work & Improvements
 *TODO: Include all the pending points.*

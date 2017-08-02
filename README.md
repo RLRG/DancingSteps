@@ -7,7 +7,8 @@ This app was created as a final project of the “Become an iOS Developer” nan
 
 ## Why it was created
 One of my passions is to dance so that I spend so much time learning new steps of different styles and, when I attend to a workshop, at the end of it, we, dance learners, record a video with what we have done during the workshop. Afterwards, we can remember the new movements and steps watching the video again. There are hundreds of dance styles and the problems comes when somebody attends so many workshops that it is difficult to organise all the videos in Albums.
-Therefore,  I thought a useful way to have all the videos in the same place arranged by styles. To give added value to the application and to meet all the requirements to pass the Udacity nanodegree, a list of dancing events around the user can also be seen in the app.
+
+Therefore,  I thought a useful way to have all the videos in the same place arranged by styles. To give added value to the application and to meet all the requirements to pass the iOS Udacity Nanodegree, a list of dancing events around the user can also be seen in the app.
 
 ## Screenshots
 TODO: Include some screenshots of the app when it is finished.
@@ -19,8 +20,15 @@ I wanted to focus on learning new materials which were not covered in the iOS Na
 
 TODO: Explain this a little bit more with links.
 
-## Steps to build, run and access the app
-In order to build, run and access the app, the only thing you have to do is to clone my repository and follow the common steps to build an app. It is important to remark that I have used CocoaPods as the dependency manager of the project so that you will need to execute a ‘pod install’ command in the same path where the PodFile is located.
+## Build and install
+In order to build, run and access the app, the first thing you have to do is to clone my repository:
+```
+git clone url_of_my_repository
+```
+It is important to remark that I have used CocoaPods as the dependency manager of the project so that you will need to execute a ‘pod install’ command in the same path where the PodFile is located to download all the third-party frameworks:
+```
+pod install
+```
 Note that there are two targets:
 * LAB: This one includes tools to monitor and get information about the operation of the app in real time (real-time debuggers, logs and so on).
 * PRO: This target would be a simulation of the app if it was going to be submitted to the App Store.

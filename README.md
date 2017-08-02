@@ -1,24 +1,27 @@
 # DancingSteps
 This app was created as a final project of the “Become an iOS Developer” nanodegree program from Udacity (more info: https://www.udacity.com/course/ios-developer-nanodegree--nd003).
 
-## Objective and audience of the app
- * The main functionalities of the app are to record all the dancing steps to be learnt by a dancer, organise them by different styles and check the most important dancing events around the user.
- * The target audience is supposed to be dancers, including dance instructors, learners and all the people interested in the dancing world.
-
-## Why it was created
-One of my passions is to dance so that I spend so much time learning new steps of different styles and, when I attend to a workshop, at the end of it, we, dance learners, record a video with what we have done during the workshop. Afterwards, we can remember the new movements and steps watching the video again. There are hundreds of dance styles and the problems comes when somebody attends so many workshops that it is difficult to organise all the videos in Albums.
-
-Therefore,  I thought a useful way to have all the videos in the same place arranged by styles. To give added value to the application and to meet all the requirements to pass the iOS Udacity Nanodegree, a list of dancing events around the user can also be seen in the app.
-
 ## Screenshots
 TODO: Include some screenshots of the app when it is finished.
 
-## Learning purposes
+## Objective and audience of the app
+ The main functionalities of the app are to record all the dancing steps to be learnt by a dancer, organise them by different styles and check the most important dancing events around the user.
+
+ The target audience using the app is supposed to be dancers, including dance instructors, learners and all the people interested in the dancing world.
+
+ Of course, if any iOS developer who would like to check how to use the frameworks and tools included in the *Resources* paragraph, is more than welcome. This project is also interesting if you want to see an app example using Clean Architecture along with RxSwift.
+
+## Motivation
+One of my passions is to dance so that I spend so much time learning new steps of different styles and, when I attend to a workshop, at the end of it, we, dance learners, record a video with what we have done during the workshop. Afterwards, we can remember the new movements and steps watching the video again. There are hundreds of dance styles and the problem comes when somebody attends so many workshops that it is difficult to organise all the videos in Albums.
+
+Therefore,  I thought of a useful way to have all the videos in the same place arranged by styles. To give added value to the application and to meet all the requirements to pass the iOS Udacity Nanodegree, a list of dancing events around the user can also be seen in the app.
+
+### Learning purposes
 I wanted to focus on learning new materials which were not covered in the iOS Nanodegree Program, paying special attention to:
-- Clean Architecure.
+- Clean Architecture.
 - RxSwift - Reactive programming.
 
-TODO: Explain this a little bit more with links.
+*TODO: Explain this a little bit more with links.*
 
 ## Build and install
 In order to build, run and access the app, the first thing you have to do is to clone my repository:

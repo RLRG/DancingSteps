@@ -44,6 +44,7 @@ I wanted to focus on learning new materials which were not covered in the iOS Na
 
 In order to create the architecture and the communications of my app I have studied mainly the following projects in addition to the links provided above:
 * [An example of and app built with clean architecture and RxSwift](https://github.com/sergdort/CleanArchitectureRxSwift)
+* [An example of and app built with clean architecture](https://github.com/RLRG/RealProgrammers-Clean-Architecture) in a workshop given by Jorge Ortiz at #SwiftAveiro event.
 
 ## Build and install
 ### Requirements

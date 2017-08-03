@@ -20,9 +20,15 @@ class VideosTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Creating a bar button used to open the Debug screen when we are executing the LAB target.
+        #if DancingStepsLAB
+            let debugButton = UIBarButtonItem(title: "DEBUG", style: .plain, target: self, action: #selector(VideosTableViewController.openDebugScreen))
+            self.navigationItem.rightBarButtonItem  = debugButton
+        #endif
+        
         presenter.viewIsReady()
         setupDataObserver()
-
     }
     
     func setupDataObserver() {
@@ -61,7 +67,7 @@ class VideosTableViewController: UITableViewController {
     
     // MARK: - Actions
     
-    @IBAction func openDebugScreen(_ sender: Any) {
+    func openDebugScreen() {
         let debugVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DebugViewController") as! DebugViewController // swiftlint:disable:this force_cast
         self.navigationController?.pushViewController(debugVC, animated: true)
     }

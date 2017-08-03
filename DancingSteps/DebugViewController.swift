@@ -9,27 +9,28 @@
 import Foundation
 import UIKit
 import MessageUI
-#if DancingStepsLAB
-    import FLEX
-#endif
+import FLEX
 import Realm // TODO: Remove this from here ? 
 
 class DebugViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
-    // MARK: - Properties & Initialization
+    // MARK: - Initialization
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     // MARK: - FLEX Debugger
     
     @IBAction func openFLEX(_ sender: Any) {
         // Displaying FLEX debugger.
-        #if DancingStepsLAB
-            FLEXManager.shared().showExplorer()
-        #endif
+        FLEXManager.shared().showExplorer()
     }
     
     // MARK: - Email sending

@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 import MessageUI
-import FLEX
+#if DancingStepsLAB
+    import FLEX
+#endif
 import Realm // TODO: Remove this from here ? 
 
 class DebugViewController: UIViewController, MFMailComposeViewControllerDelegate {
@@ -30,7 +32,9 @@ class DebugViewController: UIViewController, MFMailComposeViewControllerDelegate
     
     @IBAction func openFLEX(_ sender: Any) {
         // Displaying FLEX debugger.
-        FLEXManager.shared().showExplorer()
+        #if DancingStepsLAB
+            FLEXManager.shared().showExplorer()
+        #endif
     }
     
     // MARK: - Email sending

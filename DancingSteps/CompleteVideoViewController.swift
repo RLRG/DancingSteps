@@ -30,6 +30,7 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.isHidden = true
         self.view.backgroundColor = UIColor.gray
         player = AVPlayer(url: videoURL!)
         playerController = AVPlayerViewController()
@@ -65,6 +66,10 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate {
         player?.play()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
     
     // MARK: - Logic & Actions
     

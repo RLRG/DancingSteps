@@ -16,7 +16,6 @@ final class Application {
         
         let tabBarController = storyboard.instantiateInitialViewController() as! UITabBarController // swiftlint:disable:this force_cast
         tabBarController.tabBar.barTintColor = UIColor.purple
-        tabBarController.tabBar
         
         // VIDEOS
         let s_navigationController = tabBarController.viewControllers?.first as! UINavigationController // swiftlint:disable:this force_cast

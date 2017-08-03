@@ -432,4 +432,5 @@
         <image name="topChartIcon" width="25" height="25"/>
         <image name="videosIcon" width="25" height="25"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

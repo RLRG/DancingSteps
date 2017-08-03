@@ -18,8 +18,7 @@ public final class CongressNetwork {
     }
     
     public func fetchCongresses() -> Observable<[Congress]> {
-        return network.getRequest("\(Constants.eventsURL)&location.address=London")
-        // TODO: Remove the parameter "location.address=London" in order to have much less results. I have this configured like this for debugging purposes at the beginning of my developments.
+        return network.getRequest("\(Constants.eventsURL)")
     }
 }
 

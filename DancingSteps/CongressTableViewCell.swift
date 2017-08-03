@@ -18,9 +18,8 @@ extension CongressTableViewCell : CongressCellView {
     func display(name: String, imageUrl: String) {
         titleTextView.text = name
         
-        // TODO: Improve this !
         if(imageUrl == "") {
-            eventImageView.downloadedFrom(url: URL(string:"https://cdn.evbstatic.com/s3-build/perm_001/48d2e1/django/images/logos/eb_logo_white_1200x1200.png")!)
+            eventImageView.image = #imageLiteral(resourceName: "defaultEvent")
         } else {
             eventImageView.downloadedFrom(url: URL(string:imageUrl)!)
         }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-// TODO: Refactor this code to Clean Architecture ! R
+// TODO: Refactor this code to Clean Architecture !
 extension UIImageView {
     func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
         contentMode = mode

@@ -11,6 +11,8 @@ import UIKit
 
 class CongressDetailsViewController: UIViewController {
     
+    // MARK: - Properties
+    
     var congress:Congress?
     
     @IBOutlet weak var imageView: UIImageView!
@@ -18,12 +20,18 @@ class CongressDetailsViewController: UIViewController {
     @IBOutlet weak var startsDate: UITextView!
     @IBOutlet weak var endsDate: UITextView!
     
+    // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = "Details of the event"
         
-        // TODO: Improve this !
         if(congress?.imageUrl == "") {
-            imageView.downloadedFrom(url: URL(string:"https://cdn.evbstatic.com/s3-build/perm_001/48d2e1/django/images/logos/eb_logo_white_1200x1200.png")!)
+            imageView.image = #imageLiteral(resourceName: "defaultEvent")
         } else {
             imageView.downloadedFrom(url: URL(string:(congress?.imageUrl)!)!)
         }
@@ -31,6 +39,11 @@ class CongressDetailsViewController: UIViewController {
         self.titleText.text = congress?.name
         self.startsDate.text = DateFormatter.localizedString(from: (congress?.startDate)!, dateStyle: .short, timeStyle: .short)
         self.endsDate.text = DateFormatter.localizedString(from: (congress?.endDate)!, dateStyle: .short, timeStyle: .short)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tabBarController?.tabBar.isHidden = false
     }
     
 }

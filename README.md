@@ -88,6 +88,7 @@ This paragraph includes all the resources used to create this app project, inclu
 ### Other information resources
 | Resource | Description |
 | --- | --- |
+| App icon | Icon made by [Freepik](http://www.freepik.com/) from www.flaticon.com and all the sizes of the icon were generated with https://makeappicon.com/ |
 | [Writing READMEs Udacity course](https://www.udacity.com/course/writing-readmes--ud777) | In order to document this project. |
 | [GitHub documentation to write READMEs](https://help.github.com/categories/writing-on-github/) | In order to document this project. |
 

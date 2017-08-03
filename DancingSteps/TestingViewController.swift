@@ -17,9 +17,10 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
     var videoURL: URL?
     var player: AVPlayer?
     var playerController : AVPlayerViewController?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.isHidden = true
         self.view.backgroundColor = UIColor.gray
         
         player = AVPlayer(url: videoURL!)
@@ -44,6 +45,11 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         player?.play()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     @objc fileprivate func playerItemDidReachEnd(_ notification: Notification) {
         if self.player != nil {
             self.player!.seek(to: kCMTimeZero)
@@ -51,4 +57,3 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         }
     }
 }
-

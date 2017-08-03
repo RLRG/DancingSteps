@@ -44,6 +44,7 @@ I wanted to focus on learning new materials which were not covered in the iOS Na
 
 In order to create the architecture and the communications of my app I have studied mainly the following projects in addition to the links provided above:
 * [An example of and app built with clean architecture and RxSwift](https://github.com/sergdort/CleanArchitectureRxSwift)
+* [An example of and app built with clean architecture](https://github.com/RLRG/RealProgrammers-Clean-Architecture) in a workshop given by Jorge Ortiz at #SwiftAveiro event.
 
 ## Build and install
 ### Requirements
@@ -53,7 +54,7 @@ In order to create the architecture and the communications of my app I have stud
 ### Getting the code
 In order to build, run and access the app, the first thing you have to do is to clone my repository:
 ```
-git clone url_of_my_repository
+git clone https://github.com/RLRG/DancingSteps.git
 ```
 It is important to remark that I have used CocoaPods as the dependency manager of the project so that you will need to execute a ‘pod install’ command in the same path where the PodFile is located to download all the third-party frameworks:
 ```
@@ -96,7 +97,7 @@ This paragraph includes all the resources used to create this app project, inclu
 If I find enough time to carry out it, I will work on this project to improve it in a way that it is feasible to publish this app in the App Store.
 
 ## Feedback
-As I am continuously learning, I would appreciate if you take a look at my code and you have recommendations to improve it in different ways. You can contact me at rlromero@gmv.com to do so :smiley:
+As I am continuously learning, I would appreciate if you take a look at my code and you have recommendations to improve it in different ways. You can contact me at rodri.lopezromero@gmail.com to do so :smiley:
 
 ## License
 The contents of this repository are covered under the [MIT License](LICENSE).

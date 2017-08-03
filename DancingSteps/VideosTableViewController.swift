@@ -10,9 +10,8 @@ import Foundation
 import UIKit
 import RxSwift
 import MessageUI
-import Realm // TODO: BE CAREFUL ! REMOVE THIS !
 
-class VideosTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
+class VideosTableViewController: UITableViewController {
     
     // MARK: - Properties & Initialization
     
@@ -21,9 +20,15 @@ class VideosTableViewController: UITableViewController, MFMailComposeViewControl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Creating a bar button used to open the Debug screen when we are executing the LAB target.
+        #if DancingStepsLAB
+            let debugButton = UIBarButtonItem(title: "DEBUG", style: .plain, target: self, action: #selector(VideosTableViewController.openDebugScreen))
+            self.navigationItem.rightBarButtonItem  = debugButton
+        #endif
+        
         presenter.viewIsReady()
         setupDataObserver()
-
     }
     
     func setupDataObserver() {
@@ -53,7 +58,7 @@ class VideosTableViewController: UITableViewController, MFMailComposeViewControl
     // MARK: - Table View Delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: Implemente Clean architecture !! Give this responsability to the presenter ?
+        // TODO: Implement Clean architecture !! Give this responsability to the presenter ?
         tableView.deselectRow(at: indexPath, animated: true)
         let testingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TestingViewController") as! TestingViewController // swiftlint:disable:this force_cast
         testingVC.videoURL = URL(string: presenter.videos.value[indexPath.row].url)
@@ -62,34 +67,8 @@ class VideosTableViewController: UITableViewController, MFMailComposeViewControl
     
     // MARK: - Actions
     
-    @IBAction func sendRealmDBByEmail(_ sender: Any) {
-        sendEmail()
-    }
-    
-    func sendEmail() {
-        let composeVC = MFMailComposeViewController()
-        composeVC.mailComposeDelegate = self
-        
-        // Configure the fields of the interface.
-        composeVC.setToRecipients(["rlromero@gmv.com"])
-        composeVC.setSubject("[iOS Nanodegree] Final project. Realm database")
-        composeVC.setMessageBody("Hello this is the Realm local database!", isHTML: false)
-        
-        print("File path loaded: \(RLMRealmPathForFile("default.realm"))")
-            
-        if let fileData = NSData(contentsOfFile: RLMRealmPathForFile("default.realm") ) {
-            print("File data loaded.")
-            composeVC.addAttachmentData(fileData as Data, mimeType: "application/octet-stream", fileName: "default.realm")
-        }
-        
-        // Present the view controller modally.
-        self.present(composeVC, animated: true, completion: nil)
-    }
-    
-    func mailComposeController(_ controller: MFMailComposeViewController,
-                               didFinishWith result: MFMailComposeResult, error: Error?) {
-        // Check the result or perform other tasks.
-        // Dismiss the mail compose view controller.
-        controller.dismiss(animated: true, completion: nil)
+    func openDebugScreen() {
+        let debugVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DebugViewController") as! DebugViewController // swiftlint:disable:this force_cast
+        self.navigationController?.pushViewController(debugVC, animated: true)
     }
 }

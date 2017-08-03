@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="w3K-8p-a9y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="w3K-8p-a9y">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -241,13 +241,7 @@
                             <outlet property="delegate" destination="FnE-jR-Esv" id="1UC-Yy-I8X"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="VIDEOS" id="QSv-Aq-arg">
-                        <barButtonItem key="rightBarButtonItem" title="Send Realm" id="7f5-Bv-evO">
-                            <connections>
-                                <action selector="sendRealmDBByEmail:" destination="FnE-jR-Esv" id="n8z-Dm-FHo"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="VIDEOS" id="QSv-Aq-arg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QaP-tW-a51" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -339,12 +333,89 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.98766356706619263" green="0.53838598728179932" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.98919123411178589" green="0.53975188732147217" blue="0.001462939428165555" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MmV-9k-9AK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="340" y="535.68215892053979"/>
+        </scene>
+        <!--Debug View Controller-->
+        <scene sceneID="4tE-Uq-dP9">
+            <objects>
+                <viewController storyboardIdentifier="DebugViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LbV-gu-LzQ" customClass="DebugViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7TT-cW-0PO"/>
+                        <viewControllerLayoutGuide type="bottom" id="3a9-z6-e7M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OLl-Kl-2sW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbJ-af-XX2">
+                                <rect key="frame" x="16" y="20" width="343" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="rnc-zj-akd"/>
+                                </constraints>
+                                <string key="text">The purpose of this screen is to help debugging the app in real time. Up to now, we can send the realm local database file by email or open/close the FLEX in-app debugger:</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHK-ok-8LZ">
+                                <rect key="frame" x="77" y="255" width="220" height="156"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fi7-bG-iaD">
+                                        <rect key="frame" x="32" y="28" width="156" height="30"/>
+                                        <color key="backgroundColor" red="0.3312766725459742" green="0.72901069654701911" blue="0.69301038936983417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Send Realm">
+                                            <color key="titleColor" red="0.96349763912202235" green="0.98919123411178589" blue="0.97420986968038636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendRealmAction:" destination="LbV-gu-LzQ" eventType="touchUpInside" id="kSd-RP-oZm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giI-UP-Eas">
+                                        <rect key="frame" x="32" y="92" width="156" height="30"/>
+                                        <color key="backgroundColor" red="0.33127667249999998" green="0.72901069650000005" blue="0.69301038940000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Open FLEX">
+                                            <color key="titleColor" red="0.96349763909999997" green="0.98919123409999998" blue="0.97420986970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openFLEX:" destination="LbV-gu-LzQ" eventType="touchUpInside" id="4Vr-Fc-KGJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Fi7-bG-iaD" firstAttribute="top" secondItem="bHK-ok-8LZ" secondAttribute="top" constant="28" id="HXF-4q-1j4"/>
+                                    <constraint firstItem="giI-UP-Eas" firstAttribute="leading" secondItem="bHK-ok-8LZ" secondAttribute="leading" constant="32" id="PHq-Cj-GmW"/>
+                                    <constraint firstAttribute="bottom" secondItem="giI-UP-Eas" secondAttribute="bottom" constant="34" id="SDi-qR-xyQ"/>
+                                    <constraint firstItem="Fi7-bG-iaD" firstAttribute="leading" secondItem="bHK-ok-8LZ" secondAttribute="leading" constant="32" id="XnE-Vw-4Wm"/>
+                                    <constraint firstAttribute="height" constant="156" id="cdv-mk-cLA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fi7-bG-iaD" secondAttribute="trailing" constant="32" id="iZW-sC-vas"/>
+                                    <constraint firstItem="giI-UP-Eas" firstAttribute="top" secondItem="Fi7-bG-iaD" secondAttribute="bottom" constant="34" id="jMj-R2-ghu"/>
+                                    <constraint firstAttribute="width" constant="220" id="kSp-6U-7aV"/>
+                                    <constraint firstAttribute="trailing" secondItem="giI-UP-Eas" secondAttribute="trailing" constant="32" id="v0b-JT-38o"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98919123411178589" green="0.53975188732147217" blue="0.001462939428165555" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bHK-ok-8LZ" firstAttribute="centerX" secondItem="OLl-Kl-2sW" secondAttribute="centerX" id="0fm-at-X0V"/>
+                            <constraint firstItem="fbJ-af-XX2" firstAttribute="leading" secondItem="OLl-Kl-2sW" secondAttribute="leading" constant="16" id="1Wm-R9-H6Y"/>
+                            <constraint firstItem="fbJ-af-XX2" firstAttribute="top" secondItem="7TT-cW-0PO" secondAttribute="bottom" id="E88-Vr-hd8"/>
+                            <constraint firstItem="fbJ-af-XX2" firstAttribute="leading" secondItem="OLl-Kl-2sW" secondAttribute="leadingMargin" id="GaZ-tt-cZp"/>
+                            <constraint firstItem="bHK-ok-8LZ" firstAttribute="centerY" secondItem="OLl-Kl-2sW" secondAttribute="centerY" id="NsF-pl-uKe"/>
+                            <constraint firstAttribute="trailing" secondItem="fbJ-af-XX2" secondAttribute="trailing" constant="16" id="gCo-3B-Wv9"/>
+                            <constraint firstItem="fbJ-af-XX2" firstAttribute="top" secondItem="7TT-cW-0PO" secondAttribute="bottom" id="zOh-Mx-14V"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yzc-a2-I4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1024.8" y="-143.47826086956522"/>
         </scene>
     </scenes>
     <resources>

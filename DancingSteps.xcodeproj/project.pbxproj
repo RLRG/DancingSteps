@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1C4CDF324FBF83BF05714683 /* Pods_DancingSteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */; };
+		3724C2521F3329A7005E1BF8 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C2511F3329A7005E1BF8 /* DebugViewController.swift */; };
+		3724C2531F33305F005E1BF8 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C2511F3329A7005E1BF8 /* DebugViewController.swift */; };
 		63148DBCF0E3A0AAA7D362A5 /* Pods_DancingStepsLAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */; };
 		CB38EBEB1F17691800008585 /* GetVideosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */; };
 		CB38EBEC1F17691B00008585 /* GetVideosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */; };
@@ -114,6 +116,7 @@
 
 /* Begin PBXFileReference section */
 		31A2992605E8EC18CEFF3E68 /* Pods-DancingStepsLAB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsLAB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB.debug.xcconfig"; sourceTree = "<group>"; };
+		3724C2511F3329A7005E1BF8 /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugViewController.swift; path = DancingSteps/DebugViewController.swift; sourceTree = "<group>"; };
 		4E7CC749311DE4263BD303AC /* Pods-DancingSteps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingSteps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps.debug.xcconfig"; sourceTree = "<group>"; };
 		58A4B1197EA040862E16888F /* Pods-DancingStepsLAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsLAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB.release.xcconfig"; sourceTree = "<group>"; };
 		8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingStepsLAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +210,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3724C2501F332987005E1BF8 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				3724C2511F3329A7005E1BF8 /* DebugViewController.swift */,
+			);
+			name = debug;
+			sourceTree = "<group>";
+		};
 		385EC1A6F9B10ACF19DDEB7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +282,7 @@
 		CBFAB3411F0A88C0005C8B80 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3724C2501F332987005E1BF8 /* debug */,
 				CBFAB3761F0AA565005C8B80 /* login */,
 				CBFAB3521F0A91CD005C8B80 /* videosList */,
 				CBFAB3591F0A922B005C8B80 /* recordingScreen */,
@@ -770,6 +782,7 @@
 				CBFAB37D1F0AA801005C8B80 /* Network.swift in Sources */,
 				CBFAB36F1F0AA315005C8B80 /* Congress.swift in Sources */,
 				CBD6CA511F13C02800AC4548 /* VideosTableViewController.swift in Sources */,
+				3724C2531F33305F005E1BF8 /* DebugViewController.swift in Sources */,
 				CBFAB38A1F0BB26E005C8B80 /* CongressesPresenter.swift in Sources */,
 				CBD6CA541F13C0F000AC4548 /* VideosPresenter.swift in Sources */,
 				CBD6CA571F13C4C700AC4548 /* VideosPresentation.swift in Sources */,
@@ -819,6 +832,7 @@
 				CBD6CA331F1378C900AC4548 /* Video.swift in Sources */,
 				CBD6CA341F1378C900AC4548 /* RMStyle.swift in Sources */,
 				CBD6CA351F1378C900AC4548 /* AppDelegate.swift in Sources */,
+				3724C2521F3329A7005E1BF8 /* DebugViewController.swift in Sources */,
 				CBD6CA361F1378C900AC4548 /* CongressesPresentation.swift in Sources */,
 				CBAA335B1F1624AC009ED7CE /* RunLoopThreadScheduler.swift in Sources */,
 				CBD6CA371F1378C900AC4548 /* Network.swift in Sources */,

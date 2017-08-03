@@ -97,6 +97,7 @@ Among other things:
 - Support of multi-language.
 - Order the dancing events in the top chart by month.
 - Include an animation when the app is launching.
+- Extend the model of the app so that a video can be related to a dancer and to a song (in case the video is recorded with music).
 - ...
 
 If I find enough time to carry out it, I will work on this project to improve it in a way that it is feasible to publish this app in the App Store.

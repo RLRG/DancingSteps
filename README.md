@@ -54,7 +54,7 @@ In order to create the architecture and the communications of my app I have stud
 ### Getting the code
 In order to build, run and access the app, the first thing you have to do is to clone my repository:
 ```
-git clone url_of_my_repository
+git clone https://github.com/RLRG/DancingSteps.git
 ```
 It is important to remark that I have used CocoaPods as the dependency manager of the project so that you will need to execute a ‘pod install’ command in the same path where the PodFile is located to download all the third-party frameworks:
 ```

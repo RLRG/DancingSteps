@@ -11,7 +11,6 @@ import UIKit
 class CongressTableViewCell: UITableViewCell {
     @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var titleTextView: UITextView!
-    @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
 }
 
 extension CongressTableViewCell : CongressCellView {
@@ -24,7 +23,5 @@ extension CongressTableViewCell : CongressCellView {
         } else {
             eventImageView.downloadedFrom(url: URL(string:imageUrl)!)
         }
-        
-        loadingSpinner.stopAnimating()
     }
 }

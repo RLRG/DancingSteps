@@ -39,11 +39,6 @@
                                             <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="11"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ty2-il-bQC">
-                                            <rect key="frame" x="169" y="72" width="37" height="37"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="color" red="0.33127667249999998" green="0.72901069650000005" blue="0.69301038940000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </activityIndicatorView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.95843690633773804" green="0.75082677602767944" blue="0.043290890753269196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -58,7 +53,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="eventImageView" destination="F6k-77-CsH" id="ckg-q8-66w"/>
-                                    <outlet property="loadingSpinner" destination="ty2-il-bQC" id="7QD-QW-fNq"/>
                                     <outlet property="titleTextView" destination="pq8-ti-H1d" id="baK-Vo-hCJ"/>
                                 </connections>
                             </tableViewCell>
@@ -72,7 +66,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ax-Jg-2Vi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-378.39999999999998" y="1264.3178410794603"/>
+            <point key="canvasLocation" x="-388" y="1264"/>
         </scene>
         <!--Congress Details View Controller-->
         <scene sceneID="vck-ws-Oax">

@@ -64,8 +64,8 @@ pod install
 Open `DancingSteps.xcworkspace` with XCode 8.3.3. Then, it is recommended to install the app in a real device so that you can test the video recording functionality.
 
 Before running it, note that there are two targets:
-* LAB: This one includes tools to monitor and get information about the operation of the app in real time (real-time debuggers, logs and so on).
-* PRO: This target would be a simulation of the app if it was going to be submitted to the App Store.
+* DancingStepsLAB: When you run this target, in the "Videos" tab, you will see an UIBarButtonItem in the navigation bar (DEBUG) in order to open this debug screen. This target, then, includes tools to monitor and get information about the operation of the app in real time (real-time debuggers, logs and so on).
+* DancingSteps: This target would be a simulation of the app if it was going to be submitted to the App Store.
 
 ## Resources
 This paragraph includes all the resources used to create this app project, including frameworks, APIs and other information resources such as tutorials, documentation and so on.
@@ -88,11 +88,17 @@ This paragraph includes all the resources used to create this app project, inclu
 ### Other information resources
 | Resource | Description |
 | --- | --- |
+| App icon | Icon made by [Freepik](http://www.freepik.com/) from www.flaticon.com and all the sizes of the icon were generated with https://makeappicon.com/ |
 | [Writing READMEs Udacity course](https://www.udacity.com/course/writing-readmes--ud777) | In order to document this project. |
 | [GitHub documentation to write READMEs](https://help.github.com/categories/writing-on-github/) | In order to document this project. |
 
 ## Future work & Improvements
-*TODO: Include all the pending points.*
+Among other things:
+- Support of multi-language.
+- Order the dancing events in the top chart by month.
+- Include an animation when the app is launching.
+- Extend the model of the app so that a video can be related to a dancer and to a song (in case the video is recorded with music).
+- ...
 
 If I find enough time to carry out it, I will work on this project to improve it in a way that it is feasible to publish this app in the App Store.
 

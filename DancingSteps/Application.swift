@@ -15,9 +15,11 @@ final class Application {
     func cleanArchitectureConfiguration(storyboard: UIStoryboard, mainWindow: UIWindow) {
         
         let tabBarController = storyboard.instantiateInitialViewController() as! UITabBarController // swiftlint:disable:this force_cast
+        tabBarController.tabBar.barTintColor = UIColor.purple
         
         // VIDEOS
         let s_navigationController = tabBarController.viewControllers?.first as! UINavigationController // swiftlint:disable:this force_cast
+        s_navigationController.navigationBar.barTintColor = UIColor.purple
         let s_tableViewController = s_navigationController.topViewController as! VideosTableViewController // swiftlint:disable:this force_cast
         let realmRepo = RealmRepo<Video>()
         let getVideosUseCase = GetVideosUseCase(repository: realmRepo)
@@ -37,6 +39,7 @@ final class Application {
         
         // TOP CHART
         let navigationController = tabBarController.viewControllers?[2] as! UINavigationController // swiftlint:disable:this force_cast
+        navigationController.navigationBar.barTintColor = UIColor.purple
         let tableViewController = navigationController.topViewController as! CongressesTableViewController // swiftlint:disable:this force_cast
         let useCaseNetworkProvider = UseCaseNetworkProvider()
         let getCongressesUseCase = useCaseNetworkProvider.makeGetCongressesUseCase()

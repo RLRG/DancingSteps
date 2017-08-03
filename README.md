@@ -97,7 +97,7 @@ This paragraph includes all the resources used to create this app project, inclu
 If I find enough time to carry out it, I will work on this project to improve it in a way that it is feasible to publish this app in the App Store.
 
 ## Feedback
-As I am continuously learning, I would appreciate if you take a look at my code and you have recommendations to improve it in different ways. You can contact me at rlromero@gmv.com to do so :smiley:
+As I am continuously learning, I would appreciate if you take a look at my code and you have recommendations to improve it in different ways. You can contact me at rodri.lopezromero@gmail.com to do so :smiley:
 
 ## License
 The contents of this repository are covered under the [MIT License](LICENSE).

@@ -96,6 +96,7 @@ This paragraph includes all the resources used to create this app project, inclu
 Among other things:
 - Support of multi-language.
 - Support to landscape orientations.
+- About button which opens a new screen where some information is displayed: version of the app, attributions to mention all the frameworks used, ...
 - Improve the top events experience so that the user can filter the results in any way.
 - Order the dancing events in the top chart by month.
 - Include an animation when the app is launching.

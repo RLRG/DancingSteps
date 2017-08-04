@@ -37,6 +37,7 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
             }
         }
     }
+    
     private func mainConfiguration() {
         flashEnabled = true
     }
@@ -46,7 +47,7 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
     }
     
     private func addButtons() {
-        captureButton = UIButton(frame: CGRect(x: view.frame.midX - 50, y: view.frame.height - 160.0, width: 100.0, height: 100.0))
+        captureButton = UIButton(frame: CGRect(x: view.frame.midX - 35, y: view.frame.height - 160.0, width: 75.0, height: 75.0))
         captureButton.setImage(#imageLiteral(resourceName: "startRecording"), for: UIControlState())
         captureButton.addTarget(self, action: #selector(recordingAction(_:)), for: .touchUpInside)
         self.view.addSubview(captureButton)
@@ -56,8 +57,8 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
         switchToSelfieButton.addTarget(self, action: #selector(cameraSwitchAction(_:)), for: .touchUpInside)
         self.view.addSubview(switchToSelfieButton)
         
-        let test = CGFloat((view.frame.width - (view.frame.width / 2 + 37.5)) + ((view.frame.width / 2) - 37.5) - 9.0)
-        flashButton = UIButton(frame: CGRect(x: test, y: view.frame.height - 100, width: 18.0, height: 30.0))
+        let xRect = CGFloat((view.frame.width - (view.frame.width / 2 + 37.5)) + ((view.frame.width / 2) - 37.5) - 9.0)
+        flashButton = UIButton(frame: CGRect(x: xRect, y: view.frame.height - 100, width: 18.0, height: 30.0))
         flashButton.setImage(#imageLiteral(resourceName: "flash"), for: UIControlState())
         flashButton.addTarget(self, action: #selector(toggleFlashAction(_:)), for: .touchUpInside)
         self.view.addSubview(flashButton)

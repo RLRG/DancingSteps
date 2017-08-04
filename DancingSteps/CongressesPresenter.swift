@@ -27,7 +27,7 @@ class CongressesPresenter {
     // Not a good idea to have a dependency from UIKit, what if we want to have different UI Interfaces?
     func configure(cell: CongressCellView, forRowAt row: Int) {
         let congress = congresses.value[row]
-        cell.display(name: congress.name, imageUrl: congress.imageUrl) // TODO: Is there a better way to do this? Several methods instead of one?
+        cell.display(name: congress.name, imageUrl: congress.imageUrl) // TODO: Is there a better way to do this? Several methods instead of one? Clean Architecture ?
         // The same for the rest of the data.....
     }
 }
@@ -43,11 +43,15 @@ extension CongressesPresenter : CongressesPresentation {
                 #endif
                 self.congresses.value = congressArray
             },
-                       onError: { error in
-                        print("ERROR IN RESPONSE (CONGRESS): \(error)")
+            onError: { error in
+                #if DEBUG
+                    print("ERROR IN RESPONSE (CONGRESS): \(error)")
+                #endif
             },
-                       onCompleted: {
-                        print("onCompleted event !! (CONGRESS)")
+            onCompleted: {
+                #if DEBUG
+                    print("onCompleted event !! (CONGRESS)")
+                #endif
             })
             .addDisposableTo(disposeBag)
     }

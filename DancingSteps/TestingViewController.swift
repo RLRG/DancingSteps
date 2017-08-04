@@ -11,8 +11,6 @@ import AVFoundation
 import AVKit
 
 class TestingViewController: UIViewController, UITextFieldDelegate {
-
-    // TODO: Use the same ViewController for this and for the completeVideoViewController, right? The code is almost identical !
     
     var videoURL: URL?
     var player: AVPlayer?
@@ -47,6 +45,7 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        player?.pause()
         self.tabBarController?.tabBar.isHidden = false
     }
     

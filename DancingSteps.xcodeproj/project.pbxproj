@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C4CDF324FBF83BF05714683 /* Pods_DancingSteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */; };
 		3724C2521F3329A7005E1BF8 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C2511F3329A7005E1BF8 /* DebugViewController.swift */; };
 		3724C2531F33305F005E1BF8 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C2511F3329A7005E1BF8 /* DebugViewController.swift */; };
+		3C03B9C961EA32988F2FC199 /* Pods_DancingSteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */; };
 		63148DBCF0E3A0AAA7D362A5 /* Pods_DancingStepsLAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */; };
 		CB38EBEB1F17691800008585 /* GetVideosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */; };
 		CB38EBEC1F17691B00008585 /* GetVideosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */; };
@@ -107,12 +107,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A55F8B5EA35D3659DB3165A /* Pods-DancingSteps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingSteps.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps.release.xcconfig"; sourceTree = "<group>"; };
+		10728BBA2D97A7981A0113A3 /* Pods-DancingSteps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingSteps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps.debug.xcconfig"; sourceTree = "<group>"; };
 		31A2992605E8EC18CEFF3E68 /* Pods-DancingStepsLAB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsLAB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB.debug.xcconfig"; sourceTree = "<group>"; };
 		3724C2511F3329A7005E1BF8 /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugViewController.swift; path = DancingSteps/DebugViewController.swift; sourceTree = "<group>"; };
-		4E7CC749311DE4263BD303AC /* Pods-DancingSteps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingSteps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps.debug.xcconfig"; sourceTree = "<group>"; };
 		58A4B1197EA040862E16888F /* Pods-DancingStepsLAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsLAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB.release.xcconfig"; sourceTree = "<group>"; };
 		8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingStepsLAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A371D2CB0E0F0E9EDFCBC5A0 /* Pods-DancingSteps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingSteps.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps.release.xcconfig"; sourceTree = "<group>"; };
 		CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetVideosUseCase.swift; path = DancingSteps/GetVideosUseCase.swift; sourceTree = "<group>"; };
 		CB38EBED1F1783E300008585 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		CB38EBF01F17875000008585 /* CompleteVideoPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteVideoPresentation.swift; path = DancingSteps/CompleteVideoPresentation.swift; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C4CDF324FBF83BF05714683 /* Pods_DancingSteps.framework in Frameworks */,
+				3C03B9C961EA32988F2FC199 /* Pods_DancingSteps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,10 +190,10 @@
 		112D5606E748D11DA56D7F1F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4E7CC749311DE4263BD303AC /* Pods-DancingSteps.debug.xcconfig */,
-				A371D2CB0E0F0E9EDFCBC5A0 /* Pods-DancingSteps.release.xcconfig */,
 				31A2992605E8EC18CEFF3E68 /* Pods-DancingStepsLAB.debug.xcconfig */,
 				58A4B1197EA040862E16888F /* Pods-DancingStepsLAB.release.xcconfig */,
+				10728BBA2D97A7981A0113A3 /* Pods-DancingSteps.debug.xcconfig */,
+				0A55F8B5EA35D3659DB3165A /* Pods-DancingSteps.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -499,13 +499,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB8A45601F0401C1006E1102 /* Build configuration list for PBXNativeTarget "DancingSteps" */;
 			buildPhases = (
-				9FC423342C22639607CE5565 /* [CP] Check Pods Manifest.lock */,
+				F0360B708F9191BC8F7A9310 /* [CP] Check Pods Manifest.lock */,
 				CB8A454A1F0401C1006E1102 /* Sources */,
 				CB8A454B1F0401C1006E1102 /* Frameworks */,
 				CB8A454C1F0401C1006E1102 /* Resources */,
-				18E2EA0247164EA3FCA180D8 /* [CP] Embed Pods Frameworks */,
-				03E92C36902BAF1A67F38AF7 /* [CP] Copy Pods Resources */,
 				CBFAB3801F0ABE9C005C8B80 /* ShellScript */,
+				6710DD6C1CEA953AAD700578 /* [CP] Embed Pods Frameworks */,
+				ABB23CB648A5602CEDB16D82 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -601,22 +601,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03E92C36902BAF1A67F38AF7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		18E2EA0247164EA3FCA180D8 /* [CP] Embed Pods Frameworks */ = {
+		6710DD6C1CEA953AAD700578 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -631,19 +616,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9FC423342C22639607CE5565 /* [CP] Check Pods Manifest.lock */ = {
+		ABB23CB648A5602CEDB16D82 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CBD6CA211F1378C900AC4548 /* [CP] Check Pods Manifest.lock */ = {
@@ -716,6 +701,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
+		F0360B708F9191BC8F7A9310 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -941,7 +941,7 @@
 		};
 		CB8A45611F0401C1006E1102 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E7CC749311DE4263BD303AC /* Pods-DancingSteps.debug.xcconfig */;
+			baseConfigurationReference = 10728BBA2D97A7981A0113A3 /* Pods-DancingSteps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8WFER5UG23;
@@ -955,7 +955,7 @@
 		};
 		CB8A45621F0401C1006E1102 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A371D2CB0E0F0E9EDFCBC5A0 /* Pods-DancingSteps.release.xcconfig */;
+			baseConfigurationReference = 0A55F8B5EA35D3659DB3165A /* Pods-DancingSteps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8WFER5UG23;

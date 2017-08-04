@@ -11,54 +11,46 @@ import AVFoundation
 import AVKit
 
 
-class CompleteVideoViewController: UIViewController, UITextFieldDelegate {
+class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    // MARK: - Properties & Initialization
+    // MARK: - Properties
     
-    var nextButton: UIButton!
-    var titleTextField: UITextField!
+    @IBOutlet weak var videoView: UIView!
+    @IBOutlet weak var videoNameTextField: UITextField!
+    @IBOutlet weak var stylePickerView: UIPickerView!
+    @IBOutlet weak var saveVideoButton: UIButton!
+    
+    var arrayPickerDataSource = ["Salsa", "Bachata", "Kizomba"] // TODO: Retrieve this information from the database or somewhere else !
     
     var videoURL: URL?
     var player: AVPlayer?
     var playerController : AVPlayerViewController?
     
     var presenter: CompleteVideoPresenter!
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
+
+    // MARK: - Initialization functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // General
         self.tabBarController?.tabBar.isHidden = true
-        self.view.backgroundColor = UIColor.gray
+        videoNameTextField.delegate = self
+        stylePickerView.dataSource = self
+        stylePickerView.delegate = self
+        
+        // AVPlayer
         player = AVPlayer(url: videoURL!)
         playerController = AVPlayerViewController()
-        
         guard player != nil && playerController != nil else {
             return
         }
         playerController!.showsPlaybackControls = false
-        
         playerController!.player = player!
         self.addChildViewController(playerController!)
         self.view.addSubview(playerController!.view)
-        playerController!.view.frame = view.frame
+        playerController!.view.frame = videoView.frame
         NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.player!.currentItem)
-        
-        nextButton = UIButton(frame: CGRect(x: view.frame.midX - 50, y: view.frame.height - 160.0, width: 100.0, height: 30.0))
-        nextButton.setImage(#imageLiteral(resourceName: "nextButton"), for: UIControlState())
-        nextButton.addTarget(self, action: #selector(nextButtonAction(_:)), for: .touchUpInside)
-        self.view.addSubview(nextButton)
-        
-        titleTextField = UITextField(frame: CGRect(x: view.frame.midX - 50, y: view.frame.height - 400.0, width: 200.0, height: 75.0))
-        titleTextField.center = self.view.center
-        titleTextField.placeholder = "Set the title of the video"
-        titleTextField.borderStyle = UITextBorderStyle.line
-        titleTextField.backgroundColor = UIColor.white
-        titleTextField.textColor = UIColor.blue
-        titleTextField.delegate = self
-        self.view.addSubview(titleTextField)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -79,9 +71,12 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate {
             self.player!.play()
         }
     }
-
-    @objc fileprivate func nextButtonAction(_ sender: Any) {
-        presenter.saveVideo(title: titleTextField.text!, videoURL: videoURL!)
+    
+    @IBAction func saveVideo(_ sender: Any) {
+        if self.player != nil {
+            self.player!.pause()
+        }
+        presenter.saveVideo(title: videoNameTextField.text!, videoURL: videoURL!)
     }
     
     // MARK: - UITextFieldDelegate methods
@@ -89,6 +84,22 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    // MARK: - UIPickerView Data Source
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return arrayPickerDataSource.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return arrayPickerDataSource[row]
+    }
+    
+    // MARK: - UIPickerView Delegate
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
 }
 

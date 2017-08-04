@@ -48,6 +48,9 @@ class CongressesTableViewController: UITableViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        DispatchQueue.main.async {
+            self.loadingSpinner.stopAnimating()
+        }
         self.navigationController?.isNavigationBarHidden = false
     }
     

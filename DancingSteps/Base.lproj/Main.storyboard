@@ -83,6 +83,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" translatesAutoresizingMaskIntoConstraints="NO" id="6lJ-b6-Z62">
                                 <rect key="frame" x="0.0" y="20" width="375" height="238"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="238" id="V2G-k4-f6f"/>
                                     <constraint firstAttribute="width" constant="375" id="yx5-UU-G5z"/>
                                 </constraints>
                             </imageView>

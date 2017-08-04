@@ -43,11 +43,15 @@ extension CongressesPresenter : CongressesPresentation {
                 #endif
                 self.congresses.value = congressArray
             },
-                       onError: { error in
-                        print("ERROR IN RESPONSE (CONGRESS): \(error)")
+            onError: { error in
+                #if DEBUG
+                    print("ERROR IN RESPONSE (CONGRESS): \(error)")
+                #endif
             },
-                       onCompleted: {
-                        print("onCompleted event !! (CONGRESS)")
+            onCompleted: {
+                #if DEBUG
+                    print("onCompleted event !! (CONGRESS)")
+                #endif
             })
             .addDisposableTo(disposeBag)
     }

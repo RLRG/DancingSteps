@@ -21,9 +21,22 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         self.cameraDelegate = self
-        addButtons()
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)) {
+            addButtons()
+        } else {
+            AlertsManager.alert(caller: self, message: "The camera is not available in this device and you cannot record any video. Please, install the app in the proper device.", title: "Camera not available") {
+                #if DEBUG
+                    print("Camera not available")
+                #endif
+            }
+        }
+    }
     private func mainConfiguration() {
         flashEnabled = true
     }

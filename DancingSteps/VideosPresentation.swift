@@ -1,5 +1,5 @@
 //
-//  StylesPresentation.swift
+//  VideosPresentation.swift
 //  DancingSteps
 //
 //  Created by RLRG on 10/07/2017.
@@ -9,6 +9,6 @@
 import Foundation
 import RxSwift
 
-protocol StylesPresentation {
-    func present(styles: [Style])
+protocol VideosPresentation {
+    func present(videosObservable: Observable<[Video]>)
 }

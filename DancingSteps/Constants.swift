@@ -18,10 +18,10 @@ struct Constants {
     static let AnonymousAccessToken = "GOFDC4WEPOGSMDHTPOIB"
     
     // MARK: Events Web Service
-    static let eventsURL = "events/search"
+    static let eventsService = "events/search"
     static let categoryParameter = "categories"
     static let subcategoryParameter = "subcategories"
     static let categoryValue = "105" // Category: "Performing & Visual Arts" - https://www.eventbriteapi.com/v3/categories/105/?token=GOFDC4WEPOGSMDHTPOIB
     static let subcategoryValue = "5004" // Subcategory: "Dance" - https://www.eventbriteapi.com/v3/subcategories/5004/?token=GOFDC4WEPOGSMDHTPOIB
-    
+    static let eventsURL = "\(eventsService)/?\(AnonymousAccessTokenParameter)=\(AnonymousAccessToken)&\(categoryParameter)=\(categoryValue)&\(subcategoryParameter)=\(subcategoryValue)"
 }

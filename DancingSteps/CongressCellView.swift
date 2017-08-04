@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CongressCellView {
-    func display(name: String) // TRICKY !!! We don't want to include the logic of the transformation in the view !
+    func display(name: String, imageUrl: String) // TRICKY !!! We don't want to include the logic of the transformation in the view !
 }

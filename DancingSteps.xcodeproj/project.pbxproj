@@ -7,23 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C4CDF324FBF83BF05714683 /* Pods_DancingSteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */; };
+		3724C2521F3329A7005E1BF8 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C2511F3329A7005E1BF8 /* DebugViewController.swift */; };
+		3724C2531F33305F005E1BF8 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C2511F3329A7005E1BF8 /* DebugViewController.swift */; };
+		3C03B9C961EA32988F2FC199 /* Pods_DancingSteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */; };
 		63148DBCF0E3A0AAA7D362A5 /* Pods_DancingStepsLAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */; };
+		CB38EBEB1F17691800008585 /* GetVideosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */; };
+		CB38EBEC1F17691B00008585 /* GetVideosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */; };
+		CB38EBEE1F1783E300008585 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBED1F1783E300008585 /* Application.swift */; };
+		CB38EBEF1F1783E300008585 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBED1F1783E300008585 /* Application.swift */; };
+		CB38EBF11F17875000008585 /* CompleteVideoPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBF01F17875000008585 /* CompleteVideoPresentation.swift */; };
+		CB38EBF21F17875000008585 /* CompleteVideoPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBF01F17875000008585 /* CompleteVideoPresentation.swift */; };
+		CB38EBF41F178B8100008585 /* CompleteVideoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBF31F178B8100008585 /* CompleteVideoProtocol.swift */; };
+		CB38EBF51F178B8100008585 /* CompleteVideoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBF31F178B8100008585 /* CompleteVideoProtocol.swift */; };
+		CB38EBF71F1792CC00008585 /* AlertsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBF61F1792CC00008585 /* AlertsManager.swift */; };
+		CB38EBF81F1792CC00008585 /* AlertsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBF61F1792CC00008585 /* AlertsManager.swift */; };
+		CB38EBFA1F17CF0200008585 /* UIImageViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBF91F17CF0200008585 /* UIImageViewExt.swift */; };
+		CB38EBFB1F17CF0200008585 /* UIImageViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBF91F17CF0200008585 /* UIImageViewExt.swift */; };
 		CB8A45521F0401C1006E1102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45511F0401C1006E1102 /* AppDelegate.swift */; };
 		CB8A45541F0401C1006E1102 /* CongressesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45531F0401C1006E1102 /* CongressesTableViewController.swift */; };
 		CB8A45571F0401C1006E1102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45551F0401C1006E1102 /* Main.storyboard */; };
 		CB8A45591F0401C1006E1102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45581F0401C1006E1102 /* Assets.xcassets */; };
 		CB8A455C1F0401C1006E1102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A455A1F0401C1006E1102 /* LaunchScreen.storyboard */; };
+		CBAA33451F1616CC009ED7CE /* CompleteVideoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33441F1616CC009ED7CE /* CompleteVideoPresenter.swift */; };
+		CBAA33461F1616CC009ED7CE /* CompleteVideoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33441F1616CC009ED7CE /* CompleteVideoPresenter.swift */; };
+		CBAA33481F16170B009ED7CE /* SaveNewVideoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33471F16170B009ED7CE /* SaveNewVideoUseCase.swift */; };
+		CBAA33491F16170B009ED7CE /* SaveNewVideoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33471F16170B009ED7CE /* SaveNewVideoUseCase.swift */; };
+		CBAA33511F161940009ED7CE /* RealmRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33501F161940009ED7CE /* RealmRepo.swift */; };
+		CBAA33521F161940009ED7CE /* RealmRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33501F161940009ED7CE /* RealmRepo.swift */; };
+		CBAA33551F16230C009ED7CE /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33541F16230C009ED7CE /* RealmRepresentable.swift */; };
+		CBAA33561F16230C009ED7CE /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33541F16230C009ED7CE /* RealmRepresentable.swift */; };
+		CBAA33581F162369009ED7CE /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33571F162369009ED7CE /* DomainConvertibleType.swift */; };
+		CBAA33591F162369009ED7CE /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33571F162369009ED7CE /* DomainConvertibleType.swift */; };
+		CBAA335B1F1624AC009ED7CE /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA335A1F1624AC009ED7CE /* RunLoopThreadScheduler.swift */; };
+		CBAA335C1F1624AC009ED7CE /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA335A1F1624AC009ED7CE /* RunLoopThreadScheduler.swift */; };
+		CBAA335E1F16256B009ED7CE /* ObservableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA335D1F16256B009ED7CE /* ObservableExt.swift */; };
+		CBAA335F1F16256B009ED7CE /* ObservableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA335D1F16256B009ED7CE /* ObservableExt.swift */; };
+		CBAA33611F1625C4009ED7CE /* RealmExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33601F1625C4009ED7CE /* RealmExt.swift */; };
+		CBAA33621F1625C4009ED7CE /* RealmExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33601F1625C4009ED7CE /* RealmExt.swift */; };
+		CBAA33671F168AFB009ED7CE /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33661F168AFB009ED7CE /* TestingViewController.swift */; };
+		CBAA33681F168AFC009ED7CE /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33661F168AFB009ED7CE /* TestingViewController.swift */; };
 		CBB9B9E91F15324000F0E441 /* CompleteVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */; };
 		CBB9B9EA1F15324000F0E441 /* CompleteVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */; };
 		CBD6CA231F1378C900AC4548 /* CongressNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3781F0AA750005C8B80 /* CongressNetwork.swift */; };
-		CBD6CA241F1378C900AC4548 /* Dancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3701F0AA31E005C8B80 /* Dancer.swift */; };
-		CBD6CA251F1378C900AC4548 /* RMSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3681F0A99BC005C8B80 /* RMSong.swift */; };
-		CBD6CA261F1378C900AC4548 /* RMDancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3661F0A99B1005C8B80 /* RMDancer.swift */; };
 		CBD6CA271F1378C900AC4548 /* GetCongressesNetworkUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3851F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift */; };
 		CBD6CA281F1378C900AC4548 /* CongressesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45531F0401C1006E1102 /* CongressesTableViewController.swift */; };
 		CBD6CA291F1378C900AC4548 /* RMCongress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3641F0A9990005C8B80 /* RMCongress.swift */; };
-		CBD6CA2A1F1378C900AC4548 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3721F0AA329005C8B80 /* Song.swift */; };
 		CBD6CA2B1F1378C900AC4548 /* UseCaseNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3911F0F8D46005C8B80 /* UseCaseNetworkProvider.swift */; };
 		CBD6CA2C1F1378C900AC4548 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3821F0B8F1A005C8B80 /* Constants.swift */; };
 		CBD6CA2D1F1378C900AC4548 /* CongressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB38D1F0BB7BA005C8B80 /* CongressTableViewCell.swift */; };
@@ -44,35 +72,25 @@
 		CBD6CA3E1F1378C900AC4548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A455A1F0401C1006E1102 /* LaunchScreen.storyboard */; };
 		CBD6CA3F1F1378C900AC4548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45581F0401C1006E1102 /* Assets.xcassets */; };
 		CBD6CA401F1378C900AC4548 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8A45551F0401C1006E1102 /* Main.storyboard */; };
-		CBD6CA501F13C02800AC4548 /* StylesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA4F1F13C02800AC4548 /* StylesTableViewController.swift */; };
-		CBD6CA511F13C02800AC4548 /* StylesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA4F1F13C02800AC4548 /* StylesTableViewController.swift */; };
-		CBD6CA531F13C0F000AC4548 /* StylesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA521F13C0F000AC4548 /* StylesPresenter.swift */; };
-		CBD6CA541F13C0F000AC4548 /* StylesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA521F13C0F000AC4548 /* StylesPresenter.swift */; };
-		CBD6CA561F13C4C700AC4548 /* StylesPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA551F13C4C700AC4548 /* StylesPresentation.swift */; };
-		CBD6CA571F13C4C700AC4548 /* StylesPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA551F13C4C700AC4548 /* StylesPresentation.swift */; };
-		CBD6CA591F13C52500AC4548 /* StyleCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA581F13C52500AC4548 /* StyleCellView.swift */; };
-		CBD6CA5A1F13C52500AC4548 /* StyleCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA581F13C52500AC4548 /* StyleCellView.swift */; };
-		CBD6CA5C1F13C66F00AC4548 /* StylesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA5B1F13C66F00AC4548 /* StylesUseCase.swift */; };
-		CBD6CA5D1F13C66F00AC4548 /* StylesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA5B1F13C66F00AC4548 /* StylesUseCase.swift */; };
-		CBD6CA5F1F13C74600AC4548 /* EntityGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA5E1F13C74600AC4548 /* EntityGateway.swift */; };
-		CBD6CA601F13C74600AC4548 /* EntityGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA5E1F13C74600AC4548 /* EntityGateway.swift */; };
-		CBD6CA621F13C78A00AC4548 /* InMemoryRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA611F13C78A00AC4548 /* InMemoryRepo.swift */; };
-		CBD6CA631F13C78A00AC4548 /* InMemoryRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA611F13C78A00AC4548 /* InMemoryRepo.swift */; };
-		CBD6CA651F13CBAD00AC4548 /* StyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA641F13CBAD00AC4548 /* StyleTableViewCell.swift */; };
-		CBD6CA661F13CBAD00AC4548 /* StyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA641F13CBAD00AC4548 /* StyleTableViewCell.swift */; };
+		CBD6CA501F13C02800AC4548 /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA4F1F13C02800AC4548 /* VideosTableViewController.swift */; };
+		CBD6CA511F13C02800AC4548 /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA4F1F13C02800AC4548 /* VideosTableViewController.swift */; };
+		CBD6CA531F13C0F000AC4548 /* VideosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA521F13C0F000AC4548 /* VideosPresenter.swift */; };
+		CBD6CA541F13C0F000AC4548 /* VideosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA521F13C0F000AC4548 /* VideosPresenter.swift */; };
+		CBD6CA561F13C4C700AC4548 /* VideosPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA551F13C4C700AC4548 /* VideosPresentation.swift */; };
+		CBD6CA571F13C4C700AC4548 /* VideosPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA551F13C4C700AC4548 /* VideosPresentation.swift */; };
+		CBD6CA591F13C52500AC4548 /* VideoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA581F13C52500AC4548 /* VideoCellView.swift */; };
+		CBD6CA5A1F13C52500AC4548 /* VideoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA581F13C52500AC4548 /* VideoCellView.swift */; };
+		CBD6CA651F13CBAD00AC4548 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA641F13CBAD00AC4548 /* VideoTableViewCell.swift */; };
+		CBD6CA661F13CBAD00AC4548 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA641F13CBAD00AC4548 /* VideoTableViewCell.swift */; };
 		CBD6CA681F13D3F200AC4548 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA671F13D3F200AC4548 /* CameraViewController.swift */; };
 		CBD6CA691F13D3F200AC4548 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA671F13D3F200AC4548 /* CameraViewController.swift */; };
 		CBD6CA6B1F13E81D00AC4548 /* CongressDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA6A1F13E81D00AC4548 /* CongressDetailsViewController.swift */; };
 		CBD6CA6C1F13E81D00AC4548 /* CongressDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA6A1F13E81D00AC4548 /* CongressDetailsViewController.swift */; };
 		CBFAB3631F0A9981005C8B80 /* RMVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3621F0A9981005C8B80 /* RMVideo.swift */; };
 		CBFAB3651F0A9990005C8B80 /* RMCongress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3641F0A9990005C8B80 /* RMCongress.swift */; };
-		CBFAB3671F0A99B1005C8B80 /* RMDancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3661F0A99B1005C8B80 /* RMDancer.swift */; };
-		CBFAB3691F0A99BC005C8B80 /* RMSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3681F0A99BC005C8B80 /* RMSong.swift */; };
 		CBFAB36B1F0A9B8C005C8B80 /* RMStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB36A1F0A9B8C005C8B80 /* RMStyle.swift */; };
 		CBFAB36D1F0AA309005C8B80 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB36C1F0AA309005C8B80 /* Video.swift */; };
 		CBFAB36F1F0AA315005C8B80 /* Congress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB36E1F0AA315005C8B80 /* Congress.swift */; };
-		CBFAB3711F0AA31E005C8B80 /* Dancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3701F0AA31E005C8B80 /* Dancer.swift */; };
-		CBFAB3731F0AA329005C8B80 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3721F0AA329005C8B80 /* Song.swift */; };
 		CBFAB3751F0AA333005C8B80 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3741F0AA333005C8B80 /* Style.swift */; };
 		CBFAB3791F0AA750005C8B80 /* CongressNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3781F0AA750005C8B80 /* CongressNetwork.swift */; };
 		CBFAB37D1F0AA801005C8B80 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB37C1F0AA801005C8B80 /* Network.swift */; };
@@ -89,11 +107,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A55F8B5EA35D3659DB3165A /* Pods-DancingSteps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingSteps.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps.release.xcconfig"; sourceTree = "<group>"; };
+		10728BBA2D97A7981A0113A3 /* Pods-DancingSteps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingSteps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps.debug.xcconfig"; sourceTree = "<group>"; };
 		31A2992605E8EC18CEFF3E68 /* Pods-DancingStepsLAB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsLAB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB.debug.xcconfig"; sourceTree = "<group>"; };
-		4E7CC749311DE4263BD303AC /* Pods-DancingSteps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingSteps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps.debug.xcconfig"; sourceTree = "<group>"; };
+		3724C2511F3329A7005E1BF8 /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugViewController.swift; path = DancingSteps/DebugViewController.swift; sourceTree = "<group>"; };
 		58A4B1197EA040862E16888F /* Pods-DancingStepsLAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsLAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB.release.xcconfig"; sourceTree = "<group>"; };
 		8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingStepsLAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A371D2CB0E0F0E9EDFCBC5A0 /* Pods-DancingSteps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingSteps.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps.release.xcconfig"; sourceTree = "<group>"; };
+		CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetVideosUseCase.swift; path = DancingSteps/GetVideosUseCase.swift; sourceTree = "<group>"; };
+		CB38EBED1F1783E300008585 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		CB38EBF01F17875000008585 /* CompleteVideoPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteVideoPresentation.swift; path = DancingSteps/CompleteVideoPresentation.swift; sourceTree = "<group>"; };
+		CB38EBF31F178B8100008585 /* CompleteVideoProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteVideoProtocol.swift; path = DancingSteps/CompleteVideoProtocol.swift; sourceTree = "<group>"; };
+		CB38EBF61F1792CC00008585 /* AlertsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertsManager.swift; sourceTree = "<group>"; };
+		CB38EBF91F17CF0200008585 /* UIImageViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExt.swift; sourceTree = "<group>"; };
 		CB8A454E1F0401C1006E1102 /* DancingSteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingSteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8A45511F0401C1006E1102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB8A45531F0401C1006E1102 /* CongressesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CongressesTableViewController.swift; path = DancingSteps/CongressesTableViewController.swift; sourceTree = "<group>"; };
@@ -101,28 +126,30 @@
 		CB8A45581F0401C1006E1102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB8A455B1F0401C1006E1102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB8A455D1F0401C1006E1102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBAA33441F1616CC009ED7CE /* CompleteVideoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteVideoPresenter.swift; path = DancingSteps/CompleteVideoPresenter.swift; sourceTree = "<group>"; };
+		CBAA33471F16170B009ED7CE /* SaveNewVideoUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaveNewVideoUseCase.swift; path = DancingSteps/SaveNewVideoUseCase.swift; sourceTree = "<group>"; };
+		CBAA33501F161940009ED7CE /* RealmRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepo.swift; sourceTree = "<group>"; };
+		CBAA33541F16230C009ED7CE /* RealmRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
+		CBAA33571F162369009ED7CE /* DomainConvertibleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
+		CBAA335A1F1624AC009ED7CE /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
+		CBAA335D1F16256B009ED7CE /* ObservableExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableExt.swift; sourceTree = "<group>"; };
+		CBAA33601F1625C4009ED7CE /* RealmExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmExt.swift; sourceTree = "<group>"; };
+		CBAA33661F168AFB009ED7CE /* TestingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestingViewController.swift; path = DancingSteps/TestingViewController.swift; sourceTree = "<group>"; };
 		CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteVideoViewController.swift; path = DancingSteps/CompleteVideoViewController.swift; sourceTree = "<group>"; };
 		CBD6CA471F1378C900AC4548 /* DancingStepsLAB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingStepsLAB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD6CA481F1378C900AC4548 /* DancingStepsLAB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DancingStepsLAB-Info.plist"; path = "/Users/Gmv100/Documents/RLRG/iOS Developer Nanodegree/6. You decide! How to make an iOS app/project/DancingSteps/DancingSteps/DancingStepsLAB-Info.plist"; sourceTree = "<absolute>"; };
-		CBD6CA4F1F13C02800AC4548 /* StylesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StylesTableViewController.swift; path = DancingSteps/StylesTableViewController.swift; sourceTree = "<group>"; };
-		CBD6CA521F13C0F000AC4548 /* StylesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StylesPresenter.swift; path = DancingSteps/StylesPresenter.swift; sourceTree = "<group>"; };
-		CBD6CA551F13C4C700AC4548 /* StylesPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StylesPresentation.swift; path = DancingSteps/StylesPresentation.swift; sourceTree = "<group>"; };
-		CBD6CA581F13C52500AC4548 /* StyleCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleCellView.swift; path = DancingSteps/StyleCellView.swift; sourceTree = "<group>"; };
-		CBD6CA5B1F13C66F00AC4548 /* StylesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StylesUseCase.swift; path = DancingSteps/StylesUseCase.swift; sourceTree = "<group>"; };
-		CBD6CA5E1F13C74600AC4548 /* EntityGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntityGateway.swift; path = DancingSteps/EntityGateway.swift; sourceTree = "<group>"; };
-		CBD6CA611F13C78A00AC4548 /* InMemoryRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InMemoryRepo.swift; path = DancingSteps/InMemoryRepo.swift; sourceTree = "<group>"; };
-		CBD6CA641F13CBAD00AC4548 /* StyleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleTableViewCell.swift; path = DancingSteps/StyleTableViewCell.swift; sourceTree = "<group>"; };
+		CBD6CA4F1F13C02800AC4548 /* VideosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideosTableViewController.swift; path = DancingSteps/VideosTableViewController.swift; sourceTree = "<group>"; };
+		CBD6CA521F13C0F000AC4548 /* VideosPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideosPresenter.swift; path = DancingSteps/VideosPresenter.swift; sourceTree = "<group>"; };
+		CBD6CA551F13C4C700AC4548 /* VideosPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideosPresentation.swift; path = DancingSteps/VideosPresentation.swift; sourceTree = "<group>"; };
+		CBD6CA581F13C52500AC4548 /* VideoCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoCellView.swift; path = DancingSteps/VideoCellView.swift; sourceTree = "<group>"; };
+		CBD6CA641F13CBAD00AC4548 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoTableViewCell.swift; path = DancingSteps/VideoTableViewCell.swift; sourceTree = "<group>"; };
 		CBD6CA671F13D3F200AC4548 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = DancingSteps/CameraViewController.swift; sourceTree = "<group>"; };
 		CBD6CA6A1F13E81D00AC4548 /* CongressDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressDetailsViewController.swift; path = DancingSteps/CongressDetailsViewController.swift; sourceTree = "<group>"; };
 		CBFAB3621F0A9981005C8B80 /* RMVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMVideo.swift; sourceTree = "<group>"; };
 		CBFAB3641F0A9990005C8B80 /* RMCongress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMCongress.swift; sourceTree = "<group>"; };
-		CBFAB3661F0A99B1005C8B80 /* RMDancer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMDancer.swift; sourceTree = "<group>"; };
-		CBFAB3681F0A99BC005C8B80 /* RMSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMSong.swift; sourceTree = "<group>"; };
 		CBFAB36A1F0A9B8C005C8B80 /* RMStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMStyle.swift; sourceTree = "<group>"; };
 		CBFAB36C1F0AA309005C8B80 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		CBFAB36E1F0AA315005C8B80 /* Congress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Congress.swift; sourceTree = "<group>"; };
-		CBFAB3701F0AA31E005C8B80 /* Dancer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dancer.swift; sourceTree = "<group>"; };
-		CBFAB3721F0AA329005C8B80 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		CBFAB3741F0AA333005C8B80 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		CBFAB3781F0AA750005C8B80 /* CongressNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongressNetwork.swift; sourceTree = "<group>"; };
 		CBFAB37C1F0AA801005C8B80 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -144,7 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C4CDF324FBF83BF05714683 /* Pods_DancingSteps.framework in Frameworks */,
+				3C03B9C961EA32988F2FC199 /* Pods_DancingSteps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,12 +190,20 @@
 		112D5606E748D11DA56D7F1F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4E7CC749311DE4263BD303AC /* Pods-DancingSteps.debug.xcconfig */,
-				A371D2CB0E0F0E9EDFCBC5A0 /* Pods-DancingSteps.release.xcconfig */,
 				31A2992605E8EC18CEFF3E68 /* Pods-DancingStepsLAB.debug.xcconfig */,
 				58A4B1197EA040862E16888F /* Pods-DancingStepsLAB.release.xcconfig */,
+				10728BBA2D97A7981A0113A3 /* Pods-DancingSteps.debug.xcconfig */,
+				0A55F8B5EA35D3659DB3165A /* Pods-DancingSteps.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		3724C2501F332987005E1BF8 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				3724C2511F3329A7005E1BF8 /* DebugViewController.swift */,
+			);
+			name = debug;
 			sourceTree = "<group>";
 		};
 		385EC1A6F9B10ACF19DDEB7E /* Frameworks */ = {
@@ -211,6 +246,18 @@
 			path = DancingSteps;
 			sourceTree = "<group>";
 		};
+		CBAA33531F1622F5009ED7CE /* Conversion & Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CBAA33541F16230C009ED7CE /* RealmRepresentable.swift */,
+				CBAA33571F162369009ED7CE /* DomainConvertibleType.swift */,
+				CBAA335A1F1624AC009ED7CE /* RunLoopThreadScheduler.swift */,
+				CBAA335D1F16256B009ED7CE /* ObservableExt.swift */,
+				CBAA33601F1625C4009ED7CE /* RealmExt.swift */,
+			);
+			name = "Conversion & Utils";
+			sourceTree = "<group>";
+		};
 		CBD6CA491F13795C00AC4548 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,8 +270,9 @@
 		CBFAB3411F0A88C0005C8B80 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3724C2501F332987005E1BF8 /* debug */,
 				CBFAB3761F0AA565005C8B80 /* login */,
-				CBFAB3521F0A91CD005C8B80 /* styleList */,
+				CBFAB3521F0A91CD005C8B80 /* videosList */,
 				CBFAB3591F0A922B005C8B80 /* recordingScreen */,
 				CBFAB34D1F0A90F5005C8B80 /* topEvents */,
 			);
@@ -257,6 +305,7 @@
 			children = (
 				CBD6CA491F13795C00AC4548 /* Configuration */,
 				CB8A45511F0401C1006E1102 /* AppDelegate.swift */,
+				CB38EBED1F1783E300008585 /* Application.swift */,
 				CB8A45551F0401C1006E1102 /* Main.storyboard */,
 				CB8A455A1F0401C1006E1102 /* LaunchScreen.storyboard */,
 				CB8A45581F0401C1006E1102 /* Assets.xcassets */,
@@ -279,8 +328,6 @@
 			children = (
 				CBFAB36C1F0AA309005C8B80 /* Video.swift */,
 				CBFAB36E1F0AA315005C8B80 /* Congress.swift */,
-				CBFAB3701F0AA31E005C8B80 /* Dancer.swift */,
-				CBFAB3721F0AA329005C8B80 /* Song.swift */,
 				CBFAB3741F0AA333005C8B80 /* Style.swift */,
 			);
 			name = App_Entities;
@@ -289,10 +336,10 @@
 		CBFAB34C1F0A9099005C8B80 /* Realm_Repository */ = {
 			isa = PBXGroup;
 			children = (
+				CBAA33501F161940009ED7CE /* RealmRepo.swift */,
+				CBAA33531F1622F5009ED7CE /* Conversion & Utils */,
 				CBFAB3621F0A9981005C8B80 /* RMVideo.swift */,
 				CBFAB3641F0A9990005C8B80 /* RMCongress.swift */,
-				CBFAB3661F0A99B1005C8B80 /* RMDancer.swift */,
-				CBFAB3681F0A99BC005C8B80 /* RMSong.swift */,
 				CBFAB36A1F0A9B8C005C8B80 /* RMStyle.swift */,
 			);
 			name = Realm_Repository;
@@ -317,21 +364,20 @@
 			name = Interactor;
 			sourceTree = "<group>";
 		};
-		CBFAB3521F0A91CD005C8B80 /* styleList */ = {
+		CBFAB3521F0A91CD005C8B80 /* videosList */ = {
 			isa = PBXGroup;
 			children = (
-				CBFAB3561F0A9206005C8B80 /* DataManager */,
 				CBFAB3551F0A91FD005C8B80 /* View */,
 				CBFAB3541F0A91F6005C8B80 /* Presenter */,
 				CBFAB3531F0A91ED005C8B80 /* Interactor */,
 			);
-			name = styleList;
+			name = videosList;
 			sourceTree = "<group>";
 		};
 		CBFAB3531F0A91ED005C8B80 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				CBD6CA5B1F13C66F00AC4548 /* StylesUseCase.swift */,
+				CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -339,8 +385,8 @@
 		CBFAB3541F0A91F6005C8B80 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				CBD6CA521F13C0F000AC4548 /* StylesPresenter.swift */,
-				CBD6CA551F13C4C700AC4548 /* StylesPresentation.swift */,
+				CBD6CA521F13C0F000AC4548 /* VideosPresenter.swift */,
+				CBD6CA551F13C4C700AC4548 /* VideosPresentation.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -348,34 +394,17 @@
 		CBFAB3551F0A91FD005C8B80 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CBD6CA4F1F13C02800AC4548 /* StylesTableViewController.swift */,
-				CBD6CA581F13C52500AC4548 /* StyleCellView.swift */,
-				CBD6CA641F13CBAD00AC4548 /* StyleTableViewCell.swift */,
+				CBD6CA4F1F13C02800AC4548 /* VideosTableViewController.swift */,
+				CBAA33661F168AFB009ED7CE /* TestingViewController.swift */,
+				CBD6CA581F13C52500AC4548 /* VideoCellView.swift */,
+				CBD6CA641F13CBAD00AC4548 /* VideoTableViewCell.swift */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		CBFAB3561F0A9206005C8B80 /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				CBFAB3581F0A921D005C8B80 /* Local */,
-			);
-			name = DataManager;
-			sourceTree = "<group>";
-		};
-		CBFAB3581F0A921D005C8B80 /* Local */ = {
-			isa = PBXGroup;
-			children = (
-				CBD6CA5E1F13C74600AC4548 /* EntityGateway.swift */,
-				CBD6CA611F13C78A00AC4548 /* InMemoryRepo.swift */,
-			);
-			name = Local;
 			sourceTree = "<group>";
 		};
 		CBFAB3591F0A922B005C8B80 /* recordingScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CBFAB35D1F0A9277005C8B80 /* DataManager */,
 				CBFAB35C1F0A9272005C8B80 /* View */,
 				CBFAB35B1F0A9266005C8B80 /* Presenter */,
 				CBFAB35A1F0A9258005C8B80 /* Interactor */,
@@ -386,6 +415,7 @@
 		CBFAB35A1F0A9258005C8B80 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				CBAA33471F16170B009ED7CE /* SaveNewVideoUseCase.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -393,6 +423,8 @@
 		CBFAB35B1F0A9266005C8B80 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				CBAA33441F1616CC009ED7CE /* CompleteVideoPresenter.swift */,
+				CB38EBF01F17875000008585 /* CompleteVideoPresentation.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -402,31 +434,9 @@
 			children = (
 				CBD6CA671F13D3F200AC4548 /* CameraViewController.swift */,
 				CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */,
+				CB38EBF31F178B8100008585 /* CompleteVideoProtocol.swift */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		CBFAB35D1F0A9277005C8B80 /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				CBFAB35F1F0A928C005C8B80 /* Local */,
-				CBFAB35E1F0A9283005C8B80 /* API */,
-			);
-			name = DataManager;
-			sourceTree = "<group>";
-		};
-		CBFAB35E1F0A9283005C8B80 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = API;
-			sourceTree = "<group>";
-		};
-		CBFAB35F1F0A928C005C8B80 /* Local */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Local;
 			sourceTree = "<group>";
 		};
 		CBFAB3761F0AA565005C8B80 /* login */ = {
@@ -467,6 +477,8 @@
 			isa = PBXGroup;
 			children = (
 				CBFAB3821F0B8F1A005C8B80 /* Constants.swift */,
+				CB38EBF61F1792CC00008585 /* AlertsManager.swift */,
+				CB38EBF91F17CF0200008585 /* UIImageViewExt.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -487,13 +499,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB8A45601F0401C1006E1102 /* Build configuration list for PBXNativeTarget "DancingSteps" */;
 			buildPhases = (
-				9FC423342C22639607CE5565 /* [CP] Check Pods Manifest.lock */,
+				F0360B708F9191BC8F7A9310 /* [CP] Check Pods Manifest.lock */,
 				CB8A454A1F0401C1006E1102 /* Sources */,
 				CB8A454B1F0401C1006E1102 /* Frameworks */,
 				CB8A454C1F0401C1006E1102 /* Resources */,
-				18E2EA0247164EA3FCA180D8 /* [CP] Embed Pods Frameworks */,
-				03E92C36902BAF1A67F38AF7 /* [CP] Copy Pods Resources */,
 				CBFAB3801F0ABE9C005C8B80 /* ShellScript */,
+				6710DD6C1CEA953AAD700578 /* [CP] Embed Pods Frameworks */,
+				ABB23CB648A5602CEDB16D82 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -589,22 +601,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03E92C36902BAF1A67F38AF7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		18E2EA0247164EA3FCA180D8 /* [CP] Embed Pods Frameworks */ = {
+		6710DD6C1CEA953AAD700578 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -619,19 +616,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9FC423342C22639607CE5565 /* [CP] Check Pods Manifest.lock */ = {
+		ABB23CB648A5602CEDB16D82 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CBD6CA211F1378C900AC4548 /* [CP] Check Pods Manifest.lock */ = {
@@ -705,6 +702,21 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
+		F0360B708F9191BC8F7A9310 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -712,39 +724,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBAA33561F16230C009ED7CE /* RealmRepresentable.swift in Sources */,
 				CBFAB3791F0AA750005C8B80 /* CongressNetwork.swift in Sources */,
-				CBFAB3711F0AA31E005C8B80 /* Dancer.swift in Sources */,
-				CBFAB3691F0A99BC005C8B80 /* RMSong.swift in Sources */,
-				CBFAB3671F0A99B1005C8B80 /* RMDancer.swift in Sources */,
+				CBAA33521F161940009ED7CE /* RealmRepo.swift in Sources */,
+				CBAA33461F1616CC009ED7CE /* CompleteVideoPresenter.swift in Sources */,
+				CBAA33681F168AFC009ED7CE /* TestingViewController.swift in Sources */,
 				CBFAB3861F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift in Sources */,
 				CB8A45541F0401C1006E1102 /* CongressesTableViewController.swift in Sources */,
-				CBD6CA5A1F13C52500AC4548 /* StyleCellView.swift in Sources */,
-				CBD6CA661F13CBAD00AC4548 /* StyleTableViewCell.swift in Sources */,
+				CBD6CA5A1F13C52500AC4548 /* VideoCellView.swift in Sources */,
+				CBD6CA661F13CBAD00AC4548 /* VideoTableViewCell.swift in Sources */,
+				CBAA33621F1625C4009ED7CE /* RealmExt.swift in Sources */,
 				CBFAB3651F0A9990005C8B80 /* RMCongress.swift in Sources */,
-				CBD6CA631F13C78A00AC4548 /* InMemoryRepo.swift in Sources */,
-				CBFAB3731F0AA329005C8B80 /* Song.swift in Sources */,
+				CB38EBFB1F17CF0200008585 /* UIImageViewExt.swift in Sources */,
+				CB38EBF81F1792CC00008585 /* AlertsManager.swift in Sources */,
+				CB38EBF21F17875000008585 /* CompleteVideoPresentation.swift in Sources */,
 				CBD6CA691F13D3F200AC4548 /* CameraViewController.swift in Sources */,
-				CBD6CA5D1F13C66F00AC4548 /* StylesUseCase.swift in Sources */,
 				CBFAB3921F0F8D46005C8B80 /* UseCaseNetworkProvider.swift in Sources */,
 				CBFAB3831F0B8F1A005C8B80 /* Constants.swift in Sources */,
 				CBFAB38E1F0BB7BA005C8B80 /* CongressTableViewCell.swift in Sources */,
 				CBFAB3631F0A9981005C8B80 /* RMVideo.swift in Sources */,
+				CBAA33491F16170B009ED7CE /* SaveNewVideoUseCase.swift in Sources */,
+				CBAA335F1F16256B009ED7CE /* ObservableExt.swift in Sources */,
+				CBAA33591F162369009ED7CE /* DomainConvertibleType.swift in Sources */,
+				CB38EBEC1F17691B00008585 /* GetVideosUseCase.swift in Sources */,
 				CBFAB38C1F0BB77A005C8B80 /* CongressCellView.swift in Sources */,
 				CBFAB3881F0BAFA7005C8B80 /* GetCongressesUseCase.swift in Sources */,
 				CBFAB3751F0AA333005C8B80 /* Style.swift in Sources */,
+				CB38EBEF1F1783E300008585 /* Application.swift in Sources */,
+				CB38EBF51F178B8100008585 /* CompleteVideoProtocol.swift in Sources */,
 				CBD6CA6C1F13E81D00AC4548 /* CongressDetailsViewController.swift in Sources */,
 				CBFAB3941F0F8DAF005C8B80 /* UseCaseProvider.swift in Sources */,
 				CBFAB36D1F0AA309005C8B80 /* Video.swift in Sources */,
 				CBFAB36B1F0A9B8C005C8B80 /* RMStyle.swift in Sources */,
 				CB8A45521F0401C1006E1102 /* AppDelegate.swift in Sources */,
 				CBFAB3901F0BBC8B005C8B80 /* CongressesPresentation.swift in Sources */,
+				CBAA335C1F1624AC009ED7CE /* RunLoopThreadScheduler.swift in Sources */,
 				CBFAB37D1F0AA801005C8B80 /* Network.swift in Sources */,
-				CBD6CA601F13C74600AC4548 /* EntityGateway.swift in Sources */,
 				CBFAB36F1F0AA315005C8B80 /* Congress.swift in Sources */,
-				CBD6CA511F13C02800AC4548 /* StylesTableViewController.swift in Sources */,
+				CBD6CA511F13C02800AC4548 /* VideosTableViewController.swift in Sources */,
+				3724C2531F33305F005E1BF8 /* DebugViewController.swift in Sources */,
 				CBFAB38A1F0BB26E005C8B80 /* CongressesPresenter.swift in Sources */,
-				CBD6CA541F13C0F000AC4548 /* StylesPresenter.swift in Sources */,
-				CBD6CA571F13C4C700AC4548 /* StylesPresentation.swift in Sources */,
+				CBD6CA541F13C0F000AC4548 /* VideosPresenter.swift in Sources */,
+				CBD6CA571F13C4C700AC4548 /* VideosPresentation.swift in Sources */,
 				CBFAB37F1F0AA80C005C8B80 /* NetworkProvider.swift in Sources */,
 				CBB9B9EA1F15324000F0E441 /* CompleteVideoViewController.swift in Sources */,
 			);
@@ -754,39 +775,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBAA33551F16230C009ED7CE /* RealmRepresentable.swift in Sources */,
 				CBD6CA231F1378C900AC4548 /* CongressNetwork.swift in Sources */,
-				CBD6CA241F1378C900AC4548 /* Dancer.swift in Sources */,
-				CBD6CA251F1378C900AC4548 /* RMSong.swift in Sources */,
-				CBD6CA261F1378C900AC4548 /* RMDancer.swift in Sources */,
+				CBAA33511F161940009ED7CE /* RealmRepo.swift in Sources */,
+				CBAA33451F1616CC009ED7CE /* CompleteVideoPresenter.swift in Sources */,
+				CBAA33671F168AFB009ED7CE /* TestingViewController.swift in Sources */,
 				CBD6CA271F1378C900AC4548 /* GetCongressesNetworkUseCase.swift in Sources */,
 				CBD6CA281F1378C900AC4548 /* CongressesTableViewController.swift in Sources */,
-				CBD6CA591F13C52500AC4548 /* StyleCellView.swift in Sources */,
-				CBD6CA651F13CBAD00AC4548 /* StyleTableViewCell.swift in Sources */,
+				CBD6CA591F13C52500AC4548 /* VideoCellView.swift in Sources */,
+				CBD6CA651F13CBAD00AC4548 /* VideoTableViewCell.swift in Sources */,
+				CBAA33611F1625C4009ED7CE /* RealmExt.swift in Sources */,
 				CBD6CA291F1378C900AC4548 /* RMCongress.swift in Sources */,
-				CBD6CA621F13C78A00AC4548 /* InMemoryRepo.swift in Sources */,
-				CBD6CA2A1F1378C900AC4548 /* Song.swift in Sources */,
+				CB38EBFA1F17CF0200008585 /* UIImageViewExt.swift in Sources */,
+				CB38EBF71F1792CC00008585 /* AlertsManager.swift in Sources */,
+				CB38EBF11F17875000008585 /* CompleteVideoPresentation.swift in Sources */,
 				CBD6CA681F13D3F200AC4548 /* CameraViewController.swift in Sources */,
-				CBD6CA5C1F13C66F00AC4548 /* StylesUseCase.swift in Sources */,
 				CBD6CA2B1F1378C900AC4548 /* UseCaseNetworkProvider.swift in Sources */,
 				CBD6CA2C1F1378C900AC4548 /* Constants.swift in Sources */,
 				CBD6CA2D1F1378C900AC4548 /* CongressTableViewCell.swift in Sources */,
 				CBD6CA2E1F1378C900AC4548 /* RMVideo.swift in Sources */,
+				CBAA33481F16170B009ED7CE /* SaveNewVideoUseCase.swift in Sources */,
+				CBAA335E1F16256B009ED7CE /* ObservableExt.swift in Sources */,
+				CBAA33581F162369009ED7CE /* DomainConvertibleType.swift in Sources */,
+				CB38EBEB1F17691800008585 /* GetVideosUseCase.swift in Sources */,
 				CBD6CA2F1F1378C900AC4548 /* CongressCellView.swift in Sources */,
 				CBD6CA301F1378C900AC4548 /* GetCongressesUseCase.swift in Sources */,
 				CBD6CA311F1378C900AC4548 /* Style.swift in Sources */,
+				CB38EBEE1F1783E300008585 /* Application.swift in Sources */,
+				CB38EBF41F178B8100008585 /* CompleteVideoProtocol.swift in Sources */,
 				CBD6CA6B1F13E81D00AC4548 /* CongressDetailsViewController.swift in Sources */,
 				CBD6CA321F1378C900AC4548 /* UseCaseProvider.swift in Sources */,
 				CBD6CA331F1378C900AC4548 /* Video.swift in Sources */,
 				CBD6CA341F1378C900AC4548 /* RMStyle.swift in Sources */,
 				CBD6CA351F1378C900AC4548 /* AppDelegate.swift in Sources */,
+				3724C2521F3329A7005E1BF8 /* DebugViewController.swift in Sources */,
 				CBD6CA361F1378C900AC4548 /* CongressesPresentation.swift in Sources */,
+				CBAA335B1F1624AC009ED7CE /* RunLoopThreadScheduler.swift in Sources */,
 				CBD6CA371F1378C900AC4548 /* Network.swift in Sources */,
-				CBD6CA5F1F13C74600AC4548 /* EntityGateway.swift in Sources */,
 				CBD6CA381F1378C900AC4548 /* Congress.swift in Sources */,
-				CBD6CA501F13C02800AC4548 /* StylesTableViewController.swift in Sources */,
+				CBD6CA501F13C02800AC4548 /* VideosTableViewController.swift in Sources */,
 				CBD6CA391F1378C900AC4548 /* CongressesPresenter.swift in Sources */,
-				CBD6CA531F13C0F000AC4548 /* StylesPresenter.swift in Sources */,
-				CBD6CA561F13C4C700AC4548 /* StylesPresentation.swift in Sources */,
+				CBD6CA531F13C0F000AC4548 /* VideosPresenter.swift in Sources */,
+				CBD6CA561F13C4C700AC4548 /* VideosPresentation.swift in Sources */,
 				CBD6CA3A1F1378C900AC4548 /* NetworkProvider.swift in Sources */,
 				CBB9B9E91F15324000F0E441 /* CompleteVideoViewController.swift in Sources */,
 			);
@@ -911,7 +941,7 @@
 		};
 		CB8A45611F0401C1006E1102 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E7CC749311DE4263BD303AC /* Pods-DancingSteps.debug.xcconfig */;
+			baseConfigurationReference = 10728BBA2D97A7981A0113A3 /* Pods-DancingSteps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8WFER5UG23;
@@ -925,7 +955,7 @@
 		};
 		CB8A45621F0401C1006E1102 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A371D2CB0E0F0E9EDFCBC5A0 /* Pods-DancingSteps.release.xcconfig */;
+			baseConfigurationReference = 0A55F8B5EA35D3659DB3165A /* Pods-DancingSteps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8WFER5UG23;

@@ -1,5 +1,5 @@
 //
-//  StyleCellView.swift
+//  VideoCellView.swift
 //  DancingSteps
 //
 //  Created by RLRG on 10/07/2017.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol StyleCellView {
+protocol VideoCellView {
     func display(name: String) // TRICKY !!! We don't want to include the logic of the transformation in the view !
 }

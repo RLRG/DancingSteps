@@ -29,8 +29,8 @@ final class Network<T: ImmutableMappable> {
             .debug()
             .observeOn(scheduler)
             .map({ json -> [T] in
-                let jsonData: [String : Any] = json as! [String : Any]
-                let jsonWithEvents = jsonData["events"] // TODO: BE CERAFUL WITH THIS. THIS METHOD IS ONLY USEFUL FOR THE EVENTS WEB SERVICE.
+                let jsonData: [String : Any] = json as! [String : Any] // swiftlint:disable:this force_cast
+                let jsonWithEvents = jsonData["events"] // TODO: BE CAREFUL WITH THIS. THIS METHOD IS ONLY USEFUL FOR THE EVENTS WEB SERVICE AND THE IDEAL THING WOULD BE TO HAVE A GENERAL METHOD.
                 return try Mapper<T>().mapArray(JSONObject: jsonWithEvents!)
             })
     }

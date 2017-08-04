@@ -11,14 +11,39 @@ import UIKit
 
 class CongressDetailsViewController: UIViewController {
     
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var organizerLabel: UILabel!
+    // MARK: - Properties
     
-    var congress:Congress? = nil
+    var congress:Congress?
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleText: UITextView!
+    @IBOutlet weak var startsDate: UITextView!
+    @IBOutlet weak var endsDate: UITextView!
+    
+    // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tabBarController?.tabBar.isHidden = true
+    }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.nameLabel.text = congress?.name
-        self.organizerLabel.text = congress?.organizer
+        self.navigationItem.title = "Details of the event"
+        
+        if(congress?.imageUrl == "") {
+            imageView.image = #imageLiteral(resourceName: "defaultEvent")
+        } else {
+            imageView.downloadedFrom(url: URL(string:(congress?.imageUrl)!)!)
+        }
+        
+        self.titleText.text = congress?.name
+        self.startsDate.text = DateFormatter.localizedString(from: (congress?.startDate)!, dateStyle: .short, timeStyle: .short)
+        self.endsDate.text = DateFormatter.localizedString(from: (congress?.endDate)!, dateStyle: .short, timeStyle: .short)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tabBarController?.tabBar.isHidden = false
     }
     
 }

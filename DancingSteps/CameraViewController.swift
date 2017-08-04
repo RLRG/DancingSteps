@@ -21,8 +21,23 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         self.cameraDelegate = self
-        addButtons()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)) {
+            addButtons()
+        } else {
+            AlertsManager.alert(caller: self, message: "The camera is not available in this device and you cannot record any video. Please, install the app in the proper device.", title: "Camera not available") {
+                #if DEBUG
+                    print("Camera not available")
+                #endif
+            }
+        }
+    }
+    
+    // MARK: - Initial Configuration
     
     private func mainConfiguration() {
         flashEnabled = true
@@ -33,7 +48,7 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
     }
     
     private func addButtons() {
-        captureButton = UIButton(frame: CGRect(x: view.frame.midX - 50, y: view.frame.height - 160.0, width: 100.0, height: 100.0))
+        captureButton = UIButton(frame: CGRect(x: view.frame.midX - 35, y: view.frame.height - 160.0, width: 75.0, height: 75.0))
         captureButton.setImage(#imageLiteral(resourceName: "startRecording"), for: UIControlState())
         captureButton.addTarget(self, action: #selector(recordingAction(_:)), for: .touchUpInside)
         self.view.addSubview(captureButton)
@@ -43,8 +58,8 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
         switchToSelfieButton.addTarget(self, action: #selector(cameraSwitchAction(_:)), for: .touchUpInside)
         self.view.addSubview(switchToSelfieButton)
         
-        let test = CGFloat((view.frame.width - (view.frame.width / 2 + 37.5)) + ((view.frame.width / 2) - 37.5) - 9.0)
-        flashButton = UIButton(frame: CGRect(x: test, y: view.frame.height - 100, width: 18.0, height: 30.0))
+        let xRect = CGFloat((view.frame.width - (view.frame.width / 2 + 37.5)) + ((view.frame.width / 2) - 37.5) - 9.0)
+        flashButton = UIButton(frame: CGRect(x: xRect, y: view.frame.height - 100, width: 18.0, height: 30.0))
         flashButton.setImage(#imageLiteral(resourceName: "flash"), for: UIControlState())
         flashButton.addTarget(self, action: #selector(toggleFlashAction(_:)), for: .touchUpInside)
         self.view.addSubview(flashButton)
@@ -109,9 +124,24 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
     // MARK: - SwiftyCam Delegate methods
     
     func swiftyCam(_ swiftyCam: SwiftyCamViewController, didFinishProcessVideoAt url: URL) {
-        // TODO: Implemente Clean architecture !! Give this responsability to the presenter ?
-        let completeVideoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CompleteVideoViewController") as! CompleteVideoViewController
+        // TODO: Implement Clean architecture !! Give this responsability to the presenter ?
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let completeVideoVC = storyboard.instantiateViewController(withIdentifier: "CompleteVideoViewController") as? CompleteVideoViewController else {
+            AlertsManager.alert(caller: self, message: "Unexpected error. Contact the developer of the app.") {
+                print("CompleteVideoViewController NOT FOUND")
+            }
+            return
+        }
+    
         completeVideoVC.videoURL = url
+        
+        let realmRepo = RealmRepo<Video>()
+        let saveNewVideoUseCase = SaveNewVideoUseCase(repository: realmRepo)
+        let r_presenter = CompleteVideoPresenter(useCase: saveNewVideoUseCase)
+        saveNewVideoUseCase.presenter = r_presenter
+        completeVideoVC.presenter = r_presenter
+        r_presenter.completeVideoVC = completeVideoVC // TODO: Clean Architecture: Is this correct ? uhmm... I'm not sure if I meet the specifications of Clean Architecture...
+        
         self.navigationController?.pushViewController(completeVideoVC, animated: true)
     }
 }

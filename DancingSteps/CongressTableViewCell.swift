@@ -9,12 +9,19 @@
 import UIKit
 
 class CongressTableViewCell: UITableViewCell {
-    
+    @IBOutlet weak var eventImageView: UIImageView!
+    @IBOutlet weak var titleTextView: UITextView!
 }
 
 extension CongressTableViewCell : CongressCellView {
     
-    func display(name: String) {
-        textLabel?.text = name
+    func display(name: String, imageUrl: String) {
+        titleTextView.text = name
+        
+        if(imageUrl == "") {
+            eventImageView.image = #imageLiteral(resourceName: "defaultEvent")
+        } else {
+            eventImageView.downloadedFrom(url: URL(string:imageUrl)!)
+        }
     }
 }

@@ -18,8 +18,7 @@ public final class CongressNetwork {
     }
     
     public func fetchCongresses() -> Observable<[Congress]> {
-        return network.getRequest("\(Constants.eventsURL)/?\(Constants.AnonymousAccessTokenParameter)=\(Constants.AnonymousAccessToken)&\(Constants.categoryParameter)=\(Constants.categoryValue)&\(Constants.subcategoryParameter)=\(Constants.subcategoryValue)&location.address=London") // TODO: Improve this code with the corresponding Apple classes to create an URL.
-        // TODO: Remove the parameter "location.address=London" in order to have much less results. I have this configured like this for debugging purposes at the beginning of my developments.
+        return network.getRequest("\(Constants.eventsURL)")
     }
 }
 
@@ -33,5 +32,6 @@ extension Congress: ImmutableMappable {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         startDate = dateFormatter.date(from: try map.value("start.local"))!
         endDate = dateFormatter.date(from: try map.value("end.local"))!
+        imageUrl = (try? map.value("logo.url")) ?? "" // optional + default value
     }
 }

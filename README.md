@@ -88,13 +88,15 @@ This paragraph includes all the resources used to create this app project, inclu
 ### Other information resources
 | Resource | Description |
 | --- | --- |
-| App icon | Icon made by [Freepik](http://www.freepik.com/) from www.flaticon.com and all the sizes of the icon were generated with https://makeappicon.com/ |
+| App icon and buttons | Icon made by [Freepik](http://www.freepik.com/) from www.flaticon.com and all the sizes of the icon were generated with https://makeappicon.com/ |
 | [Writing READMEs Udacity course](https://www.udacity.com/course/writing-readmes--ud777) | In order to document this project. |
 | [GitHub documentation to write READMEs](https://help.github.com/categories/writing-on-github/) | In order to document this project. |
 
 ## Future work & Improvements
 Among other things:
 - Support of multi-language.
+- Support to landscape orientations.
+- Improve the top events experience so that the user can filter the results in any way.
 - Order the dancing events in the top chart by month.
 - Include an animation when the app is launching.
 - Extend the model of the app so that a video can be related to a dancer and to a song (in case the video is recorded with music).

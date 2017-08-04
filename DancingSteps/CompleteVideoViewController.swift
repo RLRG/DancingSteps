@@ -81,6 +81,9 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate {
     }
 
     @objc fileprivate func nextButtonAction(_ sender: Any) {
+        if self.player != nil {
+            self.player!.pause()
+        }
         presenter.saveVideo(title: titleTextField.text!, videoURL: videoURL!)
     }
     

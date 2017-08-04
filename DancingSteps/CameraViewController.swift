@@ -21,7 +21,6 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         self.cameraDelegate = self
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +36,8 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
             }
         }
     }
+    
+    // MARK: - Initial Configuration
     
     private func mainConfiguration() {
         flashEnabled = true

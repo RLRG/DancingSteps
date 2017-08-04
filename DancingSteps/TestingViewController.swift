@@ -47,6 +47,7 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        player?.pause()
         self.tabBarController?.tabBar.isHidden = false
     }
     

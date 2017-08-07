@@ -36,6 +36,7 @@ class SaveNewVideoUseCase {
             let styleRepo = RealmRepo<Style>()
             let styleObservable = styleRepo.query(with: NSPredicate(format: "name = '\(styleId)'"))
             styleObservable
+                .asObservable()
                 .subscribe(
                     onNext: { (style) in
                         
@@ -60,5 +61,11 @@ class SaveNewVideoUseCase {
                 print(error)
             #endif
         }
+    }
+    
+    func getDanceStyles() {
+        let styleRepo = RealmRepo<Style>()
+        let styleObservable = styleRepo.queryAll()
+        presenter.loadDanceStyles(finishQueryStyles: styleObservable)
     }
 }

@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import AVKit
+import RxSwift
 
 
 class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
@@ -20,13 +21,12 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
     @IBOutlet weak var stylePickerView: UIPickerView!
     @IBOutlet weak var saveVideoButton: UIButton!
     
-    var arrayPickerDataSource = ["Salsa", "Bachata", "Kizomba"] // TODO: Retrieve this information from the database !
-    
     var videoURL: URL?
     var player: AVPlayer?
     var playerController : AVPlayerViewController?
     
     var presenter: CompleteVideoPresenter!
+    let disposeBag = DisposeBag()
 
     // MARK: - Initialization functions
     
@@ -38,6 +38,10 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
         videoNameTextField.delegate = self
         stylePickerView.dataSource = self
         stylePickerView.delegate = self
+        
+        // Dance styles
+        setupStylesDataObserver()
+        presenter.getDanceStyles()
         
         // AVPlayer
         player = AVPlayer(url: videoURL!)
@@ -61,6 +65,14 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    func setupStylesDataObserver() {
+        presenter.styles.asObservable()
+            .subscribe({_ in
+                self.stylePickerView.reloadAllComponents()
+            })
+            .disposed(by: disposeBag)
     }
     
     // MARK: - Logic & Actions
@@ -92,11 +104,11 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
     // MARK: - UIPickerView Data Source
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return arrayPickerDataSource.count
+        return presenter.styles.value.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return arrayPickerDataSource[row]
+        return presenter.styles.value[row].name
     }
     
     // MARK: - UIPickerView Delegate

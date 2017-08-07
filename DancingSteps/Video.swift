@@ -14,5 +14,5 @@ public struct Video {
     let datetime: Date
     let videoDescription: String
     let url: String
-    //let style: Style
+    let style: Style
 }

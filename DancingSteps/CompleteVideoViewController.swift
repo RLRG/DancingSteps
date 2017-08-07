@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import AVKit
+import RxSwift
 
 
 class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
@@ -19,14 +20,14 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
     @IBOutlet weak var videoNameTextField: UITextField!
     @IBOutlet weak var stylePickerView: UIPickerView!
     @IBOutlet weak var saveVideoButton: UIButton!
-    
-    var arrayPickerDataSource = ["Salsa", "Bachata", "Kizomba"] // TODO: Retrieve this information from the database or somewhere else !
+    var selectedStyleName = ""
     
     var videoURL: URL?
     var player: AVPlayer?
     var playerController : AVPlayerViewController?
     
     var presenter: CompleteVideoPresenter!
+    let disposeBag = DisposeBag()
 
     // MARK: - Initialization functions
     
@@ -38,6 +39,10 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
         videoNameTextField.delegate = self
         stylePickerView.dataSource = self
         stylePickerView.delegate = self
+        
+        // Dance styles
+        setupStylesDataObserver()
+        presenter.getDanceStyles()
         
         // AVPlayer
         player = AVPlayer(url: videoURL!)
@@ -63,6 +68,19 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
         self.tabBarController?.tabBar.isHidden = false
     }
     
+    func setupStylesDataObserver() {
+        presenter.styles.asObservable()
+            .subscribe({_ in
+                self.stylePickerView.reloadAllComponents()
+                
+                // Setting the default dance style to the first selected.
+                if (!self.presenter.styles.value.isEmpty) {
+                    self.selectedStyleName = self.presenter.styles.value[0].name
+                }
+            })
+            .disposed(by: disposeBag)
+    }
+    
     // MARK: - Logic & Actions
     
     @objc fileprivate func playerItemDidReachEnd(_ notification: Notification) {
@@ -76,7 +94,7 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
         if self.player != nil {
             self.player!.pause()
         }
-        presenter.saveVideo(title: videoNameTextField.text!, videoURL: videoURL!)
+        presenter.saveVideo(title: videoNameTextField.text!, styleId: selectedStyleName, videoURL: videoURL!)
     }
     
     // MARK: - UITextFieldDelegate methods
@@ -89,17 +107,22 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
     // MARK: - UIPickerView Data Source
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return arrayPickerDataSource.count
+        return presenter.styles.value.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return arrayPickerDataSource[row]
+        return presenter.styles.value[row].name
     }
     
     // MARK: - UIPickerView Delegate
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // Setting the dance style to the selected one.
+        self.selectedStyleName = presenter.styles.value[row].name
     }
 }
 

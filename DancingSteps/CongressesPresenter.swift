@@ -54,6 +54,6 @@ extension CongressesPresenter : CongressesPresentation {
                     print("onCompleted event !! (CONGRESS)")
                 #endif
             })
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
     }
 }

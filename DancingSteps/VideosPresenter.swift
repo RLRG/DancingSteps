@@ -12,6 +12,7 @@ import RxSwift
 class VideosPresenter {
     
     var videos: Variable<[Video]> = Variable([])
+    var styles: Variable<[Style]> = Variable([])
     let useCase: GetVideosUseCase
     let disposeBag = DisposeBag()
     
@@ -24,9 +25,13 @@ class VideosPresenter {
     }
     
     // Not a good idea to have a dependency from UIKit, what if we want to have different UI Interfaces?
-    func configure(cell: VideoCellView, forRowAt row: Int) {
-        let video = videos.value[row]
+    func configure(cell: VideoCellView, forSectionAt section: Int, forRowAt row: Int) {
+        let video = videos.value.filter{ $0.style.name == styles.value[section].name }[row] // swiftlint:disable:this opening_brace
         cell.display(name: video.title)
+    }
+    
+    func getDanceStyles() {
+        useCase.getDanceStyles()
     }
 }
 
@@ -48,6 +53,25 @@ extension VideosPresenter : VideosPresentation {
                 onCompleted: {
                     print("onCompleted: Getting videos from DB !")
             })
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
+    }
+    
+    func loadDanceStyles(finishQueryStyles: Observable<[Style]>) {
+        finishQueryStyles
+            .asObservable()
+            .subscribe(
+                onNext: { (returnedStyles) in
+                    self.styles.value = returnedStyles
+            },
+                onError: { (error) in
+                    #if DEBUG
+                        print("Error querying dance styles.")
+                    #endif
+            },
+                onCompleted: {
+                    #if DEBUG
+                        print("onCompleted querying dance styles.")
+                    #endif
+            }).disposed(by: disposeBag)
     }
 }

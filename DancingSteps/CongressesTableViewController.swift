@@ -37,7 +37,7 @@ class CongressesTableViewController: UITableViewController {
             .subscribe(onNext: { _ in
                 self.tableView.reloadData()
             })
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
     }
     
     // MARK: - Table View data source

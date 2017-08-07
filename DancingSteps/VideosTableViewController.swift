@@ -27,14 +27,24 @@ class VideosTableViewController: UITableViewController {
             self.navigationItem.rightBarButtonItem  = debugButton
         #endif
         
+        setupDataObservers()
+        presenter.getDanceStyles()
         presenter.viewIsReady()
-        setupDataObserver()
     }
     
-    func setupDataObserver() {
+    func setupDataObservers() {
+        
+        // Videos
         presenter.videos.asObservable()
             .subscribe({_ in 
                 self.tableView.reloadData()
+            })
+            .disposed(by: disposeBag)
+        
+        // Dance styles
+        presenter.styles.asObservable()
+            .subscribe({_ in
+                self.tableView.reloadData() // TODO: Is it possible to include in the same observer two different observables ? Or when both of them finish, do what we consider necessary.
             })
             .disposed(by: disposeBag)
     }
@@ -42,8 +52,17 @@ class VideosTableViewController: UITableViewController {
     
     // MARK: - Table View data source
     
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return presenter.styles.value.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return presenter.styles.value[section].name
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.videos.value.count
+        return presenter.videos.value
+            .filter{ $0.style.name == presenter.styles.value[section].name}.count // swiftlint:disable:this opening_brace
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

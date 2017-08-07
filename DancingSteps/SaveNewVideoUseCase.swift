@@ -54,7 +54,6 @@ class SaveNewVideoUseCase {
                                 self.videoSavedFlag = true
                             }
                         }
-                        
                 })
                 .disposed(by: disposeBag)
         

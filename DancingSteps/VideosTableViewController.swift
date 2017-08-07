@@ -62,7 +62,7 @@ class VideosTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.videos.value
-            .filter{ $0.style.name == presenter.styles.value[section].name}.count // swiftlint:disable:this opening_brace
+            .filter{ $0.style.name == presenter.styles.value[section].name }.count // swiftlint:disable:this opening_brace
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,7 +70,7 @@ class VideosTableViewController: UITableViewController {
         // Get the empty cell.
         let cell = tableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath)
         // Configuration of the data inside of the cell
-        presenter.configure(cell: cell as! VideoCellView, forRowAt: indexPath.row) // swiftlint:disable:this force_cast
+        presenter.configure(cell: cell as! VideoCellView, forSectionAt: indexPath.section, forRowAt: indexPath.row) // swiftlint:disable:this force_cast
         return cell
     }
     
@@ -80,7 +80,7 @@ class VideosTableViewController: UITableViewController {
         // TODO: Implement Clean architecture !! Give this responsability to the presenter ?
         tableView.deselectRow(at: indexPath, animated: true)
         let testingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TestingViewController") as! TestingViewController // swiftlint:disable:this force_cast
-        testingVC.videoURL = URL(string: presenter.videos.value[indexPath.row].url)
+        testingVC.videoURL = URL(string: presenter.videos.value.filter{ $0.style.name == presenter.styles.value[indexPath.section].name }[indexPath.row].url)
         self.navigationController?.pushViewController(testingVC, animated: true)
     }
     

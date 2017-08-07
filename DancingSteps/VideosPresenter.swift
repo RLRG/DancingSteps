@@ -25,8 +25,8 @@ class VideosPresenter {
     }
     
     // Not a good idea to have a dependency from UIKit, what if we want to have different UI Interfaces?
-    func configure(cell: VideoCellView, forRowAt row: Int) {
-        let video = videos.value[row]
+    func configure(cell: VideoCellView, forSectionAt section: Int, forRowAt row: Int) {
+        let video = videos.value.filter{ $0.style.name == styles.value[section].name }[row] // swiftlint:disable:this opening_brace
         cell.display(name: video.title)
     }
     

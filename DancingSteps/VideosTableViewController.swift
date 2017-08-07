@@ -36,7 +36,7 @@ class VideosTableViewController: UITableViewController {
             .subscribe({_ in 
                 self.tableView.reloadData()
             })
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
     }
     
     

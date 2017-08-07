@@ -48,6 +48,6 @@ extension VideosPresenter : VideosPresentation {
                 onCompleted: {
                     print("onCompleted: Getting videos from DB !")
             })
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
     }
 }

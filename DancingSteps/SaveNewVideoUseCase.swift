@@ -50,7 +50,7 @@ class SaveNewVideoUseCase {
                         // 3. Provide the data to the presenter.
                         self.presenter.present(finishVideoObservable: completeVideoObservable)
                 })
-                .addDisposableTo(disposeBag)
+                .disposed(by: disposeBag)
         
             #if DEBUG
                 print("movie saved")

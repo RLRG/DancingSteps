@@ -33,6 +33,6 @@ extension CompleteVideoPresenter : CompleteVideoPresentation {
             },
                 onCompleted: {
                     self.completeVideoVC.videoSavedSuccessfully()
-        }).addDisposableTo(disposeBag)
+        }).disposed(by: disposeBag)
     }
 }

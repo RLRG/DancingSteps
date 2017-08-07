@@ -15,22 +15,21 @@ class CongressesTableViewController: UITableViewController {
     
     public var presenter: CongressesPresenter!
     let disposeBag = DisposeBag()
-    
     let loadingSpinner = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Presenter + Observer
+        presenter.viewIsReady()
+        setupDataObserver()
         
         // UIActivityIndicator
         loadingSpinner.center = view.center
         loadingSpinner.color = UIColor.purple
         loadingSpinner.hidesWhenStopped = true
         loadingSpinner.startAnimating()
-        UIApplication.shared.keyWindow!.addSubview(loadingSpinner)
-        
-        // Presenter + Observer
-        presenter.viewIsReady()
-        setupDataObserver()
+        self.view.addSubview(loadingSpinner)
     }
     
     func setupDataObserver() {
@@ -39,19 +38,6 @@ class CongressesTableViewController: UITableViewController {
                 self.tableView.reloadData()
             })
             .addDisposableTo(disposeBag)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        DispatchQueue.main.async {
-            self.loadingSpinner.stopAnimating()
-        }
-        self.navigationController?.isNavigationBarHidden = false
     }
     
     // MARK: - Table View data source
@@ -84,5 +70,28 @@ class CongressesTableViewController: UITableViewController {
         detailsVC.congress = presenter.congresses.value[indexPath.row]
         self.navigationController?.pushViewController(detailsVC, animated: true)
     }
+    
+    // MARK: - Actions
+    
+    @IBAction func refreshEventsInfo(_ sender: Any) {
+        // Calling the API web service again.
+        DispatchQueue.main.async {
+            self.loadingSpinner.startAnimating()
+        }
+        presenter.viewIsReady()
+    }
+    
 }
 
+extension CongressesTableViewController : CongressesTableViewProtocol {
+    func displayNetworkError () {
+        DispatchQueue.main.async {
+            self.loadingSpinner.stopAnimating()
+        }
+        AlertsManager.alert(caller: self, message: "An error has happened, the information could not be updated. Check your Internet connection and refresh the information again.", title: "Internet connection problem") {
+            #if DEBUG
+                print("topEvents network error")
+            #endif
+        }
+    }
+}

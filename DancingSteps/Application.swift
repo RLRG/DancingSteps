@@ -44,6 +44,7 @@ final class Application {
         let useCaseNetworkProvider = UseCaseNetworkProvider()
         let getCongressesUseCase = useCaseNetworkProvider.makeGetCongressesUseCase()
         let presenter = CongressesPresenter(useCase: getCongressesUseCase)
+        presenter.congressesView = tableViewController
         getCongressesUseCase.presenter = presenter
         tableViewController.presenter = presenter
         

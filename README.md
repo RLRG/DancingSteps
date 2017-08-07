@@ -109,4 +109,4 @@ If I find enough time to carry out it, I will work on this project to improve it
 As I am continuously learning, I would appreciate if you take a look at my code and you have recommendations to improve it in different ways. You can contact me at rodri.lopezromero@gmail.com to do so :smiley:
 
 ## License
-The contents of this repository are covered under the [MIT License](LICENSE).
+The contents of this repository are covered under the [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/).

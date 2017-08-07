@@ -49,6 +49,13 @@ class VideosTableViewController: UITableViewController {
             .disposed(by: disposeBag)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Adding a background view to the table view
+        self.tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "coupleDancingClear"))
+        self.tableView.backgroundView?.contentMode = .scaleAspectFit
+    }
     
     // MARK: - Table View data source
     
@@ -69,6 +76,7 @@ class VideosTableViewController: UITableViewController {
         // Tricky !!
         // Get the empty cell.
         let cell = tableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath)
+        cell.backgroundColor = UIColor.clear
         // Configuration of the data inside of the cell
         presenter.configure(cell: cell as! VideoCellView, forSectionAt: indexPath.section, forRowAt: indexPath.row) // swiftlint:disable:this force_cast
         return cell

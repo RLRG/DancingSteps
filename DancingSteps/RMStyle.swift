@@ -13,5 +13,25 @@ import Realm
 final class RMStyle: Object {
     dynamic var name: String = ""
     dynamic var country: String = "" // Get them from a web service? Implement it as a enum ? Improve this?
-    // TODO: Add more properties?
+    
+    override class func primaryKey() -> String? {
+        return "name"
+    }
+}
+
+
+extension RMStyle: DomainConvertibleType {
+    func asDomain() -> Style {
+        return Style(name: name,
+                     country: country)
+    }
+}
+
+extension Style: RealmRepresentable {
+    func asRealm() -> RMStyle {
+        return RMStyle.build { object in
+            object.name = name
+            object.country = country
+        }
+    }
 }

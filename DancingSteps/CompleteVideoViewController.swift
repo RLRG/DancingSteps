@@ -20,7 +20,7 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
     @IBOutlet weak var stylePickerView: UIPickerView!
     @IBOutlet weak var saveVideoButton: UIButton!
     
-    var arrayPickerDataSource = ["Salsa", "Bachata", "Kizomba"] // TODO: Retrieve this information from the database or somewhere else !
+    var arrayPickerDataSource = ["Salsa", "Bachata", "Kizomba"] // TODO: Retrieve this information from the database !
     
     var videoURL: URL?
     var player: AVPlayer?
@@ -76,7 +76,10 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
         if self.player != nil {
             self.player!.pause()
         }
-        presenter.saveVideo(title: videoNameTextField.text!, videoURL: videoURL!)
+        
+        //let danceStyleId = self.stylePickerView[self.stylePickerView.selectedRow(inComponent: 0)]
+        // TODO: Change this !
+        presenter.saveVideo(title: videoNameTextField.text!, styleId: "Salsa", videoURL: videoURL!)
     }
     
     // MARK: - UITextFieldDelegate methods

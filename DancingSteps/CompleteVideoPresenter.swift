@@ -19,8 +19,8 @@ class CompleteVideoPresenter {
         self.useCase = useCase
     }
     
-    func saveVideo(title: String = "NO_TITLE", videoURL: URL) {
-        useCase.saveVideoToDB(title: title, videoURL: videoURL)
+    func saveVideo(title: String = "NO_TITLE", styleId: String, videoURL: URL) {
+        useCase.saveVideoToDB(title: title, styleId: styleId, videoURL: videoURL)
     }
 }
 

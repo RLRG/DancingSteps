@@ -16,6 +16,7 @@ final class RMVideo: Object {
     dynamic var datetime: Date = Date()
     dynamic var videoDescription: String = ""
     dynamic var url: String = ""
+    dynamic var style: RMStyle? //= Style(name: "", country: "").asRealm()
     // TODO: Add location (to improve the app with a map).
     
     override class func primaryKey() -> String? {
@@ -30,7 +31,8 @@ extension RMVideo: DomainConvertibleType {
                     title: title,
                     datetime: datetime,
                     videoDescription: videoDescription,
-                    url: url)
+                    url: url,
+                    style: style!.asDomain())
     }
 }
 
@@ -42,6 +44,7 @@ extension Video: RealmRepresentable {
             object.datetime = datetime
             object.videoDescription = videoDescription
             object.url = url
+            object.style = style.asRealm()
         }
     }
 }

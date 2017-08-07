@@ -20,6 +20,7 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
     @IBOutlet weak var videoNameTextField: UITextField!
     @IBOutlet weak var stylePickerView: UIPickerView!
     @IBOutlet weak var saveVideoButton: UIButton!
+    var selectedStyleName = ""
     
     var videoURL: URL?
     var player: AVPlayer?
@@ -71,6 +72,11 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
         presenter.styles.asObservable()
             .subscribe({_ in
                 self.stylePickerView.reloadAllComponents()
+                
+                // Setting the default dance style to the first selected.
+                if (!self.presenter.styles.value.isEmpty) {
+                    self.selectedStyleName = self.presenter.styles.value[0].name
+                }
             })
             .disposed(by: disposeBag)
     }
@@ -88,10 +94,7 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
         if self.player != nil {
             self.player!.pause()
         }
-        
-        //let danceStyleId = self.stylePickerView[self.stylePickerView.selectedRow(inComponent: 0)]
-        // TODO: Change this !
-        presenter.saveVideo(title: videoNameTextField.text!, styleId: "Salsa", videoURL: videoURL!)
+        presenter.saveVideo(title: videoNameTextField.text!, styleId: selectedStyleName, videoURL: videoURL!)
     }
     
     // MARK: - UITextFieldDelegate methods
@@ -115,6 +118,11 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // Setting the dance style to the selected one.
+        self.selectedStyleName = presenter.styles.value[row].name
     }
 }
 

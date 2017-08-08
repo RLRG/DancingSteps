@@ -313,58 +313,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Set a name for your video !" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kGe-5B-erd">
-                                <rect key="frame" x="42" y="390" width="291" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s73-S6-COW">
-                                <rect key="frame" x="42" y="477" width="291" height="43"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8Z-AS-Squ">
-                                <rect key="frame" x="42" y="361" width="291" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dance style:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyy-FK-Wsz">
-                                <rect key="frame" x="42" y="448" width="291" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oh-yt-0Uu">
-                                <rect key="frame" x="86" y="551" width="203" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.72901069650000005" green="0.3048400986" blue="0.70668698689999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="Save video !"/>
-                                <connections>
-                                    <action selector="saveVideo:" destination="1Ry-fb-WJd" eventType="touchUpInside" id="4sw-Cw-GdT"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atu-Mu-kki">
-                                <rect key="frame" x="59" y="28" width="257" height="325"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="325" id="hb9-6J-GKV"/>
-                                </constraints>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8op-p3-VWT">
+                                <rect key="frame" x="24" y="28" width="327" height="631"/>
+                                <subviews>
+                                    <view contentMode="scaleAspectFit" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="atu-Mu-kki">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="392.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sLi-9k-IVf">
+                                        <rect key="frame" x="0.0" y="400.5" width="327" height="230.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NJi-ba-0hw">
+                                                <rect key="frame" x="0.0" y="0.0" width="327" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8Z-AS-Squ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Set a name for your video !" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kGe-5B-erd">
+                                                        <rect key="frame" x="0.0" y="30" width="327" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aed-9T-t2x">
+                                                <rect key="frame" x="0.0" y="68" width="327" height="120.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Dance style:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyy-FK-Wsz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s73-S6-COW">
+                                                        <rect key="frame" x="0.0" y="20.5" width="327" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="04N-2M-Sv7"/>
+                                                        </constraints>
+                                                    </pickerView>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" verticalHuggingPriority="255" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oh-yt-0Uu">
+                                                <rect key="frame" x="0.0" y="196.5" width="327" height="34"/>
+                                                <color key="backgroundColor" red="0.72901069650000005" green="0.3048400986" blue="0.70668698689999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <state key="normal" title="Save video !"/>
+                                                <connections>
+                                                    <action selector="saveVideo:" destination="1Ry-fb-WJd" eventType="touchUpInside" id="4sw-Cw-GdT"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.91609277249999999" blue="0.97421209480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="atu-Mu-kki" firstAttribute="centerX" secondItem="ZU6-uX-xwS" secondAttribute="centerX" id="2ie-70-9vC"/>
-                            <constraint firstItem="atu-Mu-kki" firstAttribute="top" secondItem="Yen-4P-m48" secondAttribute="bottom" constant="8" id="P3g-mF-ynk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="atu-Mu-kki" secondAttribute="trailing" constant="43" id="io7-Wt-uC3"/>
-                            <constraint firstItem="atu-Mu-kki" firstAttribute="leading" secondItem="ZU6-uX-xwS" secondAttribute="leadingMargin" constant="43" id="pSQ-DC-XL7"/>
+                            <constraint firstItem="Vrx-i8-W3b" firstAttribute="top" secondItem="8op-p3-VWT" secondAttribute="bottom" constant="8" symbolic="YES" id="Ciq-mB-Soh"/>
+                            <constraint firstItem="8op-p3-VWT" firstAttribute="top" secondItem="Yen-4P-m48" secondAttribute="bottom" constant="8" symbolic="YES" id="MIl-Ek-kAj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8op-p3-VWT" secondAttribute="trailing" constant="8" id="XGK-MT-1bN"/>
+                            <constraint firstItem="8op-p3-VWT" firstAttribute="leading" secondItem="ZU6-uX-xwS" secondAttribute="leadingMargin" constant="8" id="hES-8Z-DJc"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="rootStackView" destination="8op-p3-VWT" id="GDY-IA-YTl"/>
                         <outlet property="saveVideoButton" destination="8oh-yt-0Uu" id="yiL-JS-iV7"/>
                         <outlet property="stylePickerView" destination="s73-S6-COW" id="PEK-Od-Hz2"/>
                         <outlet property="videoNameTextField" destination="kGe-5B-erd" id="d3K-by-NGL"/>

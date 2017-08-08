@@ -17,6 +17,7 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
     // MARK: - Properties
     
     @IBOutlet weak var videoView: UIView!
+    @IBOutlet weak var rootStackView: UIStackView!
     @IBOutlet weak var videoNameTextField: UITextField!
     @IBOutlet weak var stylePickerView: UIPickerView!
     @IBOutlet weak var saveVideoButton: UIButton!
@@ -53,8 +54,8 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
         playerController!.showsPlaybackControls = false
         playerController!.player = player!
         self.addChildViewController(playerController!)
-        self.view.addSubview(playerController!.view)
         playerController!.view.frame = videoView.frame
+        self.rootStackView.addSubview(playerController!.view)
         NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.player!.currentItem)
     }
     
@@ -62,7 +63,7 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
         super.viewDidAppear(animated)
         player?.play()
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.tabBarController?.tabBar.isHidden = false

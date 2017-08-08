@@ -69,13 +69,23 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
     // MARK: - Actions
     
     @objc private func recordingAction(_ sender: Any) {
+        
         DispatchQueue.main.async {
-            self.captureButton.setImage(#imageLiteral(resourceName: "stopRecording"), for: UIControlState())
+            UIView.animate(withDuration: 0.25, animations: {
+                self.captureButton.alpha = 0.0
+            }, completion:{(finished) in
+                self.captureButton.setImage(#imageLiteral(resourceName: "stopRecording"), for: .normal)
+                UIView.animate(withDuration: 0.25,animations:{
+                    self.captureButton.alpha = 1.0
+                },completion:nil)
+            })
+
             UIView.animate(withDuration: 0.25, animations: {
                 self.flashButton.alpha = 0.0
                 self.switchToSelfieButton.alpha = 0.0
             })
         }
+        
         captureButton.removeTarget(self, action: #selector(recordingAction(_:)), for: .touchUpInside)
         captureButton.addTarget(self, action: #selector(stopRecordingAction(_:)), for: .touchUpInside)
         

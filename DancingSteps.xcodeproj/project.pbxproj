@@ -11,6 +11,8 @@
 		3724C2531F33305F005E1BF8 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C2511F3329A7005E1BF8 /* DebugViewController.swift */; };
 		3724C2581F385534005E1BF8 /* CongressesTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C2571F385534005E1BF8 /* CongressesTableViewProtocol.swift */; };
 		3724C2591F385534005E1BF8 /* CongressesTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C2571F385534005E1BF8 /* CongressesTableViewProtocol.swift */; };
+		3724C25B1F3A07FA005E1BF8 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C25A1F3A07F9005E1BF8 /* UIViewControllerExt.swift */; };
+		3724C25C1F3A07FA005E1BF8 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C25A1F3A07F9005E1BF8 /* UIViewControllerExt.swift */; };
 		3C03B9C961EA32988F2FC199 /* Pods_DancingSteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */; };
 		63148DBCF0E3A0AAA7D362A5 /* Pods_DancingStepsLAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */; };
 		CB38EBEB1F17691800008585 /* GetVideosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */; };
@@ -114,6 +116,7 @@
 		31A2992605E8EC18CEFF3E68 /* Pods-DancingStepsLAB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsLAB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB.debug.xcconfig"; sourceTree = "<group>"; };
 		3724C2511F3329A7005E1BF8 /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugViewController.swift; path = DancingSteps/DebugViewController.swift; sourceTree = "<group>"; };
 		3724C2571F385534005E1BF8 /* CongressesTableViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressesTableViewProtocol.swift; path = DancingSteps/CongressesTableViewProtocol.swift; sourceTree = "<group>"; };
+		3724C25A1F3A07F9005E1BF8 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		58A4B1197EA040862E16888F /* Pods-DancingStepsLAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsLAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB.release.xcconfig"; sourceTree = "<group>"; };
 		8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingStepsLAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetVideosUseCase.swift; path = DancingSteps/GetVideosUseCase.swift; sourceTree = "<group>"; };
@@ -483,6 +486,7 @@
 				CBFAB3821F0B8F1A005C8B80 /* Constants.swift */,
 				CB38EBF61F1792CC00008585 /* AlertsManager.swift */,
 				CB38EBF91F17CF0200008585 /* UIImageViewExt.swift */,
+				3724C25A1F3A07F9005E1BF8 /* UIViewControllerExt.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -736,6 +740,7 @@
 				CBFAB3861F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift in Sources */,
 				CB8A45541F0401C1006E1102 /* CongressesTableViewController.swift in Sources */,
 				CBD6CA5A1F13C52500AC4548 /* VideoCellView.swift in Sources */,
+				3724C25C1F3A07FA005E1BF8 /* UIViewControllerExt.swift in Sources */,
 				CBD6CA661F13CBAD00AC4548 /* VideoTableViewCell.swift in Sources */,
 				CBAA33621F1625C4009ED7CE /* RealmExt.swift in Sources */,
 				CBFAB3651F0A9990005C8B80 /* RMCongress.swift in Sources */,
@@ -788,6 +793,7 @@
 				CBD6CA271F1378C900AC4548 /* GetCongressesNetworkUseCase.swift in Sources */,
 				CBD6CA281F1378C900AC4548 /* CongressesTableViewController.swift in Sources */,
 				CBD6CA591F13C52500AC4548 /* VideoCellView.swift in Sources */,
+				3724C25B1F3A07FA005E1BF8 /* UIViewControllerExt.swift in Sources */,
 				CBD6CA651F13CBAD00AC4548 /* VideoTableViewCell.swift in Sources */,
 				CBAA33611F1625C4009ED7CE /* RealmExt.swift in Sources */,
 				CBD6CA291F1378C900AC4548 /* RMCongress.swift in Sources */,

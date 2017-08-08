@@ -41,6 +41,11 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
         stylePickerView.dataSource = self
         stylePickerView.delegate = self
         
+        // Keyboard
+        self.hideKeyboardWhenTappedAround()
+        NotificationCenter.default.addObserver(self, selector: #selector(CompleteVideoViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(CompleteVideoViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
         // Dance styles
         setupStylesDataObserver()
         presenter.getDanceStyles()
@@ -95,6 +100,7 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
         if self.player != nil {
             self.player!.pause()
         }
+        videoNameTextField.resignFirstResponder()
         presenter.saveVideo(title: videoNameTextField.text!, styleId: selectedStyleName, videoURL: videoURL!)
     }
     
@@ -124,6 +130,28 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // Setting the dance style to the selected one.
         self.selectedStyleName = presenter.styles.value[row].name
+    }
+    
+    // MARK: - Keyboard
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                DispatchQueue.main.async {
+                    self.view.frame.origin.y -= keyboardSize.height
+                }
+            }
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0 {
+                DispatchQueue.main.async {
+                    self.view.frame.origin.y += keyboardSize.height
+                }
+            }
+        }
     }
 }
 

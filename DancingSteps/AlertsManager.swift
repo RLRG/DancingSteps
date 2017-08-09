@@ -17,11 +17,15 @@ class AlertsManager {
             okActionHandler()
         }
         alertController.addAction(OKAction)
-        caller.present(alertController, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            caller.present(alertController, animated: true, completion: nil)
+        }
     }
     
     class func alertWithoutOptions(caller: UIViewController, message: String, title: String = "") {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        caller.present(alertController, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            caller.present(alertController, animated: true, completion: nil)
+        }
     }
 }

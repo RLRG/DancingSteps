@@ -21,14 +21,18 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         self.cameraDelegate = self
+        mainConfiguration()
+        addButtons()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)) {
-            addButtons()
-        } else {
+        if (!UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)) {
+            self.captureButton.isHidden = true
+            self.switchToSelfieButton.isHidden = true
+            self.flashButton.isHidden = true
+            self.view.isUserInteractionEnabled = false
             AlertsManager.alert(caller: self, message: "The camera is not available in this device and you cannot record any video. Please, install the app in the proper device.", title: "Camera not available") {
                 #if DEBUG
                     print("Camera not available")
@@ -51,31 +55,44 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
         captureButton = UIButton(frame: CGRect(x: view.frame.midX - 35, y: view.frame.height - 160.0, width: 75.0, height: 75.0))
         captureButton.setImage(#imageLiteral(resourceName: "startRecording"), for: UIControlState())
         captureButton.addTarget(self, action: #selector(recordingAction(_:)), for: .touchUpInside)
-        self.view.addSubview(captureButton)
         
         switchToSelfieButton = UIButton(frame: CGRect(x: (((view.frame.width / 2 - 37.5) / 2) - 15.0), y: view.frame.height - 100, width: 30.0, height: 23.0))
         switchToSelfieButton.setImage(#imageLiteral(resourceName: "flipCamera"), for: UIControlState())
         switchToSelfieButton.addTarget(self, action: #selector(cameraSwitchAction(_:)), for: .touchUpInside)
-        self.view.addSubview(switchToSelfieButton)
         
         let xRect = CGFloat((view.frame.width - (view.frame.width / 2 + 37.5)) + ((view.frame.width / 2) - 37.5) - 9.0)
         flashButton = UIButton(frame: CGRect(x: xRect, y: view.frame.height - 100, width: 18.0, height: 30.0))
         flashButton.setImage(#imageLiteral(resourceName: "flash"), for: UIControlState())
         flashButton.addTarget(self, action: #selector(toggleFlashAction(_:)), for: .touchUpInside)
-        self.view.addSubview(flashButton)
+        
+        DispatchQueue.main.async {
+            self.view.addSubview(self.captureButton)
+            self.view.addSubview(self.switchToSelfieButton)
+            self.view.addSubview(self.flashButton)
+        }
     }
     
     
     // MARK: - Actions
     
     @objc private func recordingAction(_ sender: Any) {
+        
         DispatchQueue.main.async {
-            self.captureButton.setImage(#imageLiteral(resourceName: "stopRecording"), for: UIControlState())
+            UIView.animate(withDuration: 0.25, animations: {
+                self.captureButton.alpha = 0.0
+            }, completion:{(finished) in
+                self.captureButton.setImage(#imageLiteral(resourceName: "stopRecording"), for: .normal)
+                UIView.animate(withDuration: 0.25,animations:{
+                    self.captureButton.alpha = 1.0
+                },completion:nil)
+            })
+
             UIView.animate(withDuration: 0.25, animations: {
                 self.flashButton.alpha = 0.0
                 self.switchToSelfieButton.alpha = 0.0
             })
         }
+        
         captureButton.removeTarget(self, action: #selector(recordingAction(_:)), for: .touchUpInside)
         captureButton.addTarget(self, action: #selector(stopRecordingAction(_:)), for: .touchUpInside)
         

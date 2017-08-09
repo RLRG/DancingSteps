@@ -27,11 +27,12 @@ extension Congress: ImmutableMappable {
     // JSON -> Object
     public init(map: Map) throws {
         name = try map.value("name.text")
-        organizer = try map.value("organizer_id") // Call the corresponding Web Service to get the name?
-        let dateFormatter = DateFormatter() // TODO: Improve this by creating an auxiliary function with Utils.
+        organizer = try map.value("organizer_id") // IMPROVEMENT: Call the corresponding Web Service to get the name?
+        let dateFormatter = DateFormatter() // IMPROVEMENT: Create an auxiliary function with Utils.
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         startDate = dateFormatter.date(from: try map.value("start.local"))!
         endDate = dateFormatter.date(from: try map.value("end.local"))!
         imageUrl = (try? map.value("logo.url")) ?? "" // optional + default value
+        descriptionText = try map.value("description.text")
     }
 }

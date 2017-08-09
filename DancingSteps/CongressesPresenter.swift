@@ -12,8 +12,8 @@ import RxSwift
 class CongressesPresenter {
     
     var congresses: Variable<[Congress]> = Variable([])
+    var congressesView: CongressesTableViewController!
     let useCase: GetCongressesUseCase
-
     let disposeBag = DisposeBag()
     
     init (useCase: GetCongressesUseCase) {
@@ -47,12 +47,13 @@ extension CongressesPresenter : CongressesPresentation {
                 #if DEBUG
                     print("ERROR IN RESPONSE (CONGRESS): \(error)")
                 #endif
+                self.congressesView.displayNetworkError()
             },
             onCompleted: {
                 #if DEBUG
                     print("onCompleted event !! (CONGRESS)")
                 #endif
             })
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
     }
 }

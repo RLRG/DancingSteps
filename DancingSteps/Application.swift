@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Realm
+import RxSwift
 import UIKit
 
 final class Application {
@@ -44,11 +46,36 @@ final class Application {
         let useCaseNetworkProvider = UseCaseNetworkProvider()
         let getCongressesUseCase = useCaseNetworkProvider.makeGetCongressesUseCase()
         let presenter = CongressesPresenter(useCase: getCongressesUseCase)
+        presenter.congressesView = tableViewController
         getCongressesUseCase.presenter = presenter
         tableViewController.presenter = presenter
         
         // START THE APP !
         mainWindow.rootViewController = tabBarController
         mainWindow.makeKeyAndVisible()
+    }
+    
+    func initializeRealmDatabase() {
+        
+        // Dance styles
+        let realmRepo = RealmRepo<Style>()
+        //let disposeBag = DisposeBag() --> Unknown behaviour. Fix this !
+        
+        let salsa = Style(name: "Salsa", country: "Cuba")
+        let bachata = Style(name: "Bachata", country: "Rep.Dominicana")
+        let kizomba = Style(name: "Kizomba", country: "Angola")
+        let stylesArray = [salsa, bachata, kizomba]
+        
+        for style in stylesArray {
+            let styleObservable = realmRepo.save(entity: style)
+            styleObservable
+                .subscribe( // TODO: unknown behaviour, If I dispose the observable, the data is not written in the local Realm database. Fix this !
+                    onNext: { (styleNext) in
+                        #if DEBUG
+                            print("New style: \(styleNext)")
+                        #endif
+                })
+            //.disposed(by: disposeBag) --> Unknown behaviour. Fix this !
+        }
     }
 }

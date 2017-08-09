@@ -11,4 +11,5 @@ import RxSwift
 
 protocol VideosPresentation {
     func present(videosObservable: Observable<[Video]>)
+    func loadDanceStyles(finishQueryStyles: Observable<[Style]>)
 }

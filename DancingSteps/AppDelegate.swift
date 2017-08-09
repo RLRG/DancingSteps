@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainStoryboard = UIStoryboard(name: storyBoardName, bundle: nil)
         window = UIWindow(frame: UIScreen.main.bounds)
         Application.shared.cleanArchitectureConfiguration(storyboard: mainStoryboard, mainWindow: window!)
+        Application.shared.initializeRealmDatabase()
         return true
     }
 

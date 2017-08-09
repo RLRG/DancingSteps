@@ -166,10 +166,10 @@ extension CompleteVideoViewController : CompleteVideoProtocol {
     
     func videoSavedSuccessfully() {
         #if DEBUG
-            print("Saved successfully!")
+            print("The video has been saved successfully!")
         #endif
         
-        AlertsManager.alert(caller: self, message: "Saved successfully") { 
+        AlertsManager.alert(caller: self, message: "The video has been saved successfully!") {
             self.navigationController?.popViewController(animated: true)
         }
     }

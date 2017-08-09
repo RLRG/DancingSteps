@@ -14,7 +14,7 @@
         <scene sceneID="geR-Vf-48Y">
             <objects>
                 <tableViewController storyboardIdentifier="CongressesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5or-S8-0b9" customClass="CongressesTableViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="QKG-Bl-CeY">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="QKG-Bl-CeY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.91609277249999999" blue="0.97421209480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

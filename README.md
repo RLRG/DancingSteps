@@ -10,11 +10,11 @@ This app was created as a final project of the [“Become an iOS Developer” Na
 
  Of course, if any iOS developer who would like to check how to use the frameworks and tools included in the *Resources* paragraph, is more than welcome. This project is also interesting if you want to see an app example using Clean Architecture along with RxSwift.
 
-![Recorded Videos Screen](https://github.com/RLRG/DancingSteps/blob/feature/GeneralImprovements%26Bugfixes/Screenshots/1.%20RecordedVideosScreen.PNG)
-![Camera Screen](https://github.com/RLRG/DancingSteps/blob/feature/GeneralImprovements%26Bugfixes/Screenshots/2.%20Camera%20Screen.PNG)
-![Finish Recording Screen](Screenshots/3. FinishRecording Screen.PNG)
-![TopChart Screen](Screenshots/4. TopChart Screen.PNG)
-![EventDetails Screen](Screenshots/5. EventDetails Screen.PNG)
+![Recorded Videos Screen](Screenshots/1.%20RecordedVideosScreen.PNG)
+![Camera Screen](Screenshots/2.%20Camera%20Screen.PNG)
+![Finish Recording Screen](Screenshots/3.%20FinishRecording%20Screen.PNG)
+![TopChart Screen](Screenshots/4.%20TopChart%20Screen.PNG)
+![EventDetails Screen](Screenshots/5.%20ventDetails%20Screen.PNG)
 
 ## Motivation
 One of my passions is to dance so that I spend so much time learning new steps of different styles and, when I attend to a workshop, at the end of it, we, dance learners, record a video with what we have done during the workshop. Afterwards, we can remember the new movements and steps watching the video again. There are hundreds of dance styles and the problem comes when somebody attends so many workshops that it is difficult to organise all the videos in Albums.

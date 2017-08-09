@@ -400,8 +400,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="8oh-yt-0Uu" id="myn-8e-Ztl"/>
                         <outlet property="rootStackView" destination="8op-p3-VWT" id="GDY-IA-YTl"/>
-                        <outlet property="saveVideoButton" destination="8oh-yt-0Uu" id="yiL-JS-iV7"/>
+                        <outlet property="saveVideoButton" destination="QdA-3N-3Iy" id="dA5-Xq-wDN"/>
                         <outlet property="stylePickerView" destination="s73-S6-COW" id="PEK-Od-Hz2"/>
                         <outlet property="videoNameTextField" destination="kGe-5B-erd" id="d3K-by-NGL"/>
                         <outlet property="videoView" destination="atu-Mu-kki" id="KNQ-RU-vOU"/>

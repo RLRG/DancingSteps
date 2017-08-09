@@ -21,6 +21,7 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
     @IBOutlet weak var videoNameTextField: UITextField!
     @IBOutlet weak var stylePickerView: UIPickerView!
     @IBOutlet weak var saveVideoButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     var selectedStyleName = ""
     
     var videoURL: URL?
@@ -45,6 +46,10 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
         self.hideKeyboardWhenTappedAround()
         NotificationCenter.default.addObserver(self, selector: #selector(CompleteVideoViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(CompleteVideoViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        // Rounded buttons
+        cancelButton.layer.cornerRadius = 10
+        saveVideoButton.layer.cornerRadius = 10
         
         // Dance styles
         setupStylesDataObserver()

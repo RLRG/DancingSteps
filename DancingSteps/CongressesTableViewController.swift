@@ -37,7 +37,13 @@ class CongressesTableViewController: UITableViewController {
     func setupDataObserver() {
         presenter.congresses.asObservable()
             .subscribe(onNext: { _ in
-                self.tableView.reloadData()
+                DispatchQueue.main.async {
+                    if (!self.presenter.congresses.value.isEmpty) {
+                        self.tableView.reloadData()
+                        self.loadingSpinner.stopAnimating()
+                        self.enableUserInteractionWithTableView()
+                    }
+                }
             })
             .disposed(by: disposeBag)
     }
@@ -45,12 +51,6 @@ class CongressesTableViewController: UITableViewController {
     // MARK: - Table View data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (!presenter.congresses.value.isEmpty) {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 7 ) { // In 7 seconds while rows are being displayed. // TODO: Improve this activity indicator !
-                self.loadingSpinner.stopAnimating()
-                self.enableUserInteractionWithTableView()
-            }
-        }
         return presenter.congresses.value.count
     }
     

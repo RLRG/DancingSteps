@@ -3,15 +3,18 @@
 
 This app was created as a final project of the [“Become an iOS Developer” Nanodegree program from Udacity](https://www.udacity.com/course/ios-developer-nanodegree--nd003).
 
-## Screenshots
-*TODO: Include some screenshots of the app when it is finished.*
-
 ## Objective and audience of the app
  The main functionalities of the app are to record all the dancing steps to be learnt by a dancer, organise them by different styles and check the most important dancing events around the user.
 
  The target audience using the app is supposed to be dancers, including dance instructors, learners and all the people interested in the dancing world.
 
  Of course, if any iOS developer who would like to check how to use the frameworks and tools included in the *Resources* paragraph, is more than welcome. This project is also interesting if you want to see an app example using Clean Architecture along with RxSwift.
+
+![Recorded Videos Screen](Screenshots/1.%20RecordedVideos%20Screen.PNG)
+![Camera Screen](Screenshots/2.%20Camera%20Screen.PNG)
+![Finish Recording Screen](Screenshots/3.%20FinishRecording%20Screen.PNG)
+![TopChart Screen](Screenshots/4.%20TopChart%20Screen.PNG)
+![EventDetails Screen](Screenshots/5.%20EventDetails%20Screen.PNG)
 
 ## Motivation
 One of my passions is to dance so that I spend so much time learning new steps of different styles and, when I attend to a workshop, at the end of it, we, dance learners, record a video with what we have done during the workshop. Afterwards, we can remember the new movements and steps watching the video again. There are hundreds of dance styles and the problem comes when somebody attends so many workshops that it is difficult to organise all the videos in Albums.

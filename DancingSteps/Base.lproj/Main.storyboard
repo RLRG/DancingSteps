@@ -152,6 +152,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descriptionTextView" destination="a9I-ei-v2c" id="DUy-6o-SwB"/>
                         <outlet property="endsDate" destination="hBt-eZ-OsR" id="RVI-Mf-EOu"/>
                         <outlet property="imageView" destination="6lJ-b6-Z62" id="sH1-3Q-Dzp"/>
                         <outlet property="startsDate" destination="NCK-cN-u3v" id="D0X-66-Zdm"/>

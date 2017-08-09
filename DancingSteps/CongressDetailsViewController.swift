@@ -19,6 +19,7 @@ class CongressDetailsViewController: UIViewController {
     @IBOutlet weak var titleText: UITextView!
     @IBOutlet weak var startsDate: UITextView!
     @IBOutlet weak var endsDate: UITextView!
+    @IBOutlet weak var descriptionTextView: UITextView!
     
     // MARK: - Lifecycle
     
@@ -39,6 +40,7 @@ class CongressDetailsViewController: UIViewController {
         self.titleText.text = congress?.name
         self.startsDate.text = DateFormatter.localizedString(from: (congress?.startDate)!, dateStyle: .short, timeStyle: .short)
         self.endsDate.text = DateFormatter.localizedString(from: (congress?.endDate)!, dateStyle: .short, timeStyle: .short)
+        self.descriptionTextView.text = congress?.descriptionText
     }
     
     override func viewWillDisappear(_ animated: Bool) {

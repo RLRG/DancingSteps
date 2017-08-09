@@ -16,5 +16,6 @@ final class RMCongress: Object {
     dynamic var startDate: Date = Date()
     dynamic var endDate: Date = Date()
     dynamic var imageUrl: String = ""
-    // TODO: Add location (to improve the app with a map).
+    dynamic var descriptionText: String = ""
+    // IMPROVEMENT: Add location (to improve the app with a map).
 }

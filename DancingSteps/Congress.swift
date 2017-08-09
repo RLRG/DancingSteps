@@ -14,5 +14,6 @@ public struct Congress {
     let startDate: Date
     let endDate: Date
     let imageUrl: String
-    // TODO: Add location (to improve the app with a map).
+    let descriptionText: String
+    // IMPROVEMENT: Add location (to improve the app with a map).
 }

@@ -97,6 +97,9 @@ class CompleteVideoViewController: UIViewController, UITextFieldDelegate, UIPick
     }
     
     @IBAction func cancelVideoSaving(_ sender: Any) {
+        if self.player != nil {
+            self.player!.pause()
+        }
         self.navigationController?.popViewController(animated: true)
     }
     

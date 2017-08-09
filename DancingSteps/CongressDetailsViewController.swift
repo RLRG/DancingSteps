@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// QUESTION: Why do I get the Missing Constraints problem in the Storyboard in the UIViewController. How could I fix it using UIStackViews ?
 class CongressDetailsViewController: UIViewController {
     
     // MARK: - Properties

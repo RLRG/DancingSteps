@@ -53,7 +53,7 @@ class VideosTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         // Adding a background view to the table view
-        self.tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "coupleDancingClear"))
+        self.tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "coupleDancing"))
         self.tableView.backgroundView?.contentMode = .scaleAspectFit
     }
     
@@ -62,7 +62,8 @@ class VideosTableViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return presenter.styles.value.count
     }
-    
+
+    // QUESTION: Why do we need this function and the function viewForHeaderInSection ? If I remove this function, the other one does not get called.
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return presenter.styles.value[section].name
     }
@@ -83,6 +84,16 @@ class VideosTableViewController: UITableViewController {
     }
     
     // MARK: - Table View Delegate
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 30))
+        headerView.backgroundColor = UIColor(red: 209/255, green: 196/255, blue: 233/255, alpha: 1) // Purple clear (#d1c4e9 (209,196,233))
+        let label = UILabel(frame: CGRect(x: 15, y: 0, width: tableView.bounds.size.width, height: 25))
+        label.text = presenter.styles.value[section].name
+        UIFont.boldSystemFont(ofSize: label.font.pointSize)
+        headerView.addSubview(label)
+        return headerView
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // TODO: Implement Clean architecture !! Give this responsability to the presenter ?

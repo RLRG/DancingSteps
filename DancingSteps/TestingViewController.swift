@@ -12,7 +12,7 @@ import AVKit
 
 class TestingViewController: UIViewController, UITextFieldDelegate {
     
-    var videoURL: URL?
+    var videoTitle: String?
     var player: AVPlayer?
     var playerController : AVPlayerViewController?
 
@@ -21,7 +21,9 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         self.tabBarController?.tabBar.isHidden = true
         self.view.backgroundColor = UIColor.gray
         
-        player = AVPlayer(url: videoURL!)
+        let documentsPath =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let videoURL = documentsPath.appendingPathComponent(videoTitle!).appendingPathExtension("mov")
+        player = AVPlayer(url: videoURL)
         playerController = AVPlayerViewController()
         
         guard player != nil && playerController != nil else {

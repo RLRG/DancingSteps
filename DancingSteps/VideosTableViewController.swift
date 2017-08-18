@@ -99,7 +99,7 @@ class VideosTableViewController: UITableViewController {
         // TODO: Implement Clean architecture !! Give this responsability to the presenter ?
         tableView.deselectRow(at: indexPath, animated: true)
         let testingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TestingViewController") as! TestingViewController // swiftlint:disable:this force_cast
-        testingVC.videoURL = URL(string: presenter.videos.value.filter{ $0.style.name == presenter.styles.value[indexPath.section].name }[indexPath.row].url)
+        testingVC.videoTitle = presenter.videos.value.filter{ $0.style.name == presenter.styles.value[indexPath.section].name }[indexPath.row].title
         self.navigationController?.pushViewController(testingVC, animated: true)
     }
     

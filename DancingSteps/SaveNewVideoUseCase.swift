@@ -35,35 +35,43 @@ class SaveNewVideoUseCase {
         do {
             let documentsPath =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
             let writePath = documentsPath.appendingPathComponent(title).appendingPathExtension("mov")
-            try  FileManager.default.moveItem(at: videoURL, to: writePath)
             
-            let styleRepo = RealmRepo<Style>()
-            let styleObservable = styleRepo.query(with: NSPredicate(format: "name = '\(styleId)'"))
-            styleObservable
-                .asObservable()
-                .subscribe(
-                    onNext: { (styles) in
-                        for style in styles {
-                            if (style.name == styleId && self.videoSavedFlag == false) {
-                                video = Video(id: title, title: title, datetime: Date(), videoDescription: "DESCRIPTION TEST", url: "Deprecated", style: style) // TODO: Be careful with this, how to improve it ?
-                                
-                                let completeVideoObservable = self.repository.save(entity: video!)
-                                
-                                // Provide the data to the presenter.
-                                self.presenter.present(finishVideoObservable: completeVideoObservable)
-                                self.videoSavedFlag = true
+            if (FileManager().fileExists(atPath: writePath.path)) {
+                self.presenter.displayError(string: "The name you are trying to set already exists ! Please, choose another one and try again.")
+            } else {
+                try  FileManager.default.moveItem(at: videoURL, to: writePath)
+                
+                let styleRepo = RealmRepo<Style>()
+                let styleObservable = styleRepo.query(with: NSPredicate(format: "name = '\(styleId)'"))
+                styleObservable
+                    .asObservable()
+                    .subscribe(
+                        onNext: { (styles) in
+                            for style in styles {
+                                if (style.name == styleId && self.videoSavedFlag == false) {
+                                    video = Video(id: title, title: title, datetime: Date(), videoDescription: "DESCRIPTION TEST", url: "Deprecated", style: style) // TODO: Be careful with this, how to improve it ?
+                                    
+                                    let completeVideoObservable = self.repository.save(entity: video!)
+                                    
+                                    // Provide the data to the presenter.
+                                    self.presenter.present(finishVideoObservable: completeVideoObservable)
+                                    self.videoSavedFlag = true
+                                }
                             }
-                        }
-                })
-                .disposed(by: disposeBag)
-        
-            #if DEBUG
-                print("movie saved")
-            #endif
+                    })
+                    .disposed(by: disposeBag)
+                
+                #if DEBUG
+                    print("movie saved")
+                #endif
+            }
+            
+            
         } catch {
             #if DEBUG
                 print(error)
             #endif
+            self.presenter.displayError(string: error.localizedDescription)
         }
     }
     

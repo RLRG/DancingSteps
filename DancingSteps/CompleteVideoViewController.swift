@@ -180,12 +180,10 @@ extension CompleteVideoViewController : CompleteVideoProtocol {
     }
     
     func errorSavingVideo(error: Error) {
-        #if DEBUG
-            print(error.localizedDescription)
-        #endif
-        
         AlertsManager.alert(caller: self, message: "Error: \(error.localizedDescription)") {
-            self.navigationController?.popViewController(animated: true)
+            #if DEBUG
+                print(error.localizedDescription)
+            #endif
         }
     }
 }

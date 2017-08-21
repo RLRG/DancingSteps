@@ -43,6 +43,10 @@ extension CompleteVideoPresenter : CompleteVideoPresentation {
         }).disposed(by: disposeBag)
     }
     
+    func displayError(string: String) {
+        self.completeVideoVC.errorSavingVideo(error: NSError(domain: string, code: 001, userInfo: nil))
+    }
+    
     func loadDanceStyles(finishQueryStyles: Observable<[Style]>) {
         finishQueryStyles
             .asObservable()

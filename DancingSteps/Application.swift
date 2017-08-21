@@ -69,7 +69,7 @@ final class Application {
         for style in stylesArray {
             let styleObservable = realmRepo.save(entity: style)
             styleObservable
-                .subscribe( // TODO: unknown behaviour, If I dispose the observable, the data is not written in the local Realm database. Fix this !
+                .subscribe( // QUESTION: Unknown behaviour, If I dispose the observable, the data is not written in the local Realm database. Why does this happen?
                     onNext: { (styleNext) in
                         #if DEBUG
                             print("New style: \(styleNext)")

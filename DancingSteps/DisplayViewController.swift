@@ -67,25 +67,10 @@ class DisplayViewController: UIViewController, UITextFieldDelegate {
     // MAR: - Sharing action
     
     func shareVideo() {
-        
         let documentsPath =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let videoURL = documentsPath.appendingPathComponent(videoTitle!).appendingPathExtension("mov")
-        
         let activityViewController : UIActivityViewController = UIActivityViewController(
             activityItems: [videoURL], applicationActivities: nil)
-        
-        // Anything you want to exclude
-//        activityViewController.excludedActivityTypes = [
-//            UIActivityTypePostToWeibo,
-//            UIActivityTypePrint,
-//            UIActivityTypeAssignToContact,
-//            UIActivityTypeSaveToCameraRoll,
-//            UIActivityTypeAddToReadingList,
-//            UIActivityTypePostToFlickr,
-//            UIActivityTypePostToVimeo,
-//            UIActivityTypePostToTencentWeibo
-//        ]
-        
         self.present(activityViewController, animated: true, completion: nil)
     }
 }

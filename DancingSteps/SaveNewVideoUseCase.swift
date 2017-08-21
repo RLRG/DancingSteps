@@ -49,7 +49,7 @@ class SaveNewVideoUseCase {
                         onNext: { (styles) in
                             for style in styles {
                                 if (style.name == styleId && self.videoSavedFlag == false) {
-                                    video = Video(id: title, title: title, datetime: Date(), videoDescription: "DESCRIPTION TEST", url: "Deprecated", style: style) // TODO: Be careful with this, how to improve it ?
+                                    video = Video(id: title, title: title, datetime: Date(), videoDescription: "DESCRIPTION TEST", url: "Deprecated", style: style)
                                     
                                     let completeVideoObservable = self.repository.save(entity: video!)
                                     

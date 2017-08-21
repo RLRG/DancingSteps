@@ -10,6 +10,5 @@ import Foundation
 
 public struct Style {
     let name: String
-    let country: String // Get them from a web service? Implement it as a enum ? Improve this?
-    // TODO: Add more properties?
+    let country: String // IMPROVEMENT: Get the styles from a web service such as Firebase or something similar? Implement it as a enum ? Improve this?
 }

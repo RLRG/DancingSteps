@@ -24,7 +24,7 @@ class CompleteVideoPresenter {
         useCase.saveVideoToDB(title: title, styleId: styleId, videoURL: videoURL)
     }
     
-    // QUESTION: Do we create a new file with a new Use Case for this case ? Why ? How to proceed ? For the moment, I include the querying method in the same Use Case (SaveNewVideoUseCase)
+    // QUESTION / TODO: Do we create a new file with a new Use Case for this case to meet the Clean Architecture paradigm? Why ? How to proceed ? For the moment, I include the querying method in the same Use Case (SaveNewVideoUseCase)
     // QUESTION / TODO: How to merge the code of this functionality ? Because we need to access the styles of music in two different parts of the app. Think about it !!
     func getDanceStyles() {
         useCase.getDanceStyles()

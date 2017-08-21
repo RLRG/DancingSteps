@@ -1,5 +1,5 @@
 //
-//  TestingViewController.swift
+//  DisplayViewController.swift
 //  DancingSteps
 //
 //  Created by RLRG on 12/07/2017.
@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import AVKit
 
-class TestingViewController: UIViewController, UITextFieldDelegate {
+class DisplayViewController: UIViewController, UITextFieldDelegate {
     
     var videoTitle: String?
     var player: AVPlayer?
@@ -18,9 +18,15 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // UITabBarController
         self.tabBarController?.tabBar.isHidden = true
         self.view.backgroundColor = UIColor.gray
         
+        // UINavigationBar
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.action, target: self, action: #selector(DisplayViewController.shareVideo))
+        
+        // Video playback configuration
         let documentsPath =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let videoURL = documentsPath.appendingPathComponent(videoTitle!).appendingPathExtension("mov")
         player = AVPlayer(url: videoURL)
@@ -56,5 +62,30 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
             self.player!.seek(to: kCMTimeZero)
             self.player!.play()
         }
+    }
+    
+    // MAR: - Sharing action
+    
+    func shareVideo() {
+        
+        let documentsPath =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let videoURL = documentsPath.appendingPathComponent(videoTitle!).appendingPathExtension("mov")
+        
+        let activityViewController : UIActivityViewController = UIActivityViewController(
+            activityItems: [videoURL], applicationActivities: nil)
+        
+        // Anything you want to exclude
+//        activityViewController.excludedActivityTypes = [
+//            UIActivityTypePostToWeibo,
+//            UIActivityTypePrint,
+//            UIActivityTypeAssignToContact,
+//            UIActivityTypeSaveToCameraRoll,
+//            UIActivityTypeAddToReadingList,
+//            UIActivityTypePostToFlickr,
+//            UIActivityTypePostToVimeo,
+//            UIActivityTypePostToTencentWeibo
+//        ]
+        
+        self.present(activityViewController, animated: true, completion: nil)
     }
 }

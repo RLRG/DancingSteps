@@ -48,8 +48,8 @@
 		CBAA335F1F16256B009ED7CE /* ObservableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA335D1F16256B009ED7CE /* ObservableExt.swift */; };
 		CBAA33611F1625C4009ED7CE /* RealmExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33601F1625C4009ED7CE /* RealmExt.swift */; };
 		CBAA33621F1625C4009ED7CE /* RealmExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33601F1625C4009ED7CE /* RealmExt.swift */; };
-		CBAA33671F168AFB009ED7CE /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33661F168AFB009ED7CE /* TestingViewController.swift */; };
-		CBAA33681F168AFC009ED7CE /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33661F168AFB009ED7CE /* TestingViewController.swift */; };
+		CBAA33671F168AFB009ED7CE /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33661F168AFB009ED7CE /* DisplayViewController.swift */; };
+		CBAA33681F168AFC009ED7CE /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA33661F168AFB009ED7CE /* DisplayViewController.swift */; };
 		CBB9B9E91F15324000F0E441 /* CompleteVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */; };
 		CBB9B9EA1F15324000F0E441 /* CompleteVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */; };
 		CBD6CA231F1378C900AC4548 /* CongressNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3781F0AA750005C8B80 /* CongressNetwork.swift */; };
@@ -140,7 +140,7 @@
 		CBAA335A1F1624AC009ED7CE /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
 		CBAA335D1F16256B009ED7CE /* ObservableExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableExt.swift; sourceTree = "<group>"; };
 		CBAA33601F1625C4009ED7CE /* RealmExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmExt.swift; sourceTree = "<group>"; };
-		CBAA33661F168AFB009ED7CE /* TestingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestingViewController.swift; path = DancingSteps/TestingViewController.swift; sourceTree = "<group>"; };
+		CBAA33661F168AFB009ED7CE /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplayViewController.swift; path = DancingSteps/DisplayViewController.swift; sourceTree = "<group>"; };
 		CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteVideoViewController.swift; path = DancingSteps/CompleteVideoViewController.swift; sourceTree = "<group>"; };
 		CBD6CA471F1378C900AC4548 /* DancingStepsLAB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingStepsLAB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD6CA481F1378C900AC4548 /* DancingStepsLAB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DancingStepsLAB-Info.plist"; path = "/Users/Gmv100/Documents/RLRG/iOS Developer Nanodegree/6. You decide! How to make an iOS app/project/DancingSteps/DancingSteps/DancingStepsLAB-Info.plist"; sourceTree = "<absolute>"; };
@@ -402,7 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				CBD6CA4F1F13C02800AC4548 /* VideosTableViewController.swift */,
-				CBAA33661F168AFB009ED7CE /* TestingViewController.swift */,
+				CBAA33661F168AFB009ED7CE /* DisplayViewController.swift */,
 				CBD6CA581F13C52500AC4548 /* VideoCellView.swift */,
 				CBD6CA641F13CBAD00AC4548 /* VideoTableViewCell.swift */,
 			);
@@ -736,7 +736,7 @@
 				CBFAB3791F0AA750005C8B80 /* CongressNetwork.swift in Sources */,
 				CBAA33521F161940009ED7CE /* RealmRepo.swift in Sources */,
 				CBAA33461F1616CC009ED7CE /* CompleteVideoPresenter.swift in Sources */,
-				CBAA33681F168AFC009ED7CE /* TestingViewController.swift in Sources */,
+				CBAA33681F168AFC009ED7CE /* DisplayViewController.swift in Sources */,
 				CBFAB3861F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift in Sources */,
 				CB8A45541F0401C1006E1102 /* CongressesTableViewController.swift in Sources */,
 				CBD6CA5A1F13C52500AC4548 /* VideoCellView.swift in Sources */,
@@ -789,7 +789,7 @@
 				CBD6CA231F1378C900AC4548 /* CongressNetwork.swift in Sources */,
 				CBAA33511F161940009ED7CE /* RealmRepo.swift in Sources */,
 				CBAA33451F1616CC009ED7CE /* CompleteVideoPresenter.swift in Sources */,
-				CBAA33671F168AFB009ED7CE /* TestingViewController.swift in Sources */,
+				CBAA33671F168AFB009ED7CE /* DisplayViewController.swift in Sources */,
 				CBD6CA271F1378C900AC4548 /* GetCongressesNetworkUseCase.swift in Sources */,
 				CBD6CA281F1378C900AC4548 /* CongressesTableViewController.swift in Sources */,
 				CBD6CA591F13C52500AC4548 /* VideoCellView.swift in Sources */,

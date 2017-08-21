@@ -187,10 +187,10 @@
             </objects>
             <point key="canvasLocation" x="-2369" y="513"/>
         </scene>
-        <!--Testing-->
+        <!--DisplayVideo-->
         <scene sceneID="HLw-BL-won">
             <objects>
-                <viewController storyboardIdentifier="TestingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3im-l8-2Vl" customClass="TestingViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DisplayViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3im-l8-2Vl" userLabel="DisplayVideo" customClass="DisplayViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fO9-Zr-xlI"/>
                         <viewControllerLayoutGuide type="bottom" id="sdE-Cj-tyt"/>

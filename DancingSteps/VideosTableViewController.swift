@@ -63,7 +63,7 @@ class VideosTableViewController: UITableViewController {
         return presenter.styles.value.count
     }
 
-    // QUESTION: Why do we need this function and the function viewForHeaderInSection ? If I remove this function, the other one does not get called.
+    // QUESTION: Why do we need this function and the function viewForHeaderInSection ? If I remove this function (titleForHeaderInSection), the other one (viewForHeaderInSection) does not get called.
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return presenter.styles.value[section].name
     }

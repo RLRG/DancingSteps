@@ -13,6 +13,10 @@
 		3724C2591F385534005E1BF8 /* CongressesTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C2571F385534005E1BF8 /* CongressesTableViewProtocol.swift */; };
 		3724C25B1F3A07FA005E1BF8 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C25A1F3A07F9005E1BF8 /* UIViewControllerExt.swift */; };
 		3724C25C1F3A07FA005E1BF8 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C25A1F3A07F9005E1BF8 /* UIViewControllerExt.swift */; };
+		3758560D1F4D72B500DF040F /* CameraPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3758560C1F4D72B500DF040F /* CameraPresenter.swift */; };
+		3758560E1F4D72B500DF040F /* CameraPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3758560C1F4D72B500DF040F /* CameraPresenter.swift */; };
+		375856131F4D73F300DF040F /* CameraProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375856121F4D73F300DF040F /* CameraProtocol.swift */; };
+		375856141F4D73F300DF040F /* CameraProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375856121F4D73F300DF040F /* CameraProtocol.swift */; };
 		3C03B9C961EA32988F2FC199 /* Pods_DancingSteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */; };
 		63148DBCF0E3A0AAA7D362A5 /* Pods_DancingStepsLAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */; };
 		CB38EBEB1F17691800008585 /* GetVideosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */; };
@@ -117,6 +121,8 @@
 		3724C2511F3329A7005E1BF8 /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugViewController.swift; path = DancingSteps/DebugViewController.swift; sourceTree = "<group>"; };
 		3724C2571F385534005E1BF8 /* CongressesTableViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressesTableViewProtocol.swift; path = DancingSteps/CongressesTableViewProtocol.swift; sourceTree = "<group>"; };
 		3724C25A1F3A07F9005E1BF8 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		3758560C1F4D72B500DF040F /* CameraPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraPresenter.swift; path = DancingSteps/CameraPresenter.swift; sourceTree = "<group>"; };
+		375856121F4D73F300DF040F /* CameraProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraProtocol.swift; path = DancingSteps/CameraProtocol.swift; sourceTree = "<group>"; };
 		58A4B1197EA040862E16888F /* Pods-DancingStepsLAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsLAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB.release.xcconfig"; sourceTree = "<group>"; };
 		8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingStepsLAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetVideosUseCase.swift; path = DancingSteps/GetVideosUseCase.swift; sourceTree = "<group>"; };
@@ -430,6 +436,7 @@
 		CBFAB35B1F0A9266005C8B80 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				3758560C1F4D72B500DF040F /* CameraPresenter.swift */,
 				CBAA33441F1616CC009ED7CE /* CompleteVideoPresenter.swift */,
 				CB38EBF01F17875000008585 /* CompleteVideoPresentation.swift */,
 			);
@@ -440,6 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				CBD6CA671F13D3F200AC4548 /* CameraViewController.swift */,
+				375856121F4D73F300DF040F /* CameraProtocol.swift */,
 				CBB9B9E81F15324000F0E441 /* CompleteVideoViewController.swift */,
 				CB38EBF31F178B8100008585 /* CompleteVideoProtocol.swift */,
 			);
@@ -734,6 +742,7 @@
 			files = (
 				CBAA33561F16230C009ED7CE /* RealmRepresentable.swift in Sources */,
 				CBFAB3791F0AA750005C8B80 /* CongressNetwork.swift in Sources */,
+				3758560E1F4D72B500DF040F /* CameraPresenter.swift in Sources */,
 				CBAA33521F161940009ED7CE /* RealmRepo.swift in Sources */,
 				CBAA33461F1616CC009ED7CE /* CompleteVideoPresenter.swift in Sources */,
 				CBAA33681F168AFC009ED7CE /* DisplayViewController.swift in Sources */,
@@ -777,6 +786,7 @@
 				CBD6CA541F13C0F000AC4548 /* VideosPresenter.swift in Sources */,
 				CBD6CA571F13C4C700AC4548 /* VideosPresentation.swift in Sources */,
 				CBFAB37F1F0AA80C005C8B80 /* NetworkProvider.swift in Sources */,
+				375856141F4D73F300DF040F /* CameraProtocol.swift in Sources */,
 				CBB9B9EA1F15324000F0E441 /* CompleteVideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -787,6 +797,7 @@
 			files = (
 				CBAA33551F16230C009ED7CE /* RealmRepresentable.swift in Sources */,
 				CBD6CA231F1378C900AC4548 /* CongressNetwork.swift in Sources */,
+				3758560D1F4D72B500DF040F /* CameraPresenter.swift in Sources */,
 				CBAA33511F161940009ED7CE /* RealmRepo.swift in Sources */,
 				CBAA33451F1616CC009ED7CE /* CompleteVideoPresenter.swift in Sources */,
 				CBAA33671F168AFB009ED7CE /* DisplayViewController.swift in Sources */,
@@ -830,6 +841,7 @@
 				CBD6CA531F13C0F000AC4548 /* VideosPresenter.swift in Sources */,
 				CBD6CA561F13C4C700AC4548 /* VideosPresentation.swift in Sources */,
 				CBD6CA3A1F1378C900AC4548 /* NetworkProvider.swift in Sources */,
+				375856131F4D73F300DF040F /* CameraProtocol.swift in Sources */,
 				CBB9B9E91F15324000F0E441 /* CompleteVideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -30,14 +30,11 @@ final class Application {
         s_tableViewController.presenter = s_presenter
         
         // RECORDING
-        // TODO: Connect the architecture for the recording workflow.
-//        let r_navigationController = tabBarController.viewControllers?[1] as! UINavigationController // swiftlint:disable:this force_cast
-//        let recordingViewController = r_navigationController.topViewController as! CameraViewController // swiftlint:disable:this force_cast
-        //        let realmRepo = RealmRepo<Video>()
-        //        let saveNewVideoUseCase = SaveNewVideoUseCase(repository: realmRepo)
-        //        let r_presenter = CompleteVideoPresenter(useCase: saveNewVideoUseCase)
-        //        // SaveNewVideoUseCase.presenter = r_presenter
-        //        s_tableViewController.presenter = s_presenter
+        let r_navigationController = tabBarController.viewControllers?[1] as! UINavigationController // swiftlint:disable:this force_cast
+        let recordingViewController = r_navigationController.topViewController as! CameraViewController // swiftlint:disable:this force_cast
+        let r_presenter = CameraPresenter()
+        r_presenter.cameraVC = recordingViewController
+        recordingViewController.presenter = r_presenter
         
         // TOP CHART
         let navigationController = tabBarController.viewControllers?[2] as! UINavigationController // swiftlint:disable:this force_cast

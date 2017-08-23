@@ -27,8 +27,14 @@ class CongressesPresenter {
     // Not a good idea to have a dependency from UIKit, what if we want to have different UI Interfaces?
     func configure(cell: CongressCellView, forRowAt row: Int) {
         let congress = congresses.value[row]
-        cell.display(name: congress.name, imageUrl: congress.imageUrl) // TODO: Is there a better way to do this? Several methods instead of one? Clean Architecture ?
-        // The same for the rest of the data.....
+        cell.display(name: congress.name, imageUrl: congress.imageUrl)
+    }
+    
+    func displayEventDetails(navigationController navigator: UINavigationController, forRowAt row: Int) {
+        // swiftlint:disable:next force_cast
+        let detailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CongressDetailsViewController") as! CongressDetailsViewController
+        detailsVC.congress = congresses.value[row]
+        navigator.pushViewController(detailsVC, animated: true)
     }
 }
 

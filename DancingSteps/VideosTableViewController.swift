@@ -34,17 +34,17 @@ class VideosTableViewController: UITableViewController {
     
     func setupDataObservers() {
         
-        // Videos
-        presenter.videos.asObservable()
-            .subscribe({_ in 
-                self.tableView.reloadData()
-            })
-            .disposed(by: disposeBag)
+        // Videos & Dance Styles
+        let videosObservable = presenter.videos.asObservable()
+        let stylesObservable = presenter.styles.asObservable()
         
-        // Dance styles
-        presenter.styles.asObservable()
-            .subscribe({_ in
-                self.tableView.reloadData() // TODO: Is it possible to include in the same observer two different observables ? Or when both of them finish, do what we consider necessary.
+        Observable
+            .zip(videosObservable, stylesObservable) { (videos, styles) throws -> ([Video], [Style]) in
+                return (videos,styles)
+            }.subscribe({ _ in
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             })
             .disposed(by: disposeBag)
     }
@@ -53,7 +53,7 @@ class VideosTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         // Adding a background view to the table view
-        self.tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "coupleDancingClear"))
+        self.tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "coupleDancing"))
         self.tableView.backgroundView?.contentMode = .scaleAspectFit
     }
     
@@ -62,7 +62,8 @@ class VideosTableViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return presenter.styles.value.count
     }
-    
+
+    // QUESTION: Why do we need this function and the function viewForHeaderInSection ? If I remove this function (titleForHeaderInSection), the other one (viewForHeaderInSection) does not get called.
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return presenter.styles.value[section].name
     }
@@ -73,7 +74,6 @@ class VideosTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Tricky !!
         // Get the empty cell.
         let cell = tableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath)
         cell.backgroundColor = UIColor.clear
@@ -84,18 +84,24 @@ class VideosTableViewController: UITableViewController {
     
     // MARK: - Table View Delegate
     
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 30))
+        headerView.backgroundColor = UIColor(red: 209/255, green: 196/255, blue: 233/255, alpha: 1) // Purple clear (#d1c4e9 (209,196,233))
+        let label = UILabel(frame: CGRect(x: 15, y: 0, width: tableView.bounds.size.width, height: 25))
+        label.text = presenter.styles.value[section].name
+        UIFont.boldSystemFont(ofSize: label.font.pointSize)
+        headerView.addSubview(label)
+        return headerView
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: Implement Clean architecture !! Give this responsability to the presenter ?
         tableView.deselectRow(at: indexPath, animated: true)
-        let testingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TestingViewController") as! TestingViewController // swiftlint:disable:this force_cast
-        testingVC.videoURL = URL(string: presenter.videos.value.filter{ $0.style.name == presenter.styles.value[indexPath.section].name }[indexPath.row].url)
-        self.navigationController?.pushViewController(testingVC, animated: true)
+        presenter.displayVideoScreen(navigationController: self.navigationController!, forIndexAt: indexPath)
     }
     
     // MARK: - Actions
     
     func openDebugScreen() {
-        let debugVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DebugViewController") as! DebugViewController // swiftlint:disable:this force_cast
-        self.navigationController?.pushViewController(debugVC, animated: true)
+        presenter.displayDebugScreen(navigationController: self.navigationController!)
     }
 }

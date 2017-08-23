@@ -18,6 +18,8 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
     var switchToSelfieButton: UIButton!
     var flashButton: UIButton!
     
+    var presenter: CameraPresenter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.cameraDelegate = self
@@ -80,9 +82,9 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
         DispatchQueue.main.async {
             UIView.animate(withDuration: 0.25, animations: {
                 self.captureButton.alpha = 0.0
-            }, completion:{(finished) in
+            }, completion: { _ in
                 self.captureButton.setImage(#imageLiteral(resourceName: "stopRecording"), for: .normal)
-                UIView.animate(withDuration: 0.25,animations:{
+                UIView.animate(withDuration: 0.25,animations: {
                     self.captureButton.alpha = 1.0
                 },completion:nil)
             })
@@ -141,24 +143,16 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
     // MARK: - SwiftyCam Delegate methods
     
     func swiftyCam(_ swiftyCam: SwiftyCamViewController, didFinishProcessVideoAt url: URL) {
-        // TODO: Implement Clean architecture !! Give this responsability to the presenter ?
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let completeVideoVC = storyboard.instantiateViewController(withIdentifier: "CompleteVideoViewController") as? CompleteVideoViewController else {
-            AlertsManager.alert(caller: self, message: "Unexpected error. Contact the developer of the app.") {
+        presenter.displayCompleteVideoScreen(navigationController: self.navigationController!, videoURL: url)
+    }
+}
+
+extension CameraViewController : CameraProtocol {
+    func displayError(string: String) {
+        AlertsManager.alert(caller: self, message: string) {
+            #if DEBUG
                 print("CompleteVideoViewController NOT FOUND")
-            }
-            return
+            #endif
         }
-    
-        completeVideoVC.videoURL = url
-        
-        let realmRepo = RealmRepo<Video>()
-        let saveNewVideoUseCase = SaveNewVideoUseCase(repository: realmRepo)
-        let r_presenter = CompleteVideoPresenter(useCase: saveNewVideoUseCase)
-        saveNewVideoUseCase.presenter = r_presenter
-        completeVideoVC.presenter = r_presenter
-        r_presenter.completeVideoVC = completeVideoVC // TODO: Clean Architecture: Is this correct ? uhmm... I'm not sure if I meet the specifications of Clean Architecture...
-        
-        self.navigationController?.pushViewController(completeVideoVC, animated: true)
     }
 }

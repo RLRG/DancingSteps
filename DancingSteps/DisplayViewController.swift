@@ -1,5 +1,5 @@
 //
-//  TestingViewController.swift
+//  DisplayViewController.swift
 //  DancingSteps
 //
 //  Created by RLRG on 12/07/2017.
@@ -10,18 +10,26 @@ import UIKit
 import AVFoundation
 import AVKit
 
-class TestingViewController: UIViewController, UITextFieldDelegate {
+class DisplayViewController: UIViewController, UITextFieldDelegate {
     
-    var videoURL: URL?
+    var videoTitle: String?
     var player: AVPlayer?
     var playerController : AVPlayerViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // UITabBarController
         self.tabBarController?.tabBar.isHidden = true
         self.view.backgroundColor = UIColor.gray
         
-        player = AVPlayer(url: videoURL!)
+        // UINavigationBar
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.action, target: self, action: #selector(DisplayViewController.shareVideo))
+        
+        // Video playback configuration
+        let documentsPath =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let videoURL = documentsPath.appendingPathComponent(videoTitle!).appendingPathExtension("mov")
+        player = AVPlayer(url: videoURL)
         playerController = AVPlayerViewController()
         
         guard player != nil && playerController != nil else {
@@ -54,5 +62,15 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
             self.player!.seek(to: kCMTimeZero)
             self.player!.play()
         }
+    }
+    
+    // MAR: - Sharing action
+    
+    func shareVideo() {
+        let documentsPath =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let videoURL = documentsPath.appendingPathComponent(videoTitle!).appendingPathExtension("mov")
+        let activityViewController : UIActivityViewController = UIActivityViewController(
+            activityItems: [videoURL], applicationActivities: nil)
+        self.present(activityViewController, animated: true, completion: nil)
     }
 }

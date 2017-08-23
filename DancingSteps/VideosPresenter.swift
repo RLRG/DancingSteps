@@ -13,25 +13,56 @@ class VideosPresenter {
     
     var videos: Variable<[Video]> = Variable([])
     var styles: Variable<[Style]> = Variable([])
-    let useCase: GetVideosUseCase
+    let getVideosUseCase: GetVideosUseCase
+    let getDanceStylesUseCase: GetDanceStylesUseCase
     let disposeBag = DisposeBag()
     
-    init(useCase: GetVideosUseCase) {
-        self.useCase = useCase
+    init(getVideosUseCase: GetVideosUseCase, getDanceStylesUseCase: GetDanceStylesUseCase) {
+        self.getVideosUseCase = getVideosUseCase
+        self.getDanceStylesUseCase = getDanceStylesUseCase
     }
     
     func viewIsReady() {
-        useCase.getAllVideosFromDB()
+        getVideosUseCase.getAllVideosFromDB()
     }
     
     // Not a good idea to have a dependency from UIKit, what if we want to have different UI Interfaces?
     func configure(cell: VideoCellView, forSectionAt section: Int, forRowAt row: Int) {
-        let video = videos.value.filter{ $0.style.name == styles.value[section].name }[row] // swiftlint:disable:this opening_brace
+        let video = videos.value
+            .filter{ $0.style.name == styles.value[section].name }[row] // swiftlint:disable:this opening_brace
         cell.display(name: video.title)
     }
     
+    func displayVideoScreen(navigationController navigator: UINavigationController, forIndexAt indexPath: IndexPath) {
+        let displayVideoVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "DisplayViewController") as! DisplayViewController // swiftlint:disable:this force_cast
+        displayVideoVC.videoTitle = videos.value
+            .filter{ $0.style.name == styles.value[indexPath.section].name }[indexPath.row].title // swiftlint:disable:this opening_brace
+        navigator.pushViewController(displayVideoVC, animated: true)
+    }
+    
+    func displayDebugScreen(navigationController navigator: UINavigationController) {
+        let debugVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "DebugViewController") as! DebugViewController // swiftlint:disable:this force_cast
+        navigator.pushViewController(debugVC, animated: true)
+    }
+    
     func getDanceStyles() {
-        useCase.getDanceStyles()
+        getDanceStylesUseCase.getDanceStyles().asObservable()
+            .subscribe(
+                onNext: { (returnedStyles) in
+                    self.styles.value = returnedStyles
+            },
+                onError: { (error) in
+                    #if DEBUG
+                        print("Error querying dance styles.")
+                    #endif
+            },
+                onCompleted: {
+                    #if DEBUG
+                        print("onCompleted querying dance styles.")
+                    #endif
+            }).disposed(by: disposeBag)
     }
 }
 
@@ -54,24 +85,5 @@ extension VideosPresenter : VideosPresentation {
                     print("onCompleted: Getting videos from DB !")
             })
             .disposed(by: disposeBag)
-    }
-    
-    func loadDanceStyles(finishQueryStyles: Observable<[Style]>) {
-        finishQueryStyles
-            .asObservable()
-            .subscribe(
-                onNext: { (returnedStyles) in
-                    self.styles.value = returnedStyles
-            },
-                onError: { (error) in
-                    #if DEBUG
-                        print("Error querying dance styles.")
-                    #endif
-            },
-                onCompleted: {
-                    #if DEBUG
-                        print("onCompleted querying dance styles.")
-                    #endif
-            }).disposed(by: disposeBag)
     }
 }

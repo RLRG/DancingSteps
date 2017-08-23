@@ -37,7 +37,13 @@ class CongressesTableViewController: UITableViewController {
     func setupDataObserver() {
         presenter.congresses.asObservable()
             .subscribe(onNext: { _ in
-                self.tableView.reloadData()
+                DispatchQueue.main.async {
+                    if (!self.presenter.congresses.value.isEmpty) {
+                        self.tableView.reloadData()
+                        self.loadingSpinner.stopAnimating()
+                        self.enableUserInteractionWithTableView()
+                    }
+                }
             })
             .disposed(by: disposeBag)
     }
@@ -45,17 +51,10 @@ class CongressesTableViewController: UITableViewController {
     // MARK: - Table View data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (!presenter.congresses.value.isEmpty) {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 7 ) { // In 7 seconds while rows are being displayed. // TODO: Improve this activity indicator !
-                self.loadingSpinner.stopAnimating()
-                self.enableUserInteractionWithTableView()
-            }
-        }
         return presenter.congresses.value.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Tricky !!
         // Get the empty cell.
         let cell = tableView.dequeueReusableCell(withIdentifier: "congressCell", for: indexPath)
         // Configuration of the data inside of the cell
@@ -66,12 +65,8 @@ class CongressesTableViewController: UITableViewController {
     // MARK: - Table View Delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: Implement Clean architecture !! Give this responsability to the presenter ?
         tableView.deselectRow(at: indexPath, animated: true)
-        // swiftlint:disable:next force_cast
-        let detailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CongressDetailsViewController") as! CongressDetailsViewController
-        detailsVC.congress = presenter.congresses.value[indexPath.row]
-        self.navigationController?.pushViewController(detailsVC, animated: true)
+        presenter.displayEventDetails(navigationController: (self.navigationController)!, forRowAt: indexPath.row)
     }
     
     // MARK: - Actions

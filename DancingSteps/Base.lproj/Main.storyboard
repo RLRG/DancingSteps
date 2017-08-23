@@ -14,7 +14,7 @@
         <scene sceneID="geR-Vf-48Y">
             <objects>
                 <tableViewController storyboardIdentifier="CongressesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5or-S8-0b9" customClass="CongressesTableViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="QKG-Bl-CeY">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="QKG-Bl-CeY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.91609277249999999" blue="0.97421209480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -99,36 +99,36 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" ambiguous="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AT3-sB-ZQB" userLabel="Vertical Dates StackView">
-                                        <rect key="frame" x="0.0" y="201.5" width="327" height="66"/>
+                                        <rect key="frame" x="0.0" y="201.5" width="327" height="61"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" ambiguous="YES" spacing="8" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qQx-uG-Q8t" userLabel="Start Date Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="327" height="33"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="327" height="30.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" ambiguous="YES" text="Starts:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJq-TI-KVP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="33"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="30.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="START DATE" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCK-cN-u3v">
-                                                        <rect key="frame" x="167.5" y="0.0" width="159.5" height="33"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="START DATE" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCK-cN-u3v">
+                                                        <rect key="frame" x="167.5" y="0.0" width="159.5" height="30.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" ambiguous="YES" spacing="8" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b4M-qh-8Qq" userLabel="End Date Stack View">
-                                                <rect key="frame" x="0.0" y="33" width="327" height="33"/>
+                                                <rect key="frame" x="0.0" y="30.5" width="327" height="30.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="Ends:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xia-KV-o83">
-                                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="33"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="30.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="END DATE" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBt-eZ-OsR">
-                                                        <rect key="frame" x="167.5" y="0.0" width="159.5" height="33"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="END DATE" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBt-eZ-OsR">
+                                                        <rect key="frame" x="167.5" y="0.0" width="159.5" height="30.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
@@ -136,7 +136,7 @@
                                         </subviews>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" ambiguous="YES" showsHorizontalScrollIndicator="NO" editable="NO" text="This text will be the description of each event." textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9I-ei-v2c">
-                                        <rect key="frame" x="0.0" y="275.5" width="327" height="355.5"/>
+                                        <rect key="frame" x="0.0" y="270.5" width="327" height="360.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -171,6 +171,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="MZs-1d-NH8" kind="relationship" relationship="viewControllers" id="jGY-Jl-Og1"/>
@@ -182,10 +187,10 @@
             </objects>
             <point key="canvasLocation" x="-2369" y="513"/>
         </scene>
-        <!--Testing-->
+        <!--DisplayVideo-->
         <scene sceneID="HLw-BL-won">
             <objects>
-                <viewController storyboardIdentifier="TestingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3im-l8-2Vl" customClass="TestingViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DisplayViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3im-l8-2Vl" userLabel="DisplayVideo" customClass="DisplayViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fO9-Zr-xlI"/>
                         <viewControllerLayoutGuide type="bottom" id="sdE-Cj-tyt"/>
@@ -222,10 +227,10 @@
         <scene sceneID="v1T-f1-00E">
             <objects>
                 <tableViewController storyboardIdentifier="StylesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FnE-jR-Esv" customClass="VideosTableViewController" customModule="DancingSteps" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="stE-kY-GEZ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="stE-kY-GEZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.91609277249999999" blue="0.97421209480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.72901069650000005" green="0.3048400985599215" blue="0.70668698687593479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
@@ -395,8 +400,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="8oh-yt-0Uu" id="myn-8e-Ztl"/>
                         <outlet property="rootStackView" destination="8op-p3-VWT" id="GDY-IA-YTl"/>
-                        <outlet property="saveVideoButton" destination="8oh-yt-0Uu" id="yiL-JS-iV7"/>
+                        <outlet property="saveVideoButton" destination="QdA-3N-3Iy" id="dA5-Xq-wDN"/>
                         <outlet property="stylePickerView" destination="s73-S6-COW" id="PEK-Od-Hz2"/>
                         <outlet property="videoNameTextField" destination="kGe-5B-erd" id="d3K-by-NGL"/>
                         <outlet property="videoView" destination="atu-Mu-kki" id="KNQ-RU-vOU"/>

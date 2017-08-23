@@ -18,7 +18,7 @@ public final class CongressNetwork {
     }
     
     public func fetchCongresses() -> Observable<[Congress]> {
-        return network.getRequest("\(Constants.eventsURL)")
+        return network.getRequest("\(Constants.eventsURL)", rootJSONEntity: "events")
     }
 }
 

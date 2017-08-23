@@ -16,8 +16,8 @@ final class RMVideo: Object {
     dynamic var datetime: Date = Date()
     dynamic var videoDescription: String = ""
     dynamic var url: String = ""
-    dynamic var style: RMStyle? //= Style(name: "", country: "").asRealm()
-    // TODO: Add location (to improve the app with a map).
+    dynamic var style: RMStyle?
+    // IMPROVEMENT: Add location (to improve the app with a map).
     
     override class func primaryKey() -> String? {
         return "id"

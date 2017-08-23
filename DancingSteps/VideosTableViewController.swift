@@ -74,7 +74,6 @@ class VideosTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Tricky !!
         // Get the empty cell.
         let cell = tableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath)
         cell.backgroundColor = UIColor.clear

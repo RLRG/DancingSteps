@@ -74,10 +74,4 @@ class SaveNewVideoUseCase {
             self.presenter.displayError(string: error.localizedDescription)
         }
     }
-    
-    func getDanceStyles() {
-        let styleRepo = RealmRepo<Style>()
-        let styleObservable = styleRepo.queryAll()
-        presenter.loadDanceStyles(finishQueryStyles: styleObservable)
-    }
 }

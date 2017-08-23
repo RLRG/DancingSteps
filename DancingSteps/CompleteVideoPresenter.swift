@@ -11,23 +11,24 @@ import RxSwift
 
 class CompleteVideoPresenter {
     
-    let useCase: SaveNewVideoUseCase
+    let saveVideoUseCase: SaveNewVideoUseCase
+    let getDanceStylesUseCase: GetDanceStylesUseCase
     var completeVideoVC : CompleteVideoProtocol!
     var styles: Variable<[Style]> = Variable([])
     let disposeBag = DisposeBag()
     
-    init (useCase: SaveNewVideoUseCase) {
-        self.useCase = useCase
+    init (saveVideoUseCase: SaveNewVideoUseCase, getDanceStylesUseCase: GetDanceStylesUseCase) {
+        self.saveVideoUseCase = saveVideoUseCase
+        self.getDanceStylesUseCase = getDanceStylesUseCase
     }
     
     func saveVideo(title: String = "NO_TITLE", styleId: String, videoURL: URL) {
-        useCase.saveVideoToDB(title: title, styleId: styleId, videoURL: videoURL)
+        saveVideoUseCase.saveVideoToDB(title: title, styleId: styleId, videoURL: videoURL)
     }
     
-    // QUESTION / TODO: Do we create a new file with a new Use Case for this case to meet the Clean Architecture paradigm? Why ? How to proceed ? For the moment, I include the querying method in the same Use Case (SaveNewVideoUseCase)
-    // QUESTION / TODO: How to merge the code of this functionality ? Because we need to access the styles of music in two different parts of the app. Think about it !!
+    // QUESTION / TODO: How to merge the code of this functionality ? Because we need to access the styles of music in two different parts of the app (videosList & here!). Think about it !!
     func getDanceStyles() {
-        useCase.getDanceStyles()
+        getDanceStylesUseCase.getDanceStyles()
     }
 }
 

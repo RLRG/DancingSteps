@@ -23,10 +23,13 @@ class CameraPresenter {
         completeVideoVC.videoURL = url
         
         // QUESTION: How I could improve or make this more efficient ? It would be nice to have this code in the "Application.swift" file along with the CleanArchitecture configuration code.
-        let realmRepo = RealmRepo<Video>()
-        let saveNewVideoUseCase = SaveNewVideoUseCase(repository: realmRepo)
-        let r_presenter = CompleteVideoPresenter(useCase: saveNewVideoUseCase)
+        let realmVideoRepo = RealmRepo<Video>()
+        let realmStyleRepo = RealmRepo<Style>()
+        let saveNewVideoUseCase = SaveNewVideoUseCase(repository: realmVideoRepo)
+        let getDanceStylesUseCase = GetDanceStylesUseCase(repository: realmStyleRepo)
+        let r_presenter = CompleteVideoPresenter(saveVideoUseCase: saveNewVideoUseCase, getDanceStylesUseCase: getDanceStylesUseCase)
         saveNewVideoUseCase.presenter = r_presenter
+        getDanceStylesUseCase.presenter = r_presenter
         completeVideoVC.presenter = r_presenter
         r_presenter.completeVideoVC = completeVideoVC
         

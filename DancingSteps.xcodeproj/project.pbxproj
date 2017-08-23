@@ -17,6 +17,8 @@
 		3758560E1F4D72B500DF040F /* CameraPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3758560C1F4D72B500DF040F /* CameraPresenter.swift */; };
 		375856131F4D73F300DF040F /* CameraProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375856121F4D73F300DF040F /* CameraProtocol.swift */; };
 		375856141F4D73F300DF040F /* CameraProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375856121F4D73F300DF040F /* CameraProtocol.swift */; };
+		375856161F4D7F4D00DF040F /* GetDanceStylesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375856151F4D7F4D00DF040F /* GetDanceStylesUseCase.swift */; };
+		375856171F4D7F4D00DF040F /* GetDanceStylesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375856151F4D7F4D00DF040F /* GetDanceStylesUseCase.swift */; };
 		3C03B9C961EA32988F2FC199 /* Pods_DancingSteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */; };
 		63148DBCF0E3A0AAA7D362A5 /* Pods_DancingStepsLAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */; };
 		CB38EBEB1F17691800008585 /* GetVideosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */; };
@@ -123,6 +125,7 @@
 		3724C25A1F3A07F9005E1BF8 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		3758560C1F4D72B500DF040F /* CameraPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraPresenter.swift; path = DancingSteps/CameraPresenter.swift; sourceTree = "<group>"; };
 		375856121F4D73F300DF040F /* CameraProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraProtocol.swift; path = DancingSteps/CameraProtocol.swift; sourceTree = "<group>"; };
+		375856151F4D7F4D00DF040F /* GetDanceStylesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetDanceStylesUseCase.swift; path = DancingSteps/GetDanceStylesUseCase.swift; sourceTree = "<group>"; };
 		58A4B1197EA040862E16888F /* Pods-DancingStepsLAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsLAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB.release.xcconfig"; sourceTree = "<group>"; };
 		8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingStepsLAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetVideosUseCase.swift; path = DancingSteps/GetVideosUseCase.swift; sourceTree = "<group>"; };
@@ -429,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				CBAA33471F16170B009ED7CE /* SaveNewVideoUseCase.swift */,
+				375856151F4D7F4D00DF040F /* GetDanceStylesUseCase.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -764,6 +768,7 @@
 				CBAA33491F16170B009ED7CE /* SaveNewVideoUseCase.swift in Sources */,
 				CBAA335F1F16256B009ED7CE /* ObservableExt.swift in Sources */,
 				CBAA33591F162369009ED7CE /* DomainConvertibleType.swift in Sources */,
+				375856171F4D7F4D00DF040F /* GetDanceStylesUseCase.swift in Sources */,
 				CB38EBEC1F17691B00008585 /* GetVideosUseCase.swift in Sources */,
 				CBFAB38C1F0BB77A005C8B80 /* CongressCellView.swift in Sources */,
 				CBFAB3881F0BAFA7005C8B80 /* GetCongressesUseCase.swift in Sources */,
@@ -819,6 +824,7 @@
 				CBAA33481F16170B009ED7CE /* SaveNewVideoUseCase.swift in Sources */,
 				CBAA335E1F16256B009ED7CE /* ObservableExt.swift in Sources */,
 				CBAA33581F162369009ED7CE /* DomainConvertibleType.swift in Sources */,
+				375856161F4D7F4D00DF040F /* GetDanceStylesUseCase.swift in Sources */,
 				CB38EBEB1F17691800008585 /* GetVideosUseCase.swift in Sources */,
 				CBD6CA2F1F1378C900AC4548 /* CongressCellView.swift in Sources */,
 				CBD6CA301F1378C900AC4548 /* GetCongressesUseCase.swift in Sources */,

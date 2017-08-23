@@ -22,7 +22,7 @@ final class Network<T: ImmutableMappable> {
         self.scheduler = ConcurrentDispatchQueueScheduler(qos: DispatchQoS(qosClass: DispatchQoS.QoSClass.background, relativePriority: 1))
     }
     
-    func getRequest(_ path: String) -> Observable<[T]> {
+    func getRequest(_ path: String, rootJSONEntity jsonKey: String) -> Observable<[T]> {
         let absolutePath = "\(endPoint)/\(path)"
         return RxAlamofire
             .json(.get, absolutePath)
@@ -30,7 +30,7 @@ final class Network<T: ImmutableMappable> {
             .observeOn(scheduler)
             .map({ json -> [T] in
                 let jsonData: [String : Any] = json as! [String : Any] // swiftlint:disable:this force_cast
-                let jsonWithEvents = jsonData["events"] // TODO: BE CAREFUL WITH THIS. THIS METHOD IS ONLY USEFUL FOR THE EVENTS WEB SERVICE AND THE IDEAL THING WOULD BE TO HAVE A GENERAL METHOD.
+                let jsonWithEvents = jsonData[jsonKey]
                 return try Mapper<T>().mapArray(JSONObject: jsonWithEvents!)
             })
     }

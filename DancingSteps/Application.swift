@@ -23,21 +23,20 @@ final class Application {
         let s_navigationController = tabBarController.viewControllers?.first as! UINavigationController // swiftlint:disable:this force_cast
         s_navigationController.navigationBar.barTintColor = UIColor.purple
         let s_tableViewController = s_navigationController.topViewController as! VideosTableViewController // swiftlint:disable:this force_cast
-        let realmRepo = RealmRepo<Video>()
-        let getVideosUseCase = GetVideosUseCase(repository: realmRepo)
-        let s_presenter = VideosPresenter(useCase: getVideosUseCase)
+        let realmVideosRepo = RealmRepo<Video>()
+        let realmStylesRepo = RealmRepo<Style>()
+        let getVideosUseCase = GetVideosUseCase(repository: realmVideosRepo)
+        let getDanceStylesUseCase = GetDanceStylesUseCase(repository: realmStylesRepo)
+        let s_presenter = VideosPresenter(getVideosUseCase: getVideosUseCase, getDanceStylesUseCase: getDanceStylesUseCase)
         getVideosUseCase.presenter = s_presenter
         s_tableViewController.presenter = s_presenter
         
         // RECORDING
-        // TODO: Connect the architecture for the recording workflow.
-//        let r_navigationController = tabBarController.viewControllers?[1] as! UINavigationController // swiftlint:disable:this force_cast
-//        let recordingViewController = r_navigationController.topViewController as! CameraViewController // swiftlint:disable:this force_cast
-        //        let realmRepo = RealmRepo<Video>()
-        //        let saveNewVideoUseCase = SaveNewVideoUseCase(repository: realmRepo)
-        //        let r_presenter = CompleteVideoPresenter(useCase: saveNewVideoUseCase)
-        //        // SaveNewVideoUseCase.presenter = r_presenter
-        //        s_tableViewController.presenter = s_presenter
+        let r_navigationController = tabBarController.viewControllers?[1] as! UINavigationController // swiftlint:disable:this force_cast
+        let recordingViewController = r_navigationController.topViewController as! CameraViewController // swiftlint:disable:this force_cast
+        let r_presenter = CameraPresenter()
+        r_presenter.cameraVC = recordingViewController
+        recordingViewController.presenter = r_presenter
         
         // TOP CHART
         let navigationController = tabBarController.viewControllers?[2] as! UINavigationController // swiftlint:disable:this force_cast
@@ -69,7 +68,7 @@ final class Application {
         for style in stylesArray {
             let styleObservable = realmRepo.save(entity: style)
             styleObservable
-                .subscribe( // TODO: unknown behaviour, If I dispose the observable, the data is not written in the local Realm database. Fix this !
+                .subscribe( // QUESTION: Unknown behaviour, If I dispose the observable, the data is not written in the local Realm database. Why does this happen?
                     onNext: { (styleNext) in
                         #if DEBUG
                             print("New style: \(styleNext)")

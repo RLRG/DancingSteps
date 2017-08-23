@@ -34,17 +34,17 @@ class VideosTableViewController: UITableViewController {
     
     func setupDataObservers() {
         
-        // Videos
-        presenter.videos.asObservable()
-            .subscribe({_ in 
-                self.tableView.reloadData()
-            })
-            .disposed(by: disposeBag)
+        // Videos & Dance Styles
+        let videosObservable = presenter.videos.asObservable()
+        let stylesObservable = presenter.styles.asObservable()
         
-        // Dance styles
-        presenter.styles.asObservable()
-            .subscribe({_ in
-                self.tableView.reloadData() // TODO: Is it possible to include in the same observer two different observables ? Or when both of them finish, do what we consider necessary.
+        Observable
+            .zip(videosObservable, stylesObservable) { (videos, styles) throws -> ([Video], [Style]) in
+                return (videos,styles)
+            }.subscribe({ _ in
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             })
             .disposed(by: disposeBag)
     }

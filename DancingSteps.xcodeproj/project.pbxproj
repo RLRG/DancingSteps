@@ -286,7 +286,6 @@
 			isa = PBXGroup;
 			children = (
 				3724C2501F332987005E1BF8 /* debug */,
-				CBFAB3761F0AA565005C8B80 /* login */,
 				CBFAB3521F0A91CD005C8B80 /* videosList */,
 				CBFAB3591F0A922B005C8B80 /* recordingScreen */,
 				CBFAB34D1F0A90F5005C8B80 /* topEvents */,
@@ -456,13 +455,6 @@
 				CB38EBF31F178B8100008585 /* CompleteVideoProtocol.swift */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		CBFAB3761F0AA565005C8B80 /* login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = login;
 			sourceTree = "<group>";
 		};
 		CBFAB3771F0AA718005C8B80 /* Network */ = {

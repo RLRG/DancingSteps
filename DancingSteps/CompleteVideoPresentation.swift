@@ -12,5 +12,4 @@ import RxSwift
 protocol CompleteVideoPresentation {
     func present(finishVideoObservable: Observable<Void>)
     func displayError(string: String)
-    func loadDanceStyles(finishQueryStyles: Observable<[Style]>)
 }

@@ -23,9 +23,11 @@ final class Application {
         let s_navigationController = tabBarController.viewControllers?.first as! UINavigationController // swiftlint:disable:this force_cast
         s_navigationController.navigationBar.barTintColor = UIColor.purple
         let s_tableViewController = s_navigationController.topViewController as! VideosTableViewController // swiftlint:disable:this force_cast
-        let realmRepo = RealmRepo<Video>()
-        let getVideosUseCase = GetVideosUseCase(repository: realmRepo)
-        let s_presenter = VideosPresenter(useCase: getVideosUseCase)
+        let realmVideosRepo = RealmRepo<Video>()
+        let realmStylesRepo = RealmRepo<Style>()
+        let getVideosUseCase = GetVideosUseCase(repository: realmVideosRepo)
+        let getDanceStylesUseCase = GetDanceStylesUseCase(repository: realmStylesRepo)
+        let s_presenter = VideosPresenter(getVideosUseCase: getVideosUseCase, getDanceStylesUseCase: getDanceStylesUseCase)
         getVideosUseCase.presenter = s_presenter
         s_tableViewController.presenter = s_presenter
         

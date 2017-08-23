@@ -26,9 +26,22 @@ class CompleteVideoPresenter {
         saveVideoUseCase.saveVideoToDB(title: title, styleId: styleId, videoURL: videoURL)
     }
     
-    // QUESTION / TODO: How to merge the code of this functionality ? Because we need to access the styles of music in two different parts of the app (videosList & here!). Think about it !!
     func getDanceStyles() {
-        getDanceStylesUseCase.getDanceStyles()
+        getDanceStylesUseCase.getDanceStyles().asObservable()
+            .subscribe(
+                onNext: { (returnedStyles) in
+                    self.styles.value = returnedStyles
+            },
+                onError: { (error) in
+                    #if DEBUG
+                        print("Error querying dance styles.")
+                    #endif
+            },
+                onCompleted: {
+                    #if DEBUG
+                        print("onCompleted querying dance styles.")
+                    #endif
+            }).disposed(by: disposeBag)
     }
 }
 
@@ -46,24 +59,5 @@ extension CompleteVideoPresenter : CompleteVideoPresentation {
     
     func displayError(string: String) {
         self.completeVideoVC.errorSavingVideo(error: NSError(domain: string, code: 001, userInfo: nil))
-    }
-    
-    func loadDanceStyles(finishQueryStyles: Observable<[Style]>) {
-        finishQueryStyles
-            .asObservable()
-            .subscribe(
-                onNext: { (returnedStyles) in
-                    self.styles.value = returnedStyles
-            },
-                onError: { (error) in
-                    #if DEBUG
-                        print("Error querying dance styles.")
-                    #endif
-            },
-                onCompleted: {
-                    #if DEBUG
-                        print("onCompleted querying dance styles.")
-                    #endif
-            }).disposed(by: disposeBag)
     }
 }

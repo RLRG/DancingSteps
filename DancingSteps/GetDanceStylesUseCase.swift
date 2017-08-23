@@ -14,8 +14,6 @@ class GetDanceStylesUseCase {
     // MARK: Properties & Initialization
     
     private let repository: AbstractRepository<Style>
-    var presenter: CompleteVideoPresentation!
-    
     let disposeBag = DisposeBag()
     
     init(repository: AbstractRepository<Style>) {
@@ -24,8 +22,8 @@ class GetDanceStylesUseCase {
     
     // MARK: Logic of the interactor.
     
-    func getDanceStyles() {
+    func getDanceStyles() -> Observable<[Style]> {
         let styleObservable = repository.queryAll()
-        presenter.loadDanceStyles(finishQueryStyles: styleObservable)
+        return styleObservable
     }
 }

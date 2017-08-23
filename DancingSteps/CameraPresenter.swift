@@ -29,7 +29,6 @@ class CameraPresenter {
         let getDanceStylesUseCase = GetDanceStylesUseCase(repository: realmStyleRepo)
         let r_presenter = CompleteVideoPresenter(saveVideoUseCase: saveNewVideoUseCase, getDanceStylesUseCase: getDanceStylesUseCase)
         saveNewVideoUseCase.presenter = r_presenter
-        getDanceStylesUseCase.presenter = r_presenter
         completeVideoVC.presenter = r_presenter
         r_presenter.completeVideoVC = completeVideoVC
         

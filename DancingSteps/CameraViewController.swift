@@ -82,9 +82,9 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
         DispatchQueue.main.async {
             UIView.animate(withDuration: 0.25, animations: {
                 self.captureButton.alpha = 0.0
-            }, completion:{(finished) in
+            }, completion: { _ in
                 self.captureButton.setImage(#imageLiteral(resourceName: "stopRecording"), for: .normal)
-                UIView.animate(withDuration: 0.25,animations:{
+                UIView.animate(withDuration: 0.25,animations: {
                     self.captureButton.alpha = 1.0
                 },completion:nil)
             })

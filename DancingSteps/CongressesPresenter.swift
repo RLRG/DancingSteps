@@ -30,6 +30,13 @@ class CongressesPresenter {
         cell.display(name: congress.name, imageUrl: congress.imageUrl) // TODO: Is there a better way to do this? Several methods instead of one? Clean Architecture ?
         // The same for the rest of the data.....
     }
+    
+    func displayEventDetails(navigationController navigator: UINavigationController, forRowAt row: Int) {
+        // swiftlint:disable:next force_cast
+        let detailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CongressDetailsViewController") as! CongressDetailsViewController
+        detailsVC.congress = congresses.value[row]
+        navigator.pushViewController(detailsVC, animated: true)
+    }
 }
 
 extension CongressesPresenter : CongressesPresentation {

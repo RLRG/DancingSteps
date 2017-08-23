@@ -96,17 +96,13 @@ class VideosTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: Implement Clean architecture !! Give this responsability to the presenter ?
         tableView.deselectRow(at: indexPath, animated: true)
-        let testingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DisplayViewController") as! DisplayViewController // swiftlint:disable:this force_cast
-        testingVC.videoTitle = presenter.videos.value.filter{ $0.style.name == presenter.styles.value[indexPath.section].name }[indexPath.row].title
-        self.navigationController?.pushViewController(testingVC, animated: true)
+        presenter.displayVideoScreen(navigationController: self.navigationController!, forIndexAt: indexPath)
     }
     
     // MARK: - Actions
     
     func openDebugScreen() {
-        let debugVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DebugViewController") as! DebugViewController // swiftlint:disable:this force_cast
-        self.navigationController?.pushViewController(debugVC, animated: true)
+        presenter.displayDebugScreen(navigationController: self.navigationController!)
     }
 }

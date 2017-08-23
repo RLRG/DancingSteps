@@ -26,8 +26,24 @@ class VideosPresenter {
     
     // Not a good idea to have a dependency from UIKit, what if we want to have different UI Interfaces?
     func configure(cell: VideoCellView, forSectionAt section: Int, forRowAt row: Int) {
-        let video = videos.value.filter{ $0.style.name == styles.value[section].name }[row] // swiftlint:disable:this opening_brace
+        let video = videos.value
+            .filter{ $0.style.name == styles.value[section].name }[row] // swiftlint:disable:this opening_brace
         cell.display(name: video.title)
+    }
+    
+    func displayVideoScreen(navigationController navigator: UINavigationController, forIndexAt indexPath: IndexPath) {
+        // swiftlint:disable:next force_cast
+        let displayVideoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DisplayViewController") as! DisplayViewController
+        displayVideoVC.videoTitle = videos.value
+            .filter{ $0.style.name == styles.value[indexPath.section].name }[indexPath.row].title // swiftlint:disable:this opening_brace
+        navigator.pushViewController(displayVideoVC, animated: true)
+    }
+    
+    func displayDebugScreen(navigationController navigator: UINavigationController) {
+        // swiftlint:disable:next force_cast
+        let debugVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "DebugViewController") as! DebugViewController
+        navigator.pushViewController(debugVC, animated: true)
     }
     
     func getDanceStyles() {

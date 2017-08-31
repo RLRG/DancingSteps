@@ -14,7 +14,6 @@ class GetDanceStylesUseCase {
     // MARK: Properties & Initialization
     
     private let repository: AbstractRepository<Style>
-    let disposeBag = DisposeBag()
     
     init(repository: AbstractRepository<Style>) {
         self.repository = repository

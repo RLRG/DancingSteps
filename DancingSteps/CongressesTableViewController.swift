@@ -30,6 +30,7 @@ class CongressesTableViewController: UITableViewController {
         loadingSpinner.startAnimating()
         // QUESTION: Is there a better way to center the activity indicator in the center of the screen ? If I don't do it like this, the activity indicator appears a little bit slightly below of the center position (because of the displacement caused by the navigation bar).
         loadingSpinner.center = CGPoint(x: UIScreen.main.bounds.width/2, y: UIScreen.main.bounds.height/2 - (self.navigationController?.navigationBar.bounds.height)!)
+        loadingSpinner.accessibilityIdentifier = "topEventsIndicator"
         disableUserInteractionWithTableView()
         self.tableView.addSubview(loadingSpinner)
     }

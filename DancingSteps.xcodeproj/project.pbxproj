@@ -88,8 +88,6 @@
 		CBD6CA511F13C02800AC4548 /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA4F1F13C02800AC4548 /* VideosTableViewController.swift */; };
 		CBD6CA531F13C0F000AC4548 /* VideosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA521F13C0F000AC4548 /* VideosPresenter.swift */; };
 		CBD6CA541F13C0F000AC4548 /* VideosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA521F13C0F000AC4548 /* VideosPresenter.swift */; };
-		CBD6CA561F13C4C700AC4548 /* VideosPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA551F13C4C700AC4548 /* VideosPresentation.swift */; };
-		CBD6CA571F13C4C700AC4548 /* VideosPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA551F13C4C700AC4548 /* VideosPresentation.swift */; };
 		CBD6CA591F13C52500AC4548 /* VideoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA581F13C52500AC4548 /* VideoCellView.swift */; };
 		CBD6CA5A1F13C52500AC4548 /* VideoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA581F13C52500AC4548 /* VideoCellView.swift */; };
 		CBD6CA651F13CBAD00AC4548 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6CA641F13CBAD00AC4548 /* VideoTableViewCell.swift */; };
@@ -180,7 +178,6 @@
 		CBD6CA481F1378C900AC4548 /* DancingStepsLAB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DancingStepsLAB-Info.plist"; path = "/Users/RLRG/Documents/RLRG/iOS Developer Nanodegree/6 Final project. You decide! How to make an iOS app/project/DancingSteps/DancingSteps/DancingStepsLAB-Info.plist"; sourceTree = "<absolute>"; };
 		CBD6CA4F1F13C02800AC4548 /* VideosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideosTableViewController.swift; path = DancingSteps/VideosTableViewController.swift; sourceTree = "<group>"; };
 		CBD6CA521F13C0F000AC4548 /* VideosPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideosPresenter.swift; path = DancingSteps/VideosPresenter.swift; sourceTree = "<group>"; };
-		CBD6CA551F13C4C700AC4548 /* VideosPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideosPresentation.swift; path = DancingSteps/VideosPresentation.swift; sourceTree = "<group>"; };
 		CBD6CA581F13C52500AC4548 /* VideoCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoCellView.swift; path = DancingSteps/VideoCellView.swift; sourceTree = "<group>"; };
 		CBD6CA641F13CBAD00AC4548 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoTableViewCell.swift; path = DancingSteps/VideoTableViewCell.swift; sourceTree = "<group>"; };
 		CBD6CA671F13D3F200AC4548 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = DancingSteps/CameraViewController.swift; sourceTree = "<group>"; };
@@ -462,7 +459,6 @@
 			isa = PBXGroup;
 			children = (
 				CBD6CA521F13C0F000AC4548 /* VideosPresenter.swift */,
-				CBD6CA551F13C4C700AC4548 /* VideosPresentation.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -922,7 +918,6 @@
 				3724C2531F33305F005E1BF8 /* DebugViewController.swift in Sources */,
 				CBFAB38A1F0BB26E005C8B80 /* CongressesPresenter.swift in Sources */,
 				CBD6CA541F13C0F000AC4548 /* VideosPresenter.swift in Sources */,
-				CBD6CA571F13C4C700AC4548 /* VideosPresentation.swift in Sources */,
 				CBFAB37F1F0AA80C005C8B80 /* NetworkProvider.swift in Sources */,
 				375856141F4D73F300DF040F /* CameraProtocol.swift in Sources */,
 				CBB9B9EA1F15324000F0E441 /* CompleteVideoViewController.swift in Sources */,
@@ -978,7 +973,6 @@
 				CBD6CA501F13C02800AC4548 /* VideosTableViewController.swift in Sources */,
 				CBD6CA391F1378C900AC4548 /* CongressesPresenter.swift in Sources */,
 				CBD6CA531F13C0F000AC4548 /* VideosPresenter.swift in Sources */,
-				CBD6CA561F13C4C700AC4548 /* VideosPresentation.swift in Sources */,
 				CBD6CA3A1F1378C900AC4548 /* NetworkProvider.swift in Sources */,
 				375856131F4D73F300DF040F /* CameraProtocol.swift in Sources */,
 				CBB9B9E91F15324000F0E441 /* CompleteVideoViewController.swift in Sources */,
@@ -1242,6 +1236,7 @@
 				37DD3B8D1F5844F100065466 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37DD3B991F58451A00065466 /* Build configuration list for PBXNativeTarget "DancingStepsUITests" */ = {
 			isa = XCConfigurationList;
@@ -1250,6 +1245,7 @@
 				37DD3B9B1F58451A00065466 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB8A45491F0401C1006E1102 /* Build configuration list for PBXProject "DancingSteps" */ = {
 			isa = XCConfigurationList;

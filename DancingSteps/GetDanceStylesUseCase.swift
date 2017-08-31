@@ -21,6 +21,8 @@ class GetDanceStylesUseCase {
     
     // MARK: Logic of the interactor.
     
+    // NOTE:
+    // Organization of the project files: As the useCases could be used by several presenters, it would have been better to have a folder called 'Interactor' in which the files of the useCases are stored.
     func getDanceStyles() -> Observable<[Style]> {
         let styleObservable = repository.queryAll()
         return styleObservable

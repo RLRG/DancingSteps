@@ -28,7 +28,6 @@ final class Application {
         let getVideosUseCase = GetVideosUseCase(repository: realmVideosRepo)
         let getDanceStylesUseCase = GetDanceStylesUseCase(repository: realmStylesRepo)
         let s_presenter = VideosPresenter(getVideosUseCase: getVideosUseCase, getDanceStylesUseCase: getDanceStylesUseCase)
-        getVideosUseCase.presenter = s_presenter
         s_tableViewController.presenter = s_presenter
         
         // RECORDING

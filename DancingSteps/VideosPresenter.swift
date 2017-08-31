@@ -23,7 +23,23 @@ class VideosPresenter {
     }
     
     func viewIsReady() {
-        getVideosUseCase.getAllVideosFromDB()
+        getVideosUseCase.getAllVideosFromDB().asObservable()
+            .subscribe(
+                onNext: { (videos) in
+                    #if DEBUG
+                        for video in videos {
+                            print("Video: \(video.title)")
+                        }
+                    #endif
+                    self.videos.value = videos
+            },
+                onError: { (error) in
+                    print("ERROR GETTING VIDEOS FROM DB: \(error)")
+            },
+                onCompleted: {
+                    print("onCompleted: Getting videos from DB !")
+            })
+            .disposed(by: disposeBag)
     }
     
     // Not a good idea to have a dependency from UIKit, what if we want to have different UI Interfaces?
@@ -63,27 +79,5 @@ class VideosPresenter {
                         print("onCompleted querying dance styles.")
                     #endif
             }).disposed(by: disposeBag)
-    }
-}
-
-extension VideosPresenter : VideosPresentation {
-    func present(videosObservable: Observable<[Video]>) {
-        videosObservable.asObservable()
-            .subscribe(
-                onNext: { (videos) in
-                    #if DEBUG
-                        for video in videos {
-                            print("Video: \(video.title)")
-                        }
-                    #endif
-                    self.videos.value = videos
-            },
-                onError: { (error) in
-                    print("ERROR GETTING VIDEOS FROM DB: \(error)")
-            },
-                onCompleted: {
-                    print("onCompleted: Getting videos from DB !")
-            })
-            .disposed(by: disposeBag)
     }
 }

@@ -12,14 +12,12 @@ import RxSwift
 class GetVideosUseCase {
     
     private let repository: AbstractRepository<Video>
-    var presenter: VideosPresentation!
     
     init(repository: AbstractRepository<Video>) {
         self.repository = repository
     }
     
-    func getAllVideosFromDB() {
-        let videos = repository.queryAll()
-        presenter.present(videosObservable: videos)
+    func getAllVideosFromDB() -> Observable<[Video]>{
+        return repository.queryAll()
     }
 }

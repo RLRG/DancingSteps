@@ -14,7 +14,7 @@ class VideosPresenter {
     var videos: Variable<[Video]> = Variable([])
     var styles: Variable<[Style]> = Variable([])
     
-    let videosTableVC : VideosTableVCProtocol!
+    var videosTableVC: VideosTableVCProtocol!
     
     let getVideosUseCase: GetVideosUseCase
     let getDanceStylesUseCase: GetDanceStylesUseCase

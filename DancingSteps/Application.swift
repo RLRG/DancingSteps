@@ -29,13 +29,10 @@ final class Application {
         let getDanceStylesUseCase = GetDanceStylesUseCase(repository: realmStylesRepo)
         let s_presenter = VideosPresenter(getVideosUseCase: getVideosUseCase, getDanceStylesUseCase: getDanceStylesUseCase)
         s_tableViewController.presenter = s_presenter
+        s_presenter.videosTableVC = s_tableViewController
         
         // RECORDING
-        let r_navigationController = tabBarController.viewControllers?[1] as! UINavigationController // swiftlint:disable:this force_cast
-        let recordingViewController = r_navigationController.topViewController as! CameraViewController // swiftlint:disable:this force_cast
-        let r_presenter = CameraPresenter()
-        r_presenter.cameraVC = recordingViewController
-        recordingViewController.presenter = r_presenter
+        // No need to include Clean Architecture connections yet
         
         // TOP CHART
         let navigationController = tabBarController.viewControllers?[2] as! UINavigationController // swiftlint:disable:this force_cast

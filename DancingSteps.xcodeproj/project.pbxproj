@@ -13,10 +13,6 @@
 		3724C2591F385534005E1BF8 /* CongressesTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C2571F385534005E1BF8 /* CongressesTableViewProtocol.swift */; };
 		3724C25B1F3A07FA005E1BF8 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C25A1F3A07F9005E1BF8 /* UIViewControllerExt.swift */; };
 		3724C25C1F3A07FA005E1BF8 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C25A1F3A07F9005E1BF8 /* UIViewControllerExt.swift */; };
-		3758560D1F4D72B500DF040F /* CameraPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3758560C1F4D72B500DF040F /* CameraPresenter.swift */; };
-		3758560E1F4D72B500DF040F /* CameraPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3758560C1F4D72B500DF040F /* CameraPresenter.swift */; };
-		375856131F4D73F300DF040F /* CameraProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375856121F4D73F300DF040F /* CameraProtocol.swift */; };
-		375856141F4D73F300DF040F /* CameraProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375856121F4D73F300DF040F /* CameraProtocol.swift */; };
 		375856161F4D7F4D00DF040F /* GetDanceStylesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375856151F4D7F4D00DF040F /* GetDanceStylesUseCase.swift */; };
 		375856171F4D7F4D00DF040F /* GetDanceStylesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375856151F4D7F4D00DF040F /* GetDanceStylesUseCase.swift */; };
 		37DD3B871F5844F100065466 /* DancingStepsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3B861F5844F100065466 /* DancingStepsTests.swift */; };
@@ -25,6 +21,8 @@
 		37DD3BA01F596B3A00065466 /* ErrorEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3B9E1F596B3A00065466 /* ErrorEnums.swift */; };
 		37DD3BA21F5997E400065466 /* VideosTableVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BA11F5997E400065466 /* VideosTableVCProtocol.swift */; };
 		37DD3BA31F5997E400065466 /* VideosTableVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BA11F5997E400065466 /* VideosTableVCProtocol.swift */; };
+		37DD3BA51F59A14200065466 /* ObjectInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BA41F59A14200065466 /* ObjectInjector.swift */; };
+		37DD3BA61F59A14200065466 /* ObjectInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BA41F59A14200065466 /* ObjectInjector.swift */; };
 		3C03B9C961EA32988F2FC199 /* Pods_DancingSteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */; };
 		63148DBCF0E3A0AAA7D362A5 /* Pods_DancingStepsLAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */; };
 		CB38EBEB1F17691800008585 /* GetVideosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */; };
@@ -140,8 +138,6 @@
 		3724C2511F3329A7005E1BF8 /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugViewController.swift; path = DancingSteps/DebugViewController.swift; sourceTree = "<group>"; };
 		3724C2571F385534005E1BF8 /* CongressesTableViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressesTableViewProtocol.swift; path = DancingSteps/CongressesTableViewProtocol.swift; sourceTree = "<group>"; };
 		3724C25A1F3A07F9005E1BF8 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
-		3758560C1F4D72B500DF040F /* CameraPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraPresenter.swift; path = DancingSteps/CameraPresenter.swift; sourceTree = "<group>"; };
-		375856121F4D73F300DF040F /* CameraProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraProtocol.swift; path = DancingSteps/CameraProtocol.swift; sourceTree = "<group>"; };
 		375856151F4D7F4D00DF040F /* GetDanceStylesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetDanceStylesUseCase.swift; sourceTree = "<group>"; };
 		37DD3B841F5844F100065466 /* DancingStepsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DancingStepsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DD3B861F5844F100065466 /* DancingStepsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DancingStepsTests.swift; sourceTree = "<group>"; };
@@ -151,6 +147,7 @@
 		37DD3B961F58451A00065466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37DD3B9E1F596B3A00065466 /* ErrorEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorEnums.swift; sourceTree = "<group>"; };
 		37DD3BA11F5997E400065466 /* VideosTableVCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideosTableVCProtocol.swift; path = DancingSteps/VideosTableVCProtocol.swift; sourceTree = "<group>"; };
+		37DD3BA41F59A14200065466 /* ObjectInjector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectInjector.swift; sourceTree = "<group>"; };
 		58A4B1197EA040862E16888F /* Pods-DancingStepsLAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsLAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB.release.xcconfig"; sourceTree = "<group>"; };
 		8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingStepsLAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetVideosUseCase.swift; sourceTree = "<group>"; };
@@ -487,8 +484,6 @@
 		CBFAB35B1F0A9266005C8B80 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				375856121F4D73F300DF040F /* CameraProtocol.swift */,
-				3758560C1F4D72B500DF040F /* CameraPresenter.swift */,
 				CB38EBF31F178B8100008585 /* CompleteVideoProtocol.swift */,
 				CBAA33441F1616CC009ED7CE /* CompleteVideoPresenter.swift */,
 			);
@@ -532,6 +527,7 @@
 				CB38EBF91F17CF0200008585 /* UIImageViewExt.swift */,
 				3724C25A1F3A07F9005E1BF8 /* UIViewControllerExt.swift */,
 				37DD3B9E1F596B3A00065466 /* ErrorEnums.swift */,
+				37DD3BA41F59A14200065466 /* ObjectInjector.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -859,7 +855,6 @@
 			files = (
 				CBAA33561F16230C009ED7CE /* RealmRepresentable.swift in Sources */,
 				CBFAB3791F0AA750005C8B80 /* CongressNetwork.swift in Sources */,
-				3758560E1F4D72B500DF040F /* CameraPresenter.swift in Sources */,
 				CBAA33521F161940009ED7CE /* RealmRepo.swift in Sources */,
 				37DD3BA01F596B3A00065466 /* ErrorEnums.swift in Sources */,
 				CBAA33461F1616CC009ED7CE /* CompleteVideoPresenter.swift in Sources */,
@@ -880,6 +875,7 @@
 				CBFAB38E1F0BB7BA005C8B80 /* CongressTableViewCell.swift in Sources */,
 				CBFAB3631F0A9981005C8B80 /* RMVideo.swift in Sources */,
 				CBAA33491F16170B009ED7CE /* SaveNewVideoUseCase.swift in Sources */,
+				37DD3BA61F59A14200065466 /* ObjectInjector.swift in Sources */,
 				CBAA335F1F16256B009ED7CE /* ObservableExt.swift in Sources */,
 				CBAA33591F162369009ED7CE /* DomainConvertibleType.swift in Sources */,
 				375856171F4D7F4D00DF040F /* GetDanceStylesUseCase.swift in Sources */,
@@ -903,7 +899,6 @@
 				CBFAB38A1F0BB26E005C8B80 /* CongressesPresenter.swift in Sources */,
 				CBD6CA541F13C0F000AC4548 /* VideosPresenter.swift in Sources */,
 				CBFAB37F1F0AA80C005C8B80 /* NetworkProvider.swift in Sources */,
-				375856141F4D73F300DF040F /* CameraProtocol.swift in Sources */,
 				CBB9B9EA1F15324000F0E441 /* CompleteVideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -914,7 +909,6 @@
 			files = (
 				CBAA33551F16230C009ED7CE /* RealmRepresentable.swift in Sources */,
 				CBD6CA231F1378C900AC4548 /* CongressNetwork.swift in Sources */,
-				3758560D1F4D72B500DF040F /* CameraPresenter.swift in Sources */,
 				CBAA33511F161940009ED7CE /* RealmRepo.swift in Sources */,
 				37DD3B9F1F596B3A00065466 /* ErrorEnums.swift in Sources */,
 				CBAA33451F1616CC009ED7CE /* CompleteVideoPresenter.swift in Sources */,
@@ -935,6 +929,7 @@
 				CBD6CA2D1F1378C900AC4548 /* CongressTableViewCell.swift in Sources */,
 				CBD6CA2E1F1378C900AC4548 /* RMVideo.swift in Sources */,
 				CBAA33481F16170B009ED7CE /* SaveNewVideoUseCase.swift in Sources */,
+				37DD3BA51F59A14200065466 /* ObjectInjector.swift in Sources */,
 				CBAA335E1F16256B009ED7CE /* ObservableExt.swift in Sources */,
 				CBAA33581F162369009ED7CE /* DomainConvertibleType.swift in Sources */,
 				375856161F4D7F4D00DF040F /* GetDanceStylesUseCase.swift in Sources */,
@@ -958,7 +953,6 @@
 				CBD6CA391F1378C900AC4548 /* CongressesPresenter.swift in Sources */,
 				CBD6CA531F13C0F000AC4548 /* VideosPresenter.swift in Sources */,
 				CBD6CA3A1F1378C900AC4548 /* NetworkProvider.swift in Sources */,
-				375856131F4D73F300DF040F /* CameraProtocol.swift in Sources */,
 				CBB9B9E91F15324000F0E441 /* CompleteVideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

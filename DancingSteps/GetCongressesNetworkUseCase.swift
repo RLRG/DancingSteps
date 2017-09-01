@@ -18,13 +18,7 @@ final class GetCongressesNetworkUseCase: GetCongressesUseCase {
     }
     
     func congresses() {
-        // 1. Fetching data.
         let congressesObservable = network.fetchCongresses()
-        
-        // 2. Process the data if needed (mapping).
-        // Example: let programmerResponse = programmers.map { ProgrammerResponse(programmer: $0) }
-        
-        // 3. Provide the data to the presenter.
         presenter.present(congressesObservable: congressesObservable)
     }
 }

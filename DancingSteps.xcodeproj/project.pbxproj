@@ -376,9 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				CB8A45531F0401C1006E1102 /* CongressesTableViewController.swift */,
-				3724C2571F385534005E1BF8 /* CongressesTableViewProtocol.swift */,
 				CBD6CA6A1F13E81D00AC4548 /* CongressDetailsViewController.swift */,
-				CBFAB38B1F0BB77A005C8B80 /* CongressCellView.swift */,
 				CBFAB38D1F0BB7BA005C8B80 /* CongressTableViewCell.swift */,
 			);
 			name = View;
@@ -387,6 +385,8 @@
 		CBFAB3461F0A8A63005C8B80 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				3724C2571F385534005E1BF8 /* CongressesTableViewProtocol.swift */,
+				CBFAB38B1F0BB77A005C8B80 /* CongressCellView.swift */,
 				CBFAB3891F0BB26E005C8B80 /* CongressesPresenter.swift */,
 				CBFAB38F1F0BBC8B005C8B80 /* CongressesPresentation.swift */,
 			);
@@ -459,6 +459,7 @@
 		CBFAB3541F0A91F6005C8B80 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				CBD6CA581F13C52500AC4548 /* VideoCellView.swift */,
 				CBD6CA521F13C0F000AC4548 /* VideosPresenter.swift */,
 			);
 			name = Presenter;
@@ -469,7 +470,6 @@
 			children = (
 				CBD6CA4F1F13C02800AC4548 /* VideosTableViewController.swift */,
 				CBAA33661F168AFB009ED7CE /* DisplayViewController.swift */,
-				CBD6CA581F13C52500AC4548 /* VideoCellView.swift */,
 				CBD6CA641F13CBAD00AC4548 /* VideoTableViewCell.swift */,
 			);
 			name = View;

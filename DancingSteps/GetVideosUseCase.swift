@@ -17,7 +17,7 @@ class GetVideosUseCase {
         self.repository = repository
     }
     
-    func getAllVideosFromDB() -> Observable<[Video]>{
+    func getAllVideosFromDB() -> Observable<[Video]> {
         return repository.queryAll()
     }
 }

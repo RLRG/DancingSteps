@@ -75,7 +75,6 @@
 		CBD6CA331F1378C900AC4548 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB36C1F0AA309005C8B80 /* Video.swift */; };
 		CBD6CA341F1378C900AC4548 /* RMStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB36A1F0A9B8C005C8B80 /* RMStyle.swift */; };
 		CBD6CA351F1378C900AC4548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A45511F0401C1006E1102 /* AppDelegate.swift */; };
-		CBD6CA361F1378C900AC4548 /* CongressesPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB38F1F0BBC8B005C8B80 /* CongressesPresentation.swift */; };
 		CBD6CA371F1378C900AC4548 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB37C1F0AA801005C8B80 /* Network.swift */; };
 		CBD6CA381F1378C900AC4548 /* Congress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB36E1F0AA315005C8B80 /* Congress.swift */; };
 		CBD6CA391F1378C900AC4548 /* CongressesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3891F0BB26E005C8B80 /* CongressesPresenter.swift */; };
@@ -111,7 +110,6 @@
 		CBFAB38A1F0BB26E005C8B80 /* CongressesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3891F0BB26E005C8B80 /* CongressesPresenter.swift */; };
 		CBFAB38C1F0BB77A005C8B80 /* CongressCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB38B1F0BB77A005C8B80 /* CongressCellView.swift */; };
 		CBFAB38E1F0BB7BA005C8B80 /* CongressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB38D1F0BB7BA005C8B80 /* CongressTableViewCell.swift */; };
-		CBFAB3901F0BBC8B005C8B80 /* CongressesPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB38F1F0BBC8B005C8B80 /* CongressesPresentation.swift */; };
 		CBFAB3921F0F8D46005C8B80 /* UseCaseNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3911F0F8D46005C8B80 /* UseCaseNetworkProvider.swift */; };
 		CBFAB3941F0F8DAF005C8B80 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAB3931F0F8DAF005C8B80 /* UseCaseProvider.swift */; };
 /* End PBXBuildFile section */
@@ -197,7 +195,6 @@
 		CBFAB3891F0BB26E005C8B80 /* CongressesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressesPresenter.swift; path = DancingSteps/CongressesPresenter.swift; sourceTree = "<group>"; };
 		CBFAB38B1F0BB77A005C8B80 /* CongressCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressCellView.swift; path = DancingSteps/CongressCellView.swift; sourceTree = "<group>"; };
 		CBFAB38D1F0BB7BA005C8B80 /* CongressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressTableViewCell.swift; path = DancingSteps/CongressTableViewCell.swift; sourceTree = "<group>"; };
-		CBFAB38F1F0BBC8B005C8B80 /* CongressesPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressesPresentation.swift; path = DancingSteps/CongressesPresentation.swift; sourceTree = "<group>"; };
 		CBFAB3911F0F8D46005C8B80 /* UseCaseNetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseNetworkProvider.swift; sourceTree = "<group>"; };
 		CBFAB3931F0F8DAF005C8B80 /* UseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingSteps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -388,7 +385,6 @@
 				3724C2571F385534005E1BF8 /* CongressesTableViewProtocol.swift */,
 				CBFAB38B1F0BB77A005C8B80 /* CongressCellView.swift */,
 				CBFAB3891F0BB26E005C8B80 /* CongressesPresenter.swift */,
-				CBFAB38F1F0BBC8B005C8B80 /* CongressesPresentation.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -894,7 +890,6 @@
 				CBFAB36D1F0AA309005C8B80 /* Video.swift in Sources */,
 				CBFAB36B1F0A9B8C005C8B80 /* RMStyle.swift in Sources */,
 				CB8A45521F0401C1006E1102 /* AppDelegate.swift in Sources */,
-				CBFAB3901F0BBC8B005C8B80 /* CongressesPresentation.swift in Sources */,
 				CBAA335C1F1624AC009ED7CE /* RunLoopThreadScheduler.swift in Sources */,
 				CBFAB37D1F0AA801005C8B80 /* Network.swift in Sources */,
 				CBFAB36F1F0AA315005C8B80 /* Congress.swift in Sources */,
@@ -950,7 +945,6 @@
 				CBD6CA341F1378C900AC4548 /* RMStyle.swift in Sources */,
 				CBD6CA351F1378C900AC4548 /* AppDelegate.swift in Sources */,
 				3724C2521F3329A7005E1BF8 /* DebugViewController.swift in Sources */,
-				CBD6CA361F1378C900AC4548 /* CongressesPresentation.swift in Sources */,
 				CBAA335B1F1624AC009ED7CE /* RunLoopThreadScheduler.swift in Sources */,
 				CBD6CA371F1378C900AC4548 /* Network.swift in Sources */,
 				CBD6CA381F1378C900AC4548 /* Congress.swift in Sources */,

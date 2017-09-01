@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 public protocol GetCongressesUseCase {
-    func congresses()
+    func congresses() -> Observable<[Congress]>
 }

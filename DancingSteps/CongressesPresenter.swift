@@ -21,7 +21,28 @@ class CongressesPresenter {
     }
     
     func viewIsReady() {
-        useCase.congresses()
+        useCase.congresses().asObservable()
+            .subscribe(
+                onNext: { (congressArray) in
+                    #if DEBUG
+                        for congress in congressArray {
+                            print("Congress: \(congress.name)")
+                        }
+                    #endif
+                    self.congresses.value = congressArray
+            },
+                onError: { error in
+                    #if DEBUG
+                        print("ERROR IN RESPONSE (CONGRESS): \(error)")
+                    #endif
+                    self.congressesView.displayNetworkError()
+            },
+                onCompleted: {
+                    #if DEBUG
+                        print("onCompleted event !! (CONGRESS)")
+                    #endif
+            })
+            .disposed(by: disposeBag)
     }
     
     // Not a good idea to have a dependency from UIKit, what if we want to have different UI Interfaces?
@@ -35,31 +56,5 @@ class CongressesPresenter {
         let detailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CongressDetailsViewController") as! CongressDetailsViewController
         detailsVC.congress = congresses.value[row]
         navigator.pushViewController(detailsVC, animated: true)
-    }
-}
-
-extension CongressesPresenter : CongressesPresentation {
-    func present(congressesObservable: Observable<[Congress]>) {
-        congressesObservable.subscribe(
-            onNext: { (congressArray) in
-                #if DEBUG
-                    for congress in congressArray {
-                        print("Congress: \(congress.name)")
-                    }
-                #endif
-                self.congresses.value = congressArray
-            },
-            onError: { error in
-                #if DEBUG
-                    print("ERROR IN RESPONSE (CONGRESS): \(error)")
-                #endif
-                self.congressesView.displayNetworkError()
-            },
-            onCompleted: {
-                #if DEBUG
-                    print("onCompleted event !! (CONGRESS)")
-                #endif
-            })
-            .disposed(by: disposeBag)
     }
 }

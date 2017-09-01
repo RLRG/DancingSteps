@@ -11,14 +11,12 @@ import RxSwift
 
 final class GetCongressesNetworkUseCase: GetCongressesUseCase {
     private let network: CongressNetwork
-    var presenter: CongressesPresentation!
     
     init(network: CongressNetwork) {
         self.network = network
     }
     
-    func congresses() {
-        let congressesObservable = network.fetchCongresses()
-        presenter.present(congressesObservable: congressesObservable)
+    func congresses() -> Observable<[Congress]> {
+        return network.fetchCongresses()
     }
 }

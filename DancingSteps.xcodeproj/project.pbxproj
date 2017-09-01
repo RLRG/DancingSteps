@@ -23,6 +23,8 @@
 		37DD3B951F58451A00065466 /* DancingStepsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3B941F58451A00065466 /* DancingStepsUITests.swift */; };
 		37DD3B9F1F596B3A00065466 /* ErrorEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3B9E1F596B3A00065466 /* ErrorEnums.swift */; };
 		37DD3BA01F596B3A00065466 /* ErrorEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3B9E1F596B3A00065466 /* ErrorEnums.swift */; };
+		37DD3BA21F5997E400065466 /* VideosTableVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BA11F5997E400065466 /* VideosTableVCProtocol.swift */; };
+		37DD3BA31F5997E400065466 /* VideosTableVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BA11F5997E400065466 /* VideosTableVCProtocol.swift */; };
 		3C03B9C961EA32988F2FC199 /* Pods_DancingSteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */; };
 		63148DBCF0E3A0AAA7D362A5 /* Pods_DancingStepsLAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */; };
 		CB38EBEB1F17691800008585 /* GetVideosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */; };
@@ -148,6 +150,7 @@
 		37DD3B941F58451A00065466 /* DancingStepsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DancingStepsUITests.swift; sourceTree = "<group>"; };
 		37DD3B961F58451A00065466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37DD3B9E1F596B3A00065466 /* ErrorEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorEnums.swift; sourceTree = "<group>"; };
+		37DD3BA11F5997E400065466 /* VideosTableVCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideosTableVCProtocol.swift; path = DancingSteps/VideosTableVCProtocol.swift; sourceTree = "<group>"; };
 		58A4B1197EA040862E16888F /* Pods-DancingStepsLAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsLAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB.release.xcconfig"; sourceTree = "<group>"; };
 		8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingStepsLAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetVideosUseCase.swift; sourceTree = "<group>"; };
@@ -456,6 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				CBD6CA581F13C52500AC4548 /* VideoCellView.swift */,
+				37DD3BA11F5997E400065466 /* VideosTableVCProtocol.swift */,
 				CBD6CA521F13C0F000AC4548 /* VideosPresenter.swift */,
 			);
 			name = Presenter;
@@ -872,6 +876,7 @@
 				CBD6CA691F13D3F200AC4548 /* CameraViewController.swift in Sources */,
 				CBFAB3921F0F8D46005C8B80 /* UseCaseNetworkProvider.swift in Sources */,
 				CBFAB3831F0B8F1A005C8B80 /* Constants.swift in Sources */,
+				37DD3BA31F5997E400065466 /* VideosTableVCProtocol.swift in Sources */,
 				CBFAB38E1F0BB7BA005C8B80 /* CongressTableViewCell.swift in Sources */,
 				CBFAB3631F0A9981005C8B80 /* RMVideo.swift in Sources */,
 				CBAA33491F16170B009ED7CE /* SaveNewVideoUseCase.swift in Sources */,
@@ -926,6 +931,7 @@
 				CBD6CA681F13D3F200AC4548 /* CameraViewController.swift in Sources */,
 				CBD6CA2B1F1378C900AC4548 /* UseCaseNetworkProvider.swift in Sources */,
 				CBD6CA2C1F1378C900AC4548 /* Constants.swift in Sources */,
+				37DD3BA21F5997E400065466 /* VideosTableVCProtocol.swift in Sources */,
 				CBD6CA2D1F1378C900AC4548 /* CongressTableViewCell.swift in Sources */,
 				CBD6CA2E1F1378C900AC4548 /* RMVideo.swift in Sources */,
 				CBAA33481F16170B009ED7CE /* SaveNewVideoUseCase.swift in Sources */,

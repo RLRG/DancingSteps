@@ -96,12 +96,24 @@ class VideosTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        presenter.displayVideoScreen(navigationController: self.navigationController!, forIndexAt: indexPath)
+        presenter.configureVideoScreen(forIndexAt: indexPath)
     }
     
     // MARK: - Actions
     
     func openDebugScreen() {
-        presenter.displayDebugScreen(navigationController: self.navigationController!)
+        let debugVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "DebugViewController") as! DebugViewController // swiftlint:disable:this force_cast
+        self.navigationController?.pushViewController(debugVC, animated: true)
+    }
+}
+
+extension VideosTableViewController : VideosTableVCProtocol {
+
+    func displayVideoScreen(withVideoTitle title: String) {
+        let displayVideoVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "DisplayViewController") as! DisplayViewController // swiftlint:disable:this force_cast
+        displayVideoVC.videoTitle = title
+        self.navigationController?.pushViewController(displayVideoVC, animated: true)
     }
 }

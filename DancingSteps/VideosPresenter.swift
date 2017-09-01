@@ -13,8 +13,12 @@ class VideosPresenter {
     
     var videos: Variable<[Video]> = Variable([])
     var styles: Variable<[Style]> = Variable([])
+    
+    let videosTableVC : VideosTableVCProtocol!
+    
     let getVideosUseCase: GetVideosUseCase
     let getDanceStylesUseCase: GetDanceStylesUseCase
+    
     let disposeBag = DisposeBag()
     
     init(getVideosUseCase: GetVideosUseCase, getDanceStylesUseCase: GetDanceStylesUseCase) {
@@ -49,18 +53,10 @@ class VideosPresenter {
         cell.display(name: video.title)
     }
     
-    func displayVideoScreen(navigationController navigator: UINavigationController, forIndexAt indexPath: IndexPath) {
-        let displayVideoVC = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(withIdentifier: "DisplayViewController") as! DisplayViewController // swiftlint:disable:this force_cast
-        displayVideoVC.videoTitle = videos.value
+    func configureVideoScreen(forIndexAt indexPath: IndexPath) {
+        let videoTitle = videos.value
             .filter{ $0.style.name == styles.value[indexPath.section].name }[indexPath.row].title // swiftlint:disable:this opening_brace
-        navigator.pushViewController(displayVideoVC, animated: true)
-    }
-    
-    func displayDebugScreen(navigationController navigator: UINavigationController) {
-        let debugVC = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(withIdentifier: "DebugViewController") as! DebugViewController // swiftlint:disable:this force_cast
-        navigator.pushViewController(debugVC, animated: true)
+        videosTableVC.displayVideoScreen(withVideoTitle: videoTitle)
     }
     
     func getDanceStyles() {

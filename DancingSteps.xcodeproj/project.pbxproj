@@ -142,7 +142,7 @@
 		3724C25A1F3A07F9005E1BF8 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		3758560C1F4D72B500DF040F /* CameraPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraPresenter.swift; path = DancingSteps/CameraPresenter.swift; sourceTree = "<group>"; };
 		375856121F4D73F300DF040F /* CameraProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraProtocol.swift; path = DancingSteps/CameraProtocol.swift; sourceTree = "<group>"; };
-		375856151F4D7F4D00DF040F /* GetDanceStylesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetDanceStylesUseCase.swift; path = DancingSteps/GetDanceStylesUseCase.swift; sourceTree = "<group>"; };
+		375856151F4D7F4D00DF040F /* GetDanceStylesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetDanceStylesUseCase.swift; sourceTree = "<group>"; };
 		37DD3B841F5844F100065466 /* DancingStepsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DancingStepsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DD3B861F5844F100065466 /* DancingStepsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DancingStepsTests.swift; sourceTree = "<group>"; };
 		37DD3B881F5844F100065466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 		37DD3B961F58451A00065466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58A4B1197EA040862E16888F /* Pods-DancingStepsLAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsLAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB.release.xcconfig"; sourceTree = "<group>"; };
 		8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingStepsLAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetVideosUseCase.swift; path = DancingSteps/GetVideosUseCase.swift; sourceTree = "<group>"; };
+		CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetVideosUseCase.swift; sourceTree = "<group>"; };
 		CB38EBED1F1783E300008585 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		CB38EBF01F17875000008585 /* CompleteVideoPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteVideoPresentation.swift; path = DancingSteps/CompleteVideoPresentation.swift; sourceTree = "<group>"; };
 		CB38EBF31F178B8100008585 /* CompleteVideoProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteVideoProtocol.swift; path = DancingSteps/CompleteVideoProtocol.swift; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 		CB8A455B1F0401C1006E1102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB8A455D1F0401C1006E1102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBAA33441F1616CC009ED7CE /* CompleteVideoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteVideoPresenter.swift; path = DancingSteps/CompleteVideoPresenter.swift; sourceTree = "<group>"; };
-		CBAA33471F16170B009ED7CE /* SaveNewVideoUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaveNewVideoUseCase.swift; path = DancingSteps/SaveNewVideoUseCase.swift; sourceTree = "<group>"; };
+		CBAA33471F16170B009ED7CE /* SaveNewVideoUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveNewVideoUseCase.swift; sourceTree = "<group>"; };
 		CBAA33501F161940009ED7CE /* RealmRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepo.swift; sourceTree = "<group>"; };
 		CBAA33541F16230C009ED7CE /* RealmRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
 		CBAA33571F162369009ED7CE /* DomainConvertibleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
@@ -193,13 +193,13 @@
 		CBFAB37E1F0AA80C005C8B80 /* NetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		CBFAB3821F0B8F1A005C8B80 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CBFAB3851F0BAECD005C8B80 /* GetCongressesNetworkUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCongressesNetworkUseCase.swift; sourceTree = "<group>"; };
-		CBFAB3871F0BAFA7005C8B80 /* GetCongressesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetCongressesUseCase.swift; path = DancingSteps/GetCongressesUseCase.swift; sourceTree = "<group>"; };
+		CBFAB3871F0BAFA7005C8B80 /* GetCongressesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCongressesUseCase.swift; sourceTree = "<group>"; };
 		CBFAB3891F0BB26E005C8B80 /* CongressesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressesPresenter.swift; path = DancingSteps/CongressesPresenter.swift; sourceTree = "<group>"; };
 		CBFAB38B1F0BB77A005C8B80 /* CongressCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressCellView.swift; path = DancingSteps/CongressCellView.swift; sourceTree = "<group>"; };
 		CBFAB38D1F0BB7BA005C8B80 /* CongressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressTableViewCell.swift; path = DancingSteps/CongressTableViewCell.swift; sourceTree = "<group>"; };
 		CBFAB38F1F0BBC8B005C8B80 /* CongressesPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressesPresentation.swift; path = DancingSteps/CongressesPresentation.swift; sourceTree = "<group>"; };
 		CBFAB3911F0F8D46005C8B80 /* UseCaseNetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseNetworkProvider.swift; sourceTree = "<group>"; };
-		CBFAB3931F0F8DAF005C8B80 /* UseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UseCaseProvider.swift; path = DancingSteps/UseCaseProvider.swift; sourceTree = "<group>"; };
+		CBFAB3931F0F8DAF005C8B80 /* UseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingSteps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -275,6 +275,27 @@
 			path = DancingStepsUITests;
 			sourceTree = "<group>";
 		};
+		37DD3B9C1F5948FF00065466 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CBFAB3771F0AA718005C8B80 /* Network */,
+				CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */,
+				CBAA33471F16170B009ED7CE /* SaveNewVideoUseCase.swift */,
+				375856151F4D7F4D00DF040F /* GetDanceStylesUseCase.swift */,
+				CBFAB3871F0BAFA7005C8B80 /* GetCongressesUseCase.swift */,
+				CBFAB3931F0F8DAF005C8B80 /* UseCaseProvider.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		37DD3B9D1F594C6E00065466 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CBFAB3781F0AA750005C8B80 /* CongressNetwork.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		385EC1A6F9B10ACF19DDEB7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,7 +333,8 @@
 			children = (
 				CBFAB3471F0A8AB1005C8B80 /* Application */,
 				CBFAB3411F0A88C0005C8B80 /* Modules */,
-				CBFAB34A1F0A907C005C8B80 /* Common */,
+				37DD3B9C1F5948FF00065466 /* Interactor */,
+				CBFAB34A1F0A907C005C8B80 /* Entities */,
 				CBFAB3811F0B8EFA005C8B80 /* Utils */,
 			);
 			name = DancingStepsApp;
@@ -386,14 +408,14 @@
 			name = Application;
 			sourceTree = "<group>";
 		};
-		CBFAB34A1F0A907C005C8B80 /* Common */ = {
+		CBFAB34A1F0A907C005C8B80 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				CBFAB3771F0AA718005C8B80 /* Network */,
+				37DD3B9D1F594C6E00065466 /* Network */,
 				CBFAB34C1F0A9099005C8B80 /* Realm_Repository */,
 				CBFAB34B1F0A9091005C8B80 /* App_Entities */,
 			);
-			name = Common;
+			name = Entities;
 			sourceTree = "<group>";
 		};
 		CBFAB34B1F0A9091005C8B80 /* App_Entities */ = {
@@ -423,18 +445,8 @@
 			children = (
 				CBFAB3451F0A8A5C005C8B80 /* View */,
 				CBFAB3461F0A8A63005C8B80 /* Presenter */,
-				CBFAB34E1F0A9112005C8B80 /* Interactor */,
 			);
 			name = topEvents;
-			sourceTree = "<group>";
-		};
-		CBFAB34E1F0A9112005C8B80 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				CBFAB3871F0BAFA7005C8B80 /* GetCongressesUseCase.swift */,
-				CBFAB3931F0F8DAF005C8B80 /* UseCaseProvider.swift */,
-			);
-			name = Interactor;
 			sourceTree = "<group>";
 		};
 		CBFAB3521F0A91CD005C8B80 /* videosList */ = {
@@ -442,17 +454,8 @@
 			children = (
 				CBFAB3551F0A91FD005C8B80 /* View */,
 				CBFAB3541F0A91F6005C8B80 /* Presenter */,
-				CBFAB3531F0A91ED005C8B80 /* Interactor */,
 			);
 			name = videosList;
-			sourceTree = "<group>";
-		};
-		CBFAB3531F0A91ED005C8B80 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				CB38EBEA1F17691800008585 /* GetVideosUseCase.swift */,
-			);
-			name = Interactor;
 			sourceTree = "<group>";
 		};
 		CBFAB3541F0A91F6005C8B80 /* Presenter */ = {
@@ -479,18 +482,8 @@
 			children = (
 				CBFAB35C1F0A9272005C8B80 /* View */,
 				CBFAB35B1F0A9266005C8B80 /* Presenter */,
-				CBFAB35A1F0A9258005C8B80 /* Interactor */,
 			);
 			name = recordingScreen;
-			sourceTree = "<group>";
-		};
-		CBFAB35A1F0A9258005C8B80 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				CBAA33471F16170B009ED7CE /* SaveNewVideoUseCase.swift */,
-				375856151F4D7F4D00DF040F /* GetDanceStylesUseCase.swift */,
-			);
-			name = Interactor;
 			sourceTree = "<group>";
 		};
 		CBFAB35B1F0A9266005C8B80 /* Presenter */ = {
@@ -519,17 +512,8 @@
 			children = (
 				CBFAB37B1F0AA7EA005C8B80 /* Configuration */,
 				CBFAB3841F0BAEA7005C8B80 /* UseCases */,
-				CBFAB37A1F0AA7D1005C8B80 /* Entities */,
 			);
 			name = Network;
-			sourceTree = "<group>";
-		};
-		CBFAB37A1F0AA7D1005C8B80 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				CBFAB3781F0AA750005C8B80 /* CongressNetwork.swift */,
-			);
-			name = Entities;
 			sourceTree = "<group>";
 		};
 		CBFAB37B1F0AA7EA005C8B80 /* Configuration */ = {

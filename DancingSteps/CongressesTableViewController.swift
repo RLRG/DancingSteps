@@ -67,7 +67,7 @@ class CongressesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        presenter.displayEventDetails(navigationController: (self.navigationController)!, forRowAt: indexPath.row)
+        presenter.configureEventDetailsScreen(forRowAt: indexPath.row)
     }
     
     // MARK: - Actions
@@ -100,6 +100,14 @@ class CongressesTableViewController: UITableViewController {
 }
 
 extension CongressesTableViewController : CongressesTableViewProtocol {
+    
+    func displayEventDetailsScreen(forCongress congress: Congress) {
+        // swiftlint:disable:next force_cast
+        let detailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CongressDetailsViewController") as! CongressDetailsViewController
+        detailsVC.congress = congress
+        self.navigationController?.pushViewController(detailsVC, animated: true)
+    }
+    
     func displayNetworkError () {
         DispatchQueue.main.async {
             self.loadingSpinner.stopAnimating()

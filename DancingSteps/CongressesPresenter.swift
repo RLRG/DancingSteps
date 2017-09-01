@@ -12,7 +12,7 @@ import RxSwift
 class CongressesPresenter {
     
     var congresses: Variable<[Congress]> = Variable([])
-    var congressesView: CongressesTableViewController!
+    var congressesView: CongressesTableViewProtocol!
     let useCase: GetCongressesUseCase
     let disposeBag = DisposeBag()
     
@@ -51,10 +51,7 @@ class CongressesPresenter {
         cell.display(name: congress.name, imageUrl: congress.imageUrl)
     }
     
-    func displayEventDetails(navigationController navigator: UINavigationController, forRowAt row: Int) {
-        // swiftlint:disable:next force_cast
-        let detailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CongressDetailsViewController") as! CongressDetailsViewController
-        detailsVC.congress = congresses.value[row]
-        navigator.pushViewController(detailsVC, animated: true)
+    func configureEventDetailsScreen(forRowAt row: Int) {
+        congressesView.displayEventDetailsScreen(forCongress: congresses.value[row])
     }
 }

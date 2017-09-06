@@ -15,12 +15,12 @@ class Repository {
     
     private let videoRepo: AbstractRepository<Video>
     private let styleRepo: AbstractRepository<Style>
-    private let congressNetwork: CongressNetwork
+    private let networkProvider: NetworkProvider
     
     init(videoRepo: AbstractRepository<Video>, styleRepo: AbstractRepository<Style>, networkProvider: NetworkProvider) {
         self.videoRepo = videoRepo
         self.styleRepo = styleRepo
-        congressNetwork = networkProvider.makeCongressNetwork()
+        self.networkProvider = networkProvider
     }
     
     // MARK: - Realm Local Database
@@ -51,6 +51,7 @@ class Repository {
     // MARK: Congresses
     
     func getCongresses() -> Observable<[Congress]> {
+        let congressNetwork = networkProvider.makeCongressNetwork()
         return congressNetwork.fetchCongresses()
     }
 }

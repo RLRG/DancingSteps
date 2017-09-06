@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class GetDanceStylesUseCase {
+class GetDanceStylesUseCase: GetDanceStylesProtocol {
     
     func getDanceStyles() -> Observable<[Style]> {
         return Repository.shared.getDanceStyles()

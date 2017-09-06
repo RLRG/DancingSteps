@@ -39,7 +39,7 @@ final class Application {
         navigationController.navigationBar.barTintColor = UIColor.purple
         let tableViewController = navigationController.topViewController as! CongressesTableViewController // swiftlint:disable:this force_cast
         let getCongressesUseCase = useCaseProvider.makeGetCongressesUseCase()
-        let presenter = CongressesPresenter(useCase: getCongressesUseCase)
+        let presenter = CongressesPresenter(getCongressesUseCase: getCongressesUseCase)
         presenter.congressesView = tableViewController
         tableViewController.presenter = presenter
         

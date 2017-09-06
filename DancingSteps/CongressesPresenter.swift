@@ -13,15 +13,15 @@ class CongressesPresenter {
     
     var congresses: Variable<[Congress]> = Variable([])
     var congressesView: CongressesTableViewProtocol!
-    let useCase: GetCongressesUseCase
+    let getCongressesUseCase: GetCongressesProtocol
     let disposeBag = DisposeBag()
     
-    init (useCase: GetCongressesUseCase) {
-        self.useCase = useCase
+    init (getCongressesUseCase: GetCongressesProtocol) {
+        self.getCongressesUseCase = getCongressesUseCase
     }
     
     func viewIsReady() {
-        useCase.congresses().asObservable()
+        getCongressesUseCase.congresses().asObservable()
             .subscribe(
                 onNext: { (congressArray) in
                     #if DEBUG

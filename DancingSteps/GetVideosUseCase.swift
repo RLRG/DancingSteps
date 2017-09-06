@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class GetVideosUseCase {
+class GetVideosUseCase: GetVideosProtocol {
     
     func getAllVideos() -> Observable<[Video]> {
         return Repository.shared.getAllVideos()

@@ -11,13 +11,13 @@ import RxSwift
 
 class CompleteVideoPresenter {
     
-    let saveVideoUseCase: SaveNewVideoUseCase
-    let getDanceStylesUseCase: GetDanceStylesUseCase
+    let saveVideoUseCase: SaveNewVideoProtocol
+    let getDanceStylesUseCase: GetDanceStylesProtocol
     var completeVideoVC : CompleteVideoProtocol!
     var styles: Variable<[Style]> = Variable([])
     let disposeBag = DisposeBag()
     
-    init (saveVideoUseCase: SaveNewVideoUseCase, getDanceStylesUseCase: GetDanceStylesUseCase) {
+    init (saveVideoUseCase: SaveNewVideoProtocol, getDanceStylesUseCase: GetDanceStylesProtocol) {
         self.saveVideoUseCase = saveVideoUseCase
         self.getDanceStylesUseCase = getDanceStylesUseCase
     }

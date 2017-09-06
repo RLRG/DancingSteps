@@ -9,8 +9,8 @@
 import Foundation
 
 protocol UseCaseProvider {
-    func makeGetDanceStylesUseCase() -> GetDanceStylesUseCase
-    func makeGetVideosUseCase() -> GetVideosUseCase
-    func makeSaveNewVideoUseCase() -> SaveNewVideoUseCase
-    func makeGetCongressesUseCase() -> GetCongressesNetworkUseCase
+    func makeGetDanceStylesUseCase() -> GetDanceStylesProtocol
+    func makeGetVideosUseCase() -> GetVideosProtocol
+    func makeSaveNewVideoUseCase() -> SaveNewVideoProtocol
+    func makeGetCongressesUseCase() -> GetCongressesProtocol
 }

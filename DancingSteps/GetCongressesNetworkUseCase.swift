@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-final class GetCongressesNetworkUseCase: GetCongressesUseCase {
+final class GetCongressesNetworkUseCase: GetCongressesProtocol {
     
     func congresses() -> Observable<[Congress]> {
         return Repository.shared.getCongresses()

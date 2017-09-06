@@ -16,12 +16,12 @@ class VideosPresenter {
     
     var videosTableVC: VideosTableVCProtocol!
     
-    let getVideosUseCase: GetVideosUseCase
-    let getDanceStylesUseCase: GetDanceStylesUseCase
+    let getVideosUseCase: GetVideosProtocol
+    let getDanceStylesUseCase: GetDanceStylesProtocol
     
     let disposeBag = DisposeBag()
     
-    init(getVideosUseCase: GetVideosUseCase, getDanceStylesUseCase: GetDanceStylesUseCase) {
+    init(getVideosUseCase: GetVideosProtocol, getDanceStylesUseCase: GetDanceStylesProtocol) {
         self.getVideosUseCase = getVideosUseCase
         self.getDanceStylesUseCase = getDanceStylesUseCase
     }

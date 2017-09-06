@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class SaveNewVideoUseCase {
+class SaveNewVideoUseCase: SaveNewVideoProtocol {
     
     // MARK: Properties & Initialization
     

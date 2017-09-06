@@ -10,19 +10,19 @@ import Foundation
 
 public final class UseCaseProviderClass: UseCaseProvider {
 
-    func makeGetDanceStylesUseCase() -> GetDanceStylesUseCase {
+    func makeGetDanceStylesUseCase() -> GetDanceStylesProtocol {
         return GetDanceStylesUseCase()
     }
     
-    func makeGetVideosUseCase() -> GetVideosUseCase {
+    func makeGetVideosUseCase() -> GetVideosProtocol {
         return GetVideosUseCase()
     }
     
-    func makeSaveNewVideoUseCase() -> SaveNewVideoUseCase {
+    func makeSaveNewVideoUseCase() -> SaveNewVideoProtocol {
         return SaveNewVideoUseCase()
     }
     
-    func makeGetCongressesUseCase() -> GetCongressesNetworkUseCase {
+    func makeGetCongressesUseCase() -> GetCongressesProtocol {
         return GetCongressesNetworkUseCase()
     }
 

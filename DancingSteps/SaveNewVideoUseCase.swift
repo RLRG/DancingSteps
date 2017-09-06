@@ -13,12 +13,14 @@ class SaveNewVideoUseCase: SaveNewVideoProtocol {
     
     // MARK: Properties & Initialization
     private let repository: Repository
+    private let fileManager: FileManager
     
     let disposeBag = DisposeBag()
     var videoSavedFlag = false
     
-    init(repository: Repository) {
+    init(repository: Repository, fileManager: FileManager) {
         self.repository = repository
+        self.fileManager = fileManager
     }
     
     // MARK: Logic
@@ -31,17 +33,16 @@ class SaveNewVideoUseCase: SaveNewVideoProtocol {
                 // If we change this flag here, it would mean that the video must be saved once. Note that this implementation is developed meanwhile the problem of the method "query" is fixed. This is temporary then.
                 self.videoSavedFlag = false
                 
-                let documentsPath =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+                let documentsPath =  self.fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
                 let writePath = documentsPath.appendingPathComponent(title).appendingPathExtension("mov")
                 
                 var video : Video? = nil
-                if (FileManager().fileExists(atPath: writePath.path)) {
+                if (self.fileManager.fileExists(atPath: writePath.path)) {
                     observer.onError(RecordingError.existingVideoName)
                 } else {
-                    try  FileManager.default.moveItem(at: videoURL, to: writePath)
+                    try self.fileManager.moveItem(at: videoURL, to: writePath)
                     
-                    let styleRepo = RealmRepo<Style>()
-                    let styleObservable = styleRepo.query(with: NSPredicate(format: "name = '\(styleId)'"))
+                    let styleObservable = self.repository.getDanceStyle(withID: styleId)
                     styleObservable
                         .asObservable()
                         .subscribe(

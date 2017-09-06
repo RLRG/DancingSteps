@@ -42,6 +42,10 @@ class Repository {
         return styleObservable
     }
     
+    func getDanceStyle(withID id: String) -> Observable<[Style]> {
+        return styleRepo.query(with: NSPredicate(format: "name = '\(id)'"))
+    }
+    
     func save(_ danceStyle: Style) -> Observable<Void> {
         return styleRepo.save(entity: danceStyle)
     }

@@ -48,7 +48,9 @@ final class RealmRepo<T:RealmRepresentable>: AbstractRepository<T> where T == T.
         self.configuration = configuration
         let name = "com.CleanArchitectureRxSwift.RealmRepo"
         self.scheduler = RunLoopThreadScheduler(threadName: name)
-        print("File 📁 url: \(RLMRealmPathForFile("default.realm"))")
+        #if DEBUG
+            print("File 📁 url: \(RLMRealmPathForFile("default.realm"))")
+        #endif
     }
     
     override func queryAll() -> Observable<[T]> {

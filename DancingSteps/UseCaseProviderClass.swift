@@ -29,7 +29,7 @@ public final class UseCaseProviderClass: UseCaseProvider {
     }
     
     func makeSaveNewVideoUseCase() -> SaveNewVideoProtocol {
-        return SaveNewVideoUseCase(repository: repository)
+        return SaveNewVideoUseCase(repository: repository, fileManager: FileManager.default)
     }
     
     func makeGetCongressesUseCase() -> GetCongressesProtocol {

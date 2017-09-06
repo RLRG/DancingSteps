@@ -13,14 +13,8 @@ class SaveNewVideoUseCase {
     
     // MARK: Properties & Initialization
     
-    private let repository: AbstractRepository<Video>
-    
     let disposeBag = DisposeBag()
     var videoSavedFlag = false
-    
-    init(repository: AbstractRepository<Video>) {
-        self.repository = repository
-    }
     
     // MARK: Logic of the interactor.
     
@@ -51,7 +45,7 @@ class SaveNewVideoUseCase {
                                     if (style.name == styleId && self.videoSavedFlag == false) {
                                         video = Video(id: title, title: title, datetime: Date(), videoDescription: "DESCRIPTION TEST", url: "Deprecated", style: style)
                                         
-                                        let completeVideoObservable = self.repository.save(entity: video!)
+                                        let completeVideoObservable = Repository.shared.save(video!)
                                         completeVideoObservable.asObservable()
                                             .subscribe(
                                                 onError: { (error) in

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370F86321F5FEFEA0072A804 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F86311F5FEFEA0072A804 /* Repository.swift */; };
+		370F86331F5FEFEA0072A804 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F86311F5FEFEA0072A804 /* Repository.swift */; };
 		3724C2521F3329A7005E1BF8 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C2511F3329A7005E1BF8 /* DebugViewController.swift */; };
 		3724C2531F33305F005E1BF8 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C2511F3329A7005E1BF8 /* DebugViewController.swift */; };
 		3724C2581F385534005E1BF8 /* CongressesTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C2571F385534005E1BF8 /* CongressesTableViewProtocol.swift */; };
@@ -135,6 +137,7 @@
 		0A55F8B5EA35D3659DB3165A /* Pods-DancingSteps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingSteps.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps.release.xcconfig"; sourceTree = "<group>"; };
 		10728BBA2D97A7981A0113A3 /* Pods-DancingSteps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingSteps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DancingSteps/Pods-DancingSteps.debug.xcconfig"; sourceTree = "<group>"; };
 		31A2992605E8EC18CEFF3E68 /* Pods-DancingStepsLAB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsLAB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB.debug.xcconfig"; sourceTree = "<group>"; };
+		370F86311F5FEFEA0072A804 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		3724C2511F3329A7005E1BF8 /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugViewController.swift; path = DancingSteps/DebugViewController.swift; sourceTree = "<group>"; };
 		3724C2571F385534005E1BF8 /* CongressesTableViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressesTableViewProtocol.swift; path = DancingSteps/CongressesTableViewProtocol.swift; sourceTree = "<group>"; };
 		3724C25A1F3A07F9005E1BF8 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
@@ -246,6 +249,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		370F86301F5FEE820072A804 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				370F86311F5FEFEA0072A804 /* Repository.swift */,
+				37DD3B9D1F594C6E00065466 /* Network */,
+				CBFAB34C1F0A9099005C8B80 /* Realm */,
+			);
+			name = Repository;
+			sourceTree = "<group>";
+		};
 		3724C2501F332987005E1BF8 /* debug */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +342,7 @@
 				CBFAB3471F0A8AB1005C8B80 /* Application */,
 				CBFAB3411F0A88C0005C8B80 /* Modules */,
 				37DD3B9C1F5948FF00065466 /* Interactor */,
+				370F86301F5FEE820072A804 /* Repository */,
 				CBFAB34A1F0A907C005C8B80 /* Entities */,
 				CBFAB3811F0B8EFA005C8B80 /* Utils */,
 			);
@@ -405,24 +419,14 @@
 		CBFAB34A1F0A907C005C8B80 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				37DD3B9D1F594C6E00065466 /* Network */,
-				CBFAB34C1F0A9099005C8B80 /* Realm_Repository */,
-				CBFAB34B1F0A9091005C8B80 /* App_Entities */,
-			);
-			name = Entities;
-			sourceTree = "<group>";
-		};
-		CBFAB34B1F0A9091005C8B80 /* App_Entities */ = {
-			isa = PBXGroup;
-			children = (
 				CBFAB36C1F0AA309005C8B80 /* Video.swift */,
 				CBFAB36E1F0AA315005C8B80 /* Congress.swift */,
 				CBFAB3741F0AA333005C8B80 /* Style.swift */,
 			);
-			name = App_Entities;
+			name = Entities;
 			sourceTree = "<group>";
 		};
-		CBFAB34C1F0A9099005C8B80 /* Realm_Repository */ = {
+		CBFAB34C1F0A9099005C8B80 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
 				CBAA33501F161940009ED7CE /* RealmRepo.swift */,
@@ -431,7 +435,7 @@
 				CBFAB3641F0A9990005C8B80 /* RMCongress.swift */,
 				CBFAB36A1F0A9B8C005C8B80 /* RMStyle.swift */,
 			);
-			name = Realm_Repository;
+			name = Realm;
 			sourceTree = "<group>";
 		};
 		CBFAB34D1F0A90F5005C8B80 /* topEvents */ = {
@@ -864,6 +868,7 @@
 				CBD6CA5A1F13C52500AC4548 /* VideoCellView.swift in Sources */,
 				3724C25C1F3A07FA005E1BF8 /* UIViewControllerExt.swift in Sources */,
 				CBD6CA661F13CBAD00AC4548 /* VideoTableViewCell.swift in Sources */,
+				370F86331F5FEFEA0072A804 /* Repository.swift in Sources */,
 				CBAA33621F1625C4009ED7CE /* RealmExt.swift in Sources */,
 				CBFAB3651F0A9990005C8B80 /* RMCongress.swift in Sources */,
 				CB38EBFB1F17CF0200008585 /* UIImageViewExt.swift in Sources */,
@@ -918,6 +923,7 @@
 				CBD6CA591F13C52500AC4548 /* VideoCellView.swift in Sources */,
 				3724C25B1F3A07FA005E1BF8 /* UIViewControllerExt.swift in Sources */,
 				CBD6CA651F13CBAD00AC4548 /* VideoTableViewCell.swift in Sources */,
+				370F86321F5FEFEA0072A804 /* Repository.swift in Sources */,
 				CBAA33611F1625C4009ED7CE /* RealmExt.swift in Sources */,
 				CBD6CA291F1378C900AC4548 /* RMCongress.swift in Sources */,
 				CB38EBFA1F17CF0200008585 /* UIImageViewExt.swift in Sources */,

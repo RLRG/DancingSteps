@@ -27,7 +27,7 @@ class VideosPresenter {
     }
     
     func viewIsReady() {
-        getVideosUseCase.getAllVideosFromDB().asObservable()
+        getVideosUseCase.getAllVideos().asObservable()
             .subscribe(
                 onNext: { (videos) in
                     #if DEBUG

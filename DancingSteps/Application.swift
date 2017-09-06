@@ -23,10 +23,8 @@ final class Application {
         let s_navigationController = tabBarController.viewControllers?.first as! UINavigationController // swiftlint:disable:this force_cast
         s_navigationController.navigationBar.barTintColor = UIColor.purple
         let s_tableViewController = s_navigationController.topViewController as! VideosTableViewController // swiftlint:disable:this force_cast
-        let realmVideosRepo = RealmRepo<Video>()
-        let realmStylesRepo = RealmRepo<Style>()
-        let getVideosUseCase = GetVideosUseCase(repository: realmVideosRepo)
-        let getDanceStylesUseCase = GetDanceStylesUseCase(repository: realmStylesRepo)
+        let getVideosUseCase = GetVideosUseCase()
+        let getDanceStylesUseCase = GetDanceStylesUseCase()
         let s_presenter = VideosPresenter(getVideosUseCase: getVideosUseCase, getDanceStylesUseCase: getDanceStylesUseCase)
         s_tableViewController.presenter = s_presenter
         s_presenter.videosTableVC = s_tableViewController
@@ -52,7 +50,6 @@ final class Application {
     func initializeRealmDatabase() {
         
         // Dance styles
-        let realmRepo = RealmRepo<Style>()
         //let disposeBag = DisposeBag() --> Unknown behaviour. Fix this !
         
         let salsa = Style(name: "Salsa", country: "Cuba")
@@ -61,7 +58,7 @@ final class Application {
         let stylesArray = [salsa, bachata, kizomba]
         
         for style in stylesArray {
-            let styleObservable = realmRepo.save(entity: style)
+            let styleObservable = Repository.shared.save(style)
             styleObservable
                 .subscribe( // QUESTION: Unknown behaviour, If I dispose the observable, the data is not written in the local Realm database. Why does this happen?
                     onNext: { (styleNext) in

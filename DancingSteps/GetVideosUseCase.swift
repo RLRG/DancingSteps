@@ -11,13 +11,7 @@ import RxSwift
 
 class GetVideosUseCase {
     
-    private let repository: AbstractRepository<Video>
-    
-    init(repository: AbstractRepository<Video>) {
-        self.repository = repository
-    }
-    
-    func getAllVideosFromDB() -> Observable<[Video]> {
-        return repository.queryAll()
+    func getAllVideos() -> Observable<[Video]> {
+        return Repository.shared.getAllVideos()
     }
 }

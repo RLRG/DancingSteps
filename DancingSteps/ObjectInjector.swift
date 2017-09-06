@@ -11,10 +11,8 @@ import Foundation
 class ObjectInjector {
     
     class func createPresenterForCompleteVideoVC () -> CompleteVideoPresenter {
-        let realmVideoRepo = RealmRepo<Video>()
-        let realmStyleRepo = RealmRepo<Style>()
-        let saveNewVideoUseCase = SaveNewVideoUseCase(repository: realmVideoRepo)
-        let getDanceStylesUseCase = GetDanceStylesUseCase(repository: realmStyleRepo)
+        let saveNewVideoUseCase = SaveNewVideoUseCase()
+        let getDanceStylesUseCase = GetDanceStylesUseCase()
         let r_presenter = CompleteVideoPresenter(saveVideoUseCase: saveNewVideoUseCase, getDanceStylesUseCase: getDanceStylesUseCase)
         
         return r_presenter

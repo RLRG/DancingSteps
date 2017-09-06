@@ -13,17 +13,13 @@ class Repository {
     
     // MARK: - Properties & Initialization
     
-    static let shared = Repository() // singleton.
-    
     private let videoRepo: AbstractRepository<Video>
     private let styleRepo: AbstractRepository<Style>
     private let congressNetwork: CongressNetwork
     
-    init() {
-        videoRepo = RealmRepo<Video>()
-        styleRepo = RealmRepo<Style>()
-        
-        let networkProvider = NetworkProvider()
+    init(videoRepo: AbstractRepository<Video>, styleRepo: AbstractRepository<Style>, networkProvider: NetworkProvider) {
+        self.videoRepo = videoRepo
+        self.styleRepo = styleRepo
         congressNetwork = networkProvider.makeCongressNetwork()
     }
     

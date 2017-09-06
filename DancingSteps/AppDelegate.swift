@@ -14,13 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let storyBoardName = "Main"
-
+    let repository = Repository(videoRepo: RealmRepo<Video>(), styleRepo: RealmRepo<Style>(), networkProvider: NetworkProvider())
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Configuration
         let mainStoryboard = UIStoryboard(name: storyBoardName, bundle: nil)
         window = UIWindow(frame: UIScreen.main.bounds)
-        Application.shared.cleanArchitectureConfiguration(storyboard: mainStoryboard, mainWindow: window!)
-        Application.shared.initializeRealmDatabase()
+        Application.shared.cleanArchitectureConfiguration(storyboard: mainStoryboard, mainWindow: window!, withRepo: repository)
+        Application.shared.initializeRealmDatabase(withRepo: repository)
         return true
     }
 

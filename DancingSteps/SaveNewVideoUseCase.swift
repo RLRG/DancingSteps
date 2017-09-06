@@ -12,11 +12,16 @@ import RxSwift
 class SaveNewVideoUseCase: SaveNewVideoProtocol {
     
     // MARK: Properties & Initialization
+    private let repository: Repository
     
     let disposeBag = DisposeBag()
     var videoSavedFlag = false
     
-    // MARK: Logic of the interactor.
+    init(repository: Repository) {
+        self.repository = repository
+    }
+    
+    // MARK: Logic
     
     func saveVideoToDB(title: String, styleId: String, videoURL: URL) -> Observable<Void> {
         
@@ -45,7 +50,7 @@ class SaveNewVideoUseCase: SaveNewVideoProtocol {
                                     if (style.name == styleId && self.videoSavedFlag == false) {
                                         video = Video(id: title, title: title, datetime: Date(), videoDescription: "DESCRIPTION TEST", url: "Deprecated", style: style)
                                         
-                                        let completeVideoObservable = Repository.shared.save(video!)
+                                        let completeVideoObservable = self.repository.save(video!)
                                         completeVideoObservable.asObservable()
                                             .subscribe(
                                                 onError: { (error) in

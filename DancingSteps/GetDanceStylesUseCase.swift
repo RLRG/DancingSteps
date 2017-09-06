@@ -11,7 +11,17 @@ import RxSwift
 
 class GetDanceStylesUseCase: GetDanceStylesProtocol {
     
+    // MARK: - Properties & Initialization
+    
+    private let repository: Repository
+    
+    init(repository: Repository) {
+        self.repository = repository
+    }
+    
+    // MARK: - Logic
+    
     func getDanceStyles() -> Observable<[Style]> {
-        return Repository.shared.getDanceStyles()
+        return repository.getDanceStyles()
     }
 }

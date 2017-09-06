@@ -14,12 +14,12 @@ import UIKit
 final class Application {
     static let shared = Application() // singleton.
     
-    func cleanArchitectureConfiguration(storyboard: UIStoryboard, mainWindow: UIWindow) {
+    func cleanArchitectureConfiguration(storyboard: UIStoryboard, mainWindow: UIWindow, withRepo repository: Repository) {
         
         let tabBarController = storyboard.instantiateInitialViewController() as! UITabBarController // swiftlint:disable:this force_cast
         tabBarController.tabBar.barTintColor = UIColor.purple
         
-        let useCaseProvider = UseCaseProviderClass()
+        let useCaseProvider = UseCaseProviderClass(repository: repository)
         
         // VIDEOS
         let s_navigationController = tabBarController.viewControllers?.first as! UINavigationController // swiftlint:disable:this force_cast
@@ -48,7 +48,7 @@ final class Application {
         mainWindow.makeKeyAndVisible()
     }
     
-    func initializeRealmDatabase() {
+    func initializeRealmDatabase(withRepo repository: Repository) {
         
         // Dance styles
         //let disposeBag = DisposeBag() --> Unknown behaviour. Fix this !
@@ -59,7 +59,7 @@ final class Application {
         let stylesArray = [salsa, bachata, kizomba]
         
         for style in stylesArray {
-            let styleObservable = Repository.shared.save(style)
+            let styleObservable = repository.save(style)
             styleObservable
                 .subscribe( // QUESTION: Unknown behaviour, If I dispose the observable, the data is not written in the local Realm database. Why does this happen?
                     onNext: { (styleNext) in

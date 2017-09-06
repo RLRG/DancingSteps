@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 class ObjectInjector {
     
     class func createPresenterForCompleteVideoVC () -> CompleteVideoPresenter {
         
-        let useCaseProvider = UseCaseProviderClass()
+        let useCaseProvider = UseCaseProviderClass(repository: (UIApplication.shared.delegate as! AppDelegate).repository) // swiftlint:disable:this force_cast
         
         let saveNewVideoUseCase = useCaseProvider.makeSaveNewVideoUseCase()
         let getDanceStylesUseCase = useCaseProvider.makeGetDanceStylesUseCase()

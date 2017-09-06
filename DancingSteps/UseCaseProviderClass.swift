@@ -10,20 +10,30 @@ import Foundation
 
 public final class UseCaseProviderClass: UseCaseProvider {
 
+    // MARK: - Properties & Initialization
+    
+    private let repository: Repository
+    
+    init(repository: Repository) {
+        self.repository = repository
+    }
+    
+    // MARK: - Logic
+    
     func makeGetDanceStylesUseCase() -> GetDanceStylesProtocol {
-        return GetDanceStylesUseCase()
+        return GetDanceStylesUseCase(repository: repository)
     }
     
     func makeGetVideosUseCase() -> GetVideosProtocol {
-        return GetVideosUseCase()
+        return GetVideosUseCase(repository: repository)
     }
     
     func makeSaveNewVideoUseCase() -> SaveNewVideoProtocol {
-        return SaveNewVideoUseCase()
+        return SaveNewVideoUseCase(repository: repository)
     }
     
     func makeGetCongressesUseCase() -> GetCongressesProtocol {
-        return GetCongressesNetworkUseCase()
+        return GetCongressesNetworkUseCase(repository: repository)
     }
 
 }

@@ -11,7 +11,17 @@ import RxSwift
 
 class GetVideosUseCase: GetVideosProtocol {
     
+    // MARK: - Properties & Initialization
+    
+    private let repository: Repository
+    
+    init(repository: Repository) {
+        self.repository = repository
+    }
+    
+    // MARK: - Logic
+    
     func getAllVideos() -> Observable<[Video]> {
-        return Repository.shared.getAllVideos()
+        return repository.getAllVideos()
     }
 }

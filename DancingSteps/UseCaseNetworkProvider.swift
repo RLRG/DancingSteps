@@ -9,14 +9,9 @@
 import Foundation
 
 public final class UseCaseNetworkProvider: UseCaseProvider {
-    private let networkProvider: NetworkProvider
-    
-    public init() {
-        networkProvider = NetworkProvider()
-    }
-    
+
     func makeGetCongressesUseCase() -> GetCongressesNetworkUseCase {
-        return GetCongressesNetworkUseCase(network: networkProvider.makeCongressNetwork())
+        return GetCongressesNetworkUseCase()
     }
 
 }

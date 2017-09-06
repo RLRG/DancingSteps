@@ -17,10 +17,14 @@ class Repository {
     
     private let videoRepo: AbstractRepository<Video>
     private let styleRepo: AbstractRepository<Style>
+    private let congressNetwork: CongressNetwork
     
     init() {
         videoRepo = RealmRepo<Video>()
         styleRepo = RealmRepo<Style>()
+        
+        let networkProvider = NetworkProvider()
+        congressNetwork = networkProvider.makeCongressNetwork()
     }
     
     // MARK: - Realm Local Database
@@ -44,5 +48,13 @@ class Repository {
     
     func save(_ danceStyle: Style) -> Observable<Void> {
         return styleRepo.save(entity: danceStyle)
-    }    
+    }
+    
+    // MARK: - Network
+    
+    // MARK: Congresses
+    
+    func getCongresses() -> Observable<[Congress]> {
+        return congressNetwork.fetchCongresses()
+    }
 }

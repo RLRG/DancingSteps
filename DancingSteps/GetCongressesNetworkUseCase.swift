@@ -10,13 +10,8 @@ import Foundation
 import RxSwift
 
 final class GetCongressesNetworkUseCase: GetCongressesUseCase {
-    private let network: CongressNetwork
-    
-    init(network: CongressNetwork) {
-        self.network = network
-    }
     
     func congresses() -> Observable<[Congress]> {
-        return network.fetchCongresses()
+        return Repository.shared.getCongresses()
     }
 }

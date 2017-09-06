@@ -19,12 +19,14 @@ final class Application {
         let tabBarController = storyboard.instantiateInitialViewController() as! UITabBarController // swiftlint:disable:this force_cast
         tabBarController.tabBar.barTintColor = UIColor.purple
         
+        let useCaseProvider = UseCaseProviderClass()
+        
         // VIDEOS
         let s_navigationController = tabBarController.viewControllers?.first as! UINavigationController // swiftlint:disable:this force_cast
         s_navigationController.navigationBar.barTintColor = UIColor.purple
         let s_tableViewController = s_navigationController.topViewController as! VideosTableViewController // swiftlint:disable:this force_cast
-        let getVideosUseCase = GetVideosUseCase()
-        let getDanceStylesUseCase = GetDanceStylesUseCase()
+        let getVideosUseCase = useCaseProvider.makeGetVideosUseCase()
+        let getDanceStylesUseCase = useCaseProvider.makeGetDanceStylesUseCase()
         let s_presenter = VideosPresenter(getVideosUseCase: getVideosUseCase, getDanceStylesUseCase: getDanceStylesUseCase)
         s_tableViewController.presenter = s_presenter
         s_presenter.videosTableVC = s_tableViewController
@@ -36,8 +38,7 @@ final class Application {
         let navigationController = tabBarController.viewControllers?[2] as! UINavigationController // swiftlint:disable:this force_cast
         navigationController.navigationBar.barTintColor = UIColor.purple
         let tableViewController = navigationController.topViewController as! CongressesTableViewController // swiftlint:disable:this force_cast
-        let useCaseNetworkProvider = UseCaseNetworkProvider()
-        let getCongressesUseCase = useCaseNetworkProvider.makeGetCongressesUseCase()
+        let getCongressesUseCase = useCaseProvider.makeGetCongressesUseCase()
         let presenter = CongressesPresenter(useCase: getCongressesUseCase)
         presenter.congressesView = tableViewController
         tableViewController.presenter = presenter

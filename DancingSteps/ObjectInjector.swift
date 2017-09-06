@@ -11,8 +11,11 @@ import Foundation
 class ObjectInjector {
     
     class func createPresenterForCompleteVideoVC () -> CompleteVideoPresenter {
-        let saveNewVideoUseCase = SaveNewVideoUseCase()
-        let getDanceStylesUseCase = GetDanceStylesUseCase()
+        
+        let useCaseProvider = UseCaseProviderClass()
+        
+        let saveNewVideoUseCase = useCaseProvider.makeSaveNewVideoUseCase()
+        let getDanceStylesUseCase = useCaseProvider.makeGetDanceStylesUseCase()
         let r_presenter = CompleteVideoPresenter(saveVideoUseCase: saveNewVideoUseCase, getDanceStylesUseCase: getDanceStylesUseCase)
         
         return r_presenter

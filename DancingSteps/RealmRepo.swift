@@ -68,11 +68,7 @@ final class RealmRepo<T:RealmRepresentable>: AbstractRepository<T> where T == T.
                         sortDescriptors: [NSSortDescriptor] = []) -> Observable<[T]> {
         return Observable.deferred {
             let realm = self.realm
-            let objects = realm.objects(T.RealmType.self)
-            // QUESTION: Why the filter method does not work ? I don't understand why.... The following message appears on the top of XCode editor: ""An internal error occurred. Source editor functionality is limited. If you want to check it, just uncomment the line ".filter(predicate)". 
-            // For this reason I had to filter the results in code in the file "SaveNewVideoUseCase", check it out ! ;)
-            //            The implementation is broken: it cause compiler to crash with xcode 8.3 ¯\_(ツ)_/¯
-            //                            .filter(predicate)
+            let objects = realm.objects(T.RealmType.self).filter(predicate)
             
             return Observable.array(from: objects)
                 .mapToDomain()

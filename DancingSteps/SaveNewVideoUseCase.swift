@@ -47,24 +47,22 @@ class SaveNewVideoUseCase: SaveNewVideoProtocol {
                         .asObservable()
                         .subscribe(
                             onNext: { (styles) in
-                                for style in styles {
-                                    if (style.name == styleId && self.videoSavedFlag == false) {
-                                        video = Video(id: title, title: title, datetime: Date(), videoDescription: "DESCRIPTION TEST", url: "Deprecated", style: style)
-                                        
-                                        let completeVideoObservable = self.repository.save(video!)
-                                        completeVideoObservable.asObservable()
-                                            .subscribe(
-                                                onError: { (error) in
-                                                    observer.onError(error)
-                                            },
-                                                onCompleted: {
-                                                    #if DEBUG
-                                                        print("movie saved")
-                                                    #endif
-                                                    self.videoSavedFlag = true
-                                                    observer.onCompleted()
-                                            }).disposed(by: self.disposeBag)
-                                    }
+                                if !self.videoSavedFlag {
+                                    video = Video(id: title, title: title, datetime: Date(), videoDescription: "DESCRIPTION TEST", url: "Deprecated", style: styles[0])
+                                    
+                                    let completeVideoObservable = self.repository.save(video!)
+                                    completeVideoObservable.asObservable()
+                                        .subscribe(
+                                            onError: { (error) in
+                                                observer.onError(error)
+                                        },
+                                            onCompleted: {
+                                                #if DEBUG
+                                                    print("movie saved")
+                                                #endif
+                                                self.videoSavedFlag = true
+                                                observer.onCompleted()
+                                        }).disposed(by: self.disposeBag)
                                 }
                         })
                         .disposed(by: self.disposeBag)

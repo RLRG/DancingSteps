@@ -34,13 +34,21 @@ class VideosTableViewControllerTests: XCTestCase {
         XCTAssertTrue(true)
     }
     
+    func testPresenterGetsDanceStyles() {
+        
+        // 2. ACT
+        _ = sut.view
+        
+        // 3. ASSERT
+        XCTAssertTrue(presenter.getDanceStylesInvoked)
+    }
+    
     func testPresenterIsInformedWhenViewIsReady() {
 
         // 2. ACT
-        // sut.viewDidLoad() <<------- DON'T DO THIS !!!! WHAT WE SHOULD DO IS:
-        _ = sut.view // --> ViewController does the job to call viewDidLoad !
+        _ = sut.view
 
-        // 3. ASSERT (we want to check that the viewReady method was called)
+        // 3. ASSERT
         XCTAssertTrue(presenter.viewReadyInvoked)
     }
     
@@ -48,9 +56,14 @@ class VideosTableViewControllerTests: XCTestCase {
     // TEST DOUBLE: SPY TYPE
     class TestableVideosPresenter: VideosPresenter {
         var viewReadyInvoked = false
-
+        var getDanceStylesInvoked = false
+        
         override func viewIsReady() {
             viewReadyInvoked = true
+        }
+        
+        override func getDanceStyles() {
+            getDanceStylesInvoked = true
         }
     }
 

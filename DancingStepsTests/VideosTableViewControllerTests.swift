@@ -26,7 +26,7 @@ class VideosTableViewControllerTests: XCTestCase {
     
     override func tearDown() {
         sut = nil
-        // presenter = nil
+        presenter = nil
         super.tearDown()
     }
     
@@ -48,8 +48,6 @@ class VideosTableViewControllerTests: XCTestCase {
     // TEST DOUBLE: SPY TYPE
     class TestableVideosPresenter: VideosPresenter {
         var viewReadyInvoked = false
-
-        // THE PROBLEM IS IN THE INIT FUNCTION !! WHAT SHOULD I DO HERE ????
 
         override func viewIsReady() {
             viewReadyInvoked = true

@@ -97,6 +97,4 @@ class VideosPresenterTests: XCTestCase {
             return Utils.myFrom(TestData.videos)
         }
     }
-    
-    
 }

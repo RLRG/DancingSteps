@@ -51,9 +51,9 @@ In order to create the architecture and the communications of my app I have stud
 
 ## Build and install
 ### Requirements
-* Xcode 8.3.3
-* iOS 10.3 SDK
-* Swift 3.1.
+* Xcode 9
+* iOS 11 SDK
+* Swift 4
 ### Getting the code
 In order to build, run and access the app, the first thing you have to do is to clone my repository:
 ```
@@ -64,7 +64,7 @@ It is important to remark that I have used CocoaPods as the dependency manager o
 pod install
 ```
 ### Running the app
-Open `DancingSteps.xcworkspace` with XCode 8.3.3. Then, it is recommended to install the app in a real device so that you can test the video recording functionality.
+Open `DancingSteps.xcworkspace` with XCode 9. Then, it is recommended to install the app in a real device so that you can test the video recording functionality.
 
 Before running it, note that there are two targets:
 * DancingStepsLAB: When you run this target, in the "Videos" tab, you will see an UIBarButtonItem in the navigation bar (DEBUG) in order to open this debug screen. This target, then, includes tools to monitor and get information about the operation of the app in real time (real-time debuggers, logs and so on).
@@ -81,8 +81,10 @@ This paragraph includes all the resources used to create this app project, inclu
 | [Alamofire](https://github.com/Alamofire/Alamofire) | Elegant HTTP Networking in Swift. |
 | [SwiftyCam](https://github.com/Awalz/SwiftyCam) | A Snapchat Inspired iOS Camera Framework written in Swift |
 | [Kiuwan](https://www.kiuwan.com/codereview/) | Automated code review tool to detect vulnerabilities and improve quality. After setting it up, I discovered that moment, Swift was not supported yet. There must be working on it. |
-| [Travis CI](https://travis-ci.org/) | Continuous Integration used to build the project automatically. |
+| [Travis CI](https://travis-ci.org/) | Continuous Integration used to build the project automatically and run unit tests. |
+| [buddybuild](https://www.buddybuild.com/) | Continuous Integration used to build the project automatically and run unit tests. |
 | [Realm](https://github.com/realm/realm-cocoa) | Mobile database used to persist data of the app. |
+| [RxSwift](https://github.com/ReactiveX/RxSwift) | Reactive Programming in Swift used mainly to communicate layers of the app. |
 | Other | Other frameworks related to the ones already mentioned such as: RxAlamofire, ObjectMapper, AlamofireObjectMapper, RxRealm, QueryKit (see PodFile of the project) |
 ### APIs
 | Framework | Description |

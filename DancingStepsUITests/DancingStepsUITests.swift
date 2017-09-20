@@ -46,45 +46,4 @@ class DancingStepsUITests: XCTestCase {
         XCTAssert(app.navigationBars["Details of the event"].exists)
     }
     
-    /* IMPORTANT TO NOTE: To run this test successfully:
-        - The app must be installed in a real device.
-        - The app must not exist in the real device used before the UI test.
-        - Last time tested (31st August 17): iOS 10, iPhone 7
-     */
-    func testRecordActionAndCheckVideoList() {
-        
-        // ------- FIRST STEP: Record the video ---------
-        let tabBarsQuery = app.tabBars
-        tabBarsQuery.buttons["Record"].tap()
-        
-        //app.alerts["“DancingSteps” Would Like to Access the Camera"].buttons["Allow"].tap()
-        
-        addUIInterruptionMonitor(withDescription: "Camera & Microphone Services") { (alert) -> Bool in
-            alert.buttons["OK"].tap()
-            return true
-        }
-        
-        app.buttons["startRecording"].tap()
-        app.buttons["stopRecording"].tap()
-        
-        let setANameForYourVideoTextField = app.textFields["Set a name for your video !"]
-        setANameForYourVideoTextField.tap()
-        setANameForYourVideoTextField.typeText("Testing")
-        app.buttons["Save video !"].tap()
-        
-        XCTAssertTrue(app.alerts[""].exists)
-        app.alerts.buttons["OK"].tap()
-        
-        // ------- SECOND STEP: Check the video ---------
-        tabBarsQuery.buttons["Videos"].tap()
-        let tablesQuery = app.tables
-        tablesQuery.cells.containing(.staticText, identifier:"Testing").children(matching: .staticText).matching(identifier: "Testing").element(boundBy: 0).tap()
-        
-        let shareButton = app.navigationBars["DancingSteps.DisplayView"].buttons["Share"]
-        shareButton.tap()
-        
-        let collectionViewsQuery = app.collectionViews.collectionViews
-        XCTAssertTrue(collectionViewsQuery.buttons["WhatsApp"].exists)
-    }
-    
 }

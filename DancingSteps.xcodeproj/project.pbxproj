@@ -24,6 +24,8 @@
 		375856161F4D7F4D00DF040F /* GetDanceStylesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375856151F4D7F4D00DF040F /* GetDanceStylesUseCase.swift */; };
 		375856171F4D7F4D00DF040F /* GetDanceStylesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375856151F4D7F4D00DF040F /* GetDanceStylesUseCase.swift */; };
 		378262C71F718726001DDF34 /* VideosPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378262C61F718726001DDF34 /* VideosPresenterTests.swift */; };
+		378262C91F7268D9001DDF34 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378262C81F7268D9001DDF34 /* Utils.swift */; };
+		378262CC1F726BD5001DDF34 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378262CB1F726BD5001DDF34 /* TestData.swift */; };
 		37AED3791F701A1400C8EFCD /* VideosTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AED3781F701A1400C8EFCD /* VideosTableViewControllerTests.swift */; };
 		37DD3B951F58451A00065466 /* DancingStepsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3B941F58451A00065466 /* DancingStepsUITests.swift */; };
 		37DD3B9F1F596B3A00065466 /* ErrorEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3B9E1F596B3A00065466 /* ErrorEnums.swift */; };
@@ -156,6 +158,8 @@
 		3724C25A1F3A07F9005E1BF8 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		375856151F4D7F4D00DF040F /* GetDanceStylesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetDanceStylesUseCase.swift; sourceTree = "<group>"; };
 		378262C61F718726001DDF34 /* VideosPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosPresenterTests.swift; sourceTree = "<group>"; };
+		378262C81F7268D9001DDF34 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		378262CB1F726BD5001DDF34 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		37AED3781F701A1400C8EFCD /* VideosTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewControllerTests.swift; sourceTree = "<group>"; };
 		37DD3B841F5844F100065466 /* DancingStepsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DancingStepsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DD3B881F5844F100065466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -323,9 +327,19 @@
 			name = debug;
 			sourceTree = "<group>";
 		};
+		378262CA1F726BB8001DDF34 /* Testing Utils */ = {
+			isa = PBXGroup;
+			children = (
+				378262C81F7268D9001DDF34 /* Utils.swift */,
+				378262CB1F726BD5001DDF34 /* TestData.swift */,
+			);
+			path = "Testing Utils";
+			sourceTree = "<group>";
+		};
 		37DD3B851F5844F100065466 /* DancingStepsTests */ = {
 			isa = PBXGroup;
 			children = (
+				378262CA1F726BB8001DDF34 /* Testing Utils */,
 				37DD3B881F5844F100065466 /* Info.plist */,
 				37AED3781F701A1400C8EFCD /* VideosTableViewControllerTests.swift */,
 				378262C61F718726001DDF34 /* VideosPresenterTests.swift */,
@@ -971,6 +985,8 @@
 			files = (
 				378262C71F718726001DDF34 /* VideosPresenterTests.swift in Sources */,
 				37AED3791F701A1400C8EFCD /* VideosTableViewControllerTests.swift in Sources */,
+				378262C91F7268D9001DDF34 /* Utils.swift in Sources */,
+				378262CC1F726BD5001DDF34 /* TestData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

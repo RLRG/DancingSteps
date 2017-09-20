@@ -29,6 +29,9 @@ class VideosPresenterTests: XCTestCase {
         getVideosUseCase = TestableGetVideosUseCase()
         sut = VideosPresenter(getVideosUseCase: getVideosUseCase, getDanceStylesUseCase: getStylesUseCase)
         sut.videosTableVC = view
+        
+        sut.viewIsReady()
+        sut.getDanceStyles()
     }
     
     override func tearDown() {
@@ -46,25 +49,19 @@ class VideosPresenterTests: XCTestCase {
     }
     
     func testViewReadyLoadsVideosFromUseCase() {
-        sut.viewIsReady()
         XCTAssertTrue(sut.videos.value.count == 3)
     }
     
     func testGetDanceStylesLoadsStyles() {
-        sut.getDanceStyles()
         XCTAssertTrue(sut.styles.value.count == 2)
     }
     
     func testConfigureCellCallsViewDisplay() {
-        sut.viewIsReady()
-        sut.getDanceStyles()
         sut.configure(cell: cellView, forSectionAt: 0, forRowAt: 0)
         XCTAssertEqual(cellView.cellName, TestData.videos[0].title)
     }
     
     func testConfigureVideoScreenCallsView() {
-        sut.viewIsReady()
-        sut.getDanceStyles()
         sut.configureVideoScreen(forIndexAt: IndexPath(row: 0, section: 0))
         XCTAssertTrue(view.displayVideoScreenInvoked)
     }

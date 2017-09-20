@@ -7,8 +7,9 @@
 //
 
 import XCTest
-@testable import DancingSteps
 import RxSwift
+
+@testable import DancingSteps
 
 class VideosPresenterTests: XCTestCase {
     

@@ -15,6 +15,7 @@
 		370F863E1F6022850072A804 /* GetVideosProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F863C1F6022850072A804 /* GetVideosProtocol.swift */; };
 		370F86401F6022DA0072A804 /* SaveNewVideoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F863F1F6022DA0072A804 /* SaveNewVideoProtocol.swift */; };
 		370F86411F6022DA0072A804 /* SaveNewVideoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F863F1F6022DA0072A804 /* SaveNewVideoProtocol.swift */; };
+		371FD5141F727FFD00210164 /* CompleteVideoPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FD5131F727FFD00210164 /* CompleteVideoPresenterTests.swift */; };
 		3724C2521F3329A7005E1BF8 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C2511F3329A7005E1BF8 /* DebugViewController.swift */; };
 		3724C2531F33305F005E1BF8 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C2511F3329A7005E1BF8 /* DebugViewController.swift */; };
 		3724C2581F385534005E1BF8 /* CongressesTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724C2571F385534005E1BF8 /* CongressesTableViewProtocol.swift */; };
@@ -153,6 +154,7 @@
 		370F86391F60224C0072A804 /* GetDanceStylesProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetDanceStylesProtocol.swift; sourceTree = "<group>"; };
 		370F863C1F6022850072A804 /* GetVideosProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetVideosProtocol.swift; sourceTree = "<group>"; };
 		370F863F1F6022DA0072A804 /* SaveNewVideoProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveNewVideoProtocol.swift; sourceTree = "<group>"; };
+		371FD5131F727FFD00210164 /* CompleteVideoPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteVideoPresenterTests.swift; sourceTree = "<group>"; };
 		3724C2511F3329A7005E1BF8 /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugViewController.swift; path = DancingSteps/DebugViewController.swift; sourceTree = "<group>"; };
 		3724C2571F385534005E1BF8 /* CongressesTableViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongressesTableViewProtocol.swift; path = DancingSteps/CongressesTableViewProtocol.swift; sourceTree = "<group>"; };
 		3724C25A1F3A07F9005E1BF8 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 		371FD5121F727E3500210164 /* recording */ = {
 			isa = PBXGroup;
 			children = (
+				371FD5131F727FFD00210164 /* CompleteVideoPresenterTests.swift */,
 			);
 			path = recording;
 			sourceTree = "<group>";
@@ -1015,6 +1018,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				371FD5141F727FFD00210164 /* CompleteVideoPresenterTests.swift in Sources */,
 				378262CF1F7277A8001DDF34 /* Utils.swift in Sources */,
 				378262C71F718726001DDF34 /* VideosPresenterTests.swift in Sources */,
 				37AED3791F701A1400C8EFCD /* VideosTableViewControllerTests.swift in Sources */,
@@ -1188,7 +1192,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8WFER5UG23;
-				INFOPLIST_FILE = DancingStepsTests/Info.plist;
+				INFOPLIST_FILE = DancingStepsTests/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rlrg.DancingStepsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1205,7 +1209,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8WFER5UG23;
-				INFOPLIST_FILE = DancingStepsTests/Info.plist;
+				INFOPLIST_FILE = DancingStepsTests/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rlrg.DancingStepsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

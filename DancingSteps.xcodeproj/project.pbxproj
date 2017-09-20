@@ -35,6 +35,7 @@
 		37DD3BA31F5997E400065466 /* VideosTableVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BA11F5997E400065466 /* VideosTableVCProtocol.swift */; };
 		37DD3BA51F59A14200065466 /* ObjectInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BA41F59A14200065466 /* ObjectInjector.swift */; };
 		37DD3BA61F59A14200065466 /* ObjectInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BA41F59A14200065466 /* ObjectInjector.swift */; };
+		37E99D2D1F72A503002B68B2 /* CongressesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E99D2C1F72A503002B68B2 /* CongressesPresenterTests.swift */; };
 		3C03B9C961EA32988F2FC199 /* Pods_DancingSteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D2A34CED622DADBBF3AACE /* Pods_DancingSteps.framework */; };
 		63148DBCF0E3A0AAA7D362A5 /* Pods_DancingStepsLAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC52C66FF12023E4E407346 /* Pods_DancingStepsLAB.framework */; };
 		C3830DDB2A6E1DDFFD721E3B /* Pods_DancingStepsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B9A151D3A568B3313A55CB /* Pods_DancingStepsTests.framework */; };
@@ -171,6 +172,7 @@
 		37DD3B9E1F596B3A00065466 /* ErrorEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorEnums.swift; sourceTree = "<group>"; };
 		37DD3BA11F5997E400065466 /* VideosTableVCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideosTableVCProtocol.swift; path = DancingSteps/VideosTableVCProtocol.swift; sourceTree = "<group>"; };
 		37DD3BA41F59A14200065466 /* ObjectInjector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectInjector.swift; sourceTree = "<group>"; };
+		37E99D2C1F72A503002B68B2 /* CongressesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongressesPresenterTests.swift; sourceTree = "<group>"; };
 		58A4B1197EA040862E16888F /* Pods-DancingStepsLAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsLAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsLAB/Pods-DancingStepsLAB.release.xcconfig"; sourceTree = "<group>"; };
 		629DEA4E5B5CBCE8E03575F2 /* Pods_DancingStepsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingStepsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E979E418D5F07CB21A3D003 /* Pods-DancingStepsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingStepsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingStepsTests/Pods-DancingStepsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 		378262D51F727850001DDF34 /* topEvents */ = {
 			isa = PBXGroup;
 			children = (
+				37E99D2C1F72A503002B68B2 /* CongressesPresenterTests.swift */,
 			);
 			path = topEvents;
 			sourceTree = "<group>";
@@ -1018,6 +1021,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E99D2D1F72A503002B68B2 /* CongressesPresenterTests.swift in Sources */,
 				371FD5141F727FFD00210164 /* CompleteVideoPresenterTests.swift in Sources */,
 				378262CF1F7277A8001DDF34 /* Utils.swift in Sources */,
 				378262C71F718726001DDF34 /* VideosPresenterTests.swift in Sources */,

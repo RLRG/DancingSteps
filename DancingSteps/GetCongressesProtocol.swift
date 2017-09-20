@@ -1,5 +1,5 @@
 //
-//  CongressesPresentation.swift
+//  GetCongresses.swift
 //  DancingSteps
 //
 //  Created by RLRG on 04/07/2017.
@@ -9,6 +9,6 @@
 import Foundation
 import RxSwift
 
-protocol CongressesPresentation {
-    func present(congressesObservable: Observable<[Congress]>)
+public protocol GetCongressesProtocol {
+    func congresses() -> Observable<[Congress]>
 }

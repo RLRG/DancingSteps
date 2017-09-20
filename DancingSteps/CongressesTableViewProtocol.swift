@@ -9,5 +9,6 @@
 import Foundation
 
 protocol CongressesTableViewProtocol {
+    func displayEventDetailsScreen(forCongress congress: Congress)
     func displayNetworkError()
 }

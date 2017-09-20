@@ -9,22 +9,19 @@
 import Foundation
 import RxSwift
 
-final class GetCongressesNetworkUseCase: GetCongressesUseCase {
-    private let network: CongressNetwork
-    var presenter: CongressesPresentation!
+final class GetCongressesNetworkUseCase: GetCongressesProtocol {
     
-    init(network: CongressNetwork) {
-        self.network = network
+    // MARK: - Properties & Initialization
+    
+    private let repository: Repository
+    
+    init(repository: Repository) {
+        self.repository = repository
     }
     
-    func congresses() {
-        // 1. Fetching data.
-        let congressesObservable = network.fetchCongresses()
-        
-        // 2. Process the data if needed (mapping).
-        // Example: let programmerResponse = programmers.map { ProgrammerResponse(programmer: $0) }
-        
-        // 3. Provide the data to the presenter.
-        presenter.present(congressesObservable: congressesObservable)
+    // MARK: - Logic
+    
+    func congresses() -> Observable<[Congress]> {
+        return repository.getCongresses()
     }
 }

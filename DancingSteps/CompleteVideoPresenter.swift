@@ -11,19 +11,26 @@ import RxSwift
 
 class CompleteVideoPresenter {
     
-    let saveVideoUseCase: SaveNewVideoUseCase
-    let getDanceStylesUseCase: GetDanceStylesUseCase
+    let saveVideoUseCase: SaveNewVideoProtocol
+    let getDanceStylesUseCase: GetDanceStylesProtocol
     var completeVideoVC : CompleteVideoProtocol!
     var styles: Variable<[Style]> = Variable([])
     let disposeBag = DisposeBag()
     
-    init (saveVideoUseCase: SaveNewVideoUseCase, getDanceStylesUseCase: GetDanceStylesUseCase) {
+    init (saveVideoUseCase: SaveNewVideoProtocol, getDanceStylesUseCase: GetDanceStylesProtocol) {
         self.saveVideoUseCase = saveVideoUseCase
         self.getDanceStylesUseCase = getDanceStylesUseCase
     }
     
     func saveVideo(title: String = "NO_TITLE", styleId: String, videoURL: URL) {
         saveVideoUseCase.saveVideoToDB(title: title, styleId: styleId, videoURL: videoURL)
+            .asObservable().subscribe(
+                onError: { (error) in
+                    self.completeVideoVC.errorSavingVideo(error: error)
+            },
+                onCompleted: {
+                    self.completeVideoVC.videoSavedSuccessfully()
+            }).disposed(by: disposeBag)
     }
     
     func getDanceStyles() {
@@ -42,22 +49,5 @@ class CompleteVideoPresenter {
                         print("onCompleted querying dance styles.")
                     #endif
             }).disposed(by: disposeBag)
-    }
-}
-
-extension CompleteVideoPresenter : CompleteVideoPresentation {
-    func present(finishVideoObservable: Observable<Void>) {
-        finishVideoObservable
-            .subscribe(
-                onError: { (error) in
-                    self.completeVideoVC.errorSavingVideo(error: error)
-            },
-                onCompleted: {
-                    self.completeVideoVC.videoSavedSuccessfully()
-        }).disposed(by: disposeBag)
-    }
-    
-    func displayError(string: String) {
-        self.completeVideoVC.errorSavingVideo(error: NSError(domain: string, code: 001, userInfo: nil))
     }
 }

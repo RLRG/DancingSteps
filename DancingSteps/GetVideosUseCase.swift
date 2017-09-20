@@ -9,17 +9,19 @@
 import Foundation
 import RxSwift
 
-class GetVideosUseCase {
+class GetVideosUseCase: GetVideosProtocol {
     
-    private let repository: AbstractRepository<Video>
-    var presenter: VideosPresentation!
+    // MARK: - Properties & Initialization
     
-    init(repository: AbstractRepository<Video>) {
+    private let repository: Repository
+    
+    init(repository: Repository) {
         self.repository = repository
     }
     
-    func getAllVideosFromDB() {
-        let videos = repository.queryAll()
-        presenter.present(videosObservable: videos)
+    // MARK: - Logic
+    
+    func getAllVideos() -> Observable<[Video]> {
+        return repository.getAllVideos()
     }
 }

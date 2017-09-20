@@ -33,3 +33,9 @@ target 'DancingStepsLAB' do
     # In-app debugger
     pod 'FLEX', '~> 2.0'
 end
+
+target 'DancingStepsTests' do
+end
+
+target 'DancingStepsUITests' do
+end

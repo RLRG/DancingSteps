@@ -14,39 +14,33 @@ import UIKit
 final class Application {
     static let shared = Application() // singleton.
     
-    func cleanArchitectureConfiguration(storyboard: UIStoryboard, mainWindow: UIWindow) {
+    func cleanArchitectureConfiguration(storyboard: UIStoryboard, mainWindow: UIWindow, withRepo repository: Repository) {
         
         let tabBarController = storyboard.instantiateInitialViewController() as! UITabBarController // swiftlint:disable:this force_cast
         tabBarController.tabBar.barTintColor = UIColor.purple
+        
+        let useCaseProvider = UseCaseProviderClass(repository: repository)
         
         // VIDEOS
         let s_navigationController = tabBarController.viewControllers?.first as! UINavigationController // swiftlint:disable:this force_cast
         s_navigationController.navigationBar.barTintColor = UIColor.purple
         let s_tableViewController = s_navigationController.topViewController as! VideosTableViewController // swiftlint:disable:this force_cast
-        let realmVideosRepo = RealmRepo<Video>()
-        let realmStylesRepo = RealmRepo<Style>()
-        let getVideosUseCase = GetVideosUseCase(repository: realmVideosRepo)
-        let getDanceStylesUseCase = GetDanceStylesUseCase(repository: realmStylesRepo)
+        let getVideosUseCase = useCaseProvider.makeGetVideosUseCase()
+        let getDanceStylesUseCase = useCaseProvider.makeGetDanceStylesUseCase()
         let s_presenter = VideosPresenter(getVideosUseCase: getVideosUseCase, getDanceStylesUseCase: getDanceStylesUseCase)
-        getVideosUseCase.presenter = s_presenter
         s_tableViewController.presenter = s_presenter
+        s_presenter.videosTableVC = s_tableViewController
         
         // RECORDING
-        let r_navigationController = tabBarController.viewControllers?[1] as! UINavigationController // swiftlint:disable:this force_cast
-        let recordingViewController = r_navigationController.topViewController as! CameraViewController // swiftlint:disable:this force_cast
-        let r_presenter = CameraPresenter()
-        r_presenter.cameraVC = recordingViewController
-        recordingViewController.presenter = r_presenter
+        // No need to include Clean Architecture connections yet
         
         // TOP CHART
         let navigationController = tabBarController.viewControllers?[2] as! UINavigationController // swiftlint:disable:this force_cast
         navigationController.navigationBar.barTintColor = UIColor.purple
         let tableViewController = navigationController.topViewController as! CongressesTableViewController // swiftlint:disable:this force_cast
-        let useCaseNetworkProvider = UseCaseNetworkProvider()
-        let getCongressesUseCase = useCaseNetworkProvider.makeGetCongressesUseCase()
-        let presenter = CongressesPresenter(useCase: getCongressesUseCase)
+        let getCongressesUseCase = useCaseProvider.makeGetCongressesUseCase()
+        let presenter = CongressesPresenter(getCongressesUseCase: getCongressesUseCase)
         presenter.congressesView = tableViewController
-        getCongressesUseCase.presenter = presenter
         tableViewController.presenter = presenter
         
         // START THE APP !
@@ -54,10 +48,9 @@ final class Application {
         mainWindow.makeKeyAndVisible()
     }
     
-    func initializeRealmDatabase() {
+    func initializeRealmDatabase(withRepo repository: Repository) {
         
         // Dance styles
-        let realmRepo = RealmRepo<Style>()
         //let disposeBag = DisposeBag() --> Unknown behaviour. Fix this !
         
         let salsa = Style(name: "Salsa", country: "Cuba")
@@ -66,7 +59,7 @@ final class Application {
         let stylesArray = [salsa, bachata, kizomba]
         
         for style in stylesArray {
-            let styleObservable = realmRepo.save(entity: style)
+            let styleObservable = repository.save(style)
             styleObservable
                 .subscribe( // QUESTION: Unknown behaviour, If I dispose the observable, the data is not written in the local Realm database. Why does this happen?
                     onNext: { (styleNext) in

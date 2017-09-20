@@ -9,21 +9,19 @@
 import Foundation
 import RxSwift
 
-class GetDanceStylesUseCase {
+class GetDanceStylesUseCase: GetDanceStylesProtocol {
     
-    // MARK: Properties & Initialization
+    // MARK: - Properties & Initialization
     
-    private let repository: AbstractRepository<Style>
-    let disposeBag = DisposeBag()
+    private let repository: Repository
     
-    init(repository: AbstractRepository<Style>) {
+    init(repository: Repository) {
         self.repository = repository
     }
     
-    // MARK: Logic of the interactor.
+    // MARK: - Logic
     
     func getDanceStyles() -> Observable<[Style]> {
-        let styleObservable = repository.queryAll()
-        return styleObservable
+        return repository.getDanceStyles()
     }
 }

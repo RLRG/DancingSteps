@@ -130,14 +130,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		37DD3B891F5844F100065466 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CB8A45461F0401C1006E1102 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CB8A454D1F0401C1006E1102;
-			remoteInfo = DancingSteps;
-		};
-		37DD3B971F58451A00065466 /* PBXContainerItemProxy */ = {
+		37E99D2E1F7A5374002B68B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CB8A45461F0401C1006E1102 /* Project object */;
 			proxyType = 1;
@@ -645,7 +638,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				37DD3B8A1F5844F100065466 /* PBXTargetDependency */,
 			);
 			name = DancingStepsTests;
 			productName = DancingStepsTests;
@@ -666,7 +658,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				37DD3B981F58451A00065466 /* PBXTargetDependency */,
+				37E99D2F1F7A5374002B68B2 /* PBXTargetDependency */,
 			);
 			name = DancingStepsUITests;
 			productName = DancingStepsUITests;
@@ -730,7 +722,6 @@
 						DevelopmentTeam = 8WFER5UG23;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
-						TestTargetID = CB8A454D1F0401C1006E1102;
 					};
 					37DD3B911F58451A00065466 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -740,7 +731,7 @@
 					};
 					CB8A454D1F0401C1006E1102 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 8WFER5UG23;
+						DevelopmentTeam = 876L3LH7TJ;
 						ProvisioningStyle = Automatic;
 					};
 					CBD6CA201F1378C900AC4548 = {
@@ -1255,15 +1246,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		37DD3B8A1F5844F100065466 /* PBXTargetDependency */ = {
+		37E99D2F1F7A5374002B68B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CB8A454D1F0401C1006E1102 /* DancingSteps */;
-			targetProxy = 37DD3B891F5844F100065466 /* PBXContainerItemProxy */;
-		};
-		37DD3B981F58451A00065466 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CB8A454D1F0401C1006E1102 /* DancingSteps */;
-			targetProxy = 37DD3B971F58451A00065466 /* PBXContainerItemProxy */;
+			targetProxy = 37E99D2E1F7A5374002B68B2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1291,7 +1277,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7EB44F8062EB0F030506E4A /* Pods-DancingStepsTests.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8WFER5UG23;
 				INFOPLIST_FILE = DancingStepsTests/Config/Info.plist;
@@ -1300,7 +1285,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DancingSteps.app/DancingSteps";
 			};
 			name = Debug;
 		};
@@ -1308,7 +1292,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E979E418D5F07CB21A3D003 /* Pods-DancingStepsTests.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8WFER5UG23;
 				INFOPLIST_FILE = DancingStepsTests/Config/Info.plist;
@@ -1316,7 +1299,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rlrg.DancingStepsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DancingSteps.app/DancingSteps";
 			};
 			name = Release;
 		};
@@ -1329,6 +1311,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rlrg.DancingStepsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = DancingSteps;
 			};
@@ -1343,6 +1326,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rlrg.DancingStepsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = DancingSteps;
 			};
@@ -1396,6 +1380,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -1440,6 +1425,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -1448,11 +1434,14 @@
 			baseConfigurationReference = 10728BBA2D97A7981A0113A3 /* Pods-DancingSteps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8WFER5UG23;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 876L3LH7TJ;
 				INFOPLIST_FILE = DancingSteps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rlrg.DancingSteps;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmv.DancingStepsRLRGWithFastlane;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1462,11 +1451,14 @@
 			baseConfigurationReference = 0A55F8B5EA35D3659DB3165A /* Pods-DancingSteps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8WFER5UG23;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 876L3LH7TJ;
 				INFOPLIST_FILE = DancingSteps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rlrg.DancingSteps;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmv.DancingStepsRLRGWithFastlane;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

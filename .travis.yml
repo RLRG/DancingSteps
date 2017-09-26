@@ -1,19 +1,26 @@
 branches:
   only:
-    - develop
-    - master
+  - develop
+  - master
 language: swift
 osx_image: xcode9
 before_install:
-  - rvm use $RVM_RUBY_VERSION
-  - gem install cocoapods
-  - gem install xcpretty -N
-  - brew update
-  - brew install swiftlint || true
-  - pod repo update
-  - pod install
-
+- rvm use $RVM_RUBY_VERSION
+- gem install cocoapods
+- gem install fastlane
+- gem install xcpretty -N
+- brew update
+- brew install swiftlint || true
+- pod repo update
+- pod install
 script:
-  - set -o pipefail
-  - xcodebuild -workspace DancingSteps.xcworkspace -scheme DancingSteps -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
-  - swiftlint
+- set -o pipefail
+- xcodebuild -workspace DancingSteps.xcworkspace -scheme DancingSteps -sdk iphonesimulator
+  ONLY_ACTIVE_ARCH=NO | xcpretty -c
+- swiftlint
+- fastlane tests
+- fastlane ui_tests
+env:
+  global:
+  - secure: j9zk9zoBhHFoD46OCRLb6j/QXuFDEyQxRC4Ed2uG1WhYz67OIczu77rcI8ub2/xRzAupOX+/LsCcQQv0EIi5jaNTj1qpD2NuO9Kq4Z7mNlrYip2xOKGxnf0iqSfCquOzZCIYWeDTHj1MhleO7q/jBbCky5fwknlR9SgibeogpV9JOPDp60cGwducyqxJxCY+5XDHC2bHC41rjDKEYk216TYqCoLnBbjSOG+uwFEVpZyIeNjsnwACzlcnoGT/KzlyWF4698lNN0Now/Fsbbe1u16fffuI+dJl/gozYTzWI1t7KcraOre00Jb9wEPKuI9gDLgKhnBuI3OJ1jebRiBvGf0llRxy/c063ZTPnW1FlHxwWxk43sosErVlMzKPa1zamXGzFCtcuIqedTd1LnHNJu50O486RPN3dGyMzncJkPHy8qTLvb/c1TEbozIjfrTIfWXkYaf/q1MNOFHsTFY7mi4g6Qa53ZdQMi5rk0kPp5BwgHR/1f1PIT7yESNYAMIC6FTf5hjF/wOh3UdYXozjr1LYWY+bN6OSNts0dy0LkGFap+NR/lx6b/Rcqq76UAdZMyUxKvG8LNbYyNXzz6WMwimtVHwjzsEOlTQowJzvHLTbXjsICjadMIa+3RQeufyA/Af5QhXcbEZH8cwIviDOV+j17HleNbGJRyNXTK4NFgU=
+  - secure: bw0f0eZ0UfC6txh3n8DRovf6ZoFvW/Sh/CKSZ2DzRJNrD1DCOpSZZSsoYl4gawF9wI161BBVDu1L3u1pKYKrsSPoZwHKBlOIYAIjtyN/o1PQrSOXu/8ZGQX27VUun0jfjqI0Y82evaA9XeoqM38JbGkdrEVGST88f0WcaJJ60/VlEMYJbvvaQAxxluLxy2KJi9+HMMdyH3hO44fFA8/sSkGwNmC1nPSNZMNK4mL297/S2vAmtOmhjYShJv1RdRZmpEFyOh61LgzlWuNqLBRHeArMIdQqzqZWi8LsPxBYzprNuDAF78tOWTeaIF6b9IT8oop5a28RiSsqKgMFNJ0CynLbhNi4Q1zmku2m2dCHQnSToWM3+K1U4gnu5/MgVhG8k4R0cDIlm1vdODtsoTinHM0+J37Gyacr1P99FE1ya0rNUhEVUI2xeliSbxRRPuI8l2euXEe7t7s0rZYmg8Wch5K+2ff6i+5VtVn8x563K5VKoA+CW0SmX0R0j801wzzaD/4uPNwL2kDXbFCgHGkcPeEKgKZ8T1St93MMCRVYRmREvzP81I2lejUKp3mzONC753ijRYlZyNCmumjeqRUerTfU1L0S91EIC1ynzOfPwQKMK/nnwSz7nGCWYSgzy1kqntJfbxnN4T98SunlPp5V2PunnExkVHHGsjRoEi/LuP4=
